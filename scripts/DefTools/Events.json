@@ -1,0 +1,541 @@
+{
+  "110003": {
+    "category": "Environment",
+    "severity": "Informational",
+    "check": "NonPresistentVDI",
+    "checkresult": "Device was onboarded via VDI PowerShell Script.",
+    "guidance": "Please ensure best practices are implemented based on below articles: \n<a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-vdi'>NonPresistentVDI(1)</a> \n<a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-antivirus/deployment-vdi-windows-defender-antivirus'>NonPresistentVDI(2)</a> \nContent of Startup folder will be logged below for reference: %1."
+  },
+  "111021": {
+    "category": "Environment",
+    "severity": "Warning",
+    "check": "EnvNotSupported",
+    "checkresult": "Device does not have the minimum patch level for MDE Security Configuration Management onboarding: %1.",
+    "guidance": "If you intend to enable MDE Security Configuration Management then please refer to following documentation for the list of requirements: \n<a target='_blank' href='https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide#supported-platforms'>Supported Platforms</a>."
+  },
+  "112002": {
+    "category": "Environment",
+    "severity": "Error",
+    "check": "UnSupported",
+    "checkresult": "Please note the device OS build is not supported by MDE and cannot be onboarded: %1.",
+    "guidance": "Please refer to this article for a list of supported Windows versions: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#hardware-and-software-requirements'>UnSupported</a>."
+  },
+  "112020": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "EnvNotSupported",
+    "checkresult": "This device attemped to onboard through Microsoft Monitoring Agent (MMA) agent but failed as it does not support onboarding using this method.",
+    "guidance": "Please refer to our online documentation to understand what onboarding method is appropriate for this device's Operating System: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/onboard-configure'>EnvNotSupported</a>."
+  },
+  "121001": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "MMAWorkspace",
+    "checkresult": "Please note the device has multiple MMA (Microsoft Monitoring Agent) workspaces.",
+    "guidance": "If the device is onboarded to Defender for Endpoint via ASC (aka Azure Defender for servers) integration, then it is recommended to remove the MDE workspace to avoid cyber upload issues. \nFor more information on ASC integration with Defender for Endpoint please refer to:  <a target='_blank' href='https://docs.microsoft.com/en-us/azure/security-center/security-center-wdatp#microsoft-defender-for-endpoint-features-in-security-center'>AzureDefender</a>."
+  },
+  "121009": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "TrustedPublishers",
+    "checkresult": "Please note that this machine has a policy that only allows domain based trusted publishers to be added. This may interfere with MDE sensor which needs to install certificates to the Trusted Publisher store.",
+    "guidance": "For more information, refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows-server/identity/software-restriction-policies/work-with-software-restriction-policies-rules#set-trusted-publisher-options'>TrustedPublishers</a>. \nTo avoid unexpected issues, remove the associated group policy configuration: %1  %2."
+  },
+  "122010": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "MoCAMPVersion",
+    "checkresult": "Please note that this machine is running with an outdated version of Defender Platform. Platform versions older than N-2 will no longer be supported.",
+    "guidance": "For more information, refer to: <a target='_blank' href='https://support.microsoft.com/en-us/topic/update-for-microsoft-defender-antimalware-platform-92e21611-8cf1-8e0e-56d6-561a07d144cc'>Antimalware platform</a>"
+  },
+  "122011": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "AVEngineVersion",
+    "checkresult": "Please note that this machine is running with an outdated version of Defender Antivirus engine.After a new package version is released, support for the previous two versions is reduced to technical support only. Versions older than that are listed in this section, and are provided for technical upgrade support only.",
+    "guidance": "For more information, refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions'>Antivirus engine</a>"
+  },
+  "121012": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "SecurityIntelligenceVersion",
+    "checkresult": "Please note that this machine is running with outdated security intelligence version. It is recommended to apply the most recent security intelligence vesion to ensure optimal protection and compatiblity.",
+    "guidance": "For more information, refer to: <a target='_blank' href='https://www.microsoft.com/en-us/wdsi/defenderupdates'>defenderupdates</a>"
+  },
+  "121013": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "CertSignerAutoUpdate",
+    "checkresult": "This test checks the signer expiration and warns if CTL are outdate. \nYour CTL has expired %1 days ago. \nSee detailed output at: %2",
+    "guidance": "Please ensure that you update latest CTLs in file share: <a target='_blank' href='https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265983(v=ws.11)#redirect-the-microsoft-automatic-update-url-for-a-disconnected-environment'>CertSignerAutoUpdate</a>."
+  },
+  "121014": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "CertSignerManualUpdate",
+    "checkresult": "This test checks the signer expiration and warns if CTL are outdate. \nYour CTL has expired %1 days ago. \nSee detailed output at: %2",
+    "guidance": "Please ensure you update the CTLs via windows update or WSUS. For more information about how CTLs and how root certificate distribution works please refer to: <a target='_blank' href='https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/tls-handshake-errors-and-connection-timeouts-maybe-it-8217-s-the/ba-p/400501'>CertSignerManualUpdate</a>."
+  },
+  "122002": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "MMAAgentVersion",
+    "checkresult": "%1.",
+    "guidance": "N/A"
+  },
+  "122003": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "MissingPaths",
+    "checkresult": "Default paths are missing: %1.",
+    "guidance": "Please ensure the mentioned missing path(s) exist and have not been renamed.  You may need to create the missing folder with system context. For example, use this command: PsExec.exe -s cmd /c (mkdir.exe %2)."
+  },
+  "122004": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "SCCMOnboard",
+    "checkresult": "This device failed to onboard via Microsoft Endpoint Configuration Manager.",
+    "guidance": "This issue can happen if the regsitry key 'Windows Advanced Threat Protection' is missing from: HKLM:\\SOFTWARE\\Microsoft\\ .\n To create a missing registry key you can use: reg.exe add 'HKLM\\SOFTWARE\\Microsoft\\Windows Advanced Threat Protection' \nSee error information from: %1."
+  },
+  "122005": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "OrgIdExpired",
+    "checkresult": "Device is reporting to an expired Organization ID: %1.",
+    "guidance": "You should offboard the device from this organization, and then onboard it to your current organization.\nContact Microsoft Support if you don't have access to the offboarding script with the mentioned OrgID.\n Note: To view the current OrgID, please go to the MDE portal (<a target='_blank' href='https://securitycenter.microsoft.com/'>Security Center</a>) and click on the user name in the top right corner."
+  },
+  "122006": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "PrivateCertStore",
+    "checkresult": "Please note the device has error 'Loading the private key for the client authentication certificate' in the OpsMgr log.",
+    "guidance": "Please uninstall and re-install MMA (Microsoft Monitoring Agent) on this device and check if the issue persists."
+  },
+  "122007": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "ClockSkew",
+    "checkresult": "The local time on the device is not matching the time in Azure.",
+    "guidance": "Please check that the local system time is accurate and the correct time zone is set.\nIf this device is domain joined, please ensure that the 'Windows Time' service is running and the device is synchronized with your domain time. \nFor more information on how to configure and control time synchronization please refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/how-the-windows-time-service-works'>WindowsTime</a>.\nIf this device is an offline standalone device, please ensure local time in BIOS is accurate."
+  },
+  "122008": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "SCEPAgentVersion",
+    "checkresult": "Device is running an older version of System Center Endpoint Protection: %1.",
+    "guidance": "You should upgrade to latest available version to ensure compatbility and allow malware detections to be logged in Defender for Endpoint security portal."
+  },
+  "122015": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "SvcRegistryCheck",
+    "checkresult": "This machine has failed to onboard due to missing permissions for registry key HKLM_System_CurrentControlSet_Services_Sense.",
+    "guidance": "This can happen due to interference from 3rd party security products or if SYSTEM account full control permissions are missing for HKLM_System_CurrentControlSet_Services_Sense. The permissions found for SYSTEM account are: %1"
+  },
+  "121016": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "SCPConfigCheck",
+    "checkresult": "Unable to read Service Connection Point (SCP) from Active Directory configuration partition.",
+    "guidance": "If you intended to implement MDE Device Configuration Management, then please refer to the following article for more information: <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-managed-domains'>Configure hybrid Azure Active Directory join for managed domains</a>."
+  },
+  "121017": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "SCPConfigCheck",
+    "checkresult": "Service Connection Point (SCP) contains non-supported configuration: %1",
+    "guidance": "The device cannot be joined to Azure AD since the SCP record is configued to join device to Enterprise DRS."
+  },
+  "121018": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "SCPConfigCheck",
+    "checkresult": "Service Connection Point (SCP) is not configured in Active Directory configuration partition.",
+    "guidance": "If you intended to implement MDE Device Configuration Management, then please refer to the following article for more information: <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-managed-domains'>Configure hybrid Azure Active Directory join for managed domains</a>."
+  },
+  "121019": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "SCPConfigCheck",
+    "checkresult": "Unable to connect to Domain Controller to reterive Service Connection Point (SCP) information.",
+    "guidance": "If you intended to implement MDE Device Configuration Management, then please refer to the following article for more information: <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-managed-domains'>Configure hybrid Azure Active Directory join for managed domains</a>."
+  },
+  "121020": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "MDfWSCheck",
+    "checkresult": "Please note that this server does not have the modern unified agent installed.",
+    "guidance": "Unified agent for downlevel servers is not installed on this device. It is recommended to install the new agent for optimal performance and protection capabilities. For more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-server-endpoints?view=o365-worldwide'>Onboard Windows servers to the Microsoft Defender for Endpoint service</a>."
+  },
+  "120021": {
+    "category": "Configuration",
+    "severity": "Informational",
+    "check": "TenantIDInfo",
+    "checkresult": "The machine is assosicated with a specific AAD Tenant ID.",
+    "guidance": "Please ensure that the AAD Tenant ID from your MDE Tenant matches the SCP Tenant ID listed above. To see your MDE Tenant Identification refer to: <a target='_blank' href='https://security.microsoft.com/settings/mtp_settings/mtp_consent'>M365 Security Portal</a>"
+  },
+  "121022": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "TenantIDInfo",
+    "checkresult": "There is a discrepancy between the AAD Tenant ID from your MDE Tenant and the tenant ID in the SCP Entry of your domain.",
+    "guidance": "Please ensure that the AAD Tenant ID from your MDE Tenant matches the SCP Tenant ID listed above. To see your MDE Tenant Identification refer to: <a target='_blank' href='https://security.microsoft.com/settings/mtp_settings/mtp_consent'>M365 Security Portal</a>"
+  },
+  "121023": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device failed to perform Hybrid join.",
+    "guidance": "Please use <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current'>Troubleshoot hybrid Azure AD-joined devices</a> to investigate this issue."
+  },
+  "121024": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device is registered to Azure AD but not enrolled to MEM because of communication errors.",
+    "guidance": "Please check if MEM related URLs are accessible. For more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide#connectivity-requirements'>Connectivity Requirements</a>"
+  },
+  "121025": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device failed to register and enroll due to communication issue with Azure AD.",
+    "guidance": "Please check if AzureAD related URLs are accessible. For more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/security-config-management?view=o365-worldwide#connectivity-requirements'>Connectivity Requirements</a>"
+  },
+  "121026": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Registration with Azure AD failed due bad SCP.",
+    "guidance": "Please engage with the organization’s identity team to deploy the configuration method required for Hybrid Azure Ad join. For more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-manual?#configure-a-service-connection-point'>Configure a service connection point</a>"
+  },
+  "121027": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device was not found in Azure AD.",
+    "guidance": "Please review the Azure AD Connect Configuration and ensure the devices being configured for management are within the scope of sync."
+  },
+  "121028": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device status in Azure AD incomplete.",
+    "guidance": "Please review the documentation for required claims to complete federated join. Manually validate the endpoints for your environment are available. <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/hybrid-azuread-join-federated-domains'>Configure hybrid Azure Active Directory join for federated domains</a>"
+  },
+  "121029": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Azure Active Directory LDAP API error.",
+    "guidance": "Please review network topology and ensure LDAP API is available to complete hybrid join requests."
+  },
+  "121030": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device is not synced with Azure AD.",
+    "guidance": "Please verify that the computer is in scope for synchronization in Azure AD Connect."
+  },
+  "121031": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device is not enrolled due to domain connectivity issues.",
+    "guidance": "Please use <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current'>Troubleshoot hybrid Azure AD-joined devices</a> to investigate this issue."
+  },
+  "121032": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device clock is not synchronizated with Azure AD time.",
+    "guidance": "Please make sure clock is correctly set/synced on the device where the errors occurs."
+  },
+  "121033": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device is not enrolled dur to network name resolution issues.",
+    "guidance": "If retries do not help, use <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current'>Troubleshoot hybrid Azure AD-joined devices</a> as guide for troubleshooting OS-level hybrid join failures. "
+  },
+  "121034": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "EnrollmentStatusCheck",
+    "checkresult": "Device failed to perform Hybrid join",
+    "guidance": "Use <a target='_blank' href='https://docs.microsoft.com/en-us/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current'>Troubleshoot hybrid Azure AD-joined devices</a> as guide for troubleshooting OS-level hybrid join failures. Refer to the following URL "
+  },
+  "121035": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "AntiSpoofingReady",
+    "checkresult": "Device is not up-to-date and does not have anti-spoofing capability deployed.",
+    "guidance": "Please ensure you deploy the recommended security patch to protect the device from spoofing, for more information, please refer to: <a target='_blank' href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23278'>Microsoft Defender for Endpoint - CVE-2022-23278</a> or <a target='_blank' href='https://security.microsoft.com/threatanalytics3/ef2c5597-4797-47bd-b7b2-6155a23c1edf/overview'>Microsoft Defender for Endpoint - Threat Analytics</a>"
+  },
+  "121036": {
+    "category": "Configuration",
+    "severity": "Warning",
+    "check": "AntiSpoofingUnStable",
+    "checkresult": "Device is anti-spoofing capable but not in a stable state",
+    "guidance": "Please refer to the guidelines in the following article: <a target='_blank' href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-23278'>Microsoft Defender for Endpoint - CVE-2022-23278</a> or <a target='_blank' href='https://security.microsoft.com/threatanalytics3/ef2c5597-4797-47bd-b7b2-6155a23c1edf/overview'>Microsoft Defender for Endpoint - Threat Analytics</a> \nContact Microsoft support if issue persists."
+  },
+  "120037": {
+    "category": "Configuration",
+    "severity": "Informational",
+    "check": "AntiSpoofingStable",
+    "checkresult": "Device is anti-spoofing capable and in a stable state",
+    "guidance": "N/A"
+  },
+  "122038": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "OldVersionDetected",
+    "checkresult": "Device is running with an old version of the Microsoft Defender for Endpoint EDR sensor",
+    "guidance": "Please update the sensor to ensure you have optimal protection and stability. For more information, refer to the article: <a target='_blank' href='https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac'>Microsoft Defender for Endpoint update for EDR Sensor</a>"
+  },
+  "122039": {
+    "category": "Configuration",
+    "severity": "Error",
+    "check": "SvcCrashCheck",
+    "checkresult": "This machine has failed to onboard due to MsSense.exe crash during initialization phase for TelLib.dll.\n The error from the crash was: %1",
+    "guidance": "This can happen if the SYSTEM account does not have permissions to write to the expected path (ProgramData\\Microsoft\\Windows Defender Advanced Threat Protection\\Cyber).\n Please validate the ACLs in the path and reset the permissions from parent folder if needed."
+  },
+  "130009": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "AuthRoot",
+    "checkresult": "Please note this machine is not set to automatically update Trusted Root Certificates from Windows Update %1 %2.",
+    "guidance": "N/A"
+  },
+  "130010": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "CertRevocation",
+    "checkresult": "Certificate validation for the Defender for Endpoint cloud service completed successfully.",
+    "guidance": "N/A"
+  },
+  "130011": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "AVCloud",
+    "checkresult": "Test connection to the Microsoft Defender Antivirus cloud service completed successfully.",
+    "guidance": "N/A"
+  },
+  "130017": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "EDRCloud CnC",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (CnC) cloud service URLs completed successfully.",
+    "guidance": "N/A"
+  },
+  "130018": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "EDRCloud Cyber",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (Cyber) cloud service URLs completed successfully.",
+    "guidance": "N/A"
+  },
+  "130019": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "EDRCloud AutoIR",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (AutoIR) cloud service URLs completed successfully.",
+    "guidance": "N/A"
+  },
+  "130020": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "AVCloud SampleUpload",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (SampleUpload) cloud service URLs completed successfully.",
+    "guidance": "N/A"
+  },
+  "130021": {
+    "category": "Connectivity",
+    "severity": "Informational",
+    "check": "EDRCloud MdeConfigMgr",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (MdeConfigMgr) cloud service URLs completed successfully.",
+    "guidance": "N/A"
+  },
+  "131001": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "EDRCloud",
+    "checkresult": "EDR Cloud checks have not run successfully.",
+    "guidance": "Ensure PsExec is not blocked in your environment and then try again.\n If you cannot allow PsExec to be run in your environment due to security reasons, then you can try log collection via Live Response as explained here: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-collect-support-log'>LiveAnalyzer</a>"
+  },
+  "131003": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "AuthRoot",
+    "checkresult": "The trusted root certificates cannot be updated from Windows Update. This can cause issues with Sensor CNC heartbeats or cyber data upload to cloud.",
+    "guidance": "You must allow access to Automatic Root Certificates Update URL. \nFor more information, refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/privacy/manage-windows-1809-endpoints#certificates'>AuthRoot(1)</a>  Or, to facilitate the distribution of certificates for a disconnected environment, you must deploy a server that can download the CTL files from the automatic update mechanism: <a target='_blank' href='https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265983(v=ws.11)'>AuthRoot(2)</a>."
+  },
+  "131004": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "CertRevocation",
+    "checkresult": "Certificate revocation was not tested.",
+    "guidance": "If the device is in 'Impaired communications' status, try manually running 'certutil.exe -verify -urlfetch winatp.cer' using PsExec -s, to ensure the revocation checks are working when executed in system context. Note that both PsExec.exe and winatp.cer files are inside available inside the 'Tools' directory of the analyzer."
+  },
+  "131005": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "CertRevocation",
+    "checkresult": "Cloud connectivity may be impaired due to certificate revocation failures.",
+    "guidance": "Please ensure the following URLs are not blocked: http://crl.microsoft.com/pki/crl and http://www.microsoft.com/pkiops. For more information please refer to <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>. For detailed error information, review %1."
+  },
+  "131007": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "AVCloud",
+    "checkresult": "Test connection to the Microsoft Defender Antivirus cloud service failed: %1",
+    "guidance": "If Microsoft Defender Antivirus is not in passive mode (it is operating as your primary antivirus solution) or you have opted to enable 'EDR block Mode' - please make sure connections to AV cloud URLs are not blocked: \n<a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/configure-network-connections-microsoft-defender-antivirus#validate-connections-between-your-network-and-the-cloud'>AVCloud</a>.\nFor more information about EDR in Block Mode please refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/edr-in-block-mode#requirements-for-edr-in-block-mode'>EdrBlockMode</a>."
+  },
+  "131013": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "EDRCloud CnC",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (CnC) cloud service URLs failed. \nThe test has failed for the following URL: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "131014": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "EDRCloud Cyber",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (Cyber) cloud service URLs failed. \nThe test has failed for the following URL: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "131015": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "EDRCloud AutoIR",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (AutoIR) cloud service URLs failed. \nThe test has failed for the following URL: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "131016": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "AVCloud SampleUpload",
+    "checkresult": "Test connection to the Microsoft Defender for Endpoint (SampleUpload) cloud service URLs failed. \nThe test has failed for the following URL: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "131017": {
+    "category": "Connectivity",
+    "severity": "Warning",
+    "check": "EDRCloud MdeConfigMgr",
+    "checkresult": "Test connection to Microsoft Defender for Endpoint (MdeConfigMgr) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "132006": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "EccCurves",
+    "checkresult": "Cloud connectivity may be impaired due to faulty EccCurves SSL settings.",
+    "guidance": "If you did not intend to modify the ECC curves, please remove these group policy settings: <a target='_blank' href='https://docs.microsoft.com/en-us/windows-server/security/tls/manage-tls#managing-windows-ecc-curves-using-group-policy'>EccCurves</a>."
+  },
+  "132012": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "AuthRoot",
+    "checkresult": "This machine has errors in EventLogs perationsManager.evtx indicating secure connection could not be negotiated in event Log.",
+    "guidance": "Please ensure the Trusted Root lists are correctly updated from WSUS or Windows Update. \nIf you are manually updating Trusted Roots, please ensure you follow guidelines in KB2813430: <a target='_blank' href='https://support.microsoft.com/en-us/help/2813430/an-update-is-available-that-enables-administrators-to-update-trusted-a'>AuthRoot</a>."
+  },
+  "132021": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "EDRCloud CnC",
+    "checkresult": "All test connections to Microsoft Defender for Endpoint (CnC) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "132022": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "EDRCloud Cyber",
+    "checkresult": "All test connections to Microsoft Defender for Endpoint (Cyber) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "132023": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "EDRCloud AutoIR",
+    "checkresult": "All test connections to Microsoft Defender for Endpoint (AutoIR) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "132024": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "AVCloud SampleUpload",
+    "checkresult": "All test connections to Microsoft Defender for Endpoint (SampleUpload) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "132025": {
+    "category": "Connectivity",
+    "severity": "Error",
+    "check": "EDRCloud MdeConfigMgr",
+    "checkresult": "All test connections to Microsoft Defender for Endpoint (MdeConfigMgr) cloud service URLs have failed. \nThe test has failed for the following URLs: \n%1",
+    "guidance": "Please review your network configuration and ensure required URLs are not blocked. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server'>ServiceURLs</a>."
+  },
+  "140004": {
+    "category": "Telemetry",
+    "severity": "Informational",
+    "check": "UTCListener",
+    "checkresult": "DiagTrack (UTC) service listener detected.",
+    "guidance": "N/A"
+  },
+  "140005": {
+    "category": "Telemtry",
+    "severity": "Informational",
+    "check": "ProviderInit",
+    "checkresult": "Sensor process is protected by Exploit Protection DisableExtensionPoints.",
+    "guidance": "N/A"
+  },
+  "140006": {
+    "category": "Telemetry",
+    "severity": "Informational",
+    "check": "OMSListener",
+    "checkresult": "SenseOms listener detected.",
+    "guidance": "N/A"
+  },
+  "141001": {
+    "category": "Telemetry",
+    "severity": "Warning",
+    "check": "UTCService",
+    "checkresult": "UTC Service is Disabled. This device may not be able to upload cyber data.",
+    "guidance": "Make the service is not disabled by Policy. \nFor more information refer to: <a target='_blank' href='https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding#ensure-the-service-is-set-to-start'>DiagTrack</a>."
+  },
+  "141002": {
+    "category": "Telemetry",
+    "severity": "Warning",
+    "check": "UTCService",
+    "checkresult": "DiagTrack (UTC) listener missing. This device is unable to upload cyber data.",
+    "guidance": "This can happen if *.settings-win.data.microsoft.com is blocked in your network and UTC the service cannot download a 1kb config file. \nContact Microsoft support if issue persists."
+  },
+  "141003": {
+    "category": "Telemetry",
+    "severity": "Warning",
+    "check": "OMSListener",
+    "checkresult": "SenseOms listener missing.",
+    "guidance": "This device is unable to upload cyber data. Contact Microsoft support if issue persists and you require assistance with onboarding."
+  },
+  "142007": {
+    "category": "Telemetry",
+    "severity": "Error",
+    "check": "UTCService",
+    "checkresult": "DiagTrack service is unable to start. This may be caused by incompatible process MitigationOptions. Note that certain Process Mitigation options may also cause the DiagTrack listener to appear as missing.",
+    "guidance": "Please try removing registry settings from below path and check if the problem persists: \nHKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\kernel\\MitigationOptions \nHKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\svchost.exe\\MitigationOptions. \nThe current Kernel or SvcHost ProcessMitigation have been exported to MDEClientAnalyzerResult\\SystemInfoLogs directory for reference."
+  },
+  "142008": {
+    "category": "Telemtry",
+    "severity": "Error",
+    "check": "ProviderInit",
+    "checkresult": "Please note this device has error ID WSAEPROVIDERFAILEDINIT in EventLogs\\utc.evtx. \nThis may be caused by deprecated LSPs (Layered Service Providers) installed on the system.",
+    "guidance": "Windows 10 version 1809 or later has additional tamper protections that can block LSPs from interfering with our sensor. Please ensure the following or later patches are installed if issue persists: \nKB4577069 for 1809 and KB4577062 for 1903/1909."
+  },
+  "142009": {
+    "category": "Telemtry",
+    "severity": "Error",
+    "check": "ProviderInit",
+    "checkresult": "Provider Initialization errors on this device may be cause by no longer supported Forefront TMG Client Winsock LSP.",
+    "guidance": "Please uninstall TMG firewall client from the affected device and ensure the following or later patches are installed if issue persists: \nKB4577069 for 1809 and KB4577062 for 1903/1909."
+  }
+}

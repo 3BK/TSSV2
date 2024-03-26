@@ -1,0 +1,3 @@
+DC_NetworkingDiagnostic.ps1
+DC_WindowsUpdateLog.ps1
+DC_UpdateHistory.ps1

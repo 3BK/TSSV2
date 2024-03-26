@@ -1,0 +1,395 @@
+<WindowsPerformanceRecorder Author="Microsoft Corporation" Version="1">
+  <Profiles>
+    <SystemCollector Id="EDPSystemCollector" Name="NT Kernel Logger">
+      <BufferSize Value="256" />
+      <Buffers Value="10" PercentageOfTotalMemory="true" MaximumBufferSpace="100" />
+    </SystemCollector>
+    <EventCollector Id="EDPEventCollector" Name="EDP Event Collector">
+      <BufferSize Value="256" />
+      <Buffers Value="10" PercentageOfTotalMemory="true" MaximumBufferSpace="100" />
+    </EventCollector>
+    <SystemProvider Id="MySystemProvider">
+      <Keywords>
+        <Keyword Value="CpuConfig" />
+        <Keyword Value="CSwitch" />
+        <Keyword Value="ReadyThread" />
+        <Keyword Value="Power" />
+        <Keyword Value="KernelQueue" />
+        <Keyword Value="DPC" />
+        <Keyword Value="Interrupt" />
+        <Keyword Value="Loader" />
+        <Keyword Value="DiskIO" />
+        <Keyword Value="HardFaults" />
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="SampledProfile" />
+      </Keywords>
+      <Stacks>
+        <Stack Value="CSwitch" />
+        <Stack Value="SampledProfile" />
+        <Stack Value="ReadyThread" />
+        <Stack Value="ThreadCreate" />
+        <Stack Value="ThreadDelete" />
+        <Stack Value="ProcessCreate" />
+        <Stack Value="ProcessDelete" />
+        <Stack Value="ImageLoad" />
+        <Stack Value="ImageUnload" />
+      </Stacks>
+    </SystemProvider>
+    <EventProvider Id="SCEP" Name="D5A5B540-C580-4DEE-8BB4-185E34AA00C5" />
+    <EventProvider Id="Tracelog_OMA-DM" Name="3B9602FF-E09B-4C6C-BC19-1A3DFA8F2250" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.LocalAccountMigPlugin" Name="CDD94AC7-CD2F-5189-E126-2DEB1B2FACBF" />
+    <EventProvider Id="OmadmClient" Name="0EC685CD-64E4-4375-92AD-4086B6AF5F1D" />
+    <EventProvider Id="Microsoft-Windows-NlaSvc" Name="63B530F8-29C9-4880-A5B4-B8179096E7B8" Level="4" />
+    <EventProvider Id="Microsoft.Windows.Shell.CloudDomainJoin.Client" Name="AA02D1A4-72D8-5F50-D425-7402EA09253A" />
+    <EventProvider Id="WapXperfGuid" Name="18F2AB69-92B9-47E4-B9DB-B4AC2E4C7115" />
+    <EventProvider Id="Microsoft-Windows-NetworkSecurity" Name="7B702970-90BC-4584-8B20-C0799086EE5A" Level="4" />
+    <EventProvider Id="UnsampledEnrollmentProvider" Name="F9E3B648-9AF1-4DC3-9A8E-BF42C0FBCE9A" />
+    <EventProvider Id="Tracelog_PolicyManager" Name="BA45E8D6-BA5B-42AE-B74F-5472C24A5F0B" />
+    <EventProvider Id="CertificateStore" Name="536D7120-A8A4-4A5F-B1F8-1735DF9B78D0" />
+    <EventProvider Id="NetUx_WPP" Name="e6dec100-4e0f-4927-92be-e69d7c15c821" />
+    <EventProvider Id="Microsoft-Windows-WLAN-AutoConfig" Name="9580D7DD-0379-4658-9870-D5BE7D52D6DE" Level="4" />
+    <EventProvider Id="NtLmGlobalDebugTrace" Name="5BBB6C18-AA45-49B1-A15F-085F7ED0AA90">
+      <Keywords>
+        <Keyword Value="0x0000000000015003" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="PushRouterAuth" Name="455FEFE7-5B3D-485A-BCBB-D0F09A47D1AE" />
+    <EventProvider Id="Microsoft-Windows-DNS-Client" Name="1C95126E-7EEA-49A9-A3FE-A378B03DDB4D" Level="5" />
+    <EventProvider Id="Microsoft-Windows-NWiFi" Name="0BD3506A-9030-4F76-9B88-3E8FE1F7CFB6" Level="4" />
+    <EventProvider Id="NLM_WPP" Name="D9131565-E1DD-4C9E-A728-951999C2ADB5">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.Security.Credentials.UserConsentVerifier" Name="507C53AE-AF42-5938-AEDE-4A9D908640ED" />
+    <EventProvider Id="TCPIP_ServiceTrace" Name="EB004A05-9B1A-11D4-9123-0050047759BC">
+      <Keywords>
+        <Keyword Value="0xFFFFFFFFFFFFFFFF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="LsaDsControl" Name="169EC169-5B77-4A3E-9DB6-441799D5CACB" />
+    <EventProvider Id="WMICSP" Name="C37BB754-DC5C-45AD-9D00-A42CFCF137A8" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.KeyStaging" Name="9B223F67-67A1-5B53-9126-4593FE81DF25" />
+    <EventProvider Id="Microsoft.Windows.Security.EFS" Name="4E04241F-30F8-5111-A04E-DF3C9C867433" Stack="true" />
+    <EventProvider Id="KerbGlobalDebugTrace" Name="6B510852-3583-4E2D-AFFE-A67F9F223438">
+      <Keywords>
+        <Keyword Value="0x0000000000201203" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WBioSrvcControlGuid" Name="34BEC984-F11F-4F1F-BB9B-3BA33C8D0132" />
+    <EventProvider Id="UnenrollHook" Name="6222F3F1-237E-4B0F-8D12-C20072D42197" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.CredProv" Name="CAC8D861-7B16-5B6B-5FC0-85014776BDAC" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.CSP" Name="89F392FF-EE7C-56A3-3F61-2D5B31A36935" />
+    <EventProvider Id="EdpEnforcementLog" Name="3D1D28B1-73F5-5937-3446-0DE4DF173FF5" NonPagedMemory="true" Stack="true" />
+    <EventProvider Id="NetworkStatus_WPP" Name="F35B308C-B304-41C9-A8CB-EE6087DA3801">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-BranchCacheEventProvider" Name="DD85457F-4E2D-44A5-A7A7-6253362E34DC" Level="5" />
+    <EventProvider Id="Tracelog_Diagnostics" Name="3DA494E4-0FE2-415C-B895-FB5265C5C83B" />
+    <EventProvider Id="Microsoft-Windows-Security-EFS-EDPAudit-ApplicationGenerated" Name="225D7337-6538-4C12-9418-B37C558C50F2" />
+    <EventProvider Id="Microsoft-Windows-DeviceSetupManager" Name="FCBB06BB-6A2A-46E3-ABAA-246CB4E508B2" Level="4" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.CryptNgc" Name="6D7051A0-9C83-5E52-CF8F-0ECAF5D5F6FD" />
+    <EventProvider Id="WMIBridge" Name="A76DBA2C-9683-4BA7-8FE4-C82601E117BB" />
+    <EventProvider Id="MdmAgentTrace" Name="EF614386-F019-4323-85A1-D6EBAF9CDE12" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.NgcCtnrSvc" Name="9DF6A82D-5174-5EBF-842A-39947C48BF2A" />
+    <EventProvider Id="DeviceManagementSettings" Name="a8fd7a5b-4323-4172-b85b-f5b78c3c0f9c" />
+    <EventProvider Id="Microsoft-Windows-WWAN-CellUX-UI" Name="F3D10D5A-8291-433D-9275-CDD0067A0022" Level="5" />
+    <EventProvider Id="OmacpClient" Name="FF036693-0480-41DD-AC12-ED3C6A936A5F" />
+    <EventProvider Id="Tracelog_AAD" Name="4DE9BC9C-B27A-43C9-8994-0915F1A5E24F" />
+    <EventProvider Id="EDPCleanupTraceLoggingProvider" Name="e42598b4-b399-41cd-a67c-a6b1b6007e07" />
+    <EventProvider Id="Microsoft-Windows-Windows_Firewall-With-Advanced-Security" Name="D1BC9AFF-2ABF-4D71-9146-ECB2A986EB85" />
+    <EventProvider Id="Microsoft-Windows-WinINet" Name="43D1A55C-76D6-4f7e-995C-64C711E5CAFE" />
+    <EventProvider Id="Microsoft-Windows-UserPnp" Name="96F4A050-7E31-453C-88BE-9634F4E02139" Level="4" />
+    <EventProvider Id="Microsoft-Windows-Wired-AutoConfig" Name="B92CF7FD-DC10-4C6B-A72D-1613BF25E597" Level="4" />
+    <EventProvider Id="AppIdLogger" Name="77FE4532-3F5C-5786-632B-FB3201BCE29B" NonPagedMemory="true" />
+    <EventProvider Id="Microsoft-Windows-EDP-Audit-TCB" Name="287D59B6-79BA-4741-A08B-2FEDEEDE6435" />
+    <EventProvider Id="Tracelog_Enrollment" Name="9FBF7B95-0697-4935-ADA2-887BE9DF12BC" />
+    <EventProvider Id="Microsoft-Windows-Security-EnterpriseData-FileRevocationManager" Name="2CD58181-0BB6-463E-828A-056FF837F966" />
+    <EventProvider Id="PushRouterProxy" Name="83AFAF72-DF00-4584-8F4C-ADED166F72B1" />
+    <EventProvider Id="Microsoft-Windows-NDIS" Name="CDEAD503-17F5-4A3E-B7AE-DF8CC2902EB9" Level="4" />
+    <EventProvider Id="Microsoft-Windows-Winsock-NameResolution" Name="55404E71-4DB9-4DEB-A5F5-8F86E46DDE56" Level="5" />
+    <EventProvider Id="Microsoft-Windows-NetworkProfile" Name="FBCFAC3F-8459-419F-8E48-1F0B49CDB85E" Level="4" />
+    <EventProvider Id="Tracelog_NodeCache" Name="79ECB2AE-3F73-4D6E-8717-CAC7804A1A61" />
+    <EventProvider Id="Microsoft-Windows-Winsock-AFD" Name="E53C6823-7BB8-44BB-90DC-3F86090D48A6" Level="4" />
+    <EventProvider Id="Tracelog_SCEP" Name="3D24D8C1-2F25-4A6D-A8FE-9D08ED3A2FFB" />
+    <EventProvider Id="PushRouterCore" Name="0E316AA7-3B31-4D58-9B8B-10B3B2C0F2ED" />
+    <EventProvider Id="Microsoft.Windows.Security.CryptoWinRT" Name="786396CD-2FF3-53D3-D1CA-43E41D9FB73B" />
+    <EventProvider Id="NgcWppControl" Name="1D6540CE-A81B-4E74-AD35-EEF8463F97F5" />
+    <EventProvider Id="Microsoft-Windows-Wmbclass-Opn" Name="A42FE227-A7BF-4483-A502-6BCDA428CD96" Level="4" />
+    <EventProvider Id="Windows_Networking_Connectivity_WinRT_WPP" Name="2ACF2633-ED1B-41FD-A17E-9F98719CDB36">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.DeviceManagement.MdmPostProcessEvaluator" Name="8F453BA5-F19E-531D-071B-72BA1C501406" />
+    <EventProvider Id="TpmWppControl" Name="3A8D6942-B034-48E2-B314-F69C2B4655A3" />
+    <EventProvider Id="Tracelog_ConfigManager2" Name="2F94E1CC-A8C5-4FE7-A1C3-53D7BDA8E73E" />
+    <EventProvider Id="SecurityPolicyCSP" Name="F058515F-DBB8-4C0D-9E21-A6BC2C422EAB" />
+    <EventProvider Id="Microsoft.Windows.Security.EFS.EfsLib" Name="7A688F0E-F39B-4A7A-BBBB-066E2C1FCB04" />
+    <EventProvider Id="Microsoft-Windows-Wmbclass" Name="12D25187-6C0D-4783-AD3A-84CAA135ACFD" Level="4" />
+    <EventProvider Id="NCSI_WPP" Name="014DE49F-CE63-4779-BA2B-D616F6963A87">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task" Name="28E25B07-C47F-473D-8B24-2E171CCA808A" Level="4" />
+    <EventProvider Id="Microsoft.Windows.Networking.VpnCsp" Name="EFD89D89-6B12-4467-BBFA-8122C589E066" />
+    <EventProvider Id="Microsoft-Windows-Dhcp-Client" Name="15A7A4F8-0072-4EAB-ABAD-F98A4D666AED" Level="4" />
+    <EventProvider Id="Microsoft-Windows-BranchCacheClientEventProvider" Name="E837619C-A2A8-4689-833F-47B48EBD2442" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.KspSvc" Name="B66B577F-AE49-5CCF-D2D7-8EB96BFD440C" />
+    <EventProvider Id="Microsoft-Windows-Shell-CloudExperienceHost" Name="D0034F5E-3686-5A74-DC48-5A22DD4F3D5B" />
+    <EventProvider Id="OmadmPrc" Name="797C5746-634F-4C59-8AE9-93F900670DCC" />
+    <EventProvider Id="DevInfoCSP" Name="FE5A93CC-0B38-424A-83B0-3C3FE2ACB8C9" />
+    <EventProvider Id="Microsoft-Windows-VWiFi" Name="314B2B0D-81EE-4474-B6E0-C2AAEC0DDBDE" Level="5" />
+    <EventProvider Id="Microsoft-Windows-Mobile-Broadband-Experience-SmsRouter" Name="FA773482-F6ED-4895-8A7D-4F5850678E59" Level="4" />
+    <EventProvider Id="Microsoft-Windows-Security-EFS-EDPAudit-CopyData" Name="6AF820A5-6E4F-4558-8D7D-F7D6A2ED7195" />
+    <EventProvider Id="PolicyManagerXperfGuid" Name="FFDB0CFD-833C-4F16-AD3F-EC4BE3CC1AF5" />
+    <EventProvider Id="Microsoft-Windows-EDP-Audit-Regular" Name="50F99B2D-96D2-421F-BE4C-222C4140DA9F" />
+    <EventProvider Id="Tracelog_OMA-DM_PRC" Name="07F947BF-6018-49b5-82E2-DE966C7BE483" />
+    <EventProvider Id="Microsoft-Windows-WWAN-MM-EVENTS" Name="7839BB2A-2EA3-4ECA-A00F-B558BA678BEC" Level="4" />
+    <EventProvider Id="Microsoft.Windows.Security.Biometrics.FingerprintCredential" Name="225B3FED-0356-59D1-1F82-EED163299FA8" />
+    <EventProvider Id="Microsoft-Windows-OneX" Name="AB0D8EF9-866D-4D39-B83F-453F3B8F6325" Level="4" />
+    <EventProvider Id="Microsoft.Windows.Security.Biometrics.Service" Name="39A5AA08-031D-4777-A32D-ED386BF03470" />
+    <EventProvider Id="NLA_WPP" Name="1AC55562-D4FF-4BC5-8EF3-A18E07C4668E">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="DPAPIGlobalDebugTrace" Name="EA3F84FC-03BB-540e-B6AA-9664F81A31FB" />
+    <EventProvider Id="Microsoft-Windows-DHCPv6-Client" Name="6A1F2B00-6A90-4C38-95A5-5CAB3B056778" Level="4" />
+    <EventProvider Id="DMSvc" Name="8CC7D9C9-09AF-45CA-86CE-4CECF680F2B7" />
+    <EventProvider Id="Microsoft-Windows-Mobile-Broadband-Experience-Api" Name="2E2BBB16-0C36-4B9B-A567-40924A199FD5" Level="4" />
+    <EventProvider Id="Microsoft-Windows-WWAN-CellUX-API" Name="767D1A28-B916-5B5E-9BEC-5456C827EDD5" Level="5" />
+    <EventProvider Id="EAPHost_WPP" Name="5F31090B-D990-4e91-B16D-46121D0255AA" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.NgcCtnr" Name="0ABA6892-455B-551D-7DA8-3A8F85225E1A" />
+    <EventProvider Id="Microsoft-Windows-EFS" Name="3663A992-84BE-40EA-BBA9-90C7ED544222" />
+    <EventProvider Id="Microsoft.Windows.Security.Biometrics.BioCredProv" Name="9DADD79B-D556-53F2-67C4-129FA62B7512" />
+    <EventProvider Id="Tracelog_CertStore" Name="EBFE7216-281A-4601-875F-17D1CABED9E0" />
+    <EventProvider Id="Microsoft-Windows-EFSTriggerProvider" Name="6863E644-DD5D-43A2-A8B5-7A81B46672E6" />
+    <EventProvider Id="Netman_WPP" Name="A111CDC2-81B0-480a-80C8-BBABE221CAFE">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="FWPUCLNT" Name="5A1600D2-68E5-4DE7-BCF4-1C2D215FE0FE" />
+    <EventProvider Id="LsaTraceControl" Name="D0B639E0-E650-4D1D-8F39-1580ADE72784">
+      <Keywords>
+        <Keyword Value="0x000000000040141F" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-Security-EFS-EDPAudit" Name="0C017B8D-7629-4AD6-A268-578A14E9DD65" />
+    <EventProvider Id="Microsoft-Windows-NCSI" Name="314DE49F-CE63-4779-BA2B-D616F6963A88" Level="4" />
+    <EventProvider Id="Microsoft-Windows-TCPIP" Name="2F07E2EE-15DB-40F1-90EF-9D7BA282188A" Level="4" />
+    <EventProvider Id="Microsoft-Windows-WFP" Name="0C478C5B-0351-41B1-8C58-4A6737DA32E3" Level="4" />
+    <EventProvider Id="IKEEXT" Name="106B464D-8043-46B1-8CB8-E92A0CD7A560" />
+    <EventProvider Id="Microsoft.Windows.Security.Biometrics.CredentialProvider.Face" Name="1D480C11-3870-4B19-9144-47A53CD973BD" />
+    <EventProvider Id="Microsoft-Windows-EapHost" Name="6EB8DB94-FE96-443F-A366-5FE0CEE7FB1C" Level="4" />
+    <EventProvider Id="Tracelog_WinsockSecProvider" Name="EB2A9FCD-1CD6-41E4-BBD6-3B2430CEE816" />
+    <EventProvider Id="HotstopAuth_WPP" Name="BBA96718-7028-4A97-9120-C50BDB91458F">
+      <Keywords>
+        <Keyword Value="0xFFFFFF7F00000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="ResourceMgr" Name="6B865228-DEFA-455A-9E25-27D71E8FE5FA" />
+    <EventProvider Id="Microsoft.Windows.Security.EFS.EfsCore" Name="82B5AD62-B453-481A-B838-CA1EEAE6E472" />
+    <EventProvider Id="Microsoft-Windows-Networking-VPN-Plugin-Platform" Name="E5FC4A0F-7198-492F-9B0F-88FDCBFDED48" />
+    <EventProvider Id="Microsoft.Windows.Security.NGC.DeviceLockHelpers" Name="2056054C-97A6-5AE4-B181-38BC6B58007E" />
+    <EventProvider Id="SampledEnrollmentProvider" Name="e74efd1a-b62d-4b83-ab00-66f4a166a2d3" />
+    <EventProvider Id="Microsoft-Windows-WinHttp" Name="7D44233D-3055-4B9C-BA64-0D47CA40A232" Level="5" />
+    <EventProvider Id="Microsoft-Windows-Mobile-Broadband-Experience-Api-Internal" Name="2AABD03B-F48B-419A-B4CE-7A14403F4A46" Level="4" />
+    <EventProvider Id="Microsoft-Windows-WebIO" Name="50B3E73C-9370-461D-BB9F-26F32D68887D" Level="5" />
+    <EventProvider Id="Microsoft.Windows.DeviceManagement.EdpConfiguration" Name="6BE7190D-DBA0-5E9C-8B69-C5A9AED40FB9" />
+    <EventProvider Id="Microsoft-Windows-Iphlpsvc-Trace" Name="6600E712-C3B6-44A2-8A48-935C511F28C8" Level="4" />
+    <EventProvider Id="MRXSMB" Name="F818EBB3-FBC4-4191-96D6-4E5C37C8A237" NonPagedMemory="true" />
+    <EventProvider Id="EFSWRT_WPP" Name="C755EF4D-DE1C-4E7D-A10D-B8D1E26F5035" />
+    <EventProvider Id="W7NodeProcessor" Name="33466AA0-09A2-4C47-9B7B-1B8A4DC3A9C9" />
+    <EventProvider Id="Tracelog_OMA-DM_API" Name="7D85C2D0-6490-4BB4-BAC1-247D0BD06F10" />
+    <EventProvider Id="Microsoft-Windows-WWAN-UI-EVENTS" Name="78168022-ECA5-41E8-9E17-E8C7FD77AAE1" Level="4" />
+    <EventProvider Id="ConfigManager2" Name="0BA3FB88-9AF5-4D80-B3B3-A94AC136B6C5" />
+    <EventProvider Id="Microsoft-Windows-WWAN-NDISUIO-EVENTS" Name="B3EEE223-D0A9-40CD-ADFC-50F1888138AB" Level="4" />
+    <EventProvider Id="Tracelog_DMClientCsp-Provider" Name="DE8FD7AD-1891-4B17-83B3-B3F915437044" />
+    <EventProvider Id="Microsoft-Windows-WWAN-SVC-EVENTS" Name="3CB40AAA-1145-4FB8-B27B-7E30F0454316" Level="4" />
+    <EventProvider Id="FWPKCLNT" Name="AD33FA19-F2D2-46D1-8F4C-E3C3087E45AD" />
+    <EventProvider Id="Microsoft-Windows-L2NACP" Name="85FE7609-FF4A-48E9-9D50-12918E43E1DA" Level="4" />
+    <EventProvider Id="ConfigManager2HookGuid" Name="76FA08A3-6807-48DB-855D-2C12702630EF" />
+    <EventProvider Id="Microsoft.Windows.Security.Biometrics.Client" Name="1B5106B1-7622-4740-AD81-D9C6EE74F124" />
+    <EventProvider Id="RRAS" Name="24989972-0967-4E21-A926-93854033638E" />
+    <EventProvider Id="Microsoft.Windows.Security.EFS.EfsWrt" Name="318BBC33-CDFD-42C0-B5E5-57ED92E8935F" />
+    <EventProvider Id="DMCmnUtils" Name="0A8E17FD-ED19-4C54-A1E7-5A2829BF507F" />
+    <EventProvider Id="DMAccXperfGuid" Name="E1A8D70D-11F0-420E-A170-29C6B686342D" />
+    <EventProvider Id="DNS_WPP" Name="609151DD-04F5-4DA7-974C-FC6947EAA323">
+      <Keywords>
+        <Keyword Value="0xC07F790000000000" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="BFE" Name="106B464A-8043-46B1-8CB8-E92A0CD7A560" />
+    <Profile Id="EDPProfile.Verbose.File" Name="EDPProfile" Description="The EDP Profile" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="EDPSystemCollector">
+          <SystemProviderId Value="MySystemProvider" />
+        </SystemCollectorId>
+        <EventCollectorId Value="EDPEventCollector">
+          <EventProviders>
+            <EventProviderId Value="SCEP" />
+            <EventProviderId Value="Tracelog_OMA-DM" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.LocalAccountMigPlugin" />
+            <EventProviderId Value="OmadmClient" />
+            <EventProviderId Value="Microsoft-Windows-NlaSvc" />
+            <EventProviderId Value="Microsoft.Windows.Shell.CloudDomainJoin.Client" />
+            <EventProviderId Value="WapXperfGuid" />
+            <EventProviderId Value="Microsoft-Windows-NetworkSecurity" />
+            <EventProviderId Value="UnsampledEnrollmentProvider" />
+            <EventProviderId Value="Tracelog_PolicyManager" />
+            <EventProviderId Value="CertificateStore" />
+            <EventProviderId Value="NetUx_WPP" />
+            <EventProviderId Value="Microsoft-Windows-WLAN-AutoConfig" />
+            <EventProviderId Value="NtLmGlobalDebugTrace" />
+            <EventProviderId Value="PushRouterAuth" />
+            <EventProviderId Value="Microsoft-Windows-DNS-Client" />
+            <EventProviderId Value="Microsoft-Windows-NWiFi" />
+            <EventProviderId Value="NLM_WPP" />
+            <EventProviderId Value="Microsoft.Windows.Security.Credentials.UserConsentVerifier" />
+            <EventProviderId Value="TCPIP_ServiceTrace" />
+            <EventProviderId Value="LsaDsControl" />
+            <EventProviderId Value="WMICSP" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.KeyStaging" />
+            <EventProviderId Value="Microsoft.Windows.Security.EFS" />
+            <EventProviderId Value="KerbGlobalDebugTrace" />
+            <EventProviderId Value="WBioSrvcControlGuid" />
+            <EventProviderId Value="UnenrollHook" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.CredProv" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.CSP" />
+            <EventProviderId Value="EdpEnforcementLog" />
+            <EventProviderId Value="NetworkStatus_WPP" />
+            <EventProviderId Value="Microsoft-Windows-BranchCacheEventProvider" />
+            <EventProviderId Value="Tracelog_Diagnostics" />
+            <EventProviderId Value="Microsoft-Windows-Security-EFS-EDPAudit-ApplicationGenerated" />
+            <EventProviderId Value="Microsoft-Windows-DeviceSetupManager" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.CryptNgc" />
+            <EventProviderId Value="WMIBridge" />
+            <EventProviderId Value="MdmAgentTrace" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.NgcCtnrSvc" />
+            <EventProviderId Value="DeviceManagementSettings" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-CellUX-UI" />
+            <EventProviderId Value="OmacpClient" />
+            <EventProviderId Value="Tracelog_AAD" />
+            <EventProviderId Value="EDPCleanupTraceLoggingProvider" />
+            <EventProviderId Value="Microsoft-Windows-Windows_Firewall-With-Advanced-Security" />
+            <EventProviderId Value="Microsoft-Windows-WinINet" />
+            <EventProviderId Value="Microsoft-Windows-UserPnp" />
+            <EventProviderId Value="Microsoft-Windows-Wired-AutoConfig" />
+            <EventProviderId Value="AppIdLogger" />
+            <EventProviderId Value="Microsoft-Windows-EDP-Audit-TCB" />
+            <EventProviderId Value="Tracelog_Enrollment" />
+            <EventProviderId Value="Microsoft-Windows-Security-EnterpriseData-FileRevocationManager" />
+            <EventProviderId Value="PushRouterProxy" />
+            <EventProviderId Value="Microsoft-Windows-NDIS" />
+            <EventProviderId Value="Microsoft-Windows-Winsock-NameResolution" />
+            <EventProviderId Value="Microsoft-Windows-NetworkProfile" />
+            <EventProviderId Value="Tracelog_NodeCache" />
+            <EventProviderId Value="Microsoft-Windows-Winsock-AFD" />
+            <EventProviderId Value="Tracelog_SCEP" />
+            <EventProviderId Value="PushRouterCore" />
+            <EventProviderId Value="Microsoft.Windows.Security.CryptoWinRT" />
+            <EventProviderId Value="NgcWppControl" />
+            <EventProviderId Value="Microsoft-Windows-Wmbclass-Opn" />
+            <EventProviderId Value="Windows_Networking_Connectivity_WinRT_WPP" />
+            <EventProviderId Value="Microsoft.Windows.DeviceManagement.MdmPostProcessEvaluator" />
+            <EventProviderId Value="TpmWppControl" />
+            <EventProviderId Value="Tracelog_ConfigManager2" />
+            <EventProviderId Value="SecurityPolicyCSP" />
+            <EventProviderId Value="Microsoft.Windows.Security.EFS.EfsLib" />
+            <EventProviderId Value="Microsoft-Windows-Wmbclass" />
+            <EventProviderId Value="NCSI_WPP" />
+            <EventProviderId Value="Microsoft-Windows-Mobile-Broadband-Experience-Parser-Task" />
+            <EventProviderId Value="Microsoft.Windows.Networking.VpnCsp" />
+            <EventProviderId Value="Microsoft-Windows-Dhcp-Client" />
+            <EventProviderId Value="Microsoft-Windows-BranchCacheClientEventProvider" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.KspSvc" />
+            <EventProviderId Value="Microsoft-Windows-Shell-CloudExperienceHost" />
+            <EventProviderId Value="OmadmPrc" />
+            <EventProviderId Value="DevInfoCSP" />
+            <EventProviderId Value="Microsoft-Windows-VWiFi" />
+            <EventProviderId Value="Microsoft-Windows-Mobile-Broadband-Experience-SmsRouter" />
+            <EventProviderId Value="Microsoft-Windows-Security-EFS-EDPAudit-CopyData" />
+            <EventProviderId Value="PolicyManagerXperfGuid" />
+            <EventProviderId Value="Microsoft-Windows-EDP-Audit-Regular" />
+            <EventProviderId Value="Tracelog_OMA-DM_PRC" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-MM-EVENTS" />
+            <EventProviderId Value="Microsoft.Windows.Security.Biometrics.FingerprintCredential" />
+            <EventProviderId Value="Microsoft-Windows-OneX" />
+            <EventProviderId Value="Microsoft.Windows.Security.Biometrics.Service" />
+            <EventProviderId Value="NLA_WPP" />
+            <EventProviderId Value="DPAPIGlobalDebugTrace" />
+            <EventProviderId Value="Microsoft-Windows-DHCPv6-Client" />
+            <EventProviderId Value="DMSvc" />
+            <EventProviderId Value="Microsoft-Windows-Mobile-Broadband-Experience-Api" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-CellUX-API" />
+            <EventProviderId Value="EAPHost_WPP" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.NgcCtnr" />
+            <EventProviderId Value="Microsoft-Windows-EFS" />
+            <EventProviderId Value="Microsoft.Windows.Security.Biometrics.BioCredProv" />
+            <EventProviderId Value="Tracelog_CertStore" />
+            <EventProviderId Value="Microsoft-Windows-EFSTriggerProvider" />
+            <EventProviderId Value="Netman_WPP" />
+            <EventProviderId Value="FWPUCLNT" />
+            <EventProviderId Value="LsaTraceControl" />
+            <EventProviderId Value="Microsoft-Windows-Security-EFS-EDPAudit" />
+            <EventProviderId Value="Microsoft-Windows-NCSI" />
+            <EventProviderId Value="Microsoft-Windows-TCPIP" />
+            <EventProviderId Value="Microsoft-Windows-WFP" />
+            <EventProviderId Value="IKEEXT" />
+            <EventProviderId Value="Microsoft.Windows.Security.Biometrics.CredentialProvider.Face" />
+            <EventProviderId Value="Microsoft-Windows-EapHost" />
+            <EventProviderId Value="Tracelog_WinsockSecProvider" />
+            <EventProviderId Value="HotstopAuth_WPP" />
+            <EventProviderId Value="ResourceMgr" />
+            <EventProviderId Value="Microsoft.Windows.Security.EFS.EfsCore" />
+            <EventProviderId Value="Microsoft-Windows-Networking-VPN-Plugin-Platform" />
+            <EventProviderId Value="Microsoft.Windows.Security.NGC.DeviceLockHelpers" />
+            <EventProviderId Value="SampledEnrollmentProvider" />
+            <EventProviderId Value="Microsoft-Windows-WinHttp" />
+            <EventProviderId Value="Microsoft-Windows-Mobile-Broadband-Experience-Api-Internal" />
+            <EventProviderId Value="Microsoft-Windows-WebIO" />
+            <EventProviderId Value="Microsoft.Windows.DeviceManagement.EdpConfiguration" />
+            <EventProviderId Value="Microsoft-Windows-Iphlpsvc-Trace" />
+            <EventProviderId Value="MRXSMB" />
+            <EventProviderId Value="EFSWRT_WPP" />
+            <EventProviderId Value="W7NodeProcessor" />
+            <EventProviderId Value="Tracelog_OMA-DM_API" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-UI-EVENTS" />
+            <EventProviderId Value="ConfigManager2" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-NDISUIO-EVENTS" />
+            <EventProviderId Value="Tracelog_DMClientCsp-Provider" />
+            <EventProviderId Value="Microsoft-Windows-WWAN-SVC-EVENTS" />
+            <EventProviderId Value="FWPKCLNT" />
+            <EventProviderId Value="Microsoft-Windows-L2NACP" />
+            <EventProviderId Value="ConfigManager2HookGuid" />
+            <EventProviderId Value="Microsoft.Windows.Security.Biometrics.Client" />
+            <EventProviderId Value="RRAS" />
+            <EventProviderId Value="Microsoft.Windows.Security.EFS.EfsWrt" />
+            <EventProviderId Value="DMCmnUtils" />
+            <EventProviderId Value="DMAccXperfGuid" />
+            <EventProviderId Value="DNS_WPP" />
+            <EventProviderId Value="BFE" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+  <TraceMergeProperties>
+    <TraceMergeProperty Id="TraceMerge_Default" Name="TraceMerge_Default">
+      <CustomEvents>
+        <CustomEvent Value="ImageId" />
+        <CustomEvent Value="BuildInfo" />
+        <CustomEvent Value="VolumeMapping" />
+        <CustomEvent Value="EventMetadata" />
+        <CustomEvent Value="PerfTrackMetadata" />
+        <CustomEvent Value="WinSAT" />
+        <CustomEvent Value="NetworkInterface" />
+      </CustomEvents>
+    </TraceMergeProperty>
+  </TraceMergeProperties>
+</WindowsPerformanceRecorder>

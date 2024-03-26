@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>SystemCenterDPM_MAB</ID>
+    <Version>2.0.0</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-217091</Name>
+    <Description>@DiagPackage.dll,-217092</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com</PrivacyLink>
+  <PowerShellVersion>1.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">5.1</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>false</RequiresElevation>
+      <RequiresInteractivity>true</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <!-- Template Root Cause Registry Key check -->
+  <Rootcauses>
+    <!--[Idea ID 2390] [System Center Data Protection Manager] SDP Request - Pull Exchange VSS writer registry key value if Exchange is part of a DAG-->
+    <Rootcause>
+      <ID>RC_ExchangeReplicationWriterRegkeyCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-226004</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3d4f41a4-3e10-4f89-bcdd-2f2ab5b02a4a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-226004</Name>
+            <Description>@DiagPackage.dll,-226003</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Registry key HKLM\Software\Microsoft\ExchangeServer\v14\Replay\Parameters\EnableVSSWriter is set to 0</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Disabling the Exchange Replication key and cause enumeration from the Data Protection Manager console for the nodes in that Exchange Database Availability Group(DAG)</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;EN-US;2521099</InternalContentURL>
+        <PublicContentURL>http://blogs.technet.com/b/dpm/archive/2012/05/08/exchange2010-dag-passive-node-visibility-and-the-enablevsswriter-regkey-in-data-protection-manager.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>13568</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <Rootcause>
+      <ID>RC_RegkeyCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1598</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>fb7256fd-e8a0-4694-b569-da99d780baee</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1599</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-217097</Name>
+              <Description>@DiagPackage.dll,-217098</Description>
+            </DisplayInformation>
+            <Value>DPMDB_DO_NOT_COLLECT</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-217095</Name>
+              <Description>@DiagPackage.dll,-217096</Description>
+            </DisplayInformation>
+            <Value>DPMDB_COLLECT</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>TroubleshootingType</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-217093</Name>
+          <Description>@DiagPackage.dll,-217094</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <CommandLinks />
+          <NoCache />
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-226010</Name>
+              <Description>@DiagPackage.dll,-226011</Description>
+            </DisplayInformation>
+            <Value>Local</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-226012</Name>
+              <Description>@DiagPackage.dll,-226013</Description>
+            </DisplayInformation>
+            <Value>Remote</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>ID_DataCollector_LocalOrRemote</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226014</Name>
+          <Description>@DiagPackage.dll,-226015</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache />
+          <CommandLinks />
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-226032</Name>
+              <Description>@DiagPackage.dll,-226033</Description>
+            </DisplayInformation>
+            <Value>Yes</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-226034</Name>
+              <Description>@DiagPackage.dll,-226035</Description>
+            </DisplayInformation>
+            <Value>No</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>ID_Run_Verbose_Logging</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226030</Name>
+          <Description>@DiagPackage.dll,-226031</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache />
+          <CommandLinks />
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+    </SingleResponseInteractions>
+    <MultipleResponseInteractions>
+      <MultipleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-226016</Name>
+              <Description>@DiagPackage.dll,-226017</Description>
+            </DisplayInformation>
+            <Value>Collect</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+        </Choices>
+        <ID>ID_VerboseLoggingCollector</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226018</Name>
+          <Description>@DiagPackage.dll,-226019</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </MultipleResponseInteraction>
+      <MultipleResponseInteraction>
+        <AllowDynamicResponses>true</AllowDynamicResponses>
+        <Choices>
+        </Choices>
+        <ID>ID_ProtectedServers</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226022</Name>
+          <Description />
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </MultipleResponseInteraction>
+    </MultipleResponseInteractions>
+    <TextInteractions />
+    <PauseInteractions>
+      <PauseInteraction>
+        <ID>ID_WaitingForExit</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226026</Name>
+          <Description>@DiagPackage.dll,-226027</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <PauseInteraction>
+        <ID>ID_WarnningForCancelJob</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226030</Name>
+          <Description>@DiagPackage.dll,-226031</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--[Idea ID 6196] [System Center Data Protection Manager] SDP Request - Verbose logging option (tracing) for DPM-->
+      <PauseInteraction>
+        <ID>ID_WaitingForReproduceIssue</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-226023</Name>
+          <Description>@DiagPackage.dll,-226024</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+    </PauseInteractions>
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint>
+    <Icon>@DiagPackage.dll,-591005</Icon>
+  </ExtensionPoint>
+</dcmPS:DiagnosticPackage>

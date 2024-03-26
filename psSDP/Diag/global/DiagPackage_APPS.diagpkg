@@ -1,0 +1,913 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>CTS_WinStoreInboxApps</ID>
+    <Version>1.0</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-1120000</Name>
+    <Description>@DiagPackage.dll,-1120001</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com</PrivacyLink>
+  <PowerShellVersion>2.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">6.2</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>true</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <Rootcauses>
+    <!--[Idea ID 7524] [Windows] WinStore -Modern applications fail to start if 'Audit the access of global system object' is enabled-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForAuditOptionCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1121019</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>1841baba-2717-4e36-8dad-1d4ad0e0f36b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1121017</Name>
+            <Description>@DiagPackage.dll,-1121018</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-12198.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-77714.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2797403</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7723] [Windows] WinStore - Modern applications fail to start if incompatible security - av software installed-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForWindDefenderCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120036</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>54a42d79-f742-4e2c-989d-89aefee1ab1e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120034</Name>
+            <Description>@DiagPackage.dll,-1120035</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-62555.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-96729.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Modern applications fail to start</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B%3bEN-US%3b2780714</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7727] [Windows] WinStore - Cannot install Windows Store Apps-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForTrustedPathCredentialsCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120051</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2e7e3e76-c691-4f5e-8d08-dcb937336725</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120049</Name>
+            <Description>@DiagPackage.dll,-1120050</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76473.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-75042.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if the group policy 'Require trusted path for credential entry' is enabled</HighLevelLogic>
+        <Symptom>Cannot install Windows Store Apps</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B%3bEN-US%3b2827456</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7712] [Windows] WinStore - Modern Apps fail to run if the UAC File Virtualization driver is not running-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForUACFileVirtualizationCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120046</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>8b31d06b-222b-482f-9237-99c11fbf1181</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120044</Name>
+            <Description>@DiagPackage.dll,-1120045</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-50983.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-58856.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if the UAC File Virtualization driver is disabled</HighLevelLogic>
+        <Symptom>Modern applications fail to start</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B%3bEN-US%3b2780377</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7508] [Windows] WinStore - This app cannot open while the User Account Control is turned off-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForUACDisabledCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120051</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6439afd0-725d-445c-b212-83f1bb0a04a5</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120049</Name>
+            <Description>@DiagPackage.dll,-1120050</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-69045.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-99302.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if the registry key(HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA) is not existing or set to 0</HighLevelLogic>
+        <Symptom>Modern applications fail to open</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B;EN-US;2780377</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 6253] [Windows] Win8:APP - Store Apps do not launch due to video resolution-->
+    <Rootcause>
+      <ID>RC_StoreAppsFailureForVideoResolutionCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1121009</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6365e3b2-040c-4511-9dce-aaf92f7a2282</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1121007</Name>
+            <Description>@DiagPackage.dll,-1121008</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-91189.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-97361.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Store Apps launching failure</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2620206</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18574</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7499] [Windows] Win8:APP - Skype fails to start-->
+    <Rootcause>
+      <ID>RC_SkypeFailureForMissingKB2703761Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1121004</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2865d80b-e1d4-44d1-9595-42d4b2291c09</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1121002</Name>
+            <Description>@DiagPackage.dll,-1121003</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-48983.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-7785.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Setup\WindowsFeatures Registry key exists and Media Player is installed</HighLevelLogic>
+        <Symptom>Skype launching failure in Windows 8</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>https://support.skype.com/en/faq/FA12201/why-is-skype-for-windows-8-crashing</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7544] [Windows] WinStore - Apps do not launch, because 'ALL APPLICATIONS PACKAGES' removed from DCOM ACL-->
+    <Rootcause>
+      <ID>RC_StoreAppsFailureForDCOMErrorCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1121012</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2ef58ab1-2f0a-4400-9306-e1f3bad9f937</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1121010</Name>
+            <Description>@DiagPackage.dll,-1121011</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-73896.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-16930.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>http://bemis.partners.extranet.microsoft.com/2831175</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7544] [Windows] WinStore - Apps do not launch, because 'ALL APPLICATIONS PACKAGES' removed from DCOM ACL-->
+    <Rootcause>
+      <ID>RC_StoreAppsFailureForAccessDCOMErrorCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1122080</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a242df4b-b95f-41d8-bd77-e8e44e614d9b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1122078</Name>
+            <Description>@DiagPackage.dll,-1122079</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-5640.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-36003.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>http://bemis.partners.extranet.microsoft.com/2831175 </InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7510] [Windows] WinStore - Apps fail to start if default registry permissions modified-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForRegistryPermissionCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120104</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a2e0ac62-77a3-4166-8205-904e37dbe869</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120102</Name>
+            <Description>@DiagPackage.dll,-1120103</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-6573.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-50279.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The permission of "All Applications Packages" group is removed from the specific registry keys</RootCause>
+        <HighLevelLogic>Detect if the permission of "All Applications Packages" group had been removed from the following registry keys: HKEY_CLASSES_ROOT; HKEY_LOCAL_MACHINE\Drivers; HKEY_LOCAL_MACHINE\HARDWARE; HKEY_LOCAL_MACHINE\SAM; HKEY_LOCAL_MACHINE\SOFTWARE; HKEY_LOCAL_MACHINE\SYSTEM; HKEY_USERS</HighLevelLogic>
+        <Symptom>Modern Applications fail to launch</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2798317</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7546] [Windows] WinStore - Modern Apps Fail to Start if the User Profile directory is Moved from default-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForUserProfileDirCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120114</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9ae1a1bc-0c98-4684-8d64-81d898371c0e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120112</Name>
+            <Description>@DiagPackage.dll,-1120113</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-32944.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-31475.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>User Profile directory is moved from the default location of C:\Users</RootCause>
+        <HighLevelLogic>Check if User Profile directory has been moved from the default location of C:\Users</HighLevelLogic>
+        <Symptom>Modern Apps fails to start</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2787623</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7547] [Windows] WinStore - Modern Apps Fail to Start if the ProgramData directory is Moved from default-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForProgramDataDirCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120119</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ae351b31-cedd-4267-8452-6dd9b2967f18</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120117</Name>
+            <Description>@DiagPackage.dll,-1120118</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-99524.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-55785.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>ProgramData directory was moved from default location</RootCause>
+        <HighLevelLogic>Check if ProgramData directory had been deleted from their default location</HighLevelLogic>
+        <Symptom>Modern Apps fail to start</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2787623</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7512] [Windows] WinStore - Apps fail to start if default file permissions modified-->
+    <Rootcause>
+      <ID>RC_ModernAppsFailureForFolderPermissionCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1120109</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b4c2498c-e3de-4337-9ac3-030c5c64ea8f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1120107</Name>
+            <Description>@DiagPackage.dll,-1120108</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75303.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The permission of "All Applications Packages" group was removed from specific folders</RootCause>
+        <HighLevelLogic>Detect if the permission of "All Applications Packages" group had been removed from the following folders: Program Files, Windows, Users\UserName\AppData\Local\Microsoft\Windows\WER</HighLevelLogic>
+        <Symptom>Modern Applications fail to launch</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2798317</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18588</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--FirewallCheck-->
+    <Rootcause>
+      <ID>RC_FirewallStartModeCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26235</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>876d2bb2-1f0f-413d-9027-7d4ab3927aa9</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26236</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-13165.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--FirewallCheck-->
+    <Rootcause>
+      <ID>RC_FirewallCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26211</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>26671bfd-16db-4928-867d-89e3cb5b9ad6</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26212</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <Rootcause>
+      <ID>RC_Blank</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1290</Name>
+        <Description>@DiagPackage.dll,-1291</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_Blank</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1292</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_Blank.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions>
+      <!--Windows Store Inbox Applications Interactive-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- MainDialog1: Choice1=Basic -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-1120002</Name>
+              <Description>@DiagPackage.dll,-1120003</Description>
+            </DisplayInformation>
+            <Value>Basic</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- MainDialog1: Choice2=Advanced -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-1120004</Name>
+              <Description>@DiagPackage.dll,-1120005</Description>
+            </DisplayInformation>
+            <Value>Advanced</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- MainDialog1 Details -->
+        <ID>WinStoreChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-1120006</Name>
+          <Description>@DiagPackage.dll,-1120007</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+    </SingleResponseInteractions>
+    <MultipleResponseInteractions>
+      <!--Windows Store Inbox Applications Interactive-->
+      <MultipleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Opt1-MSInfo32 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-1120020</Name>
+              <Description>@DiagPackage.dll,-1120021</Description>
+            </DisplayInformation>
+            <Value>Opt1-MSInfo32</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+        </Choices>
+        <ID>WinstoreAdvD1</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-1120030</Name>
+          <Description>@DiagPackage.dll,-1120031</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </MultipleResponseInteraction>
+    </MultipleResponseInteractions>
+    <TextInteractions />
+    <PauseInteractions />
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint>
+  </ExtensionPoint>
+</dcmPS:DiagnosticPackage>

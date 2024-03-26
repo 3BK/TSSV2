@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding = "UTF-8" standalone="no"?>
+<LangV1>
+	
+<!-- Menus -->
+<lang id='FileMenuEN'>&amp;File</lang>
+<lang id='FileMenuDE'>&amp;Datei</lang>
+<lang id='FileMenuHU'>&amp;F&#225;jl</lang>
+<lang id='FileMenuRO'>&amp;Fi&#351;ier</lang>
+<lang id='FileMenuFR'>&amp;Fichier</lang>
+<lang id='FileMenuIT'>&amp;File</lang>
+<lang id='FileMenuPT'>&amp;Arquivo</lang>
+
+<lang id='RunMenuEN'>&amp;Start data collection/diagnostics</lang>
+<lang id='RunMenuDE'>&amp;Daten sammeln/Diagnose starten</lang>
+<lang id='RunMenuHU'>&amp;Adatgy&#369;jt&#233;s/diagnosztika ind&#237;t&#225;sa</lang>
+<lang id='RunMenuRO'>&amp;Porni&#355;i colectarea de date/diagnosticarea</lang>
+<lang id='RunMenuFR'>&amp;D&#233;marrer la collecte de donn&#233;es / diagnostics</lang>
+<lang id='RunMenuIT'>&amp;Avvia raccolta dati/diagnostica</lang>
+<lang id='RunMenuPT'>&amp;Iniciar coleta de dados/diagn&#243;sticos</lang>
+
+<lang id='UpdateMenuEN'>Check for &amp;Update</lang>
+<lang id='UpdateMenuDE'>Nach &amp;Updates suchen</lang>
+<lang id='UpdateMenuHU'>Friss&#237;t&#233;sek ellen&#337;rz&#233;se</lang>
+<lang id='UpdateMenuRO'>Verificare &amp;actualizare</lang>
+<lang id='UpdateMenuFR'>V&#233;rifier les &amp;mises &#224; jour</lang>
+<lang id='UpdateMenuIT'>Controlla aggiornamenti</lang>
+<lang id='UpdateMenuPT'>Verificar &amp;Atualiza&#231;&#245;es</lang>
+
+<lang id='ExitMenuEN'>&amp;Exit</lang>
+<lang id='ExitMenuDE'>&amp;Beenden</lang>
+<lang id='ExitMenuHU'>&amp;Kil&#233;p&#233;s</lang>
+<lang id='ExitMenuRO'>&amp;Ie&#351;ire</lang>
+<lang id='ExitMenuFR'>&amp;Quitter</lang>
+<lang id='ExitMenuIT'>&amp;Esci</lang>
+<lang id='ExitMenuPT'>&amp;Sair</lang>
+
+<lang id='ViewMenuEN'>&amp;View</lang>
+<lang id='ViewMenuDE'>&amp;Ansicht</lang>
+<lang id='ViewMenuHU'>&amp;N&#233;zet</lang>
+<lang id='ViewMenuRO'>&amp;Vizualizare</lang>
+<lang id='ViewMenuFR'>&amp;Affichage</lang>
+<lang id='ViewMenuIT'>&amp;Visualizza</lang>
+<lang id='ViewMenuPT'>&amp;Visualizar</lang>
+
+<lang id='HideConsoleEN'>&amp;Show Console Window</lang>
+<lang id='HideConsoleDE'>&amp;Konsolenfenster anzeigen</lang>
+<lang id='HideConsoleHU'>&amp;Console ablak megjelen&#237;t&#233;se</lang>
+<lang id='HideConsoleRO'>&amp;Afi&#351;are fereastr&#259; consol&#259;</lang>
+<lang id='HideConsoleFR'>&amp;Afficher la fen&#234;tre de la console</lang>
+<lang id='HideConsoleIT'>&amp;Mostra finestra console</lang>
+<lang id='HideConsolePT'>&amp;Mostrar janela do console</lang>
+
+<lang id='AlwaysOnTopEN'>&amp;Always on Top</lang>
+<lang id='AlwaysOnTopDE'>&amp;Immer im Vordergrund</lang>
+<lang id='AlwaysOnTopHU'>&amp;Mindig az el&#337;t&#233;rben</lang>
+<lang id='AlwaysOnTopRO'>&amp;&#238;ntotdeauna deasupra</lang>
+<lang id='AlwaysOnTopFR'>&amp;Toujours en premier plan</lang>
+<lang id='AlwaysOnTopIT'>&amp;Sempre in primo piano</lang>
+<lang id='AlwaysOnTopPT'>&amp;Sempre no topo</lang>
+
+<lang id='OutputLocationEN'>&amp;Open Output Location</lang>
+<lang id='OutputLocationDE'>&amp;Ausgabeort &#214;ffnen</lang>
+<lang id='OutputLocationHU'>&amp;Kimeneti hely megnyit&#225;sa</lang>
+<lang id='OutputLocationRO'>&amp;Deschidere loca&#355;ie ie&#351;ire</lang>
+<lang id='OutputLocationFR'>&amp;Ouvrir l'emplacement de sortie</lang>
+<lang id='OutputLocationIT'>&amp;Apri posizione output</lang>
+<lang id='OutputLocationPT'>&amp;Abrir localiza&#231;&#227;o de sa&#237;da</lang>
+
+<lang id='DiagReportsEN'>&amp;Diagnostic Reports</lang>
+<lang id='DiagReportsDE'>&amp;Diagnoseberichte</lang>
+<lang id='DiagReportsHU'>&amp;Diagnosztikai jelent&#233;sek</lang>
+<lang id='DiagReportsRO'>Rapoarte de &amp;diagnosticare</lang>
+<lang id='DiagReportsFR'>Rapports de &amp;diagnostic</lang>
+<lang id='DiagReportsIT'>Rapporti &amp;diagnostici</lang>
+<lang id='DiagReportsPT'>Relat&#243;rios de &amp;diagn&#243;stico</lang>
+	
+<lang id='ToolsMenuEN'>&amp;Tools</lang>
+<lang id='ToolsMenuDE'>&amp;Tools</lang>
+<lang id='ToolsMenuHU'>&amp;Eszk&#246;z&#246;k</lang>
+<lang id='ToolsMenuRO'>&amp;Instrumente</lang>
+<lang id='ToolsMenuFR'>&amp;Outils</lang>
+<lang id='ToolsMenuIT'>&amp;Strumenti</lang>
+<lang id='ToolsMenuPT'>&amp;Ferramentas</lang>
+
+<lang id='SetOutputLocationEN'>Set &amp;Output Location...</lang>
+<lang id='SetOutputLocationDE'>&amp;Ausgabeort festlegen...</lang>
+<lang id='SetOutputLocationHU'>Kimeneti hely &amp;be&#225;ll&#237;t&#225;sa...</lang>
+<lang id='SetOutputLocationRO'>Setare loca&#355;ie de &amp;ie&#351;ire...</lang>
+<lang id='SetOutputLocationFR'>D&#233;finir l'emplacement de &amp;sortie...</lang>
+<lang id='SetOutputLocationIT'>Imposta posizione &amp;output...</lang>
+<lang id='SetOutputLocationPT'>Definir &amp;local de sa&#237;da...</lang>
+
+<lang id='SetUserContextEN'>Set &amp;User Context...</lang>
+<lang id='SetUserContextDE'>&amp;Benutzerkontext festlegen...</lang>
+<lang id='SetUserContextHU'>Felhaszn&#225;l&#243;i &amp;k&#246;rnyezet be&#225;ll&#237;t&#225;sa...</lang>
+<lang id='SetUserContextRO'>Setare context de &amp;utilizator...</lang>
+<lang id='SetUserContextFR'>D&#233;finir le &amp;contexte utilisateur...</lang>
+<lang id='SetUserContextIT'>Imposta &amp;contesto utente...</lang>
+<lang id='SetUserContextPT'>Definir &amp;contexto do usu&#225;rio...</lang>
+
+<lang id='ConfigDataCollectionEN'>Configure data &amp;collection...</lang>
+<lang id='ConfigDataCollectionDE'>Daten &amp;sammeln konfigurieren...</lang>
+<lang id='ConfigDataCollectionHU'>Adatgy&#369;jt&#233;s &amp;konfigur&#225;l&#225;sa...</lang>
+<lang id='ConfigDataCollectionRO'>Configurare &amp;colectare de date...</lang>
+<lang id='ConfigDataCollectionFR'>Configurer la &amp;collecte de donn&#233;es...</lang>
+<lang id='ConfigDataCollectionIT'>Configura raccolta &amp;dati...</lang>
+<lang id='ConfigDataCollectionPT'>Configurar &amp;coleta de dados...</lang>
+
+<lang id='ConfigDiagEN'>Configure &amp;diagnostics...</lang>
+<lang id='ConfigDiagDE'>Diagnose &amp;konfigurieren...</lang>
+<lang id='ConfigDiagHU'>Diagnosztika &amp;konfigur&#225;l&#225;sa...</lang>
+<lang id='ConfigDiagRO'>Configurare &amp;diagnosticare...</lang>
+<lang id='ConfigDiagFR'>Configurer les &amp;diagnostics...</lang>
+<lang id='ConfigDiagIT'>Configura &amp;diagnostica...</lang>
+<lang id='ConfigDiagPT'>Configurar &amp;diagn&#243;sticos...</lang>
+
+<lang id='AutoVerCheckEN'>Check for Update on launch</lang>
+<lang id='AutoVerCheckDE'>Beim Start auf Updates pr&#252;fen</lang>
+<lang id='AutoVerCheckHU'>Ellen&#336;rizze az friss&#237;t&#233;seket ind&#237;t&#225;skor</lang>
+<lang id='AutoVerCheckRO'>Verifica&#355;i actualiz&#259;rile la lansare</lang>
+
+<lang id='HelpMenuEN'>&amp;Help</lang>
+<lang id='HelpMenuDE'>&amp;Hilfe</lang>
+<lang id='HelpMenuHU'>&amp;S&#250;g&#243;</lang>
+<lang id='HelpMenuRO'>&amp;Ajutor</lang>
+<lang id='HelpMenuFR'>&amp;Aide</lang>
+<lang id='HelpMenuIT'>&amp;Aiuto</lang>
+<lang id='HelpMenuPT'>&amp;Ajuda</lang>
+
+<lang id='ReadMeEN'>&amp;ReadMe</lang>
+<lang id='ReadMeDE'>&amp;ReadMe</lang>
+<lang id='ReadMeHU'>&amp;ReadMe</lang>
+<lang id='ReadMeRO'>&amp;ReadMe</lang>
+<lang id='ReadMeFR'>&amp;Lisez-moi</lang>
+<lang id='ReadMeIT'>&amp;ReadMe</lang>
+<lang id='ReadMePT'>&amp;Leia-me</lang>
+
+<lang id='WhatsNewEN'>&amp;What's New</lang>
+<lang id='WhatsNewDE'>&amp;Was ist neu</lang>
+<lang id='WhatsNewHU'>&amp;Mi az &#250;j</lang>
+<lang id='WhatsNewRO'>&amp;Ce este nou</lang>
+<lang id='WhatsNewFR'>&amp;Quoi de neuf</lang>
+<lang id='WhatsNewIT'>&amp;Novit&#224;</lang>
+<lang id='WhatsNewPT'>&amp;O que h&#225; de novo</lang>
+
+<lang id='DownloadEN'>&amp;Downloads</lang>
+<lang id='DownloadDE'>&amp;Downloads</lang>
+<lang id='DownloadHU'>&amp;Let&#246;lt&#233;sek</lang>
+<lang id='DownloadRO'>&amp;Desc&#259;rc&#259;ri</lang>
+<lang id='DownloadFR'>&amp;T&#233;l&#233;chargements</lang>
+<lang id='DownloadIT'>&amp;Download</lang>
+<lang id='DownloadPT'>&amp;Downloads</lang>
+
+<lang id='DownloadMSRDCEN'>Get &amp;MSRD-Collect</lang>
+<lang id='DownloadMSRDCDE'>&amp;MSRD-Collect erhalten</lang>
+<lang id='DownloadMSRDCHU'>&amp;MSRD-Collect let&#246;lt&#233;se</lang>
+<lang id='DownloadMSRDCRO'>Ob&#355;ine&#355;i &amp;MSRD-Collect</lang>
+<lang id='DownloadMSRDCFR'>Obtenir &amp;MSRD-Collect</lang>
+<lang id='DownloadMSRDCIT'>Ottieni &amp;MSRD-Collect</lang>
+<lang id='DownloadMSRDCPT'>Obter &amp;MSRD-Collect</lang>
+
+<lang id='DownloadRDSTracingEN'>Get &amp;RDSTracing</lang>
+<lang id='DownloadRDSTracingDE'>&amp;RDSTracing erhalten</lang>
+<lang id='DownloadRDSTracingHU'>&amp;RDSTracing let&#246;lt&#233;se</lang>
+<lang id='DownloadRDSTracingRO'>Ob&#355;ine&#355;i &amp;RDSTracing</lang>
+<lang id='DownloadRDSTracingFR'>Obtenir &amp;RDSTracing</lang>
+<lang id='DownloadRDSTracingIT'>Ottieni &amp;RDSTracing</lang>
+<lang id='DownloadRDSTracingPT'>Obter &amp;RDSTracing</lang>
+
+<lang id='DownloadTSSv2EN'>Get &amp;TSSv2</lang>
+<lang id='DownloadTSSv2DE'>&amp;TSSv2 erhalten</lang>
+<lang id='DownloadTSSv2HU'>&amp;TSSv2 let&#246;lt&#233;se</lang>
+<lang id='DownloadTSSv2RO'>Ob&#355;ine&#355;i &amp;TSSv2</lang>
+<lang id='DownloadTSSv2FR'>Obtenir &amp;TSSv2</lang>
+<lang id='DownloadTSSv2IT'>Ottieni &amp;TSSv2</lang>
+<lang id='DownloadTSSv2PT'>Obter &amp;TSSv2</lang>
+	
+<lang id='MSDocsEN'>&amp;Microsoft Docs</lang>
+
+<lang id='AVDEN'>&amp;Azure Virtual Desktop</lang>
+
+<lang id='FSLogixEN'>&amp;FSLogix</lang>
+
+<lang id='RDSEN'>&amp;Remote Desktop Services</lang>
+	
+<lang id='365EN'>&amp;Windows 365</lang>
+	
+<lang id='TechCommunityEN'>Microsoft &amp;TechCommunity</lang>
+	
+<lang id='TCAVDEN'>&amp;Azure Virtual Desktop</lang>
+	
+<lang id='TC365EN'>&amp;Windows 365</lang>
+	
+<lang id='AzureMenuEN'>A&amp;zure</lang>
+	
+<lang id='AzOutageNotificationEN'>&amp;Get notified of outages that impact you (Docs)</lang>
+<lang id='AzOutageNotificationDE'>&amp;Benachrichtigung &#252;ber Ausf&#228;lle, die Sie betreffen (Docs)</lang>
+<lang id='AzOutageNotificationHU'>&amp;&#201;rtes&#252;lj&#246;n a rendelkez&#233;sre &#225;ll&#225;si probl&#233;m&#225;kr&#243;l, amelyek &#214;nt &#233;rintik (Dokumentumok)</lang>
+<lang id='AzOutageNotificationRO'>&amp;Fi&#355;i notificat &#238;n cazul &#238;n care apar probleme care v&#259; afecteaz&#259; (Documente)</lang>
+<lang id='AzOutageNotificationFR'>&amp;Recevoir des notifications en cas d'interruptions de service qui vous concernent (Docs)</lang>
+<lang id='AzOutageNotificationIT'>&amp;Ricevi notifiche in caso di interruzioni che ti riguardano (Documenti)</lang>
+<lang id='AzOutageNotificationPT'>&amp;Seja notificado de interrupções que afetam voc&#234; (Docs)</lang>
+
+<lang id='AzStatusEN'>&amp;Azure Status</lang>
+<lang id='AzStatusDE'>Azure &amp;Status</lang>
+<lang id='AzStatusHU'>Azure &amp;St&#225;tusz</lang>
+<lang id='AzStatusRO'>&amp;Stare Azure</lang>
+<lang id='AzStatusFR'>&amp;&#201;tat Azure</lang>
+<lang id='AzStatusIT'>&amp;Stato Azure</lang>
+<lang id='AzStatusPT'>&amp;Status do Azure</lang>
+
+<lang id='AzStatusHistEN'>Azure &amp;Status History</lang>
+<lang id='AzStatusHistDE'>Azure &amp;Statusverlauf</lang>
+<lang id='AzStatusHistHU'>Azure &amp;St&#225;tusz el&#337;zm&#233;nyek</lang>
+<lang id='AzStatusHistRO'>Istoric &amp;stare Azure</lang>
+<lang id='AzStatusHistFR'>Historique des &amp;&#233;tats Azure</lang>
+<lang id='AzStatusHistIT'>Storico &amp;stato Azure</lang>
+<lang id='AzStatusHistPT'>Hist&#243;rico de &amp;status do Azure</lang>
+
+<lang id='AzServHealthEN'>Azure Service &amp;Health</lang>	
+
+<lang id='FeedbackEmailEN'>Provide Feedback (&amp;email)</lang>
+<lang id='FeedbackEmailDE'>Feedback geben (&amp;E-Mail)</lang>
+<lang id='FeedbackEmailHU'>&amp;Visszajelz&#233;s k&#252;ld&#233;se (e-mailben)</lang>
+<lang id='FeedbackEmailRO'>Furniza&#355;i feedback (&amp;email)</lang>
+<lang id='FeedbackEmailFR'>Fournir des commentaires (&amp;email)</lang>
+<lang id='FeedbackEmailIT'>Fornisci feedback (&amp;email)</lang>
+<lang id='FeedbackEmailPT'>Fornecer feedback (&amp;e-mail)</lang>
+
+<lang id='FeedbackSurveyEN'>Provide Feedback (&amp;survey)</lang>
+<lang id='FeedbackSurveyDE'>Feedback geben (&amp;Umfrage)</lang>
+<lang id='FeedbackSurveyHU'>&amp;Visszajelz&#233;s k&#252;ld&#233;se (k&#233;rd&#337;&#237;vvel)</lang>
+<lang id='FeedbackSurveyRO'>Furniza&#355;i feedback (&amp;chestionar)</lang>
+<lang id='FeedbackSurveyFR'>Fournir des commentaires (&amp;enqu&#234;te)</lang>
+<lang id='FeedbackSurveyIT'>Fornisci feedback (&amp;sondaggio)</lang>
+<lang id='FeedbackSurveyPT'>Fornecer feedback (&amp;pesquisa)</lang>
+
+<lang id='AboutEN'>&amp;About</lang>
+<lang id='AboutDE'>&amp;Info</lang>
+<lang id='AboutHU'>&amp;N&#233;vjegy</lang>
+<lang id='AboutRO'>&amp;Despre</lang>
+<lang id='AboutFR'>&amp;&#192; propos</lang>
+<lang id='AboutIT'>&amp;Informazioni su</lang>
+<lang id='AboutPT'>&amp;Sobre</lang>
+
+
+<!-- Buttons -->
+<lang id='btnSourceEN'>Source</lang>	
+<lang id='btnAVDEN'>AVD</lang>
+<lang id='btnRDSEN'>RDS</lang>
+<lang id='btnCoreEN'>Core</lang>
+<lang id='btnProfilesEN'>Profiles</lang>
+<lang id='btnActivationEN'>Activation</lang>
+<lang id='btnMSRAEN'>MSRA</lang>
+<lang id='btnSCardEN'>SCard</lang>
+<lang id='btnIMEEN'>IME</lang>
+<lang id='btnTeamsEN'>Teams</lang>
+<lang id='btnMSIXAAEN'>MSIXAA</lang>
+<lang id='btnHCIEN'>HCI</lang>
+<lang id='btnProcDumpEN'>DumpPID</lang>
+<lang id='btnDiagOnlyEN'>DiagOnly</lang>
+<lang id='btnNetTraceEN'>NetTrace</lang>
+
+<lang id='StartEN'>Start</lang>
+<lang id='StartDE'>Starten</lang>
+<lang id='StartHU'>Ind&#237;t&#225;s</lang>
+<lang id='StartRO'>Pornire</lang>
+<lang id='StartFR'>D&#233;marrer</lang>
+<lang id='StartIT'>Avvia</lang>
+<lang id='StartPT'>Iniciar</lang>
+
+<lang id='RunningEN'>Running</lang>
+<lang id='RunningDE'>L&#228;uft</lang>
+<lang id='RunningHU'>Fut</lang>
+<lang id='RunningRO'>Ruleaz&#259;</lang>
+<lang id='RunningFR'>En cours</lang>
+<lang id='RunningIT'>In esecuzione</lang>
+<lang id='RunningPT'>Executando</lang>
+
+
+<!-- Language dropdown -->
+<lang id='engEN'>EN</lang>
+<lang id='gerEN'>DE</lang>
+<lang id='hunEN'>HU</lang>
+<lang id='romEN'>RO</lang>
+<lang id='fraEN'>FR</lang>
+<lang id='itaEN'>IT</lang>
+<lang id='porEN'>PT</lang>
+
+
+<!-- Other UI elements -->
+<lang id='surveyLink1EN'>How do you like this script?</lang>
+<lang id='surveyLink1DE'>Wie gef&#228;llt Ihnen dieses Skript?</lang>
+<lang id='surveyLink1HU'>Hogy tetszik ez a script?</lang>
+<lang id='surveyLink1RO'>Cum v&#259; place acest script?</lang>
+<lang id='surveyLink1FR'>Comment trouvez-vous ce script?</lang>
+<lang id='surveyLink1IT'>Come ti piace questo script?</lang>
+<lang id='surveyLink1PT'>Como voc&#234; gosta desse script?</lang>
+
+<lang id='surveyLink2EN'>MSRD-Collect Satisfaction Survey</lang>
+<lang id='surveyLink2DE'>MSRD-Collect Zufriedenheitsumfrage</lang>
+<lang id='surveyLink2HU'>MSRD-Collect el&#233;gedetts&#233;gi felm&#233;r&#233;s</lang>
+<lang id='surveyLink2RO'>Chestionar de satisfac&#355;ie MSRD-Collect</lang>
+<lang id='surveyLink2FR'>Enqu&#234;te de satisfaction MSRD-Collect</lang>
+<lang id='surveyLink2IT'>Sondaggio di soddisfazione MSRD-Collect</lang>
+<lang id='surveyLink2PT'>Pesquisa de satisfa&#231;&#227;o do MSRD-Collect</lang>
+
+<lang id='ReadyEN'>Ready</lang>
+<lang id='ReadyDE'>Bereit</lang>
+<lang id='ReadyHU'>K&#233;sz</lang>
+<lang id='ReadyRO'>Gata</lang>
+<lang id='ReadyFR'>Pr&#234;t</lang>
+<lang id='ReadyIT'>Pronto</lang>
+<lang id='ReadyPT'>Pronto</lang>
+
+<lang id='checkupdEN'>Checking for updates. Please wait...</lang>
+<lang id='checkupdDE'>Suche nach Updates. Bitte warten...</lang>
+<lang id='checkupdHU'>Friss&#237;t&#233;sek ellen&#337;rz&#233;se. K&#233;rem, v&#225;rjon...</lang>
+<lang id='checkupdRO'>Se verific&#259; actualiz&#259;rile. V&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='checkupdFR'>V&#233;rification des mises &#224; jour. Veuillez patienter...</lang>
+<lang id='checkupdIT'>Verifica degli aggiornamenti in corso. Attendere...</lang>
+<lang id='checkupdPT'>Verificando atualiza&#231;&#245;es. Por favor aguarde...</lang>
+
+<lang id='collecting1EN'>Collecting</lang>
+<lang id='collecting1DE'>Sammlung von</lang>
+<lang id='collecting1HU'>Adatgy&#369;jt&#233;s</lang>
+<lang id='collecting1RO'>Se colecteaz&#259; date de</lang>
+<lang id='collecting1FR'>Collecte de donn&#233;</lang>
+<lang id='collecting1IT'>Raccolta</lang>
+<lang id='collecting1PT'>Coletando</lang>
+
+<lang id='collecting2EN'>data. Please wait...</lang>
+<lang id='collecting2DE'>Daten. Bitte warten...</lang>
+<lang id='collecting2HU'>. K&#233;rem, v&#225;rjon...</lang>
+<lang id='collecting2RO'>. V&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='collecting2FR'>. Veuillez patienter...</lang>
+<lang id='collecting2IT'>dati. Attendere...</lang>
+<lang id='collecting2PT'>dados. Por favor aguarde...</lang>
+
+<lang id='waitEN'>Please wait...</lang>
+<lang id='waitDE'>Bitte warten...</lang>
+<lang id='waitHU'>K&#233;rem, v&#225;rjon...</lang>
+<lang id='waitRO'>V&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='waitFR'>Veuillez patienter...</lang>
+<lang id='waitIT'>Attendere...</lang>
+<lang id='waitPT'>Por favor aguarde...</lang>
+
+
+<!-- Initial parameters -->
+<lang id='initvalues1EN'>Script launched from:</lang>
+<lang id='initvalues1DE'>Skript gestartet von:</lang>
+<lang id='initvalues1HU'>Script elind&#237;tva innen:</lang>
+<lang id='initvalues1RO'>Script lansat din:</lang>
+<lang id='initvalues1FR'>Script lanc&#233; depuis :</lang>
+<lang id='initvalues1IT'>Script avviato da:</lang>
+<lang id='initvalues1PT'>Script iniciado a partir de:</lang>
+
+<lang id='initvalues2EN'>EULA and Notice accepted</lang>
+<lang id='initvalues2DE'>EULA und Hinweis akzeptiert</lang>
+<lang id='initvalues2HU'>EULA &#233;s Figyelmeztet&#233;s elfogadva</lang>
+<lang id='initvalues2RO'>EULA &#351;i Notificarea CSS acceptate</lang>
+<lang id='initvalues2FR'>EULA et Avis accept&#233;s</lang>
+<lang id='initvalues2IT'>EULA e avviso accettati</lang>
+<lang id='initvalues2PT'>EULA e aviso aceitos</lang>
+
+<lang id='initvalues3EN'>Output location:</lang>
+<lang id='initvalues3DE'>Ausgabeort:</lang>
+<lang id='initvalues3HU'>Kimeneti hely:</lang>
+<lang id='initvalues3RO'>Loca&#355;ia de ie&#351;ire:</lang>
+<lang id='initvalues3FR'>Emplacement de sortie :</lang>
+<lang id='initvalues3IT'>Posizione di output:</lang>
+<lang id='initvalues3PT'>Local de sa&#237;da:</lang>
+
+<lang id='initvalues4EN'>User context:</lang>
+<lang id='initvalues4DE'>Benutzerkontext:</lang>
+<lang id='initvalues4HU'>Felhaszn&#225;l&#243;i kontextus:</lang>
+<lang id='initvalues4RO'>Contextul utilizatorului:</lang>
+<lang id='initvalues4FR'>Contexte utilisateur :</lang>
+<lang id='initvalues4IT'>Contesto utente:</lang>
+<lang id='initvalues4PT'>Contexto do usu&#225;rio:</lang>
+
+
+<!-- MS Teams -->
+<lang id='teamsnoteEN'>For troubleshooting Teams issues, it is recommended to generate fresh Teams Debug Logs first.
+See: https://docs.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+To generate these debug logs, open the affected Teams app (using the same user account/context as for this data collection) and press CTRL+ALT+SHIFT+1 within Teams.
+Teams will generate diagnostic logs which can be collected by this script.
+
+If you already have these logs or do not need them, select 'Retry' to continue. 
+Otherwise select 'Cancel', generate the Teams debug logs and start the data collection again.</lang>
+<lang id='teamsnoteDE'>F&#252;r die Fehlerbehebung von Teams-Problemen wird empfohlen, zuerst frische Teams-Debug-Logs zu generieren.
+Siehe: https://docs.microsoft.com/de-de/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Um diese Debug-Logs zu generieren, &#246;ffnen Sie die betroffene Teams-App (mit demselben Benutzerkonto/Kontext wie f&#252;r diese Datensammlung) und dr&#252;cken Sie innerhalb von Teams die Tastenkombination CTRL+ALT+SHIFT+1.
+Teams generiert Diagnose-Logs, die von diesem Skript gesammelt werden k&#246;nnen.
+
+Wenn Sie diese Logs bereits haben oder nicht ben&#246;tigen, w&#228;hlen Sie "Wiederholen", um fortzufahren. Andernfalls w&#228;hlen Sie "Abbrechen", generieren die Teams-Debug-Logs und starten die Datensammlung erneut.</lang>
+<lang id='teamsnoteHU'>
+A Teams probl&#233;m&#225;k hibaelh&#225;r&#237;t&#225;sa &#233;rdek&#233;ben javasolt el&#337;sz&#246;r friss Teams hibakeres&#233;si napl&#243;kat l&#233;trehozni.
+L&#225;sd: https://docs.microsoft.com/hu-hu/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Ezeknek a hibakeres&#233;si napl&#243;knak a l&#233;trehoz&#225;s&#225;hoz nyissa meg a &#233;rintett Teams alkalmaz&#225;st (ugyanazzal a felhaszn&#225;l&#243;i fi&#243;kkal/k&#246;rnyezettel, mint a adatgy&#369;jt&#233;s eset&#233;ben) &#233;s nyomja meg a CTRL+ALT+SHIFT+1 billenty&#369;ket a Teams-en bel&#252;l.
+A Teams diagnosztikai napl&#243;kat fog gener&#225;lni, amelyeket ezzel a szkripttel lehet gy&#369;jteni.
+
+Ha m&#225;r rendelkezik ezekkel a napl&#243;kkal, vagy nem sz&#252;ks&#233;gesek, v&#225;lassza a '&#250;jra' lehet&#337;s&#233;get a folytat&#225;shoz.
+Ellenkez&#337; esetben v&#225;lassza a 'Cancel' gombot, hozza l&#233;tre a Teams hibakeres&#233;si napl&#243;kat, majd ind&#237;tsa el &#250;jra az adatgy&#369;jt&#233;st.
+</lang>
+<lang id='teamsnoteRO'>
+Pentru depanarea problemelor din Teams, se recomand&#259; generarea mai &#238;nt&#226;i a jurnalului de depanare Teams.
+Vede&#355;i: https://docs.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Pentru a genera aceste jurnale de depanare, deschide&#355;i aplica&#355;ia Teams afectat&#259; (utiliz&#226;nd acela&#351;i cont de utilizator/context ca &#351;i pentru aceast&#259; colectare de date) &#351;i ap&#259;sa&#355;i CTRL+ALT+SHIFT+1 &#238;n cadrul aplica&#355;iei Teams.
+Teams va genera jurnale de diagnosticare care pot fi colectate de acest script.
+
+Dac&#259; ave&#355;i deja aceste jurnale sau nu ave&#355;i nevoie de ele, selecta&#355;i „Re&#238;ncerca&#355;i” pentru a continua.
+&#238;n caz contrar, selecta&#355;i „Anula&#355;i”, genera&#355;i jurnalele de depanare Teams &#351;i relua&#355;i colectarea de date.
+</lang>
+<lang id='teamsnoteFR'>
+Pour r&#233;soudre les probl&#232;mes de Teams, il est recommand&#233; de g&#233;n&#233;rer des journaux de d&#233;bogage Teams frais en premier lieu.
+Voir : https://docs.microsoft.com/fr-fr/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Pour g&#233;n&#233;rer ces journaux de d&#233;bogage, ouvrez l'application Teams affect&#233;e (en utilisant le m&#234;me compte/contexte utilisateur que pour cette collecte de donn&#233;es) et appuyez sur CTRL+ALT+MAJ+1 dans Teams.
+Teams g&#233;n&#233;rera des journaux de diagnostic qui peuvent &#234;tre collect&#233;s par ce script.
+
+Si vous avez d&#233;j&#224; ces journaux ou si vous n'en avez pas besoin, s&#233;lectionnez "Retry" pour continuer.
+Sinon, s&#233;lectionnez "Cancel", g&#233;n&#233;rez les journaux de d&#233;bogage Teams et recommencez la collecte de donn&#233;es.
+</lang>
+<lang id='teamsnoteIT'>
+Per risolvere i problemi di Teams, &#232; consigliabile prima generare i log di debug di Teams aggiornati.
+Vedi: https://docs.microsoft.com/it-it/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Per generare questi log di debug, aprire l'app Teams interessata (usando lo stesso account utente/contesto di questa raccolta dati) e premere CTRL+ALT+MAIUSC+1 all'interno di Teams.
+Teams generer&#224; log di diagnostica che possono essere raccolti da questo script.
+
+Se hai gi&#224; questi log o non ne hai bisogno, seleziona 'Retry' per continuare.
+In caso contrario, selezionare 'Cancel', generare i log di debug di Teams e avviare nuovamente la raccolta dati.
+</lang>
+<lang id='teamsnotePT'>
+Para solu&#231;&#227;o de problemas com o Teams, é recomendado gerar novos logs de depura&#231;&#227;o do Teams primeiro.
+Consulte: https://docs.microsoft.com/en-us/azure/virtual-desktop/teams-on-avd#collect-teams-logs
+
+Para gerar esses logs de depura&#231;&#227;o, abra o aplicativo Teams afetado (usando a mesma conta/contexto de usu&#225;rio desta coleta de dados) e pressione CTRL+ALT+SHIFT+1 dentro do Teams.
+O Teams gerar&#225; logs de diagn&#243;stico que podem ser coletados por este script.
+
+Se voc&#234; j&#225; possui esses logs ou n&#227;o precisa deles, selecione 'Retry' para continuar.
+Caso contr&#225;rio, selecione 'Cancel', gere os logs de depura&#231;&#227;o do Teams e inicie a coleta de dados novamente.
+</lang>
+
+<lang id='teamstitleEN'>Collecting Teams troubleshooting data</lang>
+<lang id='teamstitleDE'>Sammeln von Teams-Fehlerbehebungsdaten</lang>
+<lang id='teamstitleHU'>Teams hibaelh&#225;r&#237;t&#225;si adatok gy&#369;jt&#233;se</lang>
+<lang id='teamstitleRO'>Colectarea datelor de depanare Teams</lang>
+<lang id='teamstitleFR'>Collecte de donn&#233;es de d&#233;pannage Teams</lang>
+<lang id='teamstitleIT'>Raccolta dati di risoluzione dei problemi di Teams</lang>
+<lang id='teamstitlePT'>Coletando dados de solu&#231;&#227;o de problemas do Teams</lang>
+
+
+<!-- Dumps -->
+<lang id='dpidtext1EN'>Select the running process to dump</lang>
+<lang id='dpidtext1DE'>W&#228;hlen Sie den laufenden Prozess aus, um ein Dump zu erstellen</lang>
+<lang id='dpidtext1HU'>V&#225;lassza ki a fut&#243; folyamatot a dump elk&#233;szit&#233;s&#233;hez</lang>
+<lang id='dpidtext1RO'>Selecta&#355;i procesul &#238;n execu&#355;ie pentru a genera un dump de memorie</lang>
+<lang id='dpidtext1FR'>S&#233;lectionnez le processus en cours d'ex&#233;cution &#224; vider</lang>
+<lang id='dpidtext1IT'>Seleziona il processo in esecuzione da cui effettuare il dump</lang>
+<lang id='dpidtext1PT'>Selecione o processo em execu&#231;&#227;o para o dump</lang>
+
+<lang id='dpidtext2EN'>Select a process</lang>
+<lang id='dpidtext2DE'>W&#228;hlen Sie einen Prozess aus</lang>
+<lang id='dpidtext2HU'>V&#225;lasszon folyamatot</lang>
+<lang id='dpidtext2RO'>Selecta&#355;i un proces</lang>
+<lang id='dpidtext2FR'>S&#233;lectionner un processus</lang>
+<lang id='dpidtext2IT'>Seleziona un processo</lang>
+<lang id='dpidtext2PT'>Selecione um processo</lang>
+
+<lang id='dpidtext3EN'>Process (PID) selected for process dump:</lang>
+<lang id='dpidtext3DE'>Prozess (PID) ausgew&#228;hlt f&#252;r Prozess-Dump:</lang>
+<lang id='dpidtext3HU'>A folyamat dump-hoz kiv&#225;lasztott folyamat (PID):</lang>
+<lang id='dpidtext3RO'>Procesul (PID-ul) selectat pentru dump-ul de proces:</lang>
+<lang id='dpidtext3FR'>Processus (PID) s&#233;lectionn&#233; pour le vidage de processus :</lang>
+<lang id='dpidtext3IT'>Processo (PID) selezionato per il dump del processo:</lang>
+<lang id='dpidtext3PT'>Processo (PID) selecionado para o dump de processo:</lang>
+
+<lang id='dpidtext4EN'>No PID selected - no process dump will be generated</lang>
+<lang id='dpidtext4DE'>Keine PID ausgew&#228;hlt - es wird kein Prozess-Dump generiert</lang>
+<lang id='dpidtext4HU'>Nincs kiv&#225;lasztva PID - nem lesz folyamat dump gener&#225;lva</lang>
+<lang id='dpidtext4RO'>Niciun PID selectat - nu se va genera un dump de proces</lang>
+<lang id='dpidtext4FR'>Aucun PID s&#233;lectionn&#233; - aucun vidage de processus ne sera g&#233;n&#233;r&#233;</lang>
+<lang id='dpidtext4IT'>Nessun PID selezionato - non verr&#224; generato alcun dump del processo</lang>
+<lang id='dpidtext4PT'>Nenhum PID selecionado - nenhum dump de processo ser&#225; gerado</lang>
+
+
+<!-- Script actions -->
+<lang id='rdcmsgEN'>Running data collection - please wait ...</lang>
+<lang id='rdcmsgDE'>Datensammlung wird ausgef&#252;hrt - bitte warten ...</lang>
+<lang id='rdcmsgHU'>Adatgy&#369;jt&#233;s folyamatban - k&#233;rj&#252;k v&#225;rjon...</lang>
+<lang id='rdcmsgRO'>Se colecteaz&#259; datele - v&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='rdcmsgFR'>Collecte de donn&#233;es en cours - veuillez patienter...</lang>
+<lang id='rdcmsgIT'>Esecuzione della raccolta dati in corso - attendere...</lang>
+<lang id='rdcmsgPT'>Executando a coleta de dados - aguarde...</lang>
+
+<lang id='fdcmsgEN'>Finished data collection</lang>
+<lang id='fdcmsgDE'>Datensammlung abgeschlossen</lang>
+<lang id='fdcmsgHU'>Adatgy&#369;jt&#233;s k&#233;sz</lang>
+<lang id='fdcmsgRO'>Colectarea datelor a fost finalizat&#259;</lang>
+<lang id='fdcmsgFR'>Collecte de donn&#233;es termin&#233;e</lang>
+<lang id='fdcmsgIT'>Raccolta dati completata</lang>
+<lang id='fdcmsgPT'>Coleta de dados finalizada</lang>
+
+<lang id='rdiagmsgEN'>Running diagnostics - please wait...</lang>
+<lang id='rdiagmsgDE'>Diagnose wird ausgef&#252;hrt - bitte warten ...</lang>
+<lang id='rdiagmsgHU'>Diagnosztiz&#225;l&#225;s folyamatban - k&#233;rj&#252;k v&#225;rjon...</lang>
+<lang id='rdiagmsgRO'>Se ruleaz&#259; diagnosticul - v&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='rdiagmsgFR'>Ex&#233;cution des diagnostics - veuillez patienter...</lang>
+<lang id='rdiagmsgIT'>Esecuzione della diagnostica in corso - attendere...</lang>
+<lang id='rdiagmsgPT'>Executando diagn&#243;sticos - aguarde...</lang>
+
+<lang id='checkmsgEN'>Checking:</lang>
+<lang id='checkmsgDE'>&#220;berpr&#252;fung:</lang>
+<lang id='checkmsgHU'>Ellen&#337;rz&#233;s:</lang>
+<lang id='checkmsgRO'>Se verific&#259;:</lang>
+<lang id='checkmsgFR'>V&#233;rification:</lang>
+<lang id='checkmsgIT'>Verifica:</lang>
+<lang id='checkmsgPT'>Verificando:</lang>
+
+<lang id='fdiagmsgEN'>Finished diagnostics</lang>
+<lang id='fdiagmsgDE'>Diagnose abgeschlossen</lang>
+<lang id='fdiagmsgHU'>Diagnosztiz&#225;l&#225;s k&#233;sz</lang>
+<lang id='fdiagmsgRO'>Diagnosticul a fost finalizat</lang>
+<lang id='fdiagmsgFR'>Diagnostics termin&#233;s</lang>
+<lang id='fdiagmsgIT'>Diagnostica completata</lang>
+<lang id='fdiagmsgPT'>Diagn&#243;sticos finalizados</lang>
+
+<lang id='archmsgEN'>Archiving results - please wait!</lang>
+<lang id='archmsgDE'>Ergebnisse werden archiviert - bitte warten!</lang>
+<lang id='archmsgHU'>Eredm&#233;nyek archiv&#225;l&#225;sa - k&#233;rj&#252;k v&#225;rjon!</lang>
+<lang id='archmsgRO'>Se arhiveaz&#259; rezultatele - v&#259; rog s&#259; a&#351;tepta&#355;i!</lang>
+<lang id='archmsgFR'>Archivage des r&#233;sultats - veuillez patienter !</lang>
+<lang id='archmsgIT'>Archiviazione dei risultati in corso - attendere!</lang>
+<lang id='archmsgPT'>Arquivando resultados - aguarde!</lang>
+
+<lang id='zipmsgEN'>Zip file ready:</lang>
+<lang id='zipmsgDE'>Zip-Datei ist bereit:</lang>
+<lang id='zipmsgHU'>Zip f&#225;jl k&#233;sz:</lang>
+<lang id='zipmsgRO'>Fi&#351;ierul zip este preg&#259;tit:</lang>
+<lang id='zipmsgFR'>Fichier zip pr&#234;t:</lang>
+<lang id='zipmsgIT'>File zip pronto:</lang>
+<lang id='zipmsgPT'>Arquivo zip pronto:</lang>
+
+<lang id='ziperrormsgEN'>Zip file could not be created. Please manually archive the data collected under:</lang>
+<lang id='ziperrormsgDE'>Zip-Datei konnte nicht erstellt werden. Archivieren Sie die gesammelten Daten manuell unter:</lang>
+<lang id='ziperrormsgHU'>A Zip f&#225;jl nem hozhat&#243; l&#233;tre. K&#233;rj&#252;k, hogy az adatgy&#369;jt&#246;tt adatokat k&#233;zzel archiv&#225;lja az al&#225;bbi helyre:</lang>
+<lang id='ziperrormsgRO'>Fi&#351;ierul zip nu a putut fi creat. V&#259; rog s&#259; arhiva&#355;i manual datele colectate la:</lang>
+<lang id='ziperrormsgFR'>Impossible de cr&#233;er le fichier zip. Veuillez archiver manuellement les donn&#233;es collect&#233;es sous :</lang>
+<lang id='ziperrormsgIT'>Impossibile creare il file zip. Archiviare manualmente i dati raccolti in:</lang>
+<lang id='ziperrormsgPT'>N&#227;o foi poss&#237;vel criar o arquivo zip. Por favor, arquive manualmente os dados coletados em:</lang>
+
+<lang id='dtmmsgEN'>Always use a secure file transfer tool when sharing these results with Microsoft CSS. Discuss this with your support professional and also any concerns you may have.</lang>
+<lang id='dtmmsgDE'>Verwenden Sie bei der Weitergabe dieser Ergebnisse an Microsoft CSS immer ein sicheres Datei&#252;bertragungstool. Sprechen Sie mit Ihrem Support-Experten und teilen Sie ihm auch etwaige Bedenken mit.</lang>
+<lang id='dtmmsgHU'>Haszn&#225;ljon mindig biztons&#225;gos f&#225;jl&#225;tviteli eszk&#246;zt, amikor megosztja ezeket az eredm&#233;nyeket a Microsoft CSS-sel. Besz&#233;lje meg ezt a t&#225;mogat&#225;si szakemberrel, &#233;s b&#225;rmilyen aggodalm&#225;t.</lang>
+<lang id='dtmmsgRO'>Utiliza&#355;i &#238;ntotdeauna o unealt&#259; de transfer securizat&#259; a fi&#351;ierelor c&#226;nd partaja&#355;i aceste rezultate cu Microsoft CSS. Discuta&#355;i acest lucru cu inginerul de suport, precum &#351;i orice preocup&#259;ri pe care le ave&#355;i.</lang>
+<lang id='dtmmsgFR'>Utilisez toujours un outil de transfert de fichiers s&#233;curis&#233; lorsque vous partagez ces r&#233;sultats avec Microsoft CSS. Discutez-en avec votre professionnel de support et de toutes les pr&#233;occupations que vous pourriez avoir.</lang>
+<lang id='dtmmsgIT'>Utilizzare sempre uno strumento di trasferimento file sicuro quando si condividono questi risultati con il supporto tecnico Microsoft CSS. Discutere di questo con il professionista del supporto e di eventuali preoccupazioni che si possono avere.</lang>
+<lang id='dtmmsgPT'>Sempre use uma ferramenta segura de transfer&#234;ncia de arquivos ao compartilhar esses resultados com o Microsoft CSS. Discuta isso com seu profissional de suporte e também quaisquer preocupa&#231;&#245;es que voc&#234; possa ter.</lang>
+
+<lang id='logfoldermsgEN'>Creating folder</lang>
+<lang id='logfoldermsgDE'>Erstelle Ordner</lang>
+<lang id='logfoldermsgHU'>Mappa l&#233;trehoz&#225;sa</lang>
+<lang id='logfoldermsgRO'>Se creeaz&#259; dosarul</lang>
+<lang id='logfoldermsgFR'>Cr&#233;ation du dossier</lang>
+<lang id='logfoldermsgIT'>Creazione cartella</lang>
+<lang id='logfoldermsgPT'>Criando pasta</lang>
+
+<lang id='logfolderexistmsgEN'>already exists</lang>
+<lang id='logfolderexistmsgDE'>bereits vorhanden</lang>
+<lang id='logfolderexistmsgHU'>m&#225;r l&#233;tezik</lang>
+<lang id='logfolderexistmsgRO'>exist&#259; deja</lang>
+<lang id='logfolderexistmsgFR'>existe d&#233;j&#224;</lang>
+<lang id='logfolderexistmsgIT'>esiste gi&#224;</lang>
+<lang id='logfolderexistmsgPT'>j&#225; existe</lang>
+
+<lang id='coremsgEN'>Collecting Core troubleshooting data</lang>
+<lang id='coremsgDE'>Sammeln von Core-Fehlerbehebungsdaten</lang>
+<lang id='coremsgHU'>Core hibakeres&#233;si adatok gy&#369;jt&#233;se</lang>
+<lang id='coremsgRO'>Se colecteaz&#259; date pentru depanarea sistemului (Core)</lang>
+<lang id='coremsgFR'>Collecte de donn&#233;es de d&#233;pannage de base</lang>
+<lang id='coremsgIT'>Raccolta dati di risoluzione dei problemi del core</lang>
+<lang id='coremsgPT'>Coletando dados de solu&#231;&#227;o de problemas do Core</lang>
+
+<lang id='profilesmsgEN'>Collecting User Profiles troubleshooting data</lang>
+<lang id='profilesmsgDE'>Sammeln von Benutzerprofilen-Fehlerbehebungsdaten</lang>
+<lang id='profilesmsgHU'>Felhaszn&#225;l&#243;i profil hibakeres&#233;si adatok gy&#369;jt&#233;se</lang>
+<lang id='profilesmsgRO'>Se colecteaz&#259; date pentru depanarea profilurilor de utilizator</lang>
+<lang id='profilesmsgFR'>Collecte de donn&#233;es de d&#233;pannage de profils d'utilisateur</lang>
+<lang id='profilesmsgIT'>Raccolta dati di risoluzione dei problemi dei profili utente</lang>
+<lang id='profilesmsgPT'>Coletando dados de solu&#231;&#227;o de problemas de Perfis de Usu&#225;rio</lang>
+
+<lang id='msramsgEN'>Collecting Remote Assistance troubleshooting data</lang>
+<lang id='msramsgDE'>Sammeln von Remote-Assistance-Fehlerbehebungsdaten</lang>
+<lang id='msramsgHU'>T&#225;voli seg&#237;ts&#233;gny&#250;jt&#225;s hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='msramsgRO'>Se colecteaz&#259; date pentru depanarea Asisten&#355;ei la Distan&#355;&#259;</lang>
+<lang id='msramsgFR'>Collecte de donn&#233;es de d&#233;pannage de l'assistance &#224; distance</lang>
+<lang id='msramsgIT'>Raccolta dati di risoluzione dei problemi dell'Assistenza remota</lang>
+<lang id='msramsgPT'>Coletando dados de solu&#231;&#227;o de problemas de Assist&#234;ncia Remota</lang>
+
+<lang id='scardmsgEN'>Collecting Smart Card troubleshooting data</lang>
+<lang id='scardmsgDE'>Sammeln von Smart-Card-Fehlerbehebungsdaten</lang>
+<lang id='scardmsgHU'>Okost&#225;rcsa hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='scardmsgRO'>Se colecteaz&#259; date pentru depanarea Smart Card-urilor</lang>
+<lang id='scardmsgFR'>Collecte de donn&#233;es de d&#233;pannage de la carte &#224; puce</lang>
+<lang id='scardmsgIT'>Raccolta dati di risoluzione dei problemi della Smart Card</lang>
+<lang id='scardmsgPT'>Coletando dados de solu&#231;&#227;o de problemas de Smart Card</lang>
+
+<lang id='imemsgEN'>Collecting Input Method troubleshooting data</lang>
+<lang id='imemsgDE'>Sammeln von Eingabemethoden-Fehlerbehebungsdaten</lang>
+<lang id='imemsgHU'>Beviteli m&#243;d hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='imemsgRO'>Se colecteaz&#259; date pentru depanarea Input Method (IME)</lang>
+<lang id='imemsgFR'>Collecte de donn&#233;es de d&#233;pannage de la m&#233;thode de saisie</lang>
+<lang id='imemsgIT'>Raccolta dati di risoluzione dei problemi del metodo di input</lang>
+<lang id='imemsgPT'>Coletando dados de solu&#231;&#227;o de problemas de Método de Entrada</lang>
+
+<lang id='teamsmsgEN'>Collecting Teams on AVD troubleshooting data</lang>
+<lang id='teamsmsgDE'>Sammeln von Teams auf AVD-Fehlerbehebungsdaten</lang>
+<lang id='teamsmsgHU'>Teams a virtu&#225;lis asztalon hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='teamsmsgRO'>Se colecteaz&#259; date pentru depanarea Teams pe AVD</lang>
+<lang id='teamsmsgFR'>Collecte de donn&#233;es de d&#233;pannage de Teams sur AVD</lang>
+<lang id='teamsmsgIT'>Raccolta dati di risoluzione dei problemi di Teams su AVD</lang>
+<lang id='teamsmsgPT'>Coletando dados de solu&#231;&#227;o de problemas do Teams no AVD</lang>
+
+<lang id='msixaamsgEN'>Collecting MSIX App Attach troubleshooting data</lang>
+<lang id='msixaamsgDE'>Sammeln von MSIX App Attach-Fehlerbehebungsdaten</lang>
+<lang id='msixaamsgHU'>MSIX alkalmaz&#225;sok csatol&#225;s&#225;nak hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='msixaamsgRO'>Se colecteaz&#259; date pentru depanarea MSIX App Attach</lang>
+<lang id='msixaamsgFR'>Collecte de donn&#233;es de d&#233;pannage de MSIX App Attach</lang>
+<lang id='msixaamsgIT'>Raccolta dati di risoluzione dei problemi di MSIX App Attach</lang>
+<lang id='msixaamsgPT'>Coletando dados de solu&#231;&#227;o de problemas de MSIX App Attach</lang>
+
+<lang id='hcimsgEN'>Collecting Azure Stack HCI troubleshooting data</lang>
+<lang id='hcimsgDE'>Sammeln von Azure Stack HCI-Fehlerbehebungsdaten</lang>
+<lang id='hcimsgHU'>Azure Stack HCI hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='hcimsgRO'>Se colecteaz&#259; date pentru depanarea Azure Stack HCI</lang>
+<lang id='hcimsgFR'>Collecte de donn&#233;es de d&#233;pannage de Azure Stack HCI</lang>
+<lang id='hcimsgIT'>Raccolta dati di risoluzione dei problemi di Azure Stack HCI</lang>
+<lang id='hcimsgPT'>Coletando dados de solu&#231;&#227;o de problemas do Azure Stack HCI</lang>
+
+<lang id='actmsgEN'>Collecting OS Licensing/Activation troubleshooting data</lang>
+<lang id='actmsgDE'>Sammeln von OS-Licensing-/Aktivierungs-Fehlerbehebungsdaten</lang>
+<lang id='actmsgHU'>Oper&#225;ci&#243;s rendszer licencel&#233;s/aktiv&#225;l&#225;s hibakeres&#233;si adatainak gy&#369;jt&#233;se</lang>
+<lang id='actmsgRO'>Se colecteaz&#259; date pentru depanarea licen&#355;ierii/activ&#259;rii sistemului de operare</lang>
+<lang id='actmsgFR'>Collecte de donn&#233;es de d&#233;pannage de la licence/activation du syst&#232;me d'exploitation</lang>
+<lang id='actmsgIT'>Raccolta dati di risoluzione dei problemi di licenze/attivazione del sistema operativo</lang>
+<lang id='actmsgPT'>Coletando dados de solu&#231;&#227;o de problemas de Ativa&#231;&#227;o/Licenciamento do SO</lang>
+
+<lang id='errormsgEN'>Error: An error occurred in</lang>
+<lang id='errormsgDE'>Fehler: Es ist ein Fehler aufgetreten in </lang>
+<lang id='errormsgHU'>Hiba: Hiba t&#246;rt&#233;nt a</lang>
+<lang id='errormsgRO'>Eroare: A ap&#259;rut o eroare &#238;n</lang>
+<lang id='errormsgFR'>Erreur : une erreur s'est produite dans</lang>
+<lang id='errormsgIT'>Errore: si &#232; verificato un errore in</lang>
+<lang id='errormsgPT'>Erro: Ocorreu um erro em</lang>
+
+<lang id='location1EN'>Select a location to store the results (default is C:\MSDATA\)</lang>
+<lang id='location1DE'>W&#228;hlen Sie einen Speicherort f&#252;r die Ergebnisse aus (Standard ist C:\MSDATA)</lang>
+<lang id='location1HU'>V&#225;lasszon egy helyet az eredm&#233;nyek t&#225;rol&#225;s&#225;hoz (az alap&#233;rtelmezett hely C:\MSDATA)</lang>
+<lang id='location1RO'>Selecta&#355;i o loca&#355;ie pentru stocarea rezultatelor (implicit este C:\MSDATA)</lang>
+<lang id='location1FR'>S&#233;lectionnez un emplacement pour stocker les r&#233;sultats (par d&#233;faut C:\MSDATA)</lang>
+<lang id='location1IT'>Selezionare una posizione in cui archiviare i risultati (predefinita &#232; C:\MSDATA)</lang>
+<lang id='location1PT'>Selecione um local para armazenar os resultados (o padr&#227;o é C:\MSDATA)</lang>
+
+<lang id='location2EN'>Output location:</lang>
+<lang id='location2DE'>Ausgabeort:</lang>
+<lang id='location2HU'>Kimeneti hely:</lang>
+<lang id='location2RO'>Loca&#355;ia de stocare a datelor:</lang>
+<lang id='location2FR'>Emplacement de sortie:</lang>
+<lang id='location2IT'>Posizione di output:</lang>
+<lang id='location2PT'>Local de sa&#237;da:</lang>
+
+<lang id='context1EN'>Set user context</lang>
+<lang id='context1DE'>Benutzerkontext festlegen</lang>
+<lang id='context1HU'>Felhaszn&#225;l&#243;i kontextus be&#225;ll&#237;t&#225;sa</lang>
+<lang id='context1RO'>Seta&#355;i contextul utilizatorului</lang>
+<lang id='context1FR'>D&#233;finir le contexte utilisateur</lang>
+<lang id='context1IT'>Impostare il contesto utente</lang>
+<lang id='context1PT'>Definir contexto do usu&#225;rio</lang>
+
+<lang id='context2EN'>Enter the username from whose profile to collect some of the data</lang>
+<lang id='context2DE'>Geben Sie den Benutzernamen ein, von dessen Profil einige der Daten gesammelt werden sollen</lang>
+<lang id='context2HU'>Adja meg a felhaszn&#225;l&#243;nevet, akinek a profilj&#225;b&#243;l adatokat kell gy&#369;jteni</lang>
+<lang id='context2RO'>Introduce&#355;i numele de utilizator de la care s&#259; se colecteze unele dintre date</lang>
+<lang id='context2FR'>Entrez le nom d'utilisateur &#224; partir duquel collecter certaines donn&#233;es</lang>
+<lang id='context2IT'>Inserire il nome utente del cui profilo raccogliere alcuni dati</lang>
+<lang id='context2PT'>Digite o nome de usu&#225;rio do qual deseja coletar alguns dos dados do perfil</lang>
+
+<lang id='context3EN'>User context set to:</lang>
+<lang id='context3DE'>Benutzerkontext festgelegt auf:</lang>
+<lang id='context3HU'>Felhaszn&#225;l&#243;i kontextus be&#225;ll&#237;tva:</lang>
+<lang id='context3RO'>Contextul utilizatorului setat la:</lang>
+<lang id='context3FR'>Contexte utilisateur d&#233;fini sur:</lang>
+<lang id='context3IT'>Contesto utente impostato su:</lang>
+<lang id='context3PT'>Contexto do usu&#225;rio definido para:</lang>
+
+<lang id='selectCollect1EN'>Configure data collection</lang>
+<lang id='selectCollect1DE'>Datensammlung konfigurieren</lang>
+<lang id='selectCollect1HU'>Adatgy&#369;jt&#233;s konfigur&#225;l&#225;sa</lang>
+<lang id='selectCollect1RO'>Configura&#355;i colectarea de date</lang>
+<lang id='selectCollect1FR'>Configurer la collecte de donn&#233;es</lang>
+<lang id='selectCollect1IT'>Configurare la raccolta dati</lang>
+<lang id='selectCollect1PT'>Configurar coleta de dados</lang>
+
+<lang id='selectCollect2EN'>Select which set of data to collect per scenario</lang>
+<lang id='selectCollect2DE'>W&#228;hlen Sie den Satz von Daten aus, der pro Szenario gesammelt werden soll</lang>
+<lang id='selectCollect2HU'>V&#225;lassza ki, hogy mely adatk&#233;szletet kell gy&#369;jteni forgat&#243;k&#246;nyvenk&#233;nt</lang>
+<lang id='selectCollect2RO'>Selecta&#355;i ce set de date s&#259; se colecteze pentru fiecare scenariu</lang>
+<lang id='selectCollect2FR'>S&#233;lectionnez le jeu de donn&#233;es &#224; collecter par sc&#233;nario</lang>
+<lang id='selectCollect2IT'>Selezionare quale set di dati raccogliere per ogni scenario</lang>
+<lang id='selectCollect2PT'>Selecione qual conjunto de dados coletar por cen&#225;rio</lang>
+
+<lang id='selectDiag1EN'>Configure diagnostics</lang>
+<lang id='selectDiag1DE'>Diagnose konfigurieren</lang>
+<lang id='selectDiag1HU'>Diagnosztika konfigur&#225;l&#225;sa</lang>
+<lang id='selectDiag1RO'>Configurare diagnosticare</lang>
+<lang id='selectDiag1FR'>Configurer les diagnostics</lang>
+<lang id='selectDiag1IT'>Configurare la diagnostica</lang>
+<lang id='selectDiag1PT'>Configurar diagn&#243;sticos</lang>
+
+<lang id='selectDiag2EN'>Select which diagnostics checks to perform</lang>
+<lang id='selectDiag2DE'>W&#228;hlen Sie aus, welche Diagnosechecks durchgef&#252;hrt werden sollen</lang>
+<lang id='selectDiag2HU'>V&#225;lassza ki, hogy milyen diagnosztikai ellen&#337;rz&#233;seket kell elv&#233;gezni</lang>
+<lang id='selectDiag2RO'>Selecta&#355;i ce verific&#259;ri de diagnostic s&#259; se efectueze</lang>
+<lang id='selectDiag2FR'>S&#233;lectionnez les v&#233;rifications de diagnostic &#224; effectuer</lang>
+<lang id='selectDiag2IT'>Selezionare quali controlli diagnostici eseguire</lang>
+<lang id='selectDiag2PT'>Selecione quais verifica&#231;&#245;es de diagn&#243;stico executar</lang>
+
+
+<!-- NetTrace -->
+<lang id='netTraceEN'>Running network trace - please wait...</lang>
+<lang id='netTraceDE'>Netzwerkverfolgung wird ausgef&#252;hrt - bitte warten...</lang>
+<lang id='netTraceHU'>H&#225;l&#243;zati nyomk&#246;vet&#233;s fut&#225;sa - k&#233;rj&#252;k v&#225;rjon...</lang>
+<lang id='netTraceRO'>Execut&#226;nd urm&#259;rirea re&#355;elei - v&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='netTraceFR'>Ex&#233;cution de la trace r&#233;seau - veuillez patienter...</lang>
+<lang id='netTraceIT'>Esecuzione della traccia di rete - attendere...</lang>
+<lang id='netTracePT'>Executando rastreamento de rede - aguarde...</lang>
+
+<lang id='netTraceNoteEN'>Reproduce the issue.
+Once the issue occurred, stop the trace as soon as possible by pressing the 'OK' button.</lang>
+<lang id='netTraceNoteDE'>
+Reproduzieren Sie das Problem.
+Sobald das Problem aufgetreten ist, stoppen Sie die Aufzeichnung so schnell wie m&#246;glich, indem Sie auf die Schaltfl&#228;che 'OK' klicken.</lang>
+<lang id='netTraceNoteHU'>
+Ism&#233;telje meg a probl&#233;m&#225;t.
+Amint a probl&#233;ma bek&#246;vetkezett, &#225;ll&#237;tsa le a nyomk&#246;vet&#233;st a "OK" gomb megnyom&#225;s&#225;val.
+</lang>
+<lang id='netTraceNoteRO'>
+Reproduce&#355;i problema.
+Dup&#259; ce apare problema, opri&#355;i urm&#259;rirea c&#226;t mai cur&#226;nd posibil ap&#259;s&#226;nd butonul 'OK'.
+</lang>
+<lang id='netTraceNoteFR'>
+Reproduisez le probl&#232;me.
+Une fois que le probl&#232;me est survenu, arr&#234;tez la trace d&#232;s que possible en appuyant sur le bouton 'OK'.
+</lang>
+<lang id='netTraceNoteIT'>
+Riprodurre il problema.
+Una volta verificatosi il problema, arrestare la traccia il prima possibile premendo il pulsante 'OK'.
+</lang>
+<lang id='netTraceNotePT'>
+Reproduza o problema.
+Assim que o problema ocorrer, pare o rastreamento pressionando o bot&#227;o 'OK'.
+</lang>
+
+<lang id='netTraceRunningEN'>Network trace is running</lang>
+<lang id='netTraceRunningDE'>Netzwerkverfolgung wird ausgef&#252;hrt</lang>
+<lang id='netTraceRunningHU'>H&#225;l&#243;zati nyomk&#246;vet&#233;s fut</lang>
+<lang id='netTraceRunningRO'>Urm&#259;rirea re&#355;elei ruleaz&#259;</lang>
+<lang id='netTraceRunningFR'>La trace r&#233;seau est en cours d'ex&#233;cution</lang>
+<lang id='netTraceRunningIT'>Traccia di rete in esecuzione</lang>
+<lang id='netTraceRunningPT'>O rastreamento de rede est&#225; sendo executado</lang>
+
+<lang id='netTraceStoppingEN'>Stopping network trace - please wait (this may take up to several minutes)...</lang>
+<lang id='netTraceStoppingDE'>Stoppen der Netzwerkverfolgung - bitte warten Sie (dies kann mehrere Minuten dauern)...</lang>
+<lang id='netTraceStoppingHU'>H&#225;l&#243;zati nyomk&#246;vet&#233;s le&#225;ll&#237;t&#225;sa - k&#233;rj&#252;k v&#225;rjon (ez ak&#225;r n&#233;h&#225;ny percig is eltarthat)...</lang>
+<lang id='netTraceStoppingRO'>Se opre&#351;te urm&#259;rirea re&#355;elei - v&#259; rog s&#259; a&#351;tepta&#355;i (aceasta poate dura c&#226;teva minute)...</lang>
+<lang id='netTraceStoppingFR'>Arr&#234;t de la trace r&#233;seau - veuillez patienter (cela peut prendre plusieurs minutes)...</lang>
+<lang id='netTraceStoppingIT'>Arresto della traccia di rete - attendere (questo potrebbe richiedere diversi minuti)...</lang>
+<lang id='netTraceStoppingPT'>Parando o rastreamento de rede - aguarde (isso pode levar v&#225;rios minutos)...</lang>
+
+<lang id='netTraceFinishedEN'>Finished network trace</lang>
+<lang id='netTraceFinishedDE'>Netzwerkverfolgung beendet</lang>
+<lang id='netTraceFinishedHU'>H&#225;l&#243;zati nyomk&#246;vet&#233;s befejez&#337;d&#246;tt</lang>
+<lang id='netTraceFinishedRO'>Urm&#259;rirea re&#355;elei a fost finalizat&#259;</lang>
+<lang id='netTraceFinishedFR'>Trace r&#233;seau termin&#233;e</lang>
+<lang id='netTraceFinishedIT'>Traccia di rete terminata</lang>
+<lang id='netTraceFinishedPT'>Rastreamento de rede conclu&#237;do</lang>
+
+
+<!-- Background jobs -->
+<lang id='bgjob1msgEN'>One or more background jobs are still running. These can take up to 3 minutes. Please wait...</lang>
+<lang id='bgjob1msgDE'>Ein oder mehrere Hintergrundjobs sind noch aktiv. Diese k&#246;nnen bis zu 3 Minuten dauern. Bitte warten ...</lang>
+<lang id='bgjob1msgHU'>Egy vagy t&#246;bb h&#225;tt&#233;rben fut&#243; feladat m&#233;g mindig fut. Ezek ak&#225;r 3 percig is tarthatnak. K&#233;rj&#252;k, v&#225;rjon...</lang>
+<lang id='bgjob1msgRO'>Unul sau mai multe joburi ruleaz&#259; &#238;nc&#259; &#238;n fundal. Acestea pot dura p&#226;n&#259; la 3 minute. V&#259; rog s&#259; a&#351;tepta&#355;i...</lang>
+<lang id='bgjob1msgFR'>Un ou plusieurs travaux en arri&#232;re-plan sont en cours d'ex&#233;cution. Ils peuvent prendre jusqu'&#224; 3 minutes. Veuillez patienter...</lang>
+<lang id='bgjob1msgIT'>Uno o pi&#249; processi in background sono ancora in esecuzione. Questi processi possono richiedere fino a 3 minuti. Attendere...</lang>
+<lang id='bgjob1msgPT'>Um ou mais trabalhos em segundo plano ainda est&#227;o em execu&#231;&#227;o. Isso pode levar até 3 minutos. Aguarde...</lang>
+
+<lang id='bgjob2msgEN'>One or more background jobs could not finish in the alloted time. Some data may be missing. If this issue keeps repeating, please report it to: MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgDE'>Ein oder mehrere Hintergrundjobs konnten innerhalb der vorgegebenen Zeit nicht abgeschlossen werden. M&#246;glicherweise fehlen einige Daten. Wenn dieses Problem wiederholt auftritt, melden Sie es bitte an: MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgHU'>Egy vagy t&#246;bb h&#225;tt&#233;rben fut&#243; feladat nem fejez&#337;d&#246;tt be a kijel&#246;lt id&#337; alatt. Lehet, hogy hi&#225;nyzik n&#233;h&#225;ny adat. Ha ez a probl&#233;ma ism&#233;tl&#337;dik, k&#233;rj&#252;k, jelentse e-mailben a k&#246;vetkez&#337; c&#237;mre: MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgRO'>Unul sau mai multe joburi &#238;n fundal nu s-au putut finaliza &#238;n timpul alocat. Unele date pot lipsi. Dac&#259; aceast&#259; problem&#259; se repet&#259;, v&#259; rog s&#259; o raporta&#355;i la: MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgFR'>Un ou plusieurs travaux en arri&#232;re-plan n'ont pas pu se terminer dans le d&#233;lai imparti. Certaines donn&#233;es peuvent &#234;tre manquantes. Si ce probl&#232;me se reproduit, veuillez le signaler &#224; : MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgIT'>Uno o pi&#249; processi in background non hanno potuto terminare entro il tempo previsto. Alcuni dati potrebbero essere mancanti. Se questo problema si ripete, segnalare il problema a: MSRDCollectTalk@microsoft.com</lang>
+<lang id='bgjob2msgPT'>Um ou mais trabalhos em segundo plano n&#227;o puderam ser conclu&#237;dos no tempo atribu&#237;do. Algumas informa&#231;&#245;es podem estar faltando. Se esse problema continuar ocorrendo, informe-o para: MSRDCollectTalk@microsoft.com</lang>
+
+
+<!-- Version check -->
+<lang id='vercheck1EN'>Checking if a new version is available (please wait)</lang>
+<lang id='vercheck1DE'>&#220;berpr&#252;fung, ob eine neue Version verf&#252;gbar ist (bitte warten)</lang>
+<lang id='vercheck1HU'>Ellen&#337;rz&#233;s, hogy el&#233;rhet&#337;-e &#250;j verzi&#243; (k&#233;rem, v&#225;rjon)</lang>
+<lang id='vercheck1RO'>Verific&#259;m dac&#259; este disponibil&#259; o nou&#259; versiune (v&#259; rog s&#259; a&#351;tepta&#355;i)</lang>
+<lang id='vercheck1FR'>V&#233;rification de la disponibilit&#233; d'une nouvelle version (veuillez patienter)</lang>
+<lang id='vercheck1IT'>Verifica se &#232; disponibile una nuova versione (attendere)</lang>
+<lang id='vercheck1PT'>Verificando se uma nova vers&#227;o est&#225; dispon&#237;vel (aguarde)</lang>
+
+<lang id='vercheck2EN'>A newer version is available at https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2DE'>Eine neuere Version ist verf&#252;gbar unter https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2HU'>&#250;jabb verzi&#243; &#233;rhet&#337; el itt: https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2RO'>Exist&#259; o versiune mai nou&#259; disponibil&#259; la https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2FR'>Une version plus r&#233;cente est disponible &#224; l'adresse https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2IT'>&#232; disponibile una versione pi&#249; recente su https://aka.ms/msrd-collect !</lang>
+<lang id='vercheck2PT'>Uma vers&#227;o mais recente est&#225; dispon&#237;vel em https://aka.ms/msrd-collect!</lang>
+
+<lang id='vercheck3EN'>A newer version is available:</lang>
+<lang id='vercheck3DE'>Eine neuere Version ist verf&#252;gbar:</lang>
+<lang id='vercheck3HU'>El&#233;rhet&#337; &#250;jabb verzi&#243;:</lang>
+<lang id='vercheck3RO'>Exist&#259; o versiune mai nou&#259; disponibil&#259;:</lang>
+<lang id='vercheck3FR'>Une version plus r&#233;cente est disponible :</lang>
+<lang id='vercheck3IT'>&#232; disponibile una versione pi&#249; recente:</lang>
+<lang id='vercheck3PT'>Uma vers&#227;o mais recente est&#225; dispon&#237;vel:</lang>
+
+<lang id='vercheck4EN'>you are currently on</lang>
+<lang id='vercheck4DE'>Sie verwenden derzeit</lang>
+<lang id='vercheck4HU'>Jelenleg a k&#246;vetkez&#337; verzi&#243;t haszn&#225;lja:</lang>
+<lang id='vercheck4RO'>Sunte&#355;i &#238;n prezent pe</lang>
+<lang id='vercheck4FR'>Vous utilisez actuellement</lang>
+<lang id='vercheck4IT'>attualmente si &#232; su</lang>
+<lang id='vercheck4PT'>Voc&#234; est&#225; atualmente na vers&#227;o</lang>
+
+<lang id='vercheck5EN'>For best results, download and use the latest version from https://aka.ms/MSRD-Collect
+
+If you select 'Yes', a browser window will open to download the latest 'MSRD-Collect.zip' file and the current script will exit. Otherwise the current script will continue as is.</lang>
+<lang id='vercheck5DE'>F&#252;r beste Ergebnisse laden und verwenden Sie die neueste Version von https://aka.ms/MSRD-Collect
+
+Wenn Sie 'Ja' ausw&#228;hlen, wird ein Browserfenster ge&#246;ffnet, um die neueste Datei 'MSRD-Collect.zip' herunterzuladen und das aktuelle Skript wird beendet. Andernfalls wird das aktuelle Skript wie gewohnt fortgesetzt.</lang>
+<lang id='vercheck5HU'>
+A legjobb eredm&#233;ny &#233;rdek&#233;ben t&#246;lts&#246;n le &#233;s haszn&#225;lja a legfrissebb verzi&#243;t az al&#225;bbi oldalr&#243;l: https://aka.ms/MSRD-Collect
+
+Ha a "Yes"-t v&#225;lasztja, akkor egy b&#246;ng&#233;sz&#337;ablak ny&#237;lik meg a leg&#250;jabb "MSRD-Collect.zip" let&#246;lt&#233;s&#233;hez, &#233;s az aktu&#225;lis script kil&#233;p. Ellenkez&#337; esetben az aktu&#225;lis script folytat&#243;dik az aktu&#225;lis verzi&#243;val.</lang>
+<lang id='vercheck5RO'>
+Pentru cele mai bune rezultate, desc&#259;rca&#355;i &#351;i utiliza&#355;i cea mai recent&#259; versiune de la https://aka.ms/MSRD-Collect.
+
+Dac&#259; selecta&#355;i 'Da', se va deschide o fereastr&#259; de browser pentru a desc&#259;rca cel mai recent fi&#351;ier 'MSRD-Collect.zip', iar scriptul curent va fi &#238;nchis. &#238;n caz contrar, scriptul curent va continua ca atare.
+</lang>
+<lang id='vercheck5FR'>
+Pour de meilleurs r&#233;sultats, t&#233;l&#233;chargez et utilisez la derni&#232;re version &#224; partir de https://aka.ms/MSRD-Collect
+
+Si vous s&#233;lectionnez 'OK', une fen&#234;tre de navigateur s'ouvrira pour t&#233;l&#233;charger le dernier fichier 'MSRD-Collect.zip' et le script actuel sera arr&#234;t&#233;. Sinon, le script actuel continuera tel quel.
+</lang>
+<lang id='vercheck5IT'>
+Per i migliori risultati, scaricare e utilizzare la versione pi&#249; recente da https://aka.ms/MSRD-Collect
+
+Se si seleziona 'S&#236;', verr&#224; aperta una finestra del browser per scaricare il file 'MSRD-Collect.zip' pi&#249; recente e lo script corrente verr&#224; interrotto. In caso contrario, lo script corrente continuer&#224; come &#232;.
+</lang>
+<lang id='vercheck5PT'>
+Para melhores resultados, baixe e use a &#250;ltima vers&#227;o em https://aka.ms/MSRD-Collect
+
+Se voc&#234; selecionar 'Sim', uma janela do navegador abrir&#225; para baixar o arquivo 'MSRD-Collect.zip' mais recente e o script atual ser&#225; encerrado. Caso contr&#225;rio, o script atual continuar&#225; como est&#225;.
+</lang>
+
+<lang id='vercheck6EN'>Would you like to download the new version now?</lang>
+<lang id='vercheck6DE'>M&#246;chten Sie die neue Version jetzt herunterladen?</lang>
+<lang id='vercheck6HU'>Szeretn&#233; let&#246;lteni az &#250;j verzi&#243;t most?</lang>
+<lang id='vercheck6RO'>Dori&#355;i s&#259; desc&#259;rca&#355;i noua versiune acum?</lang>
+<lang id='vercheck6FR'>Voulez-vous t&#233;l&#233;charger la nouvelle version maintenant ?</lang>
+<lang id='vercheck6IT'>Desideri scaricare la nuova versione adesso?</lang>
+<lang id='vercheck6PT'>Voc&#234; gostaria de baixar a nova vers&#227;o agora?</lang>
+
+<lang id='vercheck7EN'>Opening default browser to download the latest 'MSRD-Collect.zip' from https://aka.ms/MSRD-Collect
+Exiting
+</lang>
+<lang id='vercheck7DE'>Standardbrowser wird ge&#246;ffnet, um die neueste 'MSRD-Collect.zip' von https://aka.ms/MSRD-Collect herunterzuladen
+Beenden
+</lang>
+<lang id='vercheck7HU'>
+A legfrissebb 'MSRD-Collect.zip' let&#246;lt&#233;s&#233;hez nyissa meg az alap&#233;rtelmezett b&#246;ng&#233;sz&#337;t a https://aka.ms/MSRD-Collect oldalon.
+Kil&#233;p&#233;s.
+</lang>
+<lang id='vercheck7RO'>
+Se deschide browser-ul implicit pentru a desc&#259;rca cel mai recent fi&#351;ier 'MSRD-Collect.zip' de la https://aka.ms/MSRD-Collect
+Terminare script
+</lang>
+<lang id='vercheck7FR'>
+Ouverture du navigateur par d&#233;faut pour t&#233;l&#233;charger la derni&#232;re version de 'MSRD-Collect.zip' &#224; partir de https://aka.ms/MSRD-Collect
+Sortie
+</lang>
+<lang id='vercheck7IT'>
+Apertura del browser predefinito per scaricare l'ultimo file 'MSRD-Collect.zip' da https://aka.ms/MSRD-Collect
+Uscita
+</lang>
+<lang id='vercheck7PT'>
+Abrindo o navegador padr&#227;o para baixar o arquivo 'MSRD-Collect.zip' mais recente em https://aka.ms/MSRD-Collect
+Saindo
+</lang>
+
+<lang id='vercheck8EN'>You have decided not to download the latest version yet. For best results, download and use the latest version from https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8DE'>Sie haben sich noch nicht entschieden, die neueste Version herunterzuladen. F&#252;r beste Ergebnisse laden und verwenden Sie die neueste Version von https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8HU'>&#250;gy d&#246;nt&#246;tt, hogy m&#233;g nem t&#246;lti le a leg&#250;jabb verzi&#243;t. A legjobb eredm&#233;ny &#233;rdek&#233;ben t&#246;lts&#246;n le &#233;s haszn&#225;lja a legfrissebb verzi&#243;t az al&#225;bbi oldalr&#243;l: https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8RO'>A&#355;i decis s&#259; nu desc&#259;rca&#355;i &#238;nc&#259; cea mai recent&#259; versiune. Pentru cele mai bune rezultate, desc&#259;rca&#355;i &#351;i utiliza&#355;i cea mai recent&#259; versiune de la https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8FR'>Vous avez d&#233;cid&#233; de ne pas t&#233;l&#233;charger la derni&#232;re version pour le moment. Pour de meilleurs r&#233;sultats, t&#233;l&#233;chargez et utilisez la derni&#232;re version &#224; partir de https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8IT'>Hai deciso di non scaricare ancora l'ultima versione. Per i migliori risultati, scaricare e utilizzare la versione pi&#249; recente da https://aka.ms/MSRD-Collect</lang>
+<lang id='vercheck8PT'>Voc&#234; decidiu n&#227;o baixar a vers&#227;o mais recente ainda. Para melhores resultados, baixe e use a &#250;ltima vers&#227;o em https://aka.ms/MSRD-Collect</lang>
+
+<lang id='vercheck9EN'>MSRD-Collect version is up to date</lang>
+<lang id='vercheck9DE'>Die MSRD-Collect-Version ist auf dem neuesten Stand</lang>
+<lang id='vercheck9HU'>Az MSRD-Collect verzi&#243;ja naprak&#233;sz</lang>
+<lang id='vercheck9RO'>Versiunea MSRD-Collect este actualizat&#259;</lang>
+<lang id='vercheck9FR'>MSRD-Collect version La version de MSRD-Collect est &#224; jour</lang>
+<lang id='vercheck9IT'>La versione di MSRD-Collect &#232; aggiornata</lang>
+<lang id='vercheck9PT'>A vers&#227;o do MSRD-Collect est&#225; atualizada</lang>
+
+
+<!-- How to -->
+<lang id='howtouse1EN'>==========================================================================================================================
+
+Usage guide:
+
+Step 1:
+Select the appropriate machine role from the toolbar. This will help the script perform the correct actions based on the machine's function. Options include:
+
+'Source'     - Source (client) machine that connects to other machines through a Remote Desktop client
+'AVD'        - Target (host) machine in an Azure Virtual Desktop or Windows 365 deployment
+'RDS'        - RDS server running any RDS roles or target machine for a direct (non-AVD) RDP connection</lang>
+<lang id='howtouse1DE'>==========================================================================================================================
+
+Nutzungshandbuch:
+
+Schritt 1:
+W&#228;hlen Sie die entsprechende Maschinenrolle aus der Symbolleiste aus. Dadurch wird das Skript auf der Grundlage der Funktion der Maschine die korrekten Aktionen ausf&#220;hren. Die Optionen umfassen:
+
+'Source'     - Quell (Client)-Maschine, die &#252;ber einen Remote-Desktop-Client eine Verbindung zu anderen Maschinen herstellt
+'AVD'        - Ziel (Host)-Maschine in einer Azure Virtual Desktop- oder Windows 365-Bereitstellung
+'RDS'        - RDS-Server, der alle RDS-Rollen ausf&#252;hrt, oder die Zielmaschine f&#252;r eine direkte (nicht-AVD) RDP-Verbindung</lang>
+<lang id='howtouse1HU'>==========================================================================================================================
+
+Haszn&#225;lati &#250;tmutat&#243;:
+
+L&#233;p&#233;s 1:
+V&#225;lassza ki a megfelel&#337; g&#233;pszerepet az eszk&#246;zt&#225;rb&#243;l. Ez seg&#237;t a szkriptnek a megfelel&#337; m&#369;veletek elv&#233;gz&#233;s&#233;ben a g&#233;p funkci&#243;j&#225;t&#243;l f&#252;gg&#337;en. Az opci&#243;k k&#246;z&#233; tartoznak:
+
+'Source'     - Forr&#225;s (kliens) g&#233;p, amely kapcsol&#243;dik m&#225;s g&#233;pekhez a Remote Desktop kliensen kereszt&#252;l
+'AVD'        - C&#233;l (h&#225;zigazda) g&#233;p az Azure Virtual Desktop vagy a Windows 365 telep&#237;t&#233;s&#233;ben
+'RDS'        - RDS szerver, amely b&#225;rmilyen RDS szerepet futtat, vagy c&#233;l g&#233;p k&#246;zvetlen (nem AVD) RDP kapcsolathoz</lang>
+<lang id='howtouse1RO'>==========================================================================================================================
+
+Ghid de utilizare:
+
+Pasul 1:
+Selecta&#355;i rolul adecvat al ma&#351;inii din bara de instrumente. Acest lucru va ajuta scriptul s&#259; efectueze ac&#355;iunile corecte &#238;n func&#355;ie de func&#355;ia ma&#351;inii. Op&#355;iunile includ:
+
+'Source'     - Ma&#351;in&#259; surs&#259; (client) care se conecteaz&#259; la alte ma&#351;ini prin intermediul unui client Remote Desktop
+'AVD'        - Ma&#351;in&#259; &#355;int&#259; (gazd&#259;) &#238;ntr-o implementare Azure Virtual Desktop sau Windows 365
+'RDS'        - Server RDS care ruleaz&#259; orice roluri RDS sau ma&#351;in&#259; &#355;int&#259; pentru o conexiune RDP direct&#259; (non-AVD)</lang>
+<lang id='howtouse1FR'>==========================================================================================================================
+
+Guide d'utilisation:
+
+&#201;tape 1:
+S&#233;lectionnez le r&#244;le de la machine appropri&#233; dans la barre d'outils. Cela aidera le script &#224; effectuer les actions correctes en fonction de la fonction de la machine. Les options comprennent :
+
+'Source'     - Machine source (client) qui se connecte &#224; d'autres machines via un client Bureau &#224; distance (Remote Desktop)
+'AVD'        - Machine cible (h&#244;te) dans un d&#233;ploiement Azure Virtual Desktop ou Windows 365
+'RDS'        - Serveur RDS ex&#233;cutant des r&#244;les RDS ou une machine cible pour une connexion RDP directe (non-AVD)</lang>
+<lang id='howtouse1IT'>==========================================================================================================================
+
+Guida all'uso:
+
+Passo 1:
+Selezionare il ruolo appropriato della macchina dalla barra degli strumenti. Ciò aiuter&#224; lo script a eseguire le azioni corrette in base alla funzione della macchina. Le opzioni includono:
+
+'Source'     - Macchina sorgente (cliente) che si connette ad altre macchine tramite un client Remote Desktop
+'AVD'        - Macchina target (host) in un Azure Virtual Desktop o Windows 365 deployment
+'RDS'        - Server RDS che esegue qualsiasi ruolo RDS o macchina di destinazione per una connessione RDP diretta (non AVD)</lang>
+<lang id='howtouse1PT'>==========================================================================================================================
+
+Guia de uso:
+
+Passo 1:
+Selecione o papel apropriado da m&#225;quina na barra de ferramentas. Isso ajudar&#225; o script a realizar as a&#231;&#245;es corretas com base na fun&#231;&#227;o da m&#225;quina. As op&#231;&#245;es incluem:
+
+'Source'     - M&#225;quina de origem (cliente) que se conecta a outras m&#225;quinas por meio de um cliente de &#225;rea de Trabalho Remota
+'AVD'        - M&#225;quina de destino (host) em uma implanta&#231;&#227;o do Azure Virtual Desktop ou Windows 365
+'RDS'        - Servidor RDS executando qualquer papel do RDS ou m&#225;quina de destino para uma conex&#227;o RDP direta (n&#227;o AVD)</lang>
+
+<lang id='howtouse2EN'>Step 2:
+Select one or more scenarios (optional):
+
+'Profiles'   - Collect data for troubleshooting 'User Profiles' issues
+'Activation' - Collect data for troubleshooting 'OS Licensing/Activation' issues
+'MSRA'       - Collect data for troubleshooting 'Remote Assistance' issues
+'SCard'      - Collect data for troubleshooting 'Smart Card' issues
+'IME'        - Collect data for troubleshooting 'Input Method' issues
+'Teams'      - Collect data for troubleshooting 'Teams on AVD' issues (AVD only)
+'MSIXAA'     - Collect data for troubleshooting 'MSIX App Attach' issues (AVD only)
+'HCI'        - Collect data for troubleshooting 'AVD on Azure Stack HCI' issues (AVD only)
+'DumpPID'    - Collect a Process Dump of an existing process
+'NetTrace'   - Collect a network trace (netsh)
+'DiagOnly'   - Generate a Diagnostics report only</lang>
+<lang id='howtouse2DE'>Schritt 2:
+W&#228;hlen Sie ein oder mehrere Szenarien aus (optional):
+
+'Profiles'   - Daten zur Fehlerbehebung bei Problemen mit "Benutzerprofilen" sammeln
+'Activation' - Daten zur Fehlerbehebung bei "OS-Lizenz-/Aktivierungsproblemen" sammeln
+'MSRA'       - Daten zur Fehlerbehebung bei "Remoteunterst&#252;tzungs"-Problemen sammeln
+'SCard'      - Daten zur Fehlerbehebung bei "Smartcard"-Problemen sammeln
+'IME'        - Daten zur Fehlerbehebung bei "Eingabemethode"-Problemen sammeln
+'Teams'      - Daten zur Fehlerbehebung bei "Teams auf AVD"-Problemen sammeln (nur AVD)
+'MSIXAA'     - Daten zur Fehlerbehebung bei "MSIX App Attach"-Problemen sammeln (nur AVD)
+'HCI'        - Daten zur Fehlerbehebung bei "AVD auf Azure Stack HCI"-Problemen sammeln (nur AVD)
+'DumpPID'    - Ein Prozessdump eines vorhandenen Prozesses sammeln
+'NetTrace'   - Netzwerkverfolgung (netsh) sammeln
+'DiagOnly'   - Nur einen Diagnosebericht erstellen</lang>
+<lang id='howtouse2HU'>L&#233;p&#233;s 2:
+V&#225;lasszon ki egy vagy t&#246;bb forgat&#243;k&#246;nyvet (opcion&#225;lis):
+
+'Profiles'   - Adatgy&#369;jt&#233;s a 'Felhaszn&#225;l&#243;i profilok' hibaelh&#225;r&#237;t&#225;s&#225;hoz
+'Activation' - Adatgy&#369;jt&#233;s az 'Oper&#225;ci&#243;s rendszer enged&#233;lyez&#233;se/aktiv&#225;l&#225;sa' hibaelh&#225;r&#237;t&#225;s&#225;hoz
+'MSRA'       - Adatgy&#369;jt&#233;s a 'T&#225;voli seg&#237;ts&#233;gny&#250;jt&#225;s' hibaelh&#225;r&#237;t&#225;s&#225;hoz
+'SCard'      - Adatgy&#369;jt&#233;s a 'Smartcard' hibaelh&#225;r&#237;t&#225;s&#225;hoz
+'IME'        - Adatgy&#369;jt&#233;s az 'Input m&#243;dszer' hibaelh&#225;r&#237;t&#225;s&#225;hoz
+'Teams'      - Adatgy&#369;jt&#233;s a 'Teams az AVD-n' hibaelh&#225;r&#237;t&#225;s&#225;hoz (csak AVD)
+'MSIXAA'     - Adatgy&#369;jt&#233;s az 'MSIX App Attach' hibaelh&#225;r&#237;t&#225;s&#225;hoz (csak AVD)
+'HCI'        - Adatgy&#369;jt&#233;s az 'AVD az Azure Stack HCI-n' hibaelh&#225;r&#237;t&#225;s&#225;hoz (csak AVD)
+'DumpPID'    - Process Dump gy&#369;jt&#233;se egy megl&#233;v&#337; folyamatb&#243;l
+'NetTrace'   - H&#225;l&#243;zati nyomk&#246;vet&#233;s (netsh) gy&#369;jt&#233;se
+'DiagOnly'   - Csak Diagnosztika jelent&#233;s gener&#225;l&#225;sa</lang>
+<lang id='howtouse2RO'>Pasul 2:
+Selecta&#355;i unul sau mai multe scenarii (op&#355;ional):
+
+'Profile'    - Colecta&#355;i date pentru depanarea problemelor de "Profiluri utilizator"
+'Activare'   - Colecta&#355;i date pentru depanarea problemelor de "Licen&#355;iere/Activare sistem de operare"
+'MSRA'       - Colecta&#355;i date pentru depanarea problemelor de "Asisten&#355;&#259; la distan&#355;&#259;"
+'SCard'      - Colecta&#355;i date pentru depanarea problemelor de "Smart Card"
+'IME'        - Colecta&#355;i date pentru depanarea problemelor de "Input Method"
+'Teams'      - Colecta&#355;i date pentru depanarea problemelor de "Teams pe AVD" (doar AVD)
+'MSIXAA'     - Colecta&#355;i date pentru depanarea problemelor de "MSIX App Attach" (doar AVD)
+'HCI'        - Colecta&#355;i date pentru depanarea problemelor de "AVD pe Azure Stack HCI" (doar AVD)
+'DumpPID'    - Colecta&#355;i un proces dump al unui proces existent
+'NetTrace'   - Colecta&#355;i o urm&#259;rire de re&#355;ea (netsh)
+'DiagOnly'   - Genera&#355;i doar un raport de diagnosticare</lang>
+<lang id='howtouse2FR'>&#201;tape 2:
+S&#233;lectionnez un ou plusieurs sc&#233;narios (facultatif) :
+
+'Profiles'   - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'Profils utilisateur'
+'Activation' - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'Licence/Activation de l'OS'
+'MSRA'       - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes d'Assistance &#224; distance
+'SCard'      - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'Carte &#224; puce'
+'IME'        - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'M&#233;thode de saisie'
+'Teams'      - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'Teams sur AVD' (uniquement AVD)
+'MSIXAA'     - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes de 'MSIX App Attach' (uniquement AVD)
+'HCI'        - Collecter des donn&#233;es de d&#233;pannage pour les probl&#232;mes d'AVD sur Azure Stack HCI (uniquement AVD)
+'DumpPID'    - Collecter un vidage de processus d'un processus existant
+'NetTrace'   - Collecter une trace r&#233;seau (netsh)
+'DiagOnly'   - G&#233;n&#233;rer uniquement un rapport de diagnostic</lang>
+<lang id='howtouse2IT'>Passo 2:
+Selezionare uno o pi&#249; scenari (opzionale):
+
+'Profiles'   - Raccogliere dati per la risoluzione dei problemi relativi ai 'Profili utente'
+'Activation' - Raccogliere dati per la risoluzione dei problemi relativi all'attivazione/licenza del sistema operativo
+'MSRA'       - Raccogliere dati per la risoluzione dei problemi relativi all'assistenza remota
+'SCard'      - Raccogliere dati per la risoluzione dei problemi relativi alle smart card
+'IME'        - Raccogliere dati per la risoluzione dei problemi relativi al metodo di input
+'Teams'      - Raccogliere dati per la risoluzione dei problemi relativi a 'Teams su AVD' (solo AVD)
+'MSIXAA'     - Raccogliere dati per la risoluzione dei problemi relativi a 'MSIX App Attach' (solo AVD)
+'HCI'        - Raccogliere dati per la risoluzione dei problemi relativi a 'AVD su Azure Stack HCI' (solo AVD)
+'DumpPID'    - Raccogliere un dump di processo di un processo esistente
+'NetTrace'   - Raccogliere una traccia di rete (netsh)
+'DiagOnly'   - Generare solo un rapporto di diagnostica</lang>
+<lang id='howtouse2PT'>Passo 2:
+Selecione um ou mais cen&#225;rios (opcional):
+
+'Profiles'   - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Perfis de usu&#225;rio'
+'Activation' - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Licenciamento/Ativa&#231;&#227;o do SO'
+'MSRA'       - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Assist&#234;ncia remota'
+'SCard'      - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Smart Card'
+'IME'        - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Método de entrada'
+'Teams'      - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'Teams no AVD' (somente AVD)
+'MSIXAA'     - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'MSIX App Attach' (somente AVD)
+'HCI'        - Coletar dados para solu&#231;&#227;o de problemas de problemas de 'AVD no Azure Stack HCI' (somente AVD)
+'DumpPID'    - Coletar um despejo de processo de um processo existente
+'NetTrace'   - Coletar um rastreamento de rede (netsh)
+'DiagOnly'   - Gerar somente um relat&#243;rio de diagn&#243;stico</lang>
+
+<lang id='howtouse3EN'>Step 3:
+Click the 'Start' button when ready. Data collection/diagnostics may take up to several minutes.
+
+For more details, see Help\ReadMe.
+</lang>
+<lang id='howtouse3DE'>Schritt 3:
+Klicken Sie auf die Schaltfl&#228;che "Starten", wenn Sie bereit sind. Die Datensammlung/diagnostik kann mehrere Minuten dauern.
+
+Weitere Details finden Sie unter Hilfe\ReadMe.
+</lang>
+<lang id='howtouse3HU'>L&#233;p&#233;s 3:
+Kattintson a 'Start' gombra, ha k&#233;sz. Az adatgy&#369;jt&#233;s/diagnosztika ak&#225;r n&#233;h&#225;ny percig is eltarthat.
+
+Tov&#225;bbi r&#233;szletek&#233;rt l&#225;sd a S&#250;g&#243;\ReadMe f&#225;jlt.
+</lang>
+<lang id='howtouse3RO'>Pasul 3:
+Ap&#259;sa&#355;i butonul "Start" c&#226;nd sunte&#355;i preg&#259;tit. Colectarea datelor/diagnosticarea poate dura c&#226;teva minute.
+
+Pentru mai multe detalii, consulta&#355;i Ajutor\ReadMe.
+</lang>
+<lang id='howtouse3FR'>&#201;tape 3:
+Cliquez sur le bouton 'D&#233;marrer' lorsque vous &#234;tes pr&#234;t. La collecte de donn&#233;es/diagnostics peut prendre plusieurs minutes.
+
+Pour plus de d&#233;tails, consultez Aide\Lisez-moi.
+</lang>
+<lang id='howtouse3IT'>Passo 3:
+Fare clic sul pulsante 'Avvia' quando si &#232; pronti. La raccolta dati/diagnostica potrebbe richiedere diversi minuti.
+
+Per maggiori dettagli, consultare Aiuto\ReadMe.
+</lang>
+<lang id='howtouse3PT'>Passo 3:
+Clique no bot&#227;o 'Iniciar' quando estiver pronto. A coleta de dados/diagn&#243;sticos pode levar v&#225;rios minutos.
+
+Para mais detalhes, consulte Ajuda\Leia-me.
+</lang>	
+	
+</LangV1>

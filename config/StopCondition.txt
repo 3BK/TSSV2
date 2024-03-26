@@ -1,0 +1,33 @@
+$Result = Test-Path C:\Windows;
+Write-host "Test Result: $Result";
+if (-not $Result) {
+	Return $True
+} else {
+	Return $False
+}
+
+### This is a sample StopCondition.txt file with a conditon written in PowerShell ScriptBlock code. The code will be invoked from TSSv2.ps1 as "Invoke-Command -ScriptBlock {...}"
+# Write your stop condition above ^^^. Make sure the condition either returns a result of $True (=expected) or $False (=Stop triggger)
+# You need to terminate each statement of your ScriptBlock code with semicolon ";"
+# Please do not include any comment lines or trailing comments with #
+#
+#
+## Example#1 shown above checks if C:\Windows folder exists, and would stop once the folder is deleted - 'Test Result: False'
+# In the basic example code above, $Result is typically $True (as long as folder C:\Windows exists), but when the folder is deleted the condition becomes $False and it triggers/signals a TSS Stop immediatelly.
+#
+## Example#2: Stop when a DNSname can no longer be resolved
+#$error.clear();$ResultDnsName = Resolve-DnsName google.com -ErrorAction SilentlyContinue;
+#if ($NULL -eq $ResultDnsName) {
+#	$error_Value = $Error[0].ToString();
+#	Write-host "Test Result: $error_Value";
+#	$MyDNSErr=($error_Value).Contains("DNS name does not exist");
+#};
+#if ($NULL -ne $MyDNSErr) {
+#	Return $True
+#} else {
+#	Return $False
+#}
+#
+## Example#3: Stop when a command hangs for more then 5 seconds (or never returns) 
+#$global:PSObjAzureDrive = Start-Process cmd.exe -ArgumentList "/C `"DIR O:`"" -WindowStyle Hidden -PassThru;
+#FwWaitForProcess $global:PSObjAzureDrive 5;

@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>DIAG_RDSServer</ID>
+    <Version>1.5</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-233007</Name>
+    <Description>@DiagPackage.dll,-233008</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com/en-us/default.mspx</PrivacyLink>
+  <PowerShellVersion>2.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">6.0</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>true</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <!--<Rootcauses>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSPort']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSListenPort']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSListenPortDefault']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSIsListening']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSCert']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSCertMatch']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSx509Cert']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLicenseServer']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLicenseServerConnect']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLSValidLicense']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLSNET']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSGWCert']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLSPU']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSLSPUB']"/>
+    <Rootcause source="Scripts\Performance\RDSServer\RC_RDS.xml" select="/Element/Rootcause[ID='RC_RDSCB902']"/>
+    <Rootcause source="Scripts\Performance\KB2655998_InactiveTSPorts\RC_KB2655998_InactiveTSPorts.xml" select="/Element/Rootcause[ID='RC_KB2655998_InactiveTSPorts']"/>
+    <Rootcause source="Scripts\Performance\1872.PrintDevModes2CountCheck\RC_PrintDevModes2CountCheck.xml" select="/Element/Rootcause[ID='RC_PrintDevModes2CountCheck']"/>
+    <Rootcause source="Scripts\Networking\2745.RC_HTTPRedirectionTSGateway\RC_HTTPRedirectionTSGateway.xml" select="/Element/Rootcause[ID='RC_HTTPRedirectionTSGateway']"/>
+    <Rootcause source="Scripts\Networking\2748.KernelAuthRPCCheck\RC_KernelAuthRPCCheck.xml" select="/Element/Rootcause[ID='RC_KernelAuthRPCCheck']"/>
+
+  </Rootcauses> -->
+  <Rootcauses>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_HighHandleCount</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1604</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d793dbf1-7c16-42a7-a471-0571efb4903c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1605</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-54060.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_KernelMemoryPerformanceIssue</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1602</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f9d6591c-a67c-4a37-ae58-95bf9a399f6f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1603</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-64059.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_LowSysPTEs</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1606</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b5fc7aad-e0f5-4b20-87f2-e100653d6465</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1607</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-22884.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_LowVirtualMemory</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1608</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>80bfbefb-fcc9-496e-92b2-4909934c81cc</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1609</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--RC_HTTPRedirectionTSGateway-->
+    <Rootcause>
+      <ID>RC_HTTPRedirectionTSGateway</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26245</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2ee2fe8d-a4c5-4f87-9df1-ab4aeeca0f58</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26246</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-87855.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--KernelAuthRPCCheck-->
+    <Rootcause>
+      <ID>RC_KernelAuthRPCCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26247</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b11a9794-0e60-4745-946f-4be29e6f8359</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26248</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-17796.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSPort</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234005</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>0dd8ad61-f4da-477b-b633-40a99530c03a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234005</Name>
+            <Description>@DiagPackage.dll,-234006</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-79744.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-54080.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDP port not found in HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSENABLED</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234026</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>98AAAA64-8308-4EC0-9A0B-25548DD6F387</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234026</Name>
+            <Description>@DiagPackage.dll,-234027</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-19495.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-11553.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDS disabled by HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server or HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services fDenyTSConnections=1 in registry</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to connect via RDP</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>https://technet.microsoft.com/en-us/library/cc722151(v=ws.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSOOBE</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234028</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>01E85D79-31C5-41B1-A027-3CC2B60725C4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234028</Name>
+            <Description>@DiagPackage.dll,-234029</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-34915.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-57261.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDS disabled by HKLM:\SYSTEM\Setup OOBEInProgress=1 in registry</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to connect via RDP</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc721913(v=ws.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSListenPort</ID>
+      <DisplayInformation>
+        <Parameters>
+          <Parameter>
+            <Name>Error</Name>
+            <DefaultValue>unknown error</DefaultValue>
+          </Parameter>
+          <Parameter>
+            <Name>Solution</Name>
+            <DefaultValue>unknown solution</DefaultValue>
+          </Parameter>
+        </Parameters>
+        <Name>@DiagPackage.dll,-233015</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ee16c6c7-af27-4f7e-9fa6-b26ebe0ca286</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>Error</Name>
+                <DefaultValue>unknown error</DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>Solution</Name>
+                <DefaultValue>unknown solution</DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-233015</Name>
+            <Description>@DiagPackage.dll,-234009</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-14516.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-65172.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDP default-port cannot be found.</RootCause>
+        <HighLevelLogic>PortNumber in HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp could not be found</HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSListenPortDefault</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234010</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a5e27e32-587b-4a95-a449-ea47010be113</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234010</Name>
+            <Description>@DiagPackage.dll,-234011</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-65257.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDP default-port has been changed.</RootCause>
+        <HighLevelLogic>PortNumber in HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp is not 3389</HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSIsListening</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234013</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c5e832d8-8feb-4b2d-bb43-e947a32b0edf</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234013</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-99542.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>No listener thread found in QWinsta report, is RDS service started?</RootCause>
+        <HighLevelLogic>QWinSta output does not contain 'rdp-tcp                                 65536  Listen'</HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSCert</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234015</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9a27bf74-62f0-4c49-8b26-d3ad6dc7645c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234015</Name>
+            <Description>@DiagPackage.dll,-234016</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-52204.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-68286.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Certificate used for the RDP protocol not found.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSCertMatch</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234017</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>8fed3271-e610-40c9-943e-f722959c1ece</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234017</Name>
+            <Description>@DiagPackage.dll,-234018</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-6973.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-59374.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Certificate used for the RDP protocol does not match the set certificate.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to connect via RDP or getting security warning</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2477133</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18528</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSx509Cert</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234020</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b0be57d7-aac1-49ce-a620-c846183d741f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234020</Name>
+            <Description>@DiagPackage.dll,-234021</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-40315.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-93022.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Could not find the x509 certificate on the Session Host in the HKLM:System/CCS/Control/Terminal Server/RCM key.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to get a license from the specified license server.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc775262(v=WS.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLicenseServer</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234101</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>06BFDE67-BB8E-4AF4-931B-6E44FA8FB27B</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234101</Name>
+            <Description>@DiagPackage.dll,-234102</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-1051.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-58767.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>No License Server defined.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to get a license</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/ee791926(v=ws.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLicenseServerConnect</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234104</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4ecc779f-d8ec-48de-9332-e4207c4781a7</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234104</Name>
+            <Description>@DiagPackage.dll,-234105</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-14727.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-51246.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Unable to connect to the license Server. Check _LicenseServerReport.txt for more details.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to get a license</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL> http://msdn.microsoft.com/en-us/library/windows/desktop/ff955669(v=vs.85).aspx </PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLSValidLicense</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234108</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>8496d7c3-21e8-4205-a99d-c10903015e44</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234108</Name>
+            <Description>@DiagPackage.dll,-234109</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-31894.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-80853.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Unable to find valid licenses for this Operating System version.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Unable to get a license</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc753650.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSGWCert</ID>
+      <DisplayInformation>
+        <Parameters>
+          <Parameter>
+            <Name>Error</Name>
+            <DefaultValue>unknown error</DefaultValue>
+          </Parameter>
+          <Parameter>
+            <Name>Solution</Name>
+            <DefaultValue>unknown solution</DefaultValue>
+          </Parameter>
+        </Parameters>
+        <Name>@DiagPackage.dll,-234401</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>301e6f16-97b9-49af-8574-ecb00faacad8</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>Error</Name>
+                <DefaultValue>unknown error</DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>Solution</Name>
+                <DefaultValue>unknown solution</DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-234401</Name>
+            <Description>@DiagPackage.dll,-233016</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-42317.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-20308.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>See SDP</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>SDP is unable to connect to Remote Desktop Gateway to verify certificate.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/dd320345(v=WS.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18548</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLSPU</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234601</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>0ea9aef3-3717-4283-adff-b3b0a10b7599</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234601</Name>
+            <Description>@DiagPackage.dll,-234602</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-22220.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-37929.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>License Server policy is preventing license upgrade</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Please make sure that policy is not causing upgrade license issues. Check for Event 21 from TerminalServices-Licensing</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc725704.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLSPUB</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234603</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>aae54a14-e616-4a1a-844a-0bb7ca2a70a5</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234603</Name>
+            <Description>@DiagPackage.dll,-234604</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-62294.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-2494.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>License Server is not published in Active Directory</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Remote Desktop Server could be unable to obtain a license. Please publish License Server in AD, using RD Licensing Manager - Right-Click Server, Review Configuration</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/ee891215(v=WS.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSLSNET</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234110</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>99629518-571c-4e56-b20c-04da17709c8c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234110</Name>
+            <Description>@DiagPackage.dll,-234111</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-72200.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-13999.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Access this computer from network (SeNetworkLogonRight) is preventing network connectivity to License server</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Remote Desktop Server is unable to obtain a license</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/823659</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18561</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSCB902</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234501</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>cb5bd85e-9335-4020-b6ce-a16f706edcee</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234501</Name>
+            <Description>@DiagPackage.dll,-234502</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-47353.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-20415.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The RD Connection Broker must be available to accept connection requests from user sessions, RD Session Host servers in a farm, and RD Session Host servers running in redirection mode.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Users unable to connect back to their session.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/ee890857(v=WS.10).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18522</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSH_RDPDD</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234022</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3F2448BF-9485-42E5-B835-C96E1AA80BF0</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234022</Name>
+            <Description>@DiagPackage.dll,-234023</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-41616.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-39086.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>RDPDD does not support that hardware acceleration is not fully enabled.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Graphics update in a RDP stream might seem 'choppy', or video frames seems to be missing.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/windows/hardware/ff554056%28v=vs.85%29.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18522</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDCB_CBSTRING</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234503</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>84107350-B98E-4F9D-870E-3FDD4981542C</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234503</Name>
+            <Description>@DiagPackage.dll,-234504</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-57997.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-30992.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Session broker has a 128 character limit for the HighAvailabilityBrokersList.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Users get redirected to a server in drain mode.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/dn823580(v=vs.85).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18548</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDCB_CBCOUNT</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234505</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>379B31C5-2168-46D6-8FB5-453AC14ECE9B</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234505</Name>
+            <Description>@DiagPackage.dll,-234506</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-47678.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-9927.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Only support for two connectionbrokers in Windows 2012(R2).</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Might work or not, but not supported.</Symptom>
+        <InternalContentURL>http://bemis/8/Pages/3063531_en-US.aspx </InternalContentURL>
+        <PublicContentURL>http://blogs.technet.com/b/askperf/archive/2015/04/07/remote-desktop-services-rds-2012-session-deployment-scenarios-standard-deployment.aspx</PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18548</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RDS Server Troubleshooter and Information Gathering.-->
+    <Rootcause>
+      <ID>RC_RDSH_DEVLIC</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-234024</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>849146EE-D21B-4383-9BB2-C48529F04702</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-234024</Name>
+            <Description>@DiagPackage.dll,-234025</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-87932.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-8944.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The Buildin\users group do not have enough permissions on HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSLicensing\Store</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Users might not be able to get,renew or use per-device Client Access Licenses (CALs), generating duplicate CALs on License Server</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>https://support.microsoft.com/en-us/kb/187614</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18647</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Check for large number of Inactive Terminal Server ports-->
+    <Rootcause>
+      <ID>RC_KB2655998_InactiveTSPorts</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230229</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3bd7b740-166b-4506-9493-7e4b3e059b2b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230231</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-19962.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-62513.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 1872] [Windows] Detecting bloated HKEY_USERS\.default\printers\Devmodes2 registry key on Terminal servers-->
+    <Rootcause>
+      <ID>RC_PrintDevModes2CountCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239259</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>276b0707-36ed-48f3-84ee-a666f2102ac6</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239260</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Event Log-->
+    <Rootcause>
+      <ID>RC_GetEvents</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1263</Name>
+        <Description>@DiagPackage.dll,-1264</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_GetEvents</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1265</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GetEvents.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Dump Collector-->
+    <Rootcause>
+      <ID>RC_DumpCollector</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1190</Name>
+        <Description>@DiagPackage.dll,-1191</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_DumpCollector</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1196</Name>
+            <Description>@DiagPackage.dll,-1197</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_DumpCollector.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-233018</Name>
+              <Description />
+            </DisplayInformation>
+            <Value>Yes</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-233019</Name>
+              <Description />
+            </DisplayInformation>
+            <Value>No</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>QuestionYesNo</ID>
+        <DisplayInformation>
+          <Parameters>
+            <Parameter>
+              <Name>Question</Name>
+              <DefaultValue>?</DefaultValue>
+            </Parameter>
+            <Parameter>
+              <Name>QuestionDescription</Name>
+              <DefaultValue>Which?</DefaultValue>
+            </Parameter>
+          </Parameters>
+          <Name>@DiagPackage.dll,-233020</Name>
+          <Description>@DiagPackage.dll,-233021</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </SingleResponseInteraction>
+    </SingleResponseInteractions>
+    <MultipleResponseInteractions />
+    <TextInteractions />
+    <PauseInteractions />
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint />
+</dcmPS:DiagnosticPackage>

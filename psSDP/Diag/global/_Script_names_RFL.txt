@@ -1,0 +1,8 @@
+DC_NetworkingDiagnostic.ps1
+DC_BasicSystemInformation.ps1
+DC_MSInfo.ps1
+DC_pstat.ps1
+DC_ChkSym.ps1
+DC_Fltmc.ps1
+DC_UpdateHistory.ps1
+DC_HotfixRollups.ps1

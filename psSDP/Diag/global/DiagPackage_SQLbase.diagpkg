@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>SQL_BASE_DIAGNOSTICS_COLLECTOR</ID>
+    <Version>1.2</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-1000010</Name>
+    <Description>@DiagPackage.dll,-1000011</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com/en-us/default.mspx</PrivacyLink>
+  <PowerShellVersion>1.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">5.2</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>false</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <Rootcauses>
+    <!--<Rootcause source="..\SharedComponents\Scripts\PortUsage\RC_LowAvailablelPorts.xml" select="/Element/Rootcause[ID='RC_LowAvailablelPorts']"/>
+    <Rootcause source="..\SharedComponents\Scripts\DumpCollector\RC_DumpCollector.xml" select="/Element/Rootcause[ID='RC_DumpCollector']"/>
+    <Rootcause source="..\SharedComponents\Scripts\Event Logs\RC_GetEvents.xml" select="/Element/Rootcause[ID='RC_GetEvents']"/>
+    <Rootcause source="..\SharedComponents\Scripts\DetectVirtualization\RC_Virtualization.xml" select="/Element/Rootcause[ID='RC_Virtualization']"/>
+    <Rootcause source="..\EPS\Scripts\Performance\Perfmon-SystemPerformance\RC_PerformanceMonitorWarning.xml" select="/Element/Rootcause[ID='RC_PerformanceMonitorWarning']"/>-->
+    <!-- ClusterBasicInfo -->
+    <!--<Rootcause source="..\EPS\Scripts\FailoverCluster\ClusterBasicInfo\RC_ClusterSvcDown.xml" select="/Element/Rootcause[ID='RC_ClusterSvcDown']"/>
+    <Rootcause source="..\EPS\Scripts\FailoverCluster\ClusterBasicInfo\RC_ClusterNodeDown.xml" select="/Element/Rootcause[ID='RC_ClusterNodeDown']"/>
+    <Rootcause source="..\EPS\Scripts\FailoverCluster\ClusterBasicInfo\RC_ClusterGroupDown.xml" select="/Element/Rootcause[ID='RC_ClusterGroupDown']"/>
+    <Rootcause source="..\EPS\Scripts\FailoverCluster\ClusterBasicInfo\RC_ClusterInfoErr.xml" select="/Element/Rootcause[ID='RC_ClusterInfoErr']"/>-->
+    <!-- Shared volumes info -->
+    <!--<RootCause source="..\EPS\Scripts\FailoverCluster\SharedVolumesInfo\RC_CSVRedirect.xml" select="/Element/Rootcause[ID='RC_CSVRedirect']"/>
+    <RootCause source="..\EPS\Scripts\FailoverCluster\SharedVolumesInfo\RC_CSVLocalAccess.xml" select="/Element/Rootcause[ID='RC_CSVLocalAccess']"/>
+    <RootCause source="..\EPS\Scripts\FailoverCluster\SharedVolumesInfo\RC_CSVMaint.xml" select="/Element/Rootcause[ID='RC_CSVMaint']"/>
+    <RootCause source="..\EPS\Scripts\FailoverCluster\SharedVolumesInfo\RC_CSVNetworkAccess.xml" select="/Element/Rootcause[ID='RC_CSVNetworkAccess']"/> 
+    <RootCause source="..\EPS\Scripts\FailoverCluster\SharedVolumesInfo\RC_CSVRedirect.xml" select="/Element/Rootcause[ID='RC_CSVRedirect']"/>-->
+    <!--Cluster validation -->
+    <!--<Rootcause source="..\EPS\Scripts\FailoverCluster\ValidationTests\RC_ClusterSCMError.xml" select="/Element/Rootcause[ID='RC_CSVRedirect']"/>
+    <Rootcause source="..\EPS\Scripts\FailoverCluster\ValidationTests\RC_ClusterValidationTests.xml" select="/Element/Rootcause[ID='RC_ClusterValidationTests']"/>
+    <Rootcause source="..\EPS\Scripts\FailoverCluster\ValidationTests\RC_ClusterValidationError.xml" select="/Element/Rootcause[ID='RC_ClusterValidationError']"/>-->
+    <!--Event Log-->
+    <Rootcause>
+      <ID>RC_GetEvents</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1263</Name>
+        <Description>@DiagPackage.dll,-1264</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_GetEvents</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1265</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GetEvents.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Performance Monitor - System Performance Data Collector-->
+    <Rootcause>
+      <ID>RC_PerformanceMonitorWarning</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12364</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_PerformanceMonitorWarning</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12365</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters>
+              <Parameter>
+                <Name>XMLFileName</Name>
+                <DefaultValue />
+              </Parameter>
+            </Parameters>
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_PerfmonSystemPerfWarning.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Dump Collector-->
+    <Rootcause>
+      <ID>RC_DumpCollector</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1190</Name>
+        <Description>@DiagPackage.dll,-1191</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_DumpCollector</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1196</Name>
+            <Description>@DiagPackage.dll,-1197</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_DumpCollector.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterGroupDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12103</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>696a1ce6-51f5-493f-ae42-03997aab060a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12105</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-10215.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterInfoErr</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12106</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>380f9dfe-ba88-409f-85d7-a3b1e586ed87</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12108</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-83011.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterNodeDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12100</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>65db61bf-9fac-4bf0-b95a-311870d74d4a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12102</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-77163.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterSvcDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12097</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>497f68a7-df83-45e2-b94b-b7a2538b35ef</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12099</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-17196.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVRedirect</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12126</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>cef7ebdd-67c0-49aa-ae0d-6f0f229bea3e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12127</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-34853.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-80018.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVLocalAccess</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12129</Name>
+        <Description>@DiagPackage.dll,-12135</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4ba6eea5-557d-444c-805c-c2e0680bdc3b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12130</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75066.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-80451.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVMaint</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12123</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2668aafb-b7e6-4d4f-ba78-93c8cd777331</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12125</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-149.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-13700.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVNetworkAccess</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12132</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c3b35f82-dafb-4633-83ba-cbdc24d800c0</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12133</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-7600.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-86012.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detect Virtualization-->
+    <Rootcause>
+      <ID>RC_VirtualMachineInAzureCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1852</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ffda0fa5-cadc-4a6a-aefe-3c4749185a41</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1850</Name>
+            <Description>@DiagPackage.dll,-1851</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-29392.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2721672</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18450</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort50Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>491774f8-2673-4a12-b2f8-63ef5183b1af</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-32770.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort80Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ae082f66-3c9c-4b8a-a03c-d1385a249def</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <Rootcause>
+      <ID>RC_Blank</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1290</Name>
+        <Description>@DiagPackage.dll,-1291</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_Blank</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1292</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_Blank.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions />
+    <MultipleResponseInteractions />
+    <TextInteractions />
+    <PauseInteractions />
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint>
+  </ExtensionPoint>
+</dcmPS:DiagnosticPackage>

@@ -1,0 +1,4686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>DIAG_CTSWindowsSetup</ID>
+    <Version>2.1</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-9001</Name>
+    <Description>@DiagPackage.dll,-9002</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://go.microsoft.com/fwlink/?LinkId=57622</PrivacyLink>
+  <PowerShellVersion>1.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">5.1</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>false</RequiresInteractivity>
+      <FileName>TS_Setup.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <Rootcauses>
+    <!--Event Log-->
+    <Rootcause>
+      <ID>RC_GetEvents</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1263</Name>
+        <Description>@DiagPackage.dll,-1264</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_GetEvents</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1265</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GetEvents.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_HighHandleCount</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1604</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d793dbf1-7c16-42a7-a471-0571efb4903c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1605</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-53750.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_KernelMemoryPerformanceIssue</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1602</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f9d6591c-a67c-4a37-ae58-95bf9a399f6f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1603</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-976.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_LowSysPTEs</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1606</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b5fc7aad-e0f5-4b20-87f2-e100653d6465</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1607</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo-75222.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Processes resource usage and top Kernel memory tags-->
+    <Rootcause>
+      <ID>RC_LowVirtualMemory</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1608</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>80bfbefb-fcc9-496e-92b2-4909934c81cc</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1609</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ProcessPerfInfo.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Dump Collector-->
+    <Rootcause>
+      <ID>RC_DumpCollector</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1190</Name>
+        <Description>@DiagPackage.dll,-1191</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_DumpCollector</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1196</Name>
+            <Description>@DiagPackage.dll,-1197</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_DumpCollector.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detect Virtualization-->
+    <Rootcause>
+      <ID>RC_VirtualMachineInAzureCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1852</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ffda0fa5-cadc-4a6a-aefe-3c4749185a41</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1850</Name>
+            <Description>@DiagPackage.dll,-1851</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-51487.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-1432.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2721672</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18450</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterGroupDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12103</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>696a1ce6-51f5-493f-ae42-03997aab060a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12105</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-46564.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterInfoErr</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12106</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>380f9dfe-ba88-409f-85d7-a3b1e586ed87</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12108</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-33858.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterNodeDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12100</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>65db61bf-9fac-4bf0-b95a-311870d74d4a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12102</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-40175.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Collect Basic Cluster System Information-->
+    <Rootcause>
+      <ID>RC_ClusterSvcDown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12097</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>497f68a7-df83-45e2-b94b-b7a2538b35ef</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12099</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-66527.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVRedirect</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12126</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>cef7ebdd-67c0-49aa-ae0d-6f0f229bea3e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12127</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-23730.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-75968.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVLocalAccess</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12129</Name>
+        <Description>@DiagPackage.dll,-12135</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4ba6eea5-557d-444c-805c-c2e0680bdc3b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12130</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-88576.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-37860.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVMaint</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12123</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2668aafb-b7e6-4d4f-ba78-93c8cd777331</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12125</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-42149.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-69507.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Information about Windows 2008 R2 Cluster Shared Volumes-->
+    <Rootcause>
+      <ID>RC_CSVNetworkAccess</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-12132</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c3b35f82-dafb-4633-83ba-cbdc24d800c0</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-12133</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-8567.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-13645.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V Info-->
+    <Rootcause>
+      <ID>RC_HyperVVMHighCPU</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-10470</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>88d7346f-4ea1-4dca-96cf-2066fede60d4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-10471</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-98511.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V Info-->
+    <Rootcause>
+      <ID>RC_DynamicMemoryEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15065</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d7cfa7cb-c56e-45dd-bf31-f64408ae4ab5</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15066</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-32470.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V Info-->
+    <Rootcause>
+      <ID>RC_DynamicMemoryOldIntegration</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15063</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c5808723-6c9c-4f6d-92b7-0e9bacd0f1a7</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15064</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-49441.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V Info-->
+    <Rootcause>
+      <ID>RC_MismatchedIC</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15061</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>862b0667-caed-442b-8c7c-d21079d3fc91</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15062</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-93680.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V Info-->
+    <Rootcause>
+      <ID>RC_VHDDetected512e</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15067</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a27f61e7-8bfa-4d09-b7ba-4725ae2d0b52</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15068</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-45002.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Inbox BPAs-->
+    <Rootcause>
+      <ID>RC_BPAInfo</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1300</Name>
+        <Description>@DiagPackage.dll,-1301</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_BPAInfo</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1302</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_BPAInfo.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Print Information Report-->
+    <Rootcause>
+      <ID>RC_PrintInfo</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-10331</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_PrintInfo</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-10334</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_PrintInfo.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detect 4KB Drives (Disk Sector Size)-->
+    <Rootcause>
+      <ID>RC_4KDriveDetected</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15010</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c176d00f-9cc8-4d77-988b-10f808f7c8ac</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15011</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-81367.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detect 4KB Drives (Disk Sector Size)-->
+    <Rootcause>
+      <ID>RC_4KNativeDriveDetected</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15018</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>46056491-8d93-4133-993e-b59da8532389</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15019</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-94899.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detect 4KB Drives (Disk Sector Size)-->
+    <Rootcause>
+      <ID>RC_KB982018IsNotInstalled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15012</Name>
+        <Description>@DiagPackage.dll,-15014</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6815836c-3f06-4495-ab2e-0589ea58d23a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15013</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76204.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Detects and alerts evaluation media-->
+    <Rootcause>
+      <ID>RC_EvalMediaDetected</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1552</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9d508310-3f14-418b-a92d-ceb77138f921</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1553</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-63297.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Debug/GFlags check-->
+    <Rootcause>
+      <ID>RC_PageHeapEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1582</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>113c255b-5041-45ce-983a-15fc33ea0711</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1583</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-86940.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Debug/GFlags check-->
+    <Rootcause>
+      <ID>RC_DriverVerifierEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1586</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>52ef8720-e3ee-4a12-a37e-cc3b0870f358</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1587</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-54912.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort50Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>491774f8-2673-4a12-b2f8-63ef5183b1af</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-35892.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort80Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ae082f66-3c9c-4b8a-a03c-d1385a249def</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-38636.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--FailoverCluster Cluster Name Object AD check-->
+    <Rootcause>
+      <ID>RC_ClusterCNOCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15082</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9693af28-f7c6-48fb-98fc-e96ce5ce1f76</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15083</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-41297.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2169] [Windows] Xsigo network host driver can cause Cluster disconnects-->
+    <Rootcause>
+      <ID>RC_ClusterXsigoDriverNetworkCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239249</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>dee3ff6b-e948-4bbe-85ab-7f6822700a00</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239250</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-42376.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-81546.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2251] [Windows] Cluster 2003 - Access denied errors during a join, heartbeat, and Cluster Admin open-->
+    <Rootcause>
+      <ID>RC_Cluster2K3NoLmHash</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239807</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>50803a56-46c7-4122-bf91-8b9a67bac1e9</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239808</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-57917.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-93286.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2513] [Windows] IPv6 rules for Windows Firewall can cause loss of communications between cluster nodes-->
+    <Rootcause>
+      <ID>RC_ClusterIPv6FirewallCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240049</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a1c3c386-c0e4-438a-8603-d9a158de8e8d</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240050</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-9871.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-49686.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 5258] [Windows] Identifying Cluster Hive orphaned resources located in the dependencies key-->
+    <Rootcause>
+      <ID>RC_Cluster_OrphanResource</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239846</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f683da5c-1113-4341-a416-c4774e2e8e46</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239844</Name>
+            <Description>@DiagPackage.dll,-239845</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-43039.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-51077.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>One or more orphaned resources has been found in the cluster hive’s dependencies 'contains' key and this may cause problems to start cluster service</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;EN-US;2751945</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18429</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5258] [Windows] Identifying Cluster Hive orphaned resources located in the dependencies key-->
+    <Rootcause>
+      <ID>RC_Cluster_MissingCryptoResource</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239851</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d6e7dd07-a584-4b11-8245-c28ef058cf43</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239849</Name>
+            <Description>@DiagPackage.dll,-239850</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-82656.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-69388.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>One or more orphaned resources has been found in the cluster hive’s dependencies 'contains' key and this may cause problems to start cluster service</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;EN-US;2751945</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18429</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5258] [Windows] Identifying Cluster Hive orphaned resources located in the dependencies key-->
+    <Rootcause>
+      <ID>RC_Cluster_MissingResource</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239856</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4dbf252d-7c07-442a-89e3-32bd44036b6b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239854</Name>
+            <Description>@DiagPackage.dll,-239855</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-49879.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-5060.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>One or more orphaned resources has been found in the cluster hive’s dependencies 'contains' key and this may cause problems to start cluster service</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;EN-US;2751945</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18429</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 6519] [Windows] Invalid Class error on 2012 Clusters (SDP)-->
+    <Rootcause>
+      <ID>RC_ClusterCAUWMINamespaceCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239358</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>687c99ac-e055-484e-9c1e-39cc90d58073</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239356</Name>
+            <Description>@DiagPackage.dll,-239357</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-97711.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-23271.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Cluster nodes missing CAU WMI namespace (MSFT_CAUNode class under root\Microsoft\Windows\ClusterUpdate namespace)</RootCause>
+        <HighLevelLogic>If any Cluster machine has the CAU WMI namespace removed, fire the rule</HighLevelLogic>
+        <Symptom>User may not be able not install patches through Cluster Aware Updating</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=KB;EN-US;2822330</InternalContentURL>
+        <PublicContentURL />
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18471</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Informational</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 6500] [Windows] Invalid Namespace error on 2008 and 2012 Clusters-->
+    <Rootcause>
+      <ID>RC_ClusterMSClusterWMINamespaceCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230703</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>cc6ce54d-079d-4776-9914-c3c5d2e10a54</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230701</Name>
+            <Description>@DiagPackage.dll,-230702</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-20370.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-18232.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Cluster node missing MSCluster_CLUSTER WMI namespace (MSCluster_CLUSTER class under root\MSCluster namespace)</RootCause>
+        <HighLevelLogic>If any Cluster machine has the MSCluster_CLUSTER WMI namespace removed, fire the rule</HighLevelLogic>
+        <Symptom>User may not be able to make WMI calls into the namespace</Symptom>
+        <InternalContentURL>http://bemis.partners.extranet.microsoft.com/2795979/EN-US</InternalContentURL>
+        <PublicContentURL />
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18471</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Informational</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checking the presence of Citrix AppSense 8.1-->
+    <Rootcause>
+      <ID>RC_CitrixAppSenseCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230202</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>569e52a3-f840-4a9c-809c-2a57ce16839f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230203</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-30151.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for large number of Inactive Terminal Server ports-->
+    <Rootcause>
+      <ID>RC_KB2655998_InactiveTSPorts</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230229</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3bd7b740-166b-4506-9493-7e4b3e059b2b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230231</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-89845.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-39270.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checking if Registry Size Limit setting is present on the system-->
+    <Rootcause>
+      <ID>RC_RegistrySizeLimitCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230167</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>66b48e77-b251-4f19-a945-59d09527126b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230169</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-72195.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2446] [Windows] Determining the trimming threshold set by the Memory Manager-->
+    <Rootcause>
+      <ID>RC_2K3PoolUsageMaximum</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239202</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>8f03d2dd-e25e-40ac-ad22-1732c6c6f15a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239203</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-78686.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-52879.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks files in the LamnServer, if any at .PST files a file is created with listing all of the files in the directory-->
+    <Rootcause>
+      <ID>RC_NetworkPSTFound</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230162</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6aed9eb3-02eb-4728-93af-e55af02ffad7</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230163</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-48716.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 986] [Windows] SBSL McAfee Endpoint Encryption for PCs may cause slow boot or delay between CTRL+ALT+DEL and Cred-->
+    <Rootcause>
+      <ID>RC_SBSL_MCAfee_EEPC_SlowBoot</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239103</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>bd16778a-8692-41b9-bc7f-34bcdad2d60e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239104</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-41695.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-8747.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2285] [Windows] Windows Server 2003 TS Licensing server does not renew new versions of TS Per Device CALs-->
+    <Rootcause>
+      <ID>RC_RemoteDesktopLServerKB2512845</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239212</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5c5b6745-82a9-45db-961b-868b3f157128</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239213</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-19608.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-80322.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3181] [Windows] Symantec Endpoint Protection's smc.exe causing handle leak-->
+    <Rootcause>
+      <ID>RC_SEPProcessHandleLeak</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239133</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f3027bac-f955-4345-acdd-fc7c734d90ee</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239134</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75283.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-38135.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2387] [Windows] Verify if RPC connection a configured to accept only Authenticated sessions-->
+    <Rootcause>
+      <ID>RC_RPCUnauthenticatedSessions</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239100</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>334ab67c-4c77-4ad3-8393-1cf0c5798430</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239101</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-59623.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-78945.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 1911] [Windows] NTFS metafile cache consumes most of RAM in Win2k8R2 Server-->
+    <Rootcause>
+      <ID>RC_NTFSMetafilePerfCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239109</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>df156e87-5a7b-483c-ac5f-5b903933c8be</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239110</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-4282.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-27891.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2346] [Windows] high cpu only on one processor-->
+    <Rootcause>
+      <ID>RC_2K3ProcessorAffinityMaskCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239217</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>01e4906e-7af9-4702-b7a4-cebee11806dd</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239218</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-82433.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-33592.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3989] [Windows] STACK MATCH - Win2008R2 - Machine hangs after shutdown, caused by ClearPageFileAtShutdown setting-->
+    <Rootcause>
+      <ID>RC_SBSLClearPageFileAtShutdown</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240012</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f85a5509-4c41-477d-baa3-01337e443d31</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240013</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-7030.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-79942.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2753] [Windows] HP DL385 G5p machine cannot generate dump file-->
+    <Rootcause>
+      <ID>RC_ProLiantDL385NMICrashDump</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239812</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9ac267d7-4513-430c-aa44-2d356df09dd8</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239813</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-48863.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-59635.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3253] [Windows] Windows Search service does not start immediately after the machine is booted-->
+    <Rootcause>
+      <ID>RC_WindowsSearchLenovoRapidBootCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239832</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>917af88e-166b-4c81-8005-bcc937451b93</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239833</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-58880.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-70606.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_PagedPoolD2dSymEvent</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239119</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2a936abc-3fca-4c65-9657-35d119f31529</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239120</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-47433.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-49814.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_KernelTagRxM4SeTIKB2647452</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239125</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>169ffd39-9f10-4b89-a970-79ec325ff221</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239126</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-80052.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-43800.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_KernelTagSslCKB2585542</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239128</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>7602358c-1f07-4baa-9063-94f839bd57e3</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239129</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-39942.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-83656.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_KernelTagTokeKB982010</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239122</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f6470abd-bd48-4766-821d-c374970b0baa</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239123</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-71628.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-55833.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_MPIO2K3Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239148</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2d6ce02e-8635-4ccd-99ce-e121f48a3271</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239149</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-45065.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-56788.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_BASPNPPLeakCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239158</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>618765be-bfab-4f9e-9fab-7071d5297344</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239159</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-65067.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-96622.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_AladdinDeviceDriversCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239163</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>502e1d9b-f36b-4860-8a89-31df22e7fd34</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239164</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-66440.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-62610.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_MemoryLeakInMountmgrCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239190</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>547adb3d-0cd5-4851-8d29-b20329c95f5d</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239188</Name>
+            <Description>@DiagPackage.dll,-239189</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-89496.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-32829.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Memory leak in Mountmgr.sys driver pre KB 940307</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/940307</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18664</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_ALPCandPowerManagementPoolCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-250602</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>e7a49065-4c7d-4baf-b024-d5c2415cc913</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-250600</Name>
+            <Description>@DiagPackage.dll,-250601</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-16222.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-84539.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>ALPC and Power Management are consuming high Pool resources</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2582112</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18556</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 2334] [Windows] W2K3 x86 SP2 server running out of paged pool due to D2d tag-->
+    <Rootcause>
+      <ID>RC_CitrixDriverCausedPagePoolMemoryLeak</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239378</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2d142459-ded0-4674-9990-7115c5d960b7</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239376</Name>
+            <Description>@DiagPackage.dll,-239377</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-90262.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-69363.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Citrix component WDICA.SYS which is responsible for Citrix Desktop Sessions consume huge non paged pool memory</RootCause>
+        <HighLevelLogic>Check if pool tag "ica" is one of the top Kernel Non Paged Pool Tags and the file WDICA.SYS file version is 4.5.4400.1</HighLevelLogic>
+        <Symptom>Windows Server 2003 x86 SP2 Terminal server with Citrix installed, getting non paged pool depletion issues. During this, Citrix would not be able to create new user sessions, however you would be able to login to the console with local login and some time with domain login (if it is not completely running out of Non paged pool memory)</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B;EN-US;2488957</InternalContentURL>
+        <PublicContentURL>http://support.citrix.com/article/CTX127926</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18664</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 3317] [Windows] DisableEngine reg entry can cause app install or registration failure-->
+    <Rootcause>
+      <ID>RC_AppCompatDisabledCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240024</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b04170fe-515e-4a8d-a2c2-ceb1695c16ff</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240025</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-67756.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-12942.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2357] [Windows] the usage of NPP is very large for XTE.exe-->
+    <Rootcause>
+      <ID>RC_XTENonPagedPoolCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239143</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2dd26a15-7238-434d-aa5b-c336ed20e297</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239144</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-23032.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-90442.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 4368] [Windows] Windows Logon Slow and Explorer Slow-->
+    <Rootcause>
+      <ID>RC_2K3CLSIDUserACLCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239269</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>fc9f08b5-c1c9-4c02-b1e4-7ff690509e38</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239270</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-45597.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-77169.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 4649] [Windows] Incorrect values for HeapDecomitFreeBlockThreshold  causes high Private Bytes in multiple processes-->
+    <Rootcause>
+      <ID>RC_HeapDecommitFreeBlockThresholdCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240039</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3d82442f-e509-4210-b83f-a136b609945b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240040</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-15278.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-89679.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2056] [Windows] Consistent Explorer crash due to wsftpsi.dll-->
+    <Rootcause>
+      <ID>RC_WsftpsiExplorerCrashCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239279</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5cea8562-5e8e-4365-a5f7-f9f6f1aa892d</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239280</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-13340.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-38289.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3250] [Windows] Machine exhibits different symptoms due to Confliker attack-->
+    <Rootcause>
+      <ID>RC_Netapi32MS08-067Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239153</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6d2a765d-9399-4121-8f9f-6a89a9162825</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239154</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-81288.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-30209.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 5194] [Windows] Unable to install vcredist_x86.exe with message (Required file install.ini not found. Setup will now exit)-->
+    <Rootcause>
+      <ID>RC_RegistryEntryForAutorunsCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239861</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>af42d81d-40d3-4d66-9282-274957210c00</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239859</Name>
+            <Description>@DiagPackage.dll,-239860</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-80390.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-1589.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Registry entry for Autoruns is invalid</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/102889</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18607</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5452] [Windows] The “Red Arrow” issue in Component Services caused by registry keys corruption-->
+    <Rootcause>
+      <ID>RC_RedArrowRegistryCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239180</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>686f34d0-1205-42b2-82e1-35ab94cf0d10</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239178</Name>
+            <Description>@DiagPackage.dll,-239179</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-31253.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-3065.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://blogs.msdn.com/b/asiatech/archive/2012/01/25/how-to-troubleshoot-the-red-arrow-issue-in-component-services-iii.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18463</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 4783] [Windows] eEye Digital Security causing physical memory depletion-->
+    <Rootcause>
+      <ID>RC_eEyeDigitalSecurityCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239353</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>02852fd6-b557-4b1b-8e88-112501ca90b1</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239351</Name>
+            <Description>@DiagPackage.dll,-239352</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-68663.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-97895.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause />
+        <HighLevelLogic>Check if the version of EEYEHV64.SYS, EEYENV64.SYS and EEYETV64.SYS is 4.7.1.2703</HighLevelLogic>
+        <Symptom>eEye Digital Security might cause physical memory depletion</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B;en-US;2731546</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>8113</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5091] [Windows] Super Rule-To check if both 3GB and PAE switch is present in boot.ini for a 32bit OS (Pre - Win 2k8)-->
+    <Rootcause>
+      <ID>RC_SwithesInBootiniCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240064</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>07f299b2-ab76-4344-b594-299f078e4f95</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240062</Name>
+            <Description>@DiagPackage.dll,-240063</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-68805.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-35952.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>Performance issues for 32 bit OS pre-Windows Vista [Windows XP, 2003]</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://blogs.msdn.com/b/chadboyd/archive/2007/03/24/pae-and-3gb-and-awe-oh-my.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18556</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 6530] [Windows] Check for any configured RPC port range which may cause issues with DCOM or DTC components-->
+    <Rootcause>
+      <ID>RC_RPCPortRangeCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239373</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c4b8f791-6b23-46d0-a46f-6c0000e26c22</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239371</Name>
+            <Description>@DiagPackage.dll,-239372</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-8694.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-19449.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>A RPC port range is currently configured in HKLM\SOFTWARE\Microsoft\Rpc\Internet</RootCause>
+        <HighLevelLogic>Check if a RPC port range is configured in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Rpc\Internet and if the status of DTC or COM+ System Application is stopped</HighLevelLogic>
+        <Symptom>Services such as DTC or COM+ System Application may fail to start if a port range is too small</Symptom>
+        <InternalContentURL>http://support.microsoft.com/kb/154596</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18465</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7018] [Windows] Event Log Service won't start-->
+    <Rootcause>
+      <ID>RC_EventLogStoppedGPPCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240079</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3a768bee-aef7-42dd-b90b-8b447878f6a9</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240077</Name>
+            <Description>@DiagPackage.dll,-240078</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-93070.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-2835.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if group policy preferences are enabled for Regional Options, the Event Log service state is not running and hotfix 951430 is not installed</HighLevelLogic>
+        <Symptom>Event Log Service won't start in Windows 8</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/951430</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18600</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Check if hotfix 2480954 installed-->
+    <Rootcause>
+      <ID>RC_KB2480954AndWinRMStateCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239291</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5e609edb-084c-4462-b0b7-787c3cb08b7b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239289</Name>
+            <Description>@DiagPackage.dll,-239290</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-13878.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-7660.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Known issue regarding memory leak of Windows Remote Management service when  WMI queries using WinRM scripting API or through the Winrm command-line tool is used on a computer.</RootCause>
+        <HighLevelLogic>Check if KB2480954 is installed. If not, check if WinRM service is configured to auto start. If it is auto start, then check if WinRM is stopped. If stopped, check the service exit code. Any other value than 0, fire the rule.</HighLevelLogic>
+        <Symptom>The memory usage of the Windows Remote Management service keeps increasing on Windows Server 2008 or Windows Vista</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2480954</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18598</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 8012] [Windows] SDP-UDE check for reg key DisablePagingExecutive-->
+    <Rootcause>
+      <ID>RC_DisablePagingExecutiveCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-250637</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a0827633-6742-40cf-be40-e6de772a4e2f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-250635</Name>
+            <Description>@DiagPackage.dll,-250636</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-61450.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-19822.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        Check if HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management
+        DisablePagingExecutive is 1
+      </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc959492.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18550</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[KSE Rule] [ Windows V3] Server Manager refresh issues and SDP changes reqd for MMC Snapin Issues in 2008, 2008 R2-->
+    <Rootcause>
+      <ID>RC_ServerManagerRefreshKB2762229</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239303</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b7d69da3-d4b7-4754-ad3c-49133b0d37b4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239301</Name>
+            <Description>@DiagPackage.dll,-239302</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-44095.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-74200.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>In the upgraded Windows Server 2012, when MgmtProvider determines that FeatureInfoXml registry value exists, it tries to execute the down-level features extraction code instead of calling the UXD provider for getting features. This results in the failure.</RootCause>
+        <HighLevelLogic>Check if HKLM\SOFTWARE\Microsoft\ServerManager\MgmtProvider\FeatureInfoXml exists</HighLevelLogic>
+        <Symptom>On Windows Server 2012, Server Manager refresh fails with the following error: Incorrect function</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2762229</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18660</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[KSE Rule] [ Windows V3] Presence of lots of folders inside \spool\prtprocs\ causes failure to install print queues-->
+    <Rootcause>
+      <ID>RC_PrtprocsSubfolderBloat</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239388</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d4047602-196c-443f-934c-75bd2ee855c1</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239386</Name>
+            <Description>@DiagPackage.dll,-239387</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-63720.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-64324.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>There is a hard limit on the number of subfolders. If the number exceeds the limit, no new connection printer connections will be allowed</RootCause>
+        <HighLevelLogic>Check if event 213 or 215 exists and if the amount of subfolder of \spool\prtprocs\x64 or \spool\prtprocs\w32x86 exceeds 10</HighLevelLogic>
+        <Symptom>Unable to add the network printers Error : Operation could not be completed 0x00000002</Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B;EN-US;2026077</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18520</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[KSE Rule] [ Windows V3] Handle leak in Svchost.exe when a WMI query is triggered by using the Win32_PowerSettingCapabilities-->
+    <Rootcause>
+      <ID>RC_WMIHandleLeakKB2639077</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239392</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5c139a00-370c-4d1c-a929-defcdae591dc</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239390</Name>
+            <Description>@DiagPackage.dll,-239391</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-69373.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-89516.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>This issue occurs because the handles to the power policy registry keys that are opened by the power service (Umpo.dll) are not closed correctly. This behavior causes the handle leak.</RootCause>
+        <HighLevelLogic>Check if version of Umpo.dll is smaller than KB2639077, then check if the handle count of WMI services is above 10000</HighLevelLogic>
+        <Symptom>When Windows Management Instrumentation (WMI) query is executed to determine the power settings of a computer that is running Windows 7 or Windows Server 2008 R2, the handle count of the Svchost.exe process that hosts the power service increases. Additionally, when the handle count reaches the maximum number of handles that a process can have, no services that share this process open handles to any object.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2639077</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18662</SupportTopicsID>
+        <MessageVersion>2</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Symantec Endpoint Protection MR1 or MR2 check-->
+    <Rootcause>
+      <ID>RC_SymantecEPCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1592</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b5efad53-14c5-4905-940d-a00bf42a14a9</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1593</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-2849.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--EMC Replistor Software installation detected but KB 975759 is not installed-->
+    <Rootcause>
+      <ID>RC_ReplistorCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230103</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>0e4867a3-15f6-4c84-8ca5-2215a1f9a566</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230104</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-34491.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Warning if Windows Server 2008 Service Pack 1, We end support Windows Server 2008 SP1 on July 12, advice customer to upgrade to SP2.-->
+    <Rootcause>
+      <ID>RC_ServicePackKB2590494Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230120</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d80b954f-b43b-4c73-bfaf-c8b7b8342bf9</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230121</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-26781.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks 32 bit windows server 2003 / 2008 to see is DEP is disabled, if so it might not detect more than 4 GB of RAM.-->
+    <Rootcause>
+      <ID>RC_DEPDisabled4GBCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230174</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6ec34640-92ea-4505-a0f4-0157fce14eb4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230175</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-89610.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for Sophos BEFLT.SYS version 5.60.1.7-->
+    <Rootcause>
+      <ID>RC_B2693877_Sophos_BEFLTCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230254</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>44da0efa-5948-40fd-865e-a7162176eddd</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230255</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-98203.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-62772.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2695] [Windows] Check the Log On account for the Telnet service to verify it's not using the Local System account-->
+    <Rootcause>
+      <ID>RC_TelnetSystemAccount</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240002</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f373ed61-dd56-4c00-b76e-f56f97d26c28</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240003</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-68378.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-81948.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2842] [Windows] Alert Engineers if they are working on a Dell machine models R910, R810 and M910-->
+    <Rootcause>
+      <ID>RC_DellPowerEdgeBiosCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239802</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>899063b8-0b54-4bf2-87da-9701f1d48ba4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239803</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-42493.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-6775.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2389] [Windows] Hang caused by kernel memory depletion due 'SystemPages' reg key with wrong value-->
+    <Rootcause>
+      <ID>RC_MemoryManagerSystemPagesCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239207</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>b86a1326-dfa5-4ef0-966d-c87f2203a690</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239208</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75500.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-34857.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 7065] [Windows] Alert users about Windows XP EOS-->
+    <Rootcause>
+      <ID>RC_WindowsXPEOSCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239363</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>7d2eea26-ab6e-479d-8531-4f8ef7783b92</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239361</Name>
+            <Description>@DiagPackage.dll,-239362</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-16232.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-64851.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Windows XP end of support</RootCause>
+        <Symptom />
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://www.microsoft.com/en-us/windows/endofsupport.aspx</PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18579</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[KSE Rule] [ Windows V3] HpCISSs2 version 62.26.0.64 causes 0xD1 or 0x9E-->
+    <Rootcause>
+      <ID>RC_HpCISSs2DriverIssueCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-250632</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>16157b68-0515-40d5-babd-30d8410a54fb</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-250630</Name>
+            <Description>@DiagPackage.dll,-250631</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-31357.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-86431.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check the machine is windows server 2012 with the HPCISSS2.SYS Driver installed, if so check the HPCISSS2.SYS's version equal to 62.26.0.64, if equal fire the rule.</HighLevelLogic>
+        <Symptom>HP ProLiant Server May Blue Screen if Configured With an HP Smart Array Controller and the Windows Server 2012 HPCISSS2.SYS Driver Version 62.26.0.64</Symptom>
+        <InternalContentURL>http://bizsupport1.austin.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&amp;cc=us&amp;taskId=110&amp;prodSeriesId=3885791&amp;prodTypeId=329290&amp;objectID=c03793656</InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2863960</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18486</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--check for WMI corruption on HP systems-->
+    <Rootcause>
+      <ID>RC_HPWMICheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230858</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ea9e4afc-4c1c-4609-95d2-067732772edf</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230858</Name>
+            <Description>@DiagPackage.dll,-230859</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-64165.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-18326.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if known issue HP WMI provider is present</HighLevelLogic>
+        <Symptom>Autorecover MOFs registry key is corrupted</Symptom>
+        <InternalContentURL>http://bemis/8/Pages/3063050_en-US.aspx </InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>1</Visibility>
+        <SupportTopicsID>18600</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Hyper-V KB 982210 check-->
+    <Rootcause>
+      <ID>RC_HyperVSCSIDiskEnum</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15032</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ee158cf6-b6af-49fc-ad24-4fe4ed5d1919</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15033</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-15733.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Hyper-V KB 975530 check (Xeon Processor Errata)-->
+    <Rootcause>
+      <ID>RC_HyperVXeon5500Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-15022</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9bd17163-a0b8-4e4c-82a7-1d7203c8d080</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-15023</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-54309.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks if Windows Server 2008 R2 SP1, Hyper-V, and Hotfix 2263829 are installed if they are generate alert-->
+    <Rootcause>
+      <ID>RC_HyperVKB2263829Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230002</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2a48a4bf-94f8-4784-aac2-60b833f2c9f4</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230003</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-60669.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks if Windows Server 2008 R2 SP1, Hyper-V, and Tunnel.sys driver are installed if they are generate alert-->
+    <Rootcause>
+      <ID>ServerCoreKB978309Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230009</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d26b920f-3dfe-4f81-8c65-a83056d61a88</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230010</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-48307.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for event ID 21203 or 21125-->
+    <Rootcause>
+      <ID>RC_CheckEvtID_KB2475761</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230212</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>20f36a7d-6050-4502-9603-d74a1eff26a8</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230213</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-19872.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-20197.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 6134] [Windows] You cannot start Hyper-V virtual machines after you enable the IO verification option on a HyperV-->
+    <Rootcause>
+      <ID>RC_HyperVCheckVerificationKB2761004</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-250617</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>df812b2e-637e-4592-8326-c2ccf7b0e113</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-250615</Name>
+            <Description>@DiagPackage.dll,-250616</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76563.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-37936.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2761004</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18585</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5438] [Windows] Windows 2012 Hyper-V SPN and SCP not registed if customer uses a non default dynamicportrange-->
+    <Rootcause>
+      <ID>RC_HyperVEvent14050Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239383</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5c85cb95-7431-4c20-9626-5091cb64ed16</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239381</Name>
+            <Description>@DiagPackage.dll,-239382</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-15718.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-95456.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The default port range which is from 49152 with 16384 ports was changed</RootCause>
+        <HighLevelLogic>Check if event 14050 exists under Microsoft-Windows-Hyper-V-VMMS-Admin during last 7 days</HighLevelLogic>
+        <Symptom>Hyper-V VMMS fails to regsister SPNs and SCP. Subsequent Management fails with tools like SCVMM 2012Sp1</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://social.technet.microsoft.com/wiki/contents/articles/1340.hyper-v-troubleshooting-event-id-14050-vmms.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18448</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 5752] [Windows] BIOS update may be required for some computers before starting Hyper-V on 2012-->
+    <Rootcause>
+      <ID>RC_HyperV2012-CS-BIOS-Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239876</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c3a79c99-e386-46a4-82e4-db6e20772fb3</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239874</Name>
+            <Description>@DiagPackage.dll,-239875</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-45583.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-39139.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if the BIOS release date for PowerEdge R510, PowerEdge R710, PowerEdge R910 models is older than September 2012</HighLevelLogic>
+        <Symptom>You may receive an error when trying to start a Virtual Machine or a Virtual Machine will not start</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2762297</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18665</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 3474] [Windows] Pending Trans Rule - PendingXmlIdentifier, NextQueueEntryIndex, AdvancedInstallersNeedResolving-->
+    <Rootcause>
+      <ID>RC_ServicingComponentsReg</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239244</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2649e98b-addc-4e34-94b2-41cf7ff7ad25</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239245</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-74568.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-16964.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3472] [Windows] Pending Transactions Rule Idea - Pending.xml-->
+    <Rootcause>
+      <ID>RC_ServicingPendingXml</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239817</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6c7fca52-364e-46be-ab27-dac7f2f89f5e</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239818</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-60835.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-90873.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3002] [Windows] SP1 installation on Windows 7 and Windows Server 2008 R2 fails with the error 0x800F0826-->
+    <Rootcause>
+      <ID>RC_UsbstorSystemPermissionsSPCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239114</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>e5ed57a0-8bcc-416f-bfc0-99218f167ddb</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239115</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-98739.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-96761.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 5712] [Windows] Run Dism checkhealth on Win8 or 2012 to detect possible servicing corruption-->
+    <Rootcause>
+      <ID>RC_ServicingCorruptionCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239344</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9be2bfc9-3128-43bf-9176-c7c63cfd8539</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239342</Name>
+            <Description>@DiagPackage.dll,-239343</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76283.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-79053.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Windows image is unserviceable</RootCause>
+        <HighLevelLogic>Run 'dism /online /cleanup-image /checkhealth' and analyze output</HighLevelLogic>
+        <Symptom>Windows image is unserviceable</Symptom>
+        <InternalContentURL>http://technet.microsoft.com/en-us/library/hh824869.aspx</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18531</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 1922] [Windows] On Windows 2008 R2 and Windows 7 System state backup fails with event id 5 and error 2155347997-->
+    <Rootcause>
+      <ID>RC_BackupSystemStateKB2182466</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239234</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f11d89cf-ad83-474d-8bae-c5307cd1e7c2</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239235</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-99692.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-6032.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3919] [Windows] Create Shadow Copy fail only on VERTIAS storage foundation volume-->
+    <Rootcause>
+      <ID>RC_VeritasVXIOBadConfigFlags</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239222</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>56d379f0-a5f5-4a05-9152-8b7d5dbbab8b</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239223</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-67574.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-26745.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 3059] [Windows] Ntbackup high CPU and hang-->
+    <Rootcause>
+      <ID>RC_FilesNotToBackup2K3Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239264</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>df01ef5e-e586-410e-8be2-a32cf3e81e28</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239265</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76955.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-86294.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2004] [Windows] Bitlocker Drive Preparation fails with Error 'The new active drive cannot be formatted.'-->
+    <Rootcause>
+      <ID>RC_BitlockerDenyWriteFixedPolicy</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239274</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>0f1f1011-e351-4612-8aa7-09377a0f14bb</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239275</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-27334.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-79020.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 5327] [Windows] Machine imaged using vlite 1.2 will fail to install SP1-->
+    <Rootcause>
+      <ID>RC_MachineImageVliteCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239339</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a220f6e3-d86e-45d5-8121-7ed62b8c3da1</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239337</Name>
+            <Description>@DiagPackage.dll,-239338</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-91428.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-96599.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>The computer system was customized using the Vlite tool. The Vlite tool can cause problems installing service packs, updates, and other servicing problems</RootCause>
+        <Symptom>Windows 2008 R2 SP1 installation may fail if you have used vlite 1.2 to image from a base image and deployed it across machines</Symptom>
+        <InternalContentURL>http://bemis.partners.extranet.microsoft.com/2754354/EN-US</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18547</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 6711] [Windows] MSI package fails to install with error code HRESULT -2147319780-->
+    <Rootcause>
+      <ID>RC_MSIPackageInstallationCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-240069</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>0b59de85-f82e-4289-b339-c58f429ead06</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-240067</Name>
+            <Description>@DiagPackage.dll,-240068</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-88464.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat\DisableEngine is currently set to 1</HighLevelLogic>
+        <Symptom>Certain MSI packages may fail to install with error code HRESULT -2147319780</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://blogs.technet.com/b/askperf/archive/2012/01/06/case-of-the-windows-installer-installation-failure-and-appcompat-shim.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18425</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--SurfaceDetectWifiDriverVersion-->
+    <Rootcause>
+      <ID>RC_SurfaceDetectWifiDriverVersion</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260055</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>151B587B-EF4A-46FC-B263-E975C93962CB</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260057</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-57663.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SurfaceDetectFirmwareVersions-->
+    <Rootcause>
+      <ID>RC_SurfaceDetectFirmwareVersions</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260041</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>34F6567E-7B92-4C37-B1CA-5DE6E66D4881</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260042</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-10035.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SurfaceDetectConnectedStandbyStatus-->
+    <Rootcause>
+      <ID>RC_SurfaceDetectConnectedStandbyStatus</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260045</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>E91E703E-9D91-495A-B39E-82F6ECDE403E</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260046</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions />
+    <MultipleResponseInteractions />
+    <TextInteractions />
+    <PauseInteractions />
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint />
+</dcmPS:DiagnosticPackage>

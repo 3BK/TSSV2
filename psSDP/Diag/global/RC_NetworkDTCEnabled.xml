@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Element xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <Rootcause>
+    <ID>RC_NetworkDTCEnabled</ID>
+    <DisplayInformation>
+      <Parameters/>
+      <Name>
+        <dcmRS:LocalizeResourceElement comment="Title" index="740165">Localized Title</dcmRS:LocalizeResourceElement>
+      </Name>
+      <Description/>
+    </DisplayInformation>
+    <Resolvers>
+      <Resolver>
+        <ID>c5d318c6-dc85-4f65-b7ae-6c4df1373b7d</ID>
+        <DisplayInformation>
+          <Parameters/>
+          <Name>
+            <dcmRS:LocalizeResourceElement comment="Title" index="740166">Description</dcmRS:LocalizeResourceElement>
+          </Name>
+          <Description/>
+        </DisplayInformation>
+        <RequiresConsent>false</RequiresConsent>
+        <Script>
+          <Parameters/>
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>true</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>TS_NetworkDTCEnabled.ps1</FileName>
+          <ExtensionPoint/>
+        </Script>
+        <ExtensionPoint/>
+      </Resolver>
+    </Resolvers>
+    <Verifier/>
+    <ContextParameters/>
+    <ExtensionPoint/>
+  </Rootcause>
+</Element>

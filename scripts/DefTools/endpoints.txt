@@ -1,0 +1,19 @@
+https://winatp-gw-cus.microsoft.com/test
+https://winatp-gw-eus.microsoft.com/test
+https://winatp-gw-weu.microsoft.com/test
+https://winatp-gw-neu.microsoft.com/test
+https://winatp-gw-uks.microsoft.com/test
+https://winatp-gw-ukw.microsoft.com/test
+https://winatp-gw-usgv.microsoft.com/test
+https://winatp-gw-usgt.microsoft.com/test
+https://eu.vortex-win.data.microsoft.com/ping
+https://us.vortex-win.data.microsoft.com/ping
+https://uk.vortex-win.data.microsoft.com/ping
+https://events.data.microsoft.com/ping
+https://settings-win.data.microsoft.com/qos
+https://eu-v20.events.data.microsoft.com/ping
+https://uk-v20.events.data.microsoft.com/ping
+https://us-v20.events.data.microsoft.com/ping
+https://us4-v20.events.data.microsoft.com/ping
+https://us5-v20.events.data.microsoft.com/ping
+http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab	NoPinning

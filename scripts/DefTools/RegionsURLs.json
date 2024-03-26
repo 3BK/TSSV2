@@ -1,0 +1,62 @@
+[
+                {
+                                "Region": "US",
+                                "DatacenterPrefix": "",
+                                "CnCURLs": ["https://winatp-gw-cus.microsoft.com/commands/test", "https://winatp-gw-eus.microsoft.com/commands/test", "https://winatp-gw-cus3.microsoft.com/commands/test", "https://winatp-gw-eus3.microsoft.com/commands/test"],
+                                "CyberDataURLs": ["https://us.vortex-win.data.microsoft.com/ping", "https://us-v20.events.data.microsoft.com/ping"],
+                                "AutoIRBlobs": ["https://automatedirstrprdcus.blob.core.windows.net	NoPinning", "https://automatedirstrprdeus.blob.core.windows.net	NoPinning", "https://automatedirstrprdcus3.blob.core.windows.net	NoPinning", "https://automatedirstrprdeus3.blob.core.windows.net	NoPinning"],
+                                "MdeConfigMgr": ["https://enterpriseregistration.windows.net	NoPinning", "https://login.microsoftonline.com	NoPinning", "https://discovery.dm.microsoft.com	NoPinning", "https://enrollment.dm.microsoft.com	NoPinning", "https://checkin.dm.microsoft.com	NoPinning", "https://graph.microsoft.com	NoPinning"],
+                                "SampleUploadBlobs": ["https://ussus1eastprod.blob.core.windows.net	NoPinning", "https://ussus1westprod.blob.core.windows.net	NoPinning", "https://ussus2eastprod.blob.core.windows.net	NoPinning", "https://ussus2westprod.blob.core.windows.net	NoPinning", "https://ussus3eastprod.blob.core.windows.net	NoPinning", "https://ussus3westprod.blob.core.windows.net	NoPinning", "https://ussus4eastprod.blob.core.windows.net	NoPinning", "https://ussus4westprod.blob.core.windows.net	NoPinning", "https://wsus1eastprod.blob.core.windows.net	NoPinning", "https://wsus1westprod.blob.core.windows.net	NoPinning", "https://wsus2eastprod.blob.core.windows.net	NoPinning", "https://wsus2westprod.blob.core.windows.net	NoPinning"]
+                },
+                {
+                                "Region": "EU",
+                                "DatacenterPrefix": "",
+                                "CnCURLs": ["https://winatp-gw-weu.microsoft.com/commands/test", "https://winatp-gw-neu.microsoft.com/commands/test"],
+                                "CyberDataURLs": ["https://eu.vortex-win.data.microsoft.com/ping", "https://eu-v20.events.data.microsoft.com/ping"],
+                                "AutoIRBlobs": ["https://automatedirstrprdweu.blob.core.windows.net	NoPinning", "https://automatedirstrprdneu.blob.core.windows.net	NoPinning"],
+                                "MdeConfigMgr": ["https://enterpriseregistration.windows.net	NoPinning", "https://login.microsoftonline.com	NoPinning", "https://discovery.dm.microsoft.com	NoPinning", "https://enrollment.dm.microsoft.com	NoPinning", "https://checkin.dm.microsoft.com	NoPinning", "https://graph.microsoft.com	NoPinning"],
+                                "SampleUploadBlobs": ["https://usseu1northprod.blob.core.windows.net	NoPinning", "https://usseu1westprod.blob.core.windows.net	NoPinning", "https://wseu1northprod.blob.core.windows.net	NoPinning", "https://wseu1westprod.blob.core.windows.net	NoPinning"]
+                },
+                {
+                                "Region": "UK",
+                                "DatacenterPrefix": "",
+                                "CnCURLs": ["https://winatp-gw-uks.microsoft.com/commands/test", "https://winatp-gw-ukw.microsoft.com/commands/test"],
+                                "CyberDataURLs": ["https://uk.vortex-win.data.microsoft.com/ping", "https://uk-v20.events.data.microsoft.com/ping"],
+                                "AutoIRBlobs": ["https://automatedirstrprduks.blob.core.windows.net	NoPinning", "https://automatedirstrprdukw.blob.core.windows.net	NoPinning"],
+                                "MdeConfigMgr": ["https://enterpriseregistration.windows.net	NoPinning", "https://login.microsoftonline.com	NoPinning", "https://discovery.dm.microsoft.com	NoPinning", "https://enrollment.dm.microsoft.com	NoPinning", "https://checkin.dm.microsoft.com	NoPinning", "https://graph.microsoft.com	NoPinning"],
+                                "SampleUploadBlobs": ["https://ussuk1southprod.blob.core.windows.net	NoPinning", "https://ussuk1westprod.blob.core.windows.net	NoPinning", "https://wsuk1southprod.blob.core.windows.net	NoPinning", "https://wsuk1westprod.blob.core.windows.net	NoPinning"]
+                },
+                {
+                                "Region": "FFL4",
+                                "DatacenterPrefix": "UsGov",
+                                "CnCURLs": ["https://winatp-gw-usgv.microsoft.com/commands/test", "https://winatp-gw-usgt.microsoft.com/commands/test"],
+                                "CyberDataURLs": ["https://us4-v20.events.data.microsoft.com/ping"],
+                                "AutoIRBlobs": ["https://automatedirstrffusgv.blob.core.usgovcloudapi.net	NoPinning", "https://automatedirstrffusgt.blob.core.usgovcloudapi.net	NoPinning"],
+                                "MdeConfigMgr": ["https://enterpriseregistration.microsoftonline.us	NoPinning", "https://login.microsoftonline.us	NoPinning"],
+                                "SampleUploadBlobs": []
+                },
+                {
+                                "Region": "FFL4",
+                                "DatacenterPrefix": "UsMod",
+                                "CnCURLs": ["https://winatp-gw-usmt.microsoft.com/commands/test", "https://winatp-gw-usmv.microsoft.com/commands/test"],
+                                "CyberDataURLs": ["https://us4-v20.events.data.microsoft.com/ping"],
+                                "AutoIRBlobs": ["https://automatedirstrfmusmv.blob.core.usgovcloudapi.net	NoPinning", "https://automatedirstrfmusmt.blob.core.usgovcloudapi.net	NoPinning"],
+                                "MdeConfigMgr": ["https://enterpriseregistration.microsoftonline.us	NoPinning", "https://login.microsoftonline.us	NoPinning"],
+                                "SampleUploadBlobs": []
+                },
+                {
+                                "Region": "ASM",
+                                "DatacenterPrefix": "",
+                                "CnCURLs": ["https://winatp-gw-asmc.microsoft.com/asm/test", "https://winatp-gw-asmw.microsoft.com/asm/test"],
+                                "CyberDataURLs": [],
+                                "AutoIRBlobs": [],
+                                "MdeConfigMgr": [],
+                                "SampleUploadBlobs": []
+                },
+                {
+                                "Region": "ALL",
+                                "CTLDL": ["http://ctldl.windowsupdate.com/msdownload/update/v3/static/trustedr/en/disallowedcertstl.cab	NoPinning"],
+                                "Events": ["https://events.data.microsoft.com/ping"],
+                                "Settings": ["https://settings-win.data.microsoft.com/qos"]
+                }
+]

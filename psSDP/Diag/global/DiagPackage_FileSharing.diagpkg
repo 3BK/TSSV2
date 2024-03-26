@@ -1,0 +1,1907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>DIAG_FileSharing</ID>
+    <Version>1.0</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-22201</Name>
+    <Description>@DiagPackage.dll,-22202</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com</PrivacyLink>
+  <PowerShellVersion>1.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">5.1</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>true</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <Rootcauses>
+    <!--Detects and alerts evaluation media-->
+    <Rootcause>
+      <ID>RC_EvalMediaDetected</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1552</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>9d508310-3f14-418b-a92d-ceb77138f921</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1553</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-41544.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Debug/GFlags check-->
+    <Rootcause>
+      <ID>RC_PageHeapEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1582</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>113c255b-5041-45ce-983a-15fc33ea0711</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1583</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75100.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Debug/GFlags check-->
+    <Rootcause>
+      <ID>RC_DriverVerifierEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1586</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>52ef8720-e3ee-4a12-a37e-cc3b0870f358</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1587</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-38435.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort50Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>491774f8-2673-4a12-b2f8-63ef5183b1af</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-29195.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Check for ephemeral port usage-->
+    <Rootcause>
+      <ID>RC_EphemeralPort80Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1820</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ae082f66-3c9c-4b8a-a03c-d1385a249def</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1821</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-83803.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SMB2ClientDriverStateCheck-->
+    <Rootcause>
+      <ID>RC_SMB2ClientDriverStateCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26303</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>fffffffe-656d-473e-b2db-d4d5a9f6da81</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26304</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-3798.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SMB2ServerDriverStateCheck-->
+    <Rootcause>
+      <ID>RC_SMB2ServerDriverStateCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26307</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>fffffffa-656d-473e-b3db-d4d5a9f6db85</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26308</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-58921.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Opportunistic Locking has been disabled and may impact performance.-->
+    <Rootcause>
+      <ID>RC_LockingKB296264Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230091</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>87e9fad8-df6f-4354-8be0-ee884db951a1</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230092</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-94233.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Evaluates whether InfocacheLevel should be increased to 0x10 hex. To resolve slow logon, slow boot issues.-->
+    <Rootcause>
+      <ID>RC_InfoCacheLevelCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230180</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>edc0fed4-656d-473e-b2db-d4d5a9f6da81</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230181</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-56498.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-49770.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--RC_HTTPRedirectionTSGateway-->
+    <Rootcause>
+      <ID>RC_HTTPRedirectionTSGateway</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26245</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2ee2fe8d-a4c5-4f87-9df1-ab4aeeca0f58</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26246</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-11848.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--RSASHA512 Certificate TLS 1.2 Compat Check-->
+    <Rootcause>
+      <ID>RC_DetectSHA512-TLS</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-34041</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>01b95cb5-4184-4cfa-a695-7706a87149f8</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-34039</Name>
+            <Description>@DiagPackage.dll,-34039</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-17119.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-36344.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Applications or web sites which use SSL/TLS will fail network connections when using the certificate(s) in the alert. Review installed apps and services and replace the certificate or alter the local configuration to support RSA/SHA512 for TLS 1.2.</RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>http://bemis/13/Pages/2950636_en-US.aspx</InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2973337</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18568</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--RC_KB2647170_CnameCheck-->
+    <Rootcause>
+      <ID>RC_KB2647170_CnameCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26204</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>be24a46c-dd00-4df1-954f-842915f405ed</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26205</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-90702.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--IPv6Check-->
+    <Rootcause>
+      <ID>RC_IPv6Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26243</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4e21e8e5-b042-4175-b4fe-c12d5d700aff</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26244</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-43995.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--IPv66To4Check-->
+    <Rootcause>
+      <ID>RC_IPv66To4Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26249</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>ffffffed-656d-473e-b2db-d4d5a9f6da80</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26250</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-3252.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--RC_32GBMemoryKB2634907-->
+    <Rootcause>
+      <ID>RC_32GBMemoryKB2634907</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-26207</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>f096482d-cae9-439f-9781-a31cd43df8f5</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-26208</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-63847.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-58866.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--PMTU Check-->
+    <Rootcause>
+      <ID>RC_PMTUCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230030</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>a56a8aa4-d88c-41d2-911b-417f1247ee56</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230031</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-84441.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks for modified TcpIP Reg Parameters and recommend KB-->
+    <Rootcause>
+      <ID>RC_TCPIPSettingsCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230073</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>e202b2fc-104a-4105-9d2b-be2ff9c16024</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230074</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-24908.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--'Checks if the number of 6to4 adapters is larger than the number of physical adapters-->
+    <Rootcause>
+      <ID>RC_AdapterKB980486Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230097</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4331bfc2-d67d-4b37-890b-768ef269a201</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230098</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-66008.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks if Windows Server 2008 R2 SP1, Hyper-V, and Tunnel.sys driver are installed if they are generate alert-->
+    <Rootcause>
+      <ID>ServerCoreKB978309Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-230009</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>d26b920f-3dfe-4f81-8c65-a83056d61a88</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-230010</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76606.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 2749] [Windows] SBSL Windows firewall delays acquisition of DHCP address from DHCP relay on domain-joined W7 client-->
+    <Rootcause>
+      <ID>RC_SBSL_DHCPRelayKB2459530</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239106</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>608e5bfb-5254-48ff-9440-47e9e85c088c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239107</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-66539.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-37836.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Missing Enterprise Hotfix Rollup for Windows7/Windows2008R2 (KB2775511)-->
+    <Rootcause>
+      <ID>RC_HyperVEvent106Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260005</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>11465EEA-04F9-4CCC-BDA4-51188CA14931</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260006</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-7565.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Missing Enterprise Hotfix Rollup for Windows7/Windows2008R2 (KB2775511)-->
+    <Rootcause>
+      <ID>RC_KB2775511Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260001</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4ab8694b-0af7-4f91-adcd-8ec8133567b1</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260002</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-11811.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 7521] [Windows] McAfee HIPS 7.0 adds numerous extraneous network adapter interfaces to registry-->
+    <Rootcause>
+      <ID>RC_McAfeeHIPS70Check</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239866</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>258005a8-e58e-43b0-8646-5902fb1e44f3</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239864</Name>
+            <Description>@DiagPackage.dll,-239865</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-83834.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-35008.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>Check if value of HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\NDIS\IfTypes\1\IfUsedNetLuidIndices has 50 or more FF bytes and McAfee HIPS 7.0 is installed on the system</HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>https://vkbexternal.partners.extranet.microsoft.com/VKBWebService/ViewContent.aspx?scid=B;EN-US;2834708</InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18500</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Symantec Intrusion Prevenstion System Check-->
+    <Rootcause>
+      <ID>RC_SymantecIPSCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-300722</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>22800724-7dd4-4c63-ba13-1679a1154127</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-300723</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-54810.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--[Idea ID 7345] [Windows] Perfmon - Split IO Counter-->
+    <Rootcause>
+      <ID>RC_SplitIO</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-252205</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>5a032435-e6f9-45c8-94bf-ff404871529c</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-252203</Name>
+            <Description>@DiagPackage.dll,-252204</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-28405.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage-91953.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Detect Split IO problems on local volumes.</RootCause>
+        <HighLevelLogic>This script will do a quick sample of the Logical and Physical Disks' Split IO/Sec _Total counter instances. If a number greater than 5 is seen further examination will be done to see which volume is seeing the issue and that information is reported to the engineer.</HighLevelLogic>
+        <Symptom>Detect Split IO problems on local volumes.</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://technet.microsoft.com/en-us/library/cc938959.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>18438</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--[Idea ID 7065] [Windows] Alert users about Windows XP EOS-->
+    <Rootcause>
+      <ID>RC_WindowsXPEOSCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-239363</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>7d2eea26-ab6e-479d-8531-4f8ef7783b92</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-239361</Name>
+            <Description>@DiagPackage.dll,-239362</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76409.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Windows XP end of support</RootCause>
+        <Symptom />
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://www.microsoft.com/en-us/windows/endofsupport.aspx</PublicContentURL>
+        <Visibility>3</Visibility>
+        <SupportTopicsID>18579</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Warning</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--SurfacePro3DetectWifiDriverVersion-->
+    <Rootcause>
+      <ID>RC_SurfacePro3DetectWifiDriverVersion</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260017</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>151B587B-EF4A-46FC-B263-E975C93962CB</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260018</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-49666.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SurfacePro3DetectFirmwareVersions-->
+    <Rootcause>
+      <ID>RC_SurfacePro3DetectFirmwareVersions</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260021</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>34F6567E-7B92-4C37-B1CA-5DE6E66D4881</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260022</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-39036.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SurfacePro3DetectConnectedStandbyStatus-->
+    <Rootcause>
+      <ID>RC_SurfacePro3DetectConnectedStandbyStatus</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260025</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>E91E703E-9D91-495A-B39E-82F6ECDE403E</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260026</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-66957.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--SurfacePro3DetectConnectedStandbyHibernationConfig-->
+    <Rootcause>
+      <ID>RC_SurfacePro3DetectConnectedStandbyHibernationConfig</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-260029</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>03F8CAD0-6D61-4501-AA1F-ACAECC18411C</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-260030</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Event Log-->
+    <Rootcause>
+      <ID>RC_GetEvents</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1263</Name>
+        <Description>@DiagPackage.dll,-1264</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_GetEvents</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1265</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GetEvents.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--ETL Trace Collector-->
+    <Rootcause>
+      <ID>RC_ETLCollected</ID>
+      <DisplayInformation>
+        <Parameters>
+          <Parameter>
+            <Name>Component</Name>
+            <DefaultValue />
+          </Parameter>
+        </Parameters>
+        <Name>@DiagPackage.dll,-1572</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_ETLCollected</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1573</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters>
+              <Parameter>
+                <Name>XMLFileName</Name>
+                <DefaultValue />
+              </Parameter>
+              <Parameter>
+                <Name>Verbosity</Name>
+                <DefaultValue />
+              </Parameter>
+              <Parameter>
+                <Name>SectionTitle</Name>
+                <DefaultValue />
+              </Parameter>
+            </Parameters>
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_ETLMoreInfo.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <Rootcause>
+      <ID>RC_Blank</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1290</Name>
+        <Description>@DiagPackage.dll,-1291</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_Blank</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1292</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_Blank.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions>
+      <!--NetworkCapture-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Dialog1: Choice1=Netmon34 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36003</Name>
+              <Description>@DiagPackage.dll,-36004</Description>
+            </DisplayInformation>
+            <Value>Netmon34</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog1: Choice2=NetshTrace -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36005</Name>
+              <Description>@DiagPackage.dll,-36006</Description>
+            </DisplayInformation>
+            <Value>NetshTrace</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- Dialog1 Details -->
+        <ID>NetCapChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36007</Name>
+          <Description>@DiagPackage.dll,-36008</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--NetworkCapture-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Dialog3:Option1:DefaultSaveLocation-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36031</Name>
+              <Description>@DiagPackage.dll,-36032</Description>
+            </DisplayInformation>
+            <Value>DefaultSaveLoc</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog3:Opt2:SelectFolder-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36033</Name>
+              <Description>@DiagPackage.dll,-36034</Description>
+            </DisplayInformation>
+            <Value>SelectFolder</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- Dialog3 -->
+        <ID>SaveLocChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36035</Name>
+          <Description>@DiagPackage.dll,-36036</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--NetworkCapture-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Dialog4:Option1-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36041</Name>
+              <Description>@DiagPackage.dll,-36042</Description>
+            </DisplayInformation>
+            <Value>SingleFile</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog4:Opt2-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36043</Name>
+              <Description>@DiagPackage.dll,-36044</Description>
+            </DisplayInformation>
+            <Value>MultipleFiles</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- Dialog4 -->
+        <ID>SingleOrMultipleChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36045</Name>
+          <Description>@DiagPackage.dll,-36046</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--NetworkCapture-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Dialog5:Opt1-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36051</Name>
+              <Description>@DiagPackage.dll,-36052</Description>
+            </DisplayInformation>
+            <Value>SingleFileSize250MB</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog5:Opt2-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36053</Name>
+              <Description>@DiagPackage.dll,-36054</Description>
+            </DisplayInformation>
+            <Value>SingleFileSize500MB</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog5:Opt3-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36055</Name>
+              <Description>@DiagPackage.dll,-36056</Description>
+            </DisplayInformation>
+            <Value>SingleFileSize750MB</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- Dialog5 -->
+        <ID>SingleFileSizeChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36057</Name>
+          <Description>@DiagPackage.dll,-36058</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--NetworkCapture-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Dialog6:Opt1-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36061</Name>
+              <Description>@DiagPackage.dll,-36062</Description>
+            </DisplayInformation>
+            <Value>MultipleFileNumber5</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog6:Opt2-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36063</Name>
+              <Description>@DiagPackage.dll,-36064</Description>
+            </DisplayInformation>
+            <Value>MultipleFileNumber10</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- Dialog6:Opt3-->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-36065</Name>
+              <Description>@DiagPackage.dll,-36066</Description>
+            </DisplayInformation>
+            <Value>MultipleFileNumber20</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- Dialog6 -->
+        <ID>MultipleFileNumberChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36067</Name>
+          <Description>@DiagPackage.dll,-36068</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--File Sharing Diagnostic-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- RFS Static Data Collection -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22203</Name>
+              <Description>@DiagPackage.dll,-22204</Description>
+            </DisplayInformation>
+            <Value>RFSStatic</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- RFS Interactive Data Collection -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22205</Name>
+              <Description>@DiagPackage.dll,-22206</Description>
+            </DisplayInformation>
+            <Value>RFSInteractive</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- RFS Automated Data Collection 
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22207">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22208">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSAutomated</Value>
+            <ExtensionPoint />
+          </Choice>
+          -->
+        </Choices>
+        <!-- RFSMain Details -->
+        <ID>RFSCollectionTypeChoice</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22209</Name>
+          <Description>@DiagPackage.dll,-22210</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <Link>http://support.microsoft.com/kb/2861122</Link>
+          <LinkText>Please see KB 2861122 for more information about this diagnostic.</LinkText>
+          <LinkFlushWithText />
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--File Sharing Diagnostic-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- RFSCli -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22211</Name>
+              <Description>@DiagPackage.dll,-22212</Description>
+            </DisplayInformation>
+            <Value>RFSCli</Value>
+            <ExtensionPoint />
+          </Choice>
+          <!-- RFSSrv -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22213</Name>
+              <Description>@DiagPackage.dll,-22214</Description>
+            </DisplayInformation>
+            <Value>RFSSrv</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <!-- RFSMain Details -->
+        <ID>RFSClientOrServer</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22215</Name>
+          <Description>@DiagPackage.dll,-22216</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+    </SingleResponseInteractions>
+    <MultipleResponseInteractions>
+      <!--File Sharing Diagnostic-->
+      <MultipleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Opt1: Network Capture (netsh trace) -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22301</Name>
+              <Description>@DiagPackage.dll,-22302</Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt1</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt11: Network Capture (Netmon34)
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22313">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22314">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt2_UPDATE IF NEEDED</Value>
+            <ExtensionPoint>
+              <Default/>
+            </ExtensionPoint>
+          </Choice>
+		  -->
+          <!-- Opt2: T.CMD -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22303</Name>
+              <Description>@DiagPackage.dll,-22304</Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt2</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt3: PSR -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22305</Name>
+              <Description>@DiagPackage.dll,-22306</Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt3</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt6: Perfmon -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22311</Name>
+              <Description>@DiagPackage.dll,-22312</Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt6</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt4: Procmon
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22307">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22308">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt4</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+           -->
+          <!-- Opt5: iDNA of Windows Explorer -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22309</Name>
+              <Description>@DiagPackage.dll,-22310</Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt5</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt7: iDNA of Microsoft Word 
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22315">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22316">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt7</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+		  -->
+          <!-- Opt8: iDNA of Microsoft Excel
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22317">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22318">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSCliD1_Opt8</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+		  -->
+        </Choices>
+        <ID>RFSCliD1</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22321</Name>
+          <Description>@DiagPackage.dll,-22322</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </MultipleResponseInteraction>
+      <!--File Sharing Diagnostic-->
+      <MultipleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <!-- Opt1 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22401</Name>
+              <Description>@DiagPackage.dll,-22402</Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt1</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt2 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22403</Name>
+              <Description>@DiagPackage.dll,-22404</Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt2</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt3 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22405</Name>
+              <Description>@DiagPackage.dll,-22406</Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt3</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt5 -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22409</Name>
+              <Description>@DiagPackage.dll,-22410</Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt5</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+          <!-- Opt4 
+          <Choice>
+            <DisplayInformation>
+              <Parameters/>
+              <Name>
+                <dcmRS:LocalizeResourceElement comment="" index="22407">Name</dcmRS:LocalizeResourceElement>
+              </Name>
+              <Description>
+                <dcmRS:LocalizeResourceElement comment="" index="22408">Name</dcmRS:LocalizeResourceElement>
+              </Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt4</Value>
+            <ExtensionPoint>
+            </ExtensionPoint>
+          </Choice>
+          -->
+          <!-- Opt6: StorPort Logging -->
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-22411</Name>
+              <Description>@DiagPackage.dll,-22412</Description>
+            </DisplayInformation>
+            <Value>RFSSrvD1_Opt6</Value>
+            <ExtensionPoint>
+              <Default />
+            </ExtensionPoint>
+          </Choice>
+        </Choices>
+        <ID>RFSSrvD1</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22421</Name>
+          <Description>@DiagPackage.dll,-22422</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </MultipleResponseInteraction>
+    </MultipleResponseInteractions>
+    <TextInteractions>
+      <!--NetworkCapture-->
+      <TextInteraction>
+        <RegularExpression />
+        <ID>BrowseFolder</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-230331</Name>
+          <Description>@DiagPackage.dll,-230330</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <Browse>Folder</Browse>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </TextInteraction>
+      <!--File Sharing Diagnostic-->
+      <TextInteraction>
+        <RegularExpression />
+        <ID>PromptForUNCPath</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22501</Name>
+          <Description>@DiagPackage.dll,-22502</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint />
+      </TextInteraction>
+    </TextInteractions>
+    <PauseInteractions>
+      <!--ETL Trace Collector-->
+      <PauseInteraction>
+        <ID>ETLTraceCollectorStopper</ID>
+        <DisplayInformation>
+          <Parameters>
+            <Parameter>
+              <Name>Title</Name>
+              <DefaultValue />
+            </Parameter>
+            <Parameter>
+              <Name>Description</Name>
+              <DefaultValue />
+            </Parameter>
+          </Parameters>
+          <Name>@DiagPackage.dll,-1570</Name>
+          <Description>@DiagPackage.dll,-1571</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--NetworkCapture-->
+      <PauseInteraction>
+        <ID>NetCap_InstallNM34</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36021</Name>
+          <Description>@DiagPackage.dll,-36022</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--NetworkCapture-->
+      <PauseInteraction>
+        <ID>NetCap_Start</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36071</Name>
+          <Description>@DiagPackage.dll,-36072</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--NetworkCapture-->
+      <PauseInteraction>
+        <ID>NetCap_Stop</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-36081</Name>
+          <Description>@DiagPackage.dll,-36082</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--File Sharing Diagnostic-->
+      <PauseInteraction>
+        <ID>RFSCliStop</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22217</Name>
+          <Description>@DiagPackage.dll,-22218</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--File Sharing Diagnostic-->
+      <PauseInteraction>
+        <ID>RFSSrvStop</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-22219</Name>
+          <Description>@DiagPackage.dll,-22220</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </PauseInteraction>
+    </PauseInteractions>
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint>
+  </ExtensionPoint>
+</dcmPS:DiagnosticPackage>

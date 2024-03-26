@@ -1,0 +1,1486 @@
+**MSRD-Collect Revision History** 
+
+To provide feedback, report issues or suggest improvements, fill out our survey at https://aka.ms/MSRD-Collect-Survey or send an e-mail to MSRDCollectTalk@microsoft.com
+
+Version number / Change Notes
+
+v230523.3:
+
+[MSRD-Collect changes]
+• Fix: Resolved some issues when the script is run from the TSSv2 package and either procdump.exe or avdnettest.exe are not available
+• Fix: Resolved some special character display issues in the Romanian UI translation
+
+
+
+v230519.5:
+
+[MSRD-Collect changes]
+• Feature: MSRD-Collect is now also part of TSSv2 (https://aka.ms/tssv2)
+		o Currently only 'AVD host' data collection is available through TSSv2 command line
+		o MSRD-Collect can be invoked from the TSSv2 command line without the GUI, using one of the following:
+			o "-CollectLog" followed by one or more component names: UEX_AVDCore, UEX_AVDProfiles, UEX_AVDActivation, UEX_AVDMSRA, UEX_AVDSCard, UEX_AVDIME, UEX_AVDTeams, UEX_AVDMSIXAA, UEX_AVDHCI, UEX_AVDDiag
+				o You can mix and match multiple components as needed
+				o This will collect the same data as the standalone MSRD-Collect, with the difference that 'Core' and 'Diagnostics' are not run unless explicitly specified
+				o Usage examples:
+					o ".\TSSv2.ps1 -CollectLog UEX_AVDCore, UEX_AVDProfiles, UEX_AVDDiag" (collects Core + Profiles data + runs Diagnostics)
+					o ".\TSSv2.ps1 -CollectLog UEX_AVDCore, UEX_AVDProfiles" (collects only Core + Profiles data, without running Diagnostics)
+					o ".\TSSv2.ps1 -CollectLog UEX_AVDProfiles" (collects only Profiles data, without Core data and without running Diagnostics)
+			o "-Scenario" followed by one of the scenario names: UEX_AVDCore, UEX_AVDProfiles, UEX_AVDActivation, UEX_AVDMSRA, UEX_AVDSCard, UEX_AVDIME, UEX_AVDTeams, UEX_AVDMSIXAA, UEX_AVDHCI, UEX_AVDDiag
+				o Currently only one scenario at a time is supported by TSSv2
+				o When using a scenario, the UEX_AVDCore dataset is always collected, except for UEX_AVDDiag (UEX_AVDDiag collects Diagnostics only)
+				o The AVD scenarios will be extended in future TSSv2 versions to include tracing and PSR as needed
+				o Usage examples:
+					o ".\TSSv2.ps1 -Scenario UEX_AVDCore" (collects Core data and runs Diagnostics)
+					o ".\TSSv2.ps1 -Scenario UEX_AVDProfiles" (collects only Core + Profiles data, without running Diagnostics)
+					o ".\TSSv2.ps1 -Scenario UEX_AVDDiag" (runs only Diagnostics)
+• Fix: [GUI] Resolved some UI compatibility issues with PowerShell 7+
+• Update: [GUI] 'Show/Hide Console Window' status is now stored in the MSRD-Collect.cfg file for persistence (out of the box it is set to 'Hide')
+• Update: 'Core' dataset now also collects the following event logs:
+		o Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
+		o Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Operational
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing a broken link to the 'avdnettest.log' file under the 'Shortpath' category, when the log file is available
+• Fix: Resolved an issue that was causing some of the MSIX App Attach related failure events to not show up in the filtered MSRD-Diag-MSIXAAIssues.txt
+• Update: 'RD Client' check has been updated to take into account the current/latest desktop client version (1.2.4240.0) and Windows 365 app version (1.1.162.0)
+
+
+
+v230509.3:
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was sometimes causing a broken warning link for the Office check in the html navigation menu
+• Fix: Resolved an issue that was sometimes causing the right EoS notification message to not be displayed for some unsupported OS versions
+• Update: Notification has been added for Windows 10 20H2 Enterprise EoS (May 9, 2023)
+
+
+
+v230503.9:
+
+[MSRD-Collect changes]
+• Feature: The script now uses a new MSRD-Collect.cfg file to store some of the script's settings, so that changes to these settings can persist after the script is closed
+• Feature: [GUI] You can Enable/Disable automatic update checking through the GUI, with the new 'Tools\Check for Update on launch' option (default = Enabled)
+		o If the automatic update check on launch fails (e.g. due to limited or no internet connectivity), it will ask if you want to disable automatic update check for the future
+		o It is recommended to leave this option Enabled (unless the machine has no internet connection), to ensure that you are notified on launch whenever a new version of the script or the included tools are available
+• Feature: A new command line parameter '-SkipAutoUpdate' has been added
+		o You can use this parameter to skip the automatic update check on launch for the current instance of the script (can be used for both GUI and command line mode)
+• Feature: [GUI] The 'View' menu now contains a 'Diagnostic Reports' section that lists all existing MSRD-Diag.html reports found under the current output location
+		o Each entry is represented by the computer name + date + time when the data was collected
+		o Clicking on an entry will open the corresponding MSRD-Diag.html file in the browser
+		o If there are no reports generated yet or if the output location is missing, a warning message is returned
+• Fix: The GUI no longer goes into the background after dismissing the NetTrace pop-up
+• Update: [GUI] The 'Help' menu has been updated:
+		o A new 'Azure' section has been added, with links to how to set up alerts, Azure status and status history, and service health (last one req. Azure Portal login)
+		o A new 'Microsoft TechCommunity' section has been added, with links to AVD and Windows 365 tech communities
+		o The 'Downloads' section has been reorganized and now also includes download links to the latest RDSTracing and TSSv2 troubleshooting tools
+		o The 'Microsoft Docs' section now also includes a link to the FSLogix public docs
+• Update: [GUI] 'Tools\Configure diagnostics' now has an 'All' checkbox on each tab to more easily check/uncheck all options
+• Update: [GUI] Process dump references (toolbar and guide) have been changed back from 'ProcDump' to 'DumpPID' for consistency with the command line parameter equivalent
+• Update: As part of the script's update check, the script now also looks if a newer version of the included ProcDump.exe exists in the Sysinternals online repository and if yes, it will prompt to download it and replace the current version under the 'Tools' folder
+• Update: The 'LogFiles' folder will no longer be generated as part of the 'Core' dataset and the files have been distributed according to their scope:
+		o AVD specific log files will be collected under the 'AVD' folder
+		o RDS specific log files will be collected under the 'RDS' folder
+		o Networking specific log files will be collected under 'Networking' folder
+		o Azure VM and device setup specific log files will be collected under the 'SystemInfo' folder
+• Update: 'Core' dataset now also collects:
+		o a debug log for RDP Shortpath availability using 'avdnettest.exe', when either Source or AVD machine type is selected (under the 'AVD' folder)
+		o the 'Microsoft-Windows-RemoteDesktopServices-SessionServices/Operational' event logs (when using RDS or AVD machine type)
+• Update: 'Core' dataset no longer attempts to collect WindowsAzure Logs and Plugins information when the 'Source' machine type is selected
+• Update: Code adjustments for TSSv2 integration
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was sometimes causing errors when retrieving information on existing TERMINPUT_BUS\UMB\ keyboard and mouse entries
+• Fix: Resolved an issue that was sometimes causing missing hyperlinks in the .html report under the 'General' category even though the corresponding .txt files existed
+• Update: 'Authentication / Logon' check now also looks for the 'AutoAdminLogon' and 'ForceAutoLogon' registry keys
+• Update: 'Known Issues: Events' now also checks for RDP Shortpath issues within the 'RemoteDesktopServices' event logs and includes additional links to public troubleshooting guides, when issues are detected
+• Update: 'Third party' check now also reports if 'Sentinel Agent' from SentinelOne is running on the system
+• Update: Additional hyperlinks to 'Core' data files have been added under different checks for easier access (not available when using 'DiagOnly')
+• Update: Navigation menu has been revamped
+		o The list of buttons has been replaced by dropdown menus
+		o If an issue is detected during diagnostics, the coresponding dropdown menu and dropdown menu item will display a red exclamation mark
+
+
+
+v230421.18:
+
+[MSRD-Collect changes]
+• Feature: [Preview] The GUI is now available in the following languages: English, French, German, Hungarian, Italian, Portuguese, Romanian
+		o You can switch between languages by using the new dropdown list from the toolbar
+		o Machine types and Scenario names, collected data/diagnostics results and potential error messages encountered during script usage remain in English
+		o Please contact MSRDCollectTalk@microsoft.com for any translation issues or requests for new languages
+• Feature: The script package (MSRD-Collect.zip) is now shipped with a copy of the SysInternals 'procdump.exe' tool and the 'avdnettest.exe' tool (under a new 'Tools' folder)
+• Feature: [GUI] A 'Core' button has been added to the scenario bar to align with the command line experience
+		o This button is checked by default and cannot be unchecked unless selecting 'DiagOnly'
+• Feature: [GUI] When a machine type is selected, the available scenarios are now highlighted with a lightblue background for easier reference
+• Fix: [GUI] Resolved an issue that was causing the titlebar not to display a message when a newer script version is available
+• Fix: Resolved an issue that was causing the AVD monitoring environment variables not to be collected when available, as part of the 'Core' dataset
+• Fix: Resolved an issue that was causing the 'RemoteDesktop' Scheduled Tasks information not to be collected when available, as part of the 'Core' dataset
+• Update: 'Core' scenario now also collects:
+		o the 'HKLM\SYSTEM\CurrentControlSet\Enum\TERMINPUT_BUS_SXS' registry key
+		o the 'HKCU\SOFTWARE\Microsoft\Terminal Server Client' registry key
+		o the system's environment variables (under the 'SystemInfo' folder)
+• Update: [GUI] Mouse cursor hover effect over menu and toolbar items has been adjusted
+• Update: [GUI] The 'Tools\Set User Context' option now validates if a local profile folder exists for the provided user account and if not, resets the context to the admin account used to launch the script
+• Update: [GUI] The list of processes and PIDs is now refreshed every time the 'ProcDump' pop-up is opened
+• Update: '-UserContext' command line parameter now validates if a local profile folder exists for the provided user account and if it does not, exits the script
+• Update: '<DiagnosticsUri>api/health and <BrokerResourceIdURIGlobal>api/health status' output has been moved from the 'Networking' folder to a new 'AVD' folder
+• Update: 'NetTrace' command line scenario no longer runs when 'DiagOnly' scenario is specified
+• Update: 'NetTrace' scenario can no longer be selected in the GUI when 'DiagOnly' scenario is selected
+• Update: 'ProcDump' scenario now uses the SysInternals 'procdump.exe' tool to generate process dumps
+• Update: 'qwinsta /counter' output can now be found under either the 'RDS' folder (when machine type is 'Source' or 'RDS') or under the 'AVD' folder (when machine type is 'AVD')
+• Update: 'Monitoring' folder has been moved under the 'AVD' folder (when machine type is 'AVD')
+• Update: 'tree C:\Program Files\Microsoft RDInfra' output has been moved under the 'AVD' folder (when machine type is 'AVD')
+• Update: 'tree C:\Windows\RemotePackages' output can now be found under either the 'RDS' folder (when machine type is 'Source' or 'RDS') or under the 'AVD' folder (when machine type is 'AVD')
+• Update: AVD-specific data from 'Windows 7'-based AVD hosts will no longer be collected
+		o The script will still run on 'Windows 7'-based machines like on any other source clients, but might return script errors for commands that are not available on Windows 7 OS
+• Update: Script error handling/logging has been improved
+• Update: Several code adjustments in preparation for TSSv2 integration (phase 1)
+• Update: Stopwatch has been removed
+
+[MSRD-Diag changes]
+• Update: [Preview] 'Req. URLs' check now also attempts to resolve additional required AVD URLs (not included in the 'wvdagenturltool.exe') and optional (non-AVD) URLs recommended for hosts, when using the AVD machine type
+• Update: 'Drive' check now also lists remote desktop redirected drives, when available
+• Update: 'Drive', 'Printer' and 'Redirection' checks now also report client side redirection registry keys for each category
+• Update: 'General' check now also reports the system model
+• Update: 'Issues: Events' now also checks for:
+		o Remote Desktop Licensing issues over the past 5 days, if the RD Licensing role is installed
+			o If an issue is found, information about the event will be exported into a separate "MSRD-Diag-RDLicensingIssues.txt" file
+		o Remote Desktop Gateway issues over the past 5 days, if the RD Gateway role is installed
+			o If an issue is found, information about the event will be exported into a separate "MSRD-Diag-RDGatewayIssues.txt" file
+• Update: 'Issues: Logon' check now also counts the keyboard and mouse entries per AVD session under 'HKLM\SYSTEM\CurrentControlSet\Enum\TERMINPUT_BUS_SXS\UMB\' and warns if any session has more than one keyboard and/or mouse entry
+• Update: 'Office' check now also reports information about the 'ClickToRunSvc' service (Microsoft Office Click-to-Run Service)
+• Update: 'RD Client' check:
+		o has been updated to take into account the current/latest desktop client version (MSRDC 1.2.4157)
+		o now also reports if the Remote Desktop Web Client URLs for AVD can be resolved
+		o now also reports information on the new Azure Virtual Desktop Store App
+• Update: 'Quick Assist' check now only performs the URL checks if the Quick Assist app is found installed
+• Update: 'Shortpath' check now uses the 'avdnettest.exe' tool to verify STUN/TURN server connectivity and NAT type
+• Update: Parsing time for some of the event logs within the 'Issues: Events' check has been improved
+• Update: Additional hyperlinks to 'Core' data files have been added under different checks for easier access (not available when using 'DiagOnly')
+• Update: Some of the hyperlinks to public docs have been updated
+
+
+
+v230403.5:
+
+[MSRD-Collect changes]
+• Update: 'Setupapi.dev.log' is now collected as part of the 'Core' dataset (previously it was under the 'Profiles' dataset)
+• Update: [GUI] A link to download the latest MSRD-Collect version has been added also to the Help menu
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing the 'OneDrive Updater Service' recovery settings to not be reported
+• Fix: Resolved an issue that was causing 'Shortpath' checks not to be performed when using the 'Source' machine type
+• Fix: Resolved an issue that was sometimes causing the Shortpath issues check (part of 'Issues: Events') to not be performed
+• Update: 'Auth/Logon' check now also reports if default and saved credential delegations are allowed or denied
+• Update: 'General' check now also reports if the Isolated User Mode feature is enabled
+• Update: 'Multimedia' check now also reports:
+		o if a Multimedia Redirection compatible Remote Desktop client (MSRDC) version is found and warns if the minimum client version (1.2.3916) is not met
+		o if a 'Microsoft Visual C++ Redistributable' installation is found
+• Update: 'RDS Roles' check now also reports:
+		o if IP Virtualization is configured on servers with the RD Session Host role installed
+		o if the Server authentication certificate template policy is configured on servers with the RD Session Host role installed
+• Update: 'Security' check now also reports:
+		o if the 'Restrict delegation of credentials to remote servers' policy is enabled
+		o if Windows Defender Credential Guard or Windows Defender Remote Credential Guard are enabled
+• Update: 'Search', 'Office', 'OneDrive' checks will no longer be performed when using the 'Source' machine type
+• Update: Additional warnings have been added for some key services when they are detected as being in a 'Stopped' state
+• Update: Service checks now also report service dependencies and their status, when available
+• Update: Html layout adjustments
+
+
+
+v230323.5:
+
+[MSRD-Collect changes]
+• Update: 'Core' scenario now also collects the members of the 'Terminal Server License Servers' group in the domain, if the machine is domain-joined and has either the RD Session Host or RD Licensing role installed
+
+[MSRD-Diag changes]
+• Update: 'AVD required URLs' check will now provide additional warning/highlight if the WVDAgentUrlTool available on AVD hosts encounters issues contacting the AVD Agent or if it has detected any not accessible URLs
+• Update: 'Graphics' check now also returns monitor information (manufacturer and product code)
+• Update: 'Issues: Logon' check now also counts the keyboard and mouse entries per session under 'HKLM\SYSTEM\CurrentControlSet\Enum\TERMINPUT_BUS\UMB\' and warns if any session has more than one keyboard and/or mouse entry
+• Update: 'Multimedia' check now also looks for the status of the 'Media Playback' and 'Windows Media Player' features
+• Update: 'RDS Roles' check now also looks for the local configuration of the 'SessionDirectoryActive' registry key
+• Update: 'RDS Roles' check now also warns if the RDSH is in drain mode
+• Update: 'Security' check now also looks for the AppIDSvc (Application Identity) service status
+• Update: Additional hyperlinks to 'Core' data files have been added under different checks for easier access (not available when using 'DiagOnly')
+
+
+
+v230309.5:
+
+Note: Support for Windows 7 ended on January 10, 2023. While the current version of the script can still be used on Windows 7 clients, future versions may no longer be compatible with Windows 7.
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was sometimes causing truncated information in the 'Azure AD Join' check
+• Update: 'Host pool' check now also reports the Host Pool ARM Path value
+• Update: 'General' check now also reports the Azure VM ID and AVD Session Host GUID values
+• Update: 'RD Client' check now also reports for the MSTSC, AVD Host App and Windows 365 client installations and versions
+• Update: 'RD Licensing' check now also looks for the 'Hide notifications about RD Licensing problems that affect the RD Session Host server' policy configuration
+• Update: 'RDS Roles' check now also reports the following:
+		o Information on the configured certificates for the RDS deployment when the RD Connection Broker role is detected and warns if they are missing, untrusted, expired or are about to expire within the next 30 days
+		o IIS .Net Trust Levels when the RD Gateway and/or RD Web Access roles are detected and warns if any of them are set to a value other than "Full"
+		o HTML5 web client installation and deployment settings when the RD Web Access role is detected
+		o 'WebSocketListenerPort', 'WebSocketTlsListenerPort', 'WebSocketURI' registry key values under the RDP-Tcp listener
+• Update: 'RDS Roles' check now also warns if the RD Connection Broker, RD Web Access or RD Gateway roles are installed on an AVD host running server OS (requires 'AVD' machine type)
+• Update: 'Third party' check now also looks for the 'SetDisplayRequiredMode' registry key when a Citrix product is detected
+• Update: 'WinRM/PowerShell' check now also reports the [Net.ServicePointManager]::SecurityProtocol value
+• Update: 'FSLogix', 'Multimedia', 'RD Client' and 'Teams' checks have been updated to take into account the current/latest corresponding versions (FSLogix 2.9.8440.42104, MMR 1.0.2301.24004, MSRDC 1.2.4065, WebRTC 1.33.2302.07001)
+• Update: 'FSLogix' and 'Search' checks now also look for the 'RoamSearch' registry keys
+• Update: 'Known Issues: Logon' check now also looks for the 'ShellAppRuntime' and 'Userinit' registry keys
+• Update: Additional hyperlinks to 'Core' data files have been added under different checks for easier access (not available when using 'DiagOnly')
+
+
+v230302.6:
+
+[MSRD-Collect changes]
+• Fix: Resolved an issue that was sometimes causing an error message during AVD service URI health status collection (as part of the 'Core' dataset)
+• Update: API version used for IMDS query has been updated
+• Update: 'Core' scenario now also collects filtered NPS event logs if available, when the RD Gateway role is detected
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing the display name for some of the 'Issues: Events' links to be truncated
+• Update: 'Third party' check now also looks for the registry key 'HKLM\SYSTEM\CurrentControlSet\Services\Sophos Endpoint Defense\EndpointFlags\modernweb.offloading.enabled'
+
+
+
+v230217.10:
+
+[MSRD-Collect changes]
+• Update: A more verbose method is now used to collect the MachineKeys permissions (part of the 'Core' dataset)
+• Update: Additional EoS notifications will be displayed when either Windows 7 or Windows 8.1 operating system is detected running on the machine
+• Update: When using the GUI, you can now configure to include/exclude the 'Security' event logs and the 'dsregcmd /status' output from the 'Core' dataset, if needed (under Tools/Configure data collection...)
+• Update: 'Core' scenario now also collects the following registry keys:
+		o HKLM\SYSTEM\CurrentControlSet\Control\CoDeviceInstallers
+		o HKLM\SYSTEM\DriverDatabase\DeviceIds\TS_INPT
+• Update: 'Core' scenario now also collects the output of "pnputil /e" (under the 'SystemInfo' folder)
+• Update: 'Profiles' scenario now also collects the 'C:\Windows\inf\setupapi.dev.log' file (under the 'LogFiles' folder)
+• Update: Code optimization
+
+[MSRD-Diag changes]
+• Fix: Resolved some text display issues in the GUI menu options
+• Update: 'Issue Events' category has been renamed to 'Issues: Events' to better reflect the content
+• Update: 'Black Screen Logon' category has been renamed to 'Issues: Logon' to better reflect the content
+• Update: 'Issues: Logon' check now also looks if the following registry keys exist and warn if they are missing:
+		o HKLM\SYSTEM\DriverDatabase\DeviceIds\TS_INPT\TS_KBD\termkbd.inf
+		o HKLM\SYSTEM\DriverDatabase\DeviceIds\TS_INPT\TS_MOU\termmou.inf
+• Update: 'Issues: Logon' check now also counts the number of entries under the following registry keys and warns if any of them are above 5000:
+		o HKLM\SOFTWARE\Microsoft\Windows Search\CrawlScopeManager\Windows\SystemIndex\DefaultRules\
+		o HKLM\SOFTWARE\Microsoft\Windows Search\CrawlScopeManager\Windows\SystemIndex\WorkingSetRules\
+		o HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules\
+		o HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedInterfaces\IfIso\FirewallRules\
+		o HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\RestrictedServices\AppIso\FirewallRules\
+• Update: 'RDS Roles' check now also looks for the following RD license server related information (if the RDLS role is installed)
+		o RD license server activation status
+		o RD license server membership in the 'Terminal Server License Servers' group in Active Directory
+		o 'License server security group' and 'Prevent license upgrade' policy configuration
+• Update: 'Third party' check now also looks if 'Sophos Endpoint Defense Service', 'Sophos Network Threat Protection', 'Sophos System Protection Service', 'Sophos Web Intelligence Service' are running on the system
+
+
+
+v230202.10:
+
+[MSRD-Collect changes]
+• Feature: A new command line parameter "-Activation" has been added, which can be used to collect collect OS licensing/activation related troubleshooting data (under the 'SystemInfo' folder)
+• Feature: A new GUI option 'Activation' has been added to the options bar (for RDS and AVD scenarios), which can be used to collect OS licensing/activation related troubleshooting data (under the 'SystemInfo' folder)
+• Feature: 'Activation' scenario collects 'licensingdiag.cab' output, 'slmgr /dlv' output and a list of KMS servers available in the machine's domain (if domain joined)
+• Fix: Resolved an issue that was causing the script to not automatically check if a newer version is available when launched in GUI mode
+• Fix: Resolved an issue that was sometimes causing the RdClientAutoTrace traces not to be collected as part of the 'Core' dataset
+• Update: 'Core' scenario now also collects the services registry keys for the MSSQL$MICROSOFT##WID, RDMS, TermServLicensing, TScPubRPC, TSFairShare, Tssdis, TSGateway and W3SVC services (RDS only)
+• Update: 'HCI' scenario now also collects information on Azure Instance Metadata Service (IMDS) endpoint accessibility specific for Azure Stack HCI
+• Update: A warning is now displayed when MSRD-Collect is launched from PowerShell ISE and the script will exit - Running MSRD-Collect in PowerShell ISE is not supported - Please run the script in a regular elevated/admin PowerShell window
+• Update: Code optimization
+
+[MSRD-Diag changes]
+• Feature: Recovery settings are now listed across all categories that include local service checks
+• Fix: Resolved an issue that was sometimes causing the names of some menu categories not to be highlighted in yellow when a potential issue was detected in those categories
+• Update: 'FSLogix' check now also shows the value of VHDLocations and CCDLocations registry keys even if the Profile/ODFC 'Enabled' registry keys are not set
+• Update: 'General' check now also looks if the user policies "Don't run specified Windows applications" and "Run only specified Windows applications" are enabled
+• Update: 'Security' check now also looks for the Watermarking configuration (AVD only)
+• Update: 'Third party' check now also looks if 'CrowdStrike' is running on the system
+• Update: Additional hyperlinks to various 'Core' data files have been added under different checks for easier access (not available when using 'DiagOnly')
+
+
+
+v230120.3:
+
+[MSRD-Collect changes]
+• Update: If the PowerShell console window is hidden while the GUI is open (default behaviour), it will be displayed again after the GUI is closed
+
+[MSRD-Diag changes]
+• Feature: A new GUI option 'Always on Top' has been added to the 'View' menu - By default the GUI does not stay on top of other windows, but if needed, you can change this behaviour by selecting the 'Always on Top' option
+• Fix: Resolved an issue that was sometimes causing an incorrect value to be reported when a specific TCP or UDP port was being used by a different process than the expected one
+• Update: 'FSLogix' check now also looks for the 'RoamRecycleBin' registry key
+• Update: 'General' check now also returns information on the system's culture settings
+• Update: 'Teams' check detects now also the latest WebRTC version 1.31.2211.15001
+• Update: Device redirection settings can now also be found in individual categories where they are applicable (Drive, Multimedia, Printing)
+• Update: Small layout adjustments
+
+
+
+v230117.14:
+
+[MSRD-Collect changes]
+• Feature: A new GUI option 'NetTrace' has been added to the options bar, which can be used to collect 'netsh' network traces (netsh trace start scenario=netconnection maxsize=2048 filemode=circular overwrite=yes report=yes) - This option works independently of any other scenario and if selected will always run first, before any other data collection/diagnostics - Trace files are saved under the 'Networking' folder
+• Feature: A new command line parameter "-NetTrace" has been added, which can be used to collect 'netsh' network traces (netsh trace start scenario=netconnection maxsize=2048 filemode=circular overwrite=yes report=yes) - This option works independently of any other scenario and if selected will always run first, before any other data collection/diagnostics - Trace files are saved under the 'Networking' folder
+• Fix: Resolved an issue that was sometimes causing an error message when closing the GUI through the File/Exit option
+• Update: 'Core' scenario now collects also a verbose list of domain trusts (under the 'Networking' folder)
+• Update: 'Core' scenario now collects also the NTFS permissions for the 'C:\' drive (under the 'SystemInfo' folder)
+• Update: When launched with GUI, the PowerShell console window is now hidden by default - You can select the 'Show Console Window' option from the 'View' menu to display the console window
+• Update: When launched, the script will attempt to unblock its .psm1 files from the 'Modules' folder, which may have become blocked after the initial download - The main MSRD-Collect.ps1 may still need to be manually unblocked
+• Update: Code improvements
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing a warning message to not be displayed when the free disk space was below 5% on any local or network drive
+• Fix: Resolved an issue that was causing some hyperlinks to be broken when the collected data was moved to a different location
+• Fix: Resolved an issue that was causing the Windows Firewall profile name not to be displayed properly when the firewall was disabled for that profile
+• Fix: Resolved an issue that was sometimes causing the DNS check for AVD URLs and Quick Assist to fail and not log any errors
+• Update: 'Authentication' check now also looks for the Kerberos 'MaxTokenSize' registry key
+• Update: 'Domain Controller' check has been renamed to 'Domain' and now also lists the available domain trusts
+• Update: 'FSLogix' check now also looks for any Java installation
+• Update: 'Printing' check now also looks for the 'MaintainDefaultPrinter' registry key
+• Update: 'Redirection' check now also looks for client printer redirection settings
+• Update: 'Security' check now also looks if Microsoft Defender SmartScreen is enabled
+• Update: 'Teams' check now also looks for the 'ShareClientDesktop', 'DisableRAILScreenSharing', 'DisableRAILAppSharing' registry keys
+• Update: 'Third Party' check now also verifies if 'Acronis Cyber Protect' is running on the system
+• Update: Additional group policy references have been added to various registry keys (hover with the mouse over the (i) icon next to a registry key)
+• Update: Notifications have been updated for Windows 7 and Windows 8.1 end of support
+• Update: Code improvements
+
+
+
+v221228.2:
+
+[MSRD-Collect changes]
+• Feature: A new "Configure data collection..." option is available under the Tools menu - This feature allows you to more granularly select which data to collect for each scenario (recommended is to leave all checkboxes selected, for the best troubleshooting experience)
+• Feature: A new "Configure diagnostics..." option is available under the Tools menu - This feature allows you to more granularly select which diagnostics checks to perform (recommended is to leave all checkboxes selected, for the best troubleshooting experience)
+• Update: New icons have been added to the menu options
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing an error message during the FSLogix check, when the FSLogix service was not running
+• Fix: Resolved an issue that was causing the status of services to not be reported properly when their startup type was set to 'Disabled'
+• Fix: Resolved an issue that was causing missing AVD Host URLs checks due to the 'WVDAgentUrlTool.exe' not being properly detected on AVD hosts
+• Update: 'FSLogix' check now also looks for the 'NoOST' (Outlook), 'OutlookCachedMode' (FSLogix Profiles/ODFC) and 'VHDAccessMode' (FSLogix ODFC) reg keys
+
+
+v221223.4:
+
+[MSRD-Collect changes]
+• Fix: Resolved an issue where sometimes the script hung or threw a .Net Framework error during data collection, due to underlying domain connectivity/authentication issues
+
+[MSRD-Diag changes]
+• Feature: [Preview] A new 'Quick Assist' category has been added with information about Quick Assist installation and access to the required URLs
+• Fix: Resolved an issue where sometimes the script was not able to properly run all checks, due to underlying domain connectivity/authentication issues
+• Update: [Preview] 'Req. URLs' check now also includes client side URLs
+• Update: 'RDP/Listener' check now looks for the 'fPromptForPassword' registry key
+• Update: Report categories can now be collapsed/expanded all at once using the 'Hide/Show All' link
+• Update: Layout adjustments
+
+
+
+v221219.1:
+
+[MSRD-Collect changes]
+• Fix: Resolved an issue that was causing some error messages when manually checking for MSRD-Collect updates through the GUI
+• Update: The time required to collect some of the data has been improved
+
+[MSRD-Diag changes]
+• Fix: Resolved an issue that was causing a broken link to the DxDiag.txt file when running 'DiagOnly'
+• Update: 'HCI' check now also reports the status of the 'GC Service' (GCArcService) and 'Extension Service' (ExtensionService) services
+• Update: 'HCI' check will no longer trigger a warning if the HCI services are not found
+
+
+
+v221216.34:
+
+[MSRD-Collect changes]
+• Feature: A new command line parameter "-Machine" has been added, which indicates the type of machine from where data is collected. This is a mandatory parameter when not using the GUI. Supported values: "isAVD", "isRDS", "isSource". Based on the provided value, only data specific to that machine type will be collected
+• Feature: [GUI only] A new environment type "Source" has been added - Select this option when collecting data from source (users' local) machines - This type is limited to the 'Core', 'DumpPID' and 'DiagOnly' scenarios (DiagOnly will not include AVD, FSLogix or RDS roles related checks)
+• Feature: [GUI only] A new menu item "View" has been added, with option "Hide Console" to hide/show the main PowerShell console window on demand (currently the console is displayed by default - may change in a future release)
+• Feature: [GUI only] Links to the public Microsoft AVD, RDS and W365 documentation have been added under the 'Help' menu
+• Fix: Resolved an issue where sometimes the 'redirections.xml' file for FSLogix was not properly collected as part of the 'Profiles' scenario
+• Fix: Resolved an issue where RPC communication errors with RDS servers during 'GetFarmData' collection were not logged under the MSRD-Collect-Errors.txt file
+• Update: GUI has been redesigned, now using a toolbar for the data collection options instead of checkboxes
+• Update: '-NoGUI' command line parameter has been removed - The script has now two running modes: 'with GUI' (when launching MSRD-Collect.ps1 without any scenario parameters); 'without GUI' (when launching MSRD-Collect.ps1 with one or more scenario parameters)
+• Update: 'Core' scenario now collects the 'Microsoft-Windows-HelloForBusiness/Operational' and 'Microsoft-Windows-WER-Diagnostics/Operational' event logs
+• Update: 'Core' scenario now collects information on installed Firewall products (under the 'SystemInfo' folder)
+• Update: 'Core' scenario now collects information on Power Settings ('powercfg /list', 'powercfg /query', 'powercfg /systempowerreport' , under the 'SystemInfo' folder)
+• Update: 'HCI' scenario now collects 'GuestConfig\arc_policy_logs\gc_agent.log' and 'GuestConfig\ext_mgr_logs\gc_ext.log' (under the 'LogFiles' folder)
+• Update: 'UserContext' now applies also to exporting 'RemoteDesktop' scheduled tasks (as part of the 'Core' scenario)
+• Update: Hotfixes.txt and Hotfixes.html have been replaced by a new, more verbose 'UpdateHistory.html' report
+• Update: Defender Exclusions registry keys are now collected as part of the 'Core' scenario (previously were part of 'Profiles')
+• Update: Message colors have been adjusted for better visibility
+• Update: Code improvements and module name changes
+
+[MSRD-Diag changes]
+• Feature: A new 'Host Pool' category has been added and host pool details have been moved from the 'Deployment' to the new 'Host Pool' category
+• Feature: A new 'Search' category has been added to report Windows Search service status and look for the 'EnablePerUserCatalog' registry key
+• Feature: A new 'VPN' category has been added to report VPN connection profile information
+• Fix: Resolved an issue where sometimes the 'Graphics' check was not properly reporting if the VM is GPU enabled (Azure NV* or NC* series)
+• Fix: Resolved an issue where sometimes the 'RD client' check was not properly displaying installation date and path
+• Fix: Resolved an issue where sometimes either the 'OS activation / licensing' or the 'FSLogix' check was hanging indefinitely
+• Update: 'Auth/Logon' check now looks for the registry key 'fQueryUserConfigFromLocalMachine'
+• Update: 'FSLogix' check now looks for the 'RedirectType', 'RebootOnUserLogoff', 'ShutdownOnUserLogoff' registry keys
+• Update: 'General' check now reports VM Image Type, if the VM is part of an AVD host pool
+• Update: 'General' check now also reports .Net Framework version 4.8.1, if available (previously it reported only up to version 4.8)
+• Update: 'Graphics' check now looks for the registry key 'UserPreferencesMask'
+• Update: 'PowerShell' check now looks for the version of the PowerShellGet module
+• Update: 'Printing' check now looks for the Print Spooler service status
+• Update: 'RD Client' check now looks for the 'DisableUDPTransport', 'EnableCredSSPSupport', 'RDGClientTransport' registry keys
+• Update: 'RDP/Listener' check now looks if TermService is listening on ports TCP+UDP 3389 or if either port may have been hijacked
+• Update: 'RDS Roles' check now looks for the 'ClusterSettings' and 'CentralizedPublishing' registry keys
+• Update: 'RDS Roles' check now looks for status of local RDS role related services (RDGateway, W3SVC, Tssdis, RDMS, TScPubRPC, MSSQL$MICROSOFT##WID, TermServLicensing)
+• Update: 'Redirection' check now looks for the 'IgnoreRemoteKeyboardLayout' registry key
+• Update: 'Security' check now looks for the following Microsoft Defender Antivirus settings: 'DisableAutoExclusions', 'RandomizeScheduleTaskTimes', 'SchedulerRandomizationTime', 'ProxyServer', 'ProxyPacUrl', 'ProxyBypass', 'ForceUseProxyOnly', 'ScanScheduleTime', 'ScanScheduleQuickScanTime', 'ScanOnlyIfIdle'
+• Update: 'WinRM/PowerShell' check now looks for the 'MaxRequestBytes' registry key
+• Update: '3rd party' check now looks if 'Netskope Client' is running on the system
+• Update: 'Deployment' check has been renamed to 'General'
+• Update: 'Authentication' check has been renamed to 'Auth/Logon'
+• Update: 'Windows Update' history links are now displayed also for machines running Windows 10 22H2 or Windows 11 22H2
+• Update: The time required to perform some of the checks has been improved
+• Update: MSRD-Diag.html layout revamped (QoL improvements)
+
+
+
+v221020.15:
+
+[MSRD-Collect changes]
+• Feature: 'Core' scenario now collects Monitoring Agent configuration files (under the 'Monitoring' folder)
+• Feature: 'Core' scenario now collects certificate and thumbprint information from the "Remote Desktop" store (under the 'Certificates' folder)
+• Feature: 'Core' scenario now collects DACLs for "C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys" and "C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys\f686aace6942fb7f7ceb231212eef4a4_" (under the 'Certificates' folder)
+• Feature: 'Core' scenario now collects the 'HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer' (Software Restriction Policies) registry keys (under the 'RegistryKeys' folder)
+• Feature: 'Core' scenario now collects the 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceInstall\Restrictions' (Device Installation Restrictions) registry keys (under the 'RegistryKeys' folder)
+• Feature: 'Core' scenario now collects the list of AppLocker rules collections (under the 'SystemInfo' folder)
+• Feature: 'Profiles' scenario now generates a filtered output of the VHD Disk Compaction metric events for FSLogix for the past 5 days (under the 'FSLogix' folder) - requires FSLogix version 2.9.8308.44092 or newer
+• Fix: The script will no longer generate duplicate ".evtx" extensions for some of the exported event log files
+• General: Various code improvements
+
+[MSRD-Diag changes]
+• Feature: 'Black Screen Logon' check now looks for the 'Prevent Installation of Removable Devices' policy configuration
+• Feature: 'Deployment' check now looks for the 'Winlogon\AppSetup' registry key 
+• Feature: 'Deployment' check now looks if the 'Windows Sandbox' and 'Hyper-V' features are enabled on the machine
+• Feature: 'FSLogix' check now looks for the 'VHDCompactDisk' registry key (requires FSLogix version 2.9.8308.44092 or newer)
+• Feature: 'RD Listener' check now looks for the following registry keys 'SecurityLayer', 'UserAuthentication', 'PortNumber' (RDS only), 'KeepAliveInterval', 'KeepAliveEnable'
+• Feature: 'RDS Roles' check now looks for the 'IasTimeout' registry key if an RD Gateway is detected
+• Feature: 'Security' check now looks for the 'ImpersonateCheckProtection' and 'DisableRestrictedAdmin' registry keys
+• Feature: '3rd party' check now verifies if 'Tenable Nessus' is running on the system
+• Fix: Hyperlinks pointing to collected files will now open properly when the folder with the collected data is moved to a different location
+• Fix: Resolved an issue that was causing an error when collecting Smartcard related data on RDS deployments
+• Fix: Resolved an issue that was causing some unrecognized cmdlet errors when running diagnostics on Windows 7 operating systems
+• Fix: RD client information is now properly displayed when multiple Windows Desktop RD client installations are found on the system
+• Fix: The OS build number is now properly displayed in the 'Deployment' section when an unsupported OS is being used
+• Fix: ZScaler connectivity check will now work properly on Server OS
+• Update: Increased the TimeOut interval for some remote queries from 20 to 30 seconds
+
+
+
+v220919.10:
+
+[MSRD-Collect changes]
+• Added a 'Start data collection/diagnostics' option also to the 'File' menu (GUI mode)
+	o The option will be usable/enabled only after selecting one of the environment checkboxes ('RDS' or 'AVD')
+• Added a 'Provide Feedback (survey)' option under the 'Help' menu (GUI mode) which points to an anonymous MSRD-Collect satisfaction survey
+• Fixed an issue that was causing an error loading the script's icon when the script was launched from PowerShell ISE and using the GUI
+• Improved detection of installed applications
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o 'HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management' registry keys
+	o 'Microsoft-Windows-NTLM/Operational' event logs
+• When using the GUI, the script will no longer collect AVD specific data when the 'RDS' deployment type is selected
+	o When used without the GUI, the script will collect data specific to both 'RDS' and 'AVD' deployment types (this may change in a future version)
+
+[MSRD-Diag changes]
+• Adjusted some output messages for better clarity
+• Fixed a display message issue when multiple Office installations were found
+• Fixed an issue that was causing some errors when collecting Profiles data and FSLogix not present
+• Fixed an issue that was causing an incorrect warning about not running the latest FSLogix version even though the latest version was already installed
+• Fixed an issue that was sometimes causing the AVD Windows Desktop client to not be detected properly
+• Menu buttons will be highlighted (yellow background) whenever a 'WARNING' has been logged within the corresponding section
+• Updated 'Authentication' and 'Redirection' checks to also look for the WebAuthN and RdsAadAuth registry keys
+• Updated 'FSLogix' and 'Security' checks to also look for the 'Network security: Configure encryption types allowed for Kerberos' policy and warn if configured
+• Updated 'Printing' check to also look for the 'RemovePrintersAtLogoff' registry key
+• Updated 'RDP Shortpath' check to use the new STUN server connectivity and NAT type validation method for Shortpath for public networks
+• Updated 'RDS Roles' check to also look for the 'SkipMachineNameAttribute' and 'EnforceChannelBinding' registry keys if an RD Gateway is detected (RDS only)
+
+
+
+v220830.11:
+
+[MSRD-Collect changes]
+• Improved script usage when launched from PowerShell ISE (or other PowerShell GUI editors)
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o 'HKCU\SOFTWARE\Microsoft\MSRDC' reg keys (previously it was only collecting HKLM\SOFTWARE\Microsoft\MSRDC)
+	o 'HKLM\SYSTEM\CurrentControlSet\Enum\SCSI\Disk&Ven_Msft&Prod_Virtual_Disk' reg keys (as part of the 'Profiles' dataset)
+
+[MSRD-Diag changes]
+• Added new 'Authentication' category to check for authentication related settings
+• Fixed an issue that was causing some hyperlinks within MSRD-Diag.html to be broken when the collected data was moved to a different location
+• Fixed an issue that was causing the 'AllowOnlineID' value (part of the Azure AD Join check) to not be reported correctly
+• Fixed an issue that was causing the 'EnableAdvancedRemoteFXRemoteAppSupport' reg key (part of the Graphics check) to not be detected properly
+• Fixed an issue that was sometimes causing the Windows firewall profile status to not be reported correctly
+• Moved ZScaler check from 'Public IP' to 'Proxy/Route' category
+• Updated '3rd party' check to also look if 'Forcepoint Endpoint Security Agent' is running on the system
+• Updated 'Azure AD Join' check to also look for the 'AzureVmComputeMetadataEndpoint', 'AzureVmMsiTokenEndpoint', 'AzureVmTenantIdEndpoint' registry keys
+• Updated 'AVD Agent and SxS Stack' check to also return the 'RdAgentBootLoader' version
+• Updated 'RDP/Listener' check to also look for the 'LoadableProtocol_Object' and 'CitrixBackupRdpTcpLoadableProtocolObject' registry keys on the RDP-Tcp listener
+• Updated 'Redirection' check to also look for the 'IoEnableSessionZeroAccessCheck' registry key
+• Updated 'Security' check to also look for the 'Network security: Restrict NTLM: *' policies configuration
+• Removed check for 'RdAgent' (WaAppAgent) service status
+• When using the GUI, the script will no longer run AVD related diagnostics checks when the 'RDS' deployment type is selected
+	o If you select AVD, diagnostics will run both AVD and RDS checks
+	o If you select RDS, diagnostics will run only RDS checks
+	o When used without the GUI, diagnostics will still run all checks regardless of the deployment type (this may change in a future version)
+• Some output message adjustments for better clarity
+
+
+
+v220808.45:
+
+[MSRD-Collect changes]
+• 'AVD-Collect' and 'RDS-Collect' have been merged under one script 'MSRD-Collect'
+	o When using the GUI, you need to first select which environment is being investigated: AVD or RDS; this will enable the corresponding scenarios 
+• Added data collection/diagnostics progress indicator (separately for each scenario)
+• Added new command line parameter "-UserContext <username>" and GUI field "User context"
+	o MSRD-Collect needs to be run with elevated privileges to be able to collect all the relevant data, which can sometimes be an inconvenient when troubleshooting issues occurring only with non-admin users or even different admin users than the one running the script, where you need data from the affected user's profile, not the admin's profile running the script
+	o With this option, you can specify that some data should be collected from another user's context (e.g. RDClientAutoTrace, Teams settings, IME folder trees) as long as the user's profile data exists on the local machine
+	o This does not apply to collecting HKCU registry keys from the other user. For now, HKCU output will still reflect the settings of the admin user running the script
+	o Usage example:
+		MSRD-Collect.ps1 -UserContext "avduser1"
+• Fixed an issue that was causing no warning prompt when the MSRDC process was already running (Core module)
+• Fixed an issue that was causing the "DiagOnly" scenario to not start when launching the script in legacy mode (with '-NoGUI' and no other scenario-based parameters)
+• Fixed an issue that was causing the tree output for some IME-related folders to not return the expected content (IME module)
+• Fixed an issue that was sometimes causing an error message when the prosess PID provided for "DumpPID" did not exist
+• Fixed an issue that was sometimes causing errors when collecting '\Memory\Pool Paged Bytes' and '\Memory\Pool Nonpaged Bytes' counter information (Core module)
+• Renamed the 'RDClientAutoTrace' folder to 'RDClient'
+• Some of the heavier data collection has been offloaded to background jobs
+• The GUI code has been moved to a separate MSRD-Collect-GUI.psm1 module
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o '%localappdata%\rdclientwpf\ISubscription.json' under the RDClient folder
+	o 'klist get krbtgt' and 'klist get cifs/<FSLogix Profiles VHDLocations storage>' output under the FSLogix folder (as part of the 'Profiles' dataset)
+• When using the GUI, DumpPID has now a dropdown list to select from with the running processes and their PIDs
+
+[MSRD-Diag changes]
+• 'MSRD-Diag' has been rewritten and improved (a .txt report will no longer be generated, only the .html)
+• Added 'OS activation / licensing' check
+• Added dedicated 'Azure Stack HCI' configuration check (basic - will be extended in future releases)
+• Added dedicated 'Windows Installer' status check (basic - will be extended in future releases)
+• Added notification about the upcoming Windows 7 ESU EoS (when running on Windows 7 machines)
+• Fixed an issue that was sometimes causing the script to not display a warning in the Diag results when an outdated WebSocket Service version was found
+• Fixed an issue that was sometimes causing the script to get stuck indefinitely during the public IP information check
+• Fixed an issue that was sometimes incorrectly reporting the OneDrive installation mode as 'per-user' when installed under 'C:\Program Files (x86)'
+• Fixed an issue that was sometimes incorrectly reporting that a UDP 3390 firewall rule has been found for RDP Shortpath when there was no such rule
+• Merged 'Citrix' and '3rd party' software checks under a single 'Citrix and other potentially relevant 3rd party products' check
+• Merged 'Screen Capture Protection' and 'User Rights' checks under a single 'Security' check
+• Removed and redistributed the 'key system services check' between the other checks dedicated to each involved component
+• Updated '3rd party' software check to also look if 'ForeScout SecureConnector', 'Trend Micro' or 'TerminalWorks TSPrint' are running on the system
+• Updated 'Black Screen' settings check to look for additional AppReadiness and Shell related registry keys
+• Updated 'Deployment' check to also look for Secure Boot and TPM status
+• Updated 'Deployment' and 'Windows Update' checks to look for additional reboot pending registry keys
+• Updated 'FSLogix' check to also look for the 'InstallAppxPackages' registry key
+• Updated 'Graphics' check to also look for the 'EnableAdvancedRemoteFXRemoteAppSupport' registry key
+• Updated 'OneDrive' check to also look for the Run and RunOnce keys from HKCU
+• Updated 'PowerShell' configuration check to look for the versions of the following modules: PSReadline, Az.Accounts, Az.Resources, Az.DesktopVirtualization, Microsoft.RDInfra.RDPowerShell where available
+• Updated 'Public IP' check to also verify if the traffic is going through ZScaler
+• Updated 'RDP/Listener' check to also look for the 'IgnoreRegUserConfigErrors' registry key
+• Updated 'Security' check to also look for the 'RestrictRemoteSam' and 'RestrictRemoteSamAuditOnlyMode' registry keys
+• Updated 'Session Time Limit' check to also look for the 'Interactive logon' and 'Microsoft network server' time limit policy settings
+• Updated 'SSL/TLS' check to also look for the .Net Framework TLS configuration
+• Updated 'Teams' check to also look for the 'UseHardwareEncoding' reg key (relevant on source client machines) and for the new WebSocket Service version
+• Updated 'WinRM' check to also look for the 'Allow Remote Shell Access' policy (disabling this policy may prevent usage of the RDMS UI)
+• Updated and renamed 'Redirection' check to also look for the device redirection settings on the RDP/SxS listener level
+
+
+
+
+=====================================================================
+
+Previous AVD-Collect Revision History:
+
+v220512.21:
+
+[AVD-Collect changes]
+• AVD-Collect comes now with a GUI, when it is launched without any scenario-based command line parameters (e.g. when simply running ".\AVD-Collect.ps1")
+	o Please report any issues with the script to AVDCollectTalk@microsoft.com
+	o A new command line parameter "-NoGUI" is now available, in case you prefer to start the script without a GUI (like in the previous versions / legacy mode)
+	o Specifying any scenario-based command line parameter(s) will prevent showing the GUI (even without the "-NoGUI" parameter) and will start the corresponding data collection
+		o The currently available scenario based parameters are: -Core, -Profiles, -Teams, -MSIXAA, -MSRA, -SCard, -IME, -HCI, -DiagOnly, -DumpPID
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o 'Get-MpComputerStatus' output (under the 'SystemInfo' folder, *_AntiVirusProducts.txt) (Windows 10+)
+	o 'netsh interface Teredo show state' output (under the 'Networking' folder, *_Teredo.txt)
+	o Remaining RD Licensing Grace Period value for RDSH (Server OS) deployments (under the 'RDS' folder)
+• Fixed an issue that was causing the script to not collect WVDAgent and WVDAgentManager registry keys on Windows 7 hosts
+• Fixed an issue that was causing the 'DumpPID' option to not be available in the selection menu when running the script without a GUI and without the '-DumpPID' command line parameter
+• Code and security improvements
+
+[AVD-Diag changes]
+• Added User Rights policy configuration check (SeNetworkLogonRight, SeDenyNetworkLogonRight, SeRemoteInteractiveLogonRight, SeDenyRemoteInteractiveLogonRight)
+• Added printing configuration check
+• Updated the DNS configuration check to also look for the 'Configure NetBIOS settings' policy (Windows 10+)
+• Updated the PowerShell configuration check to also look for the execution policies for each scope
+• Updated the RDP Shortpath configuration check to also look for the 'RDP Shortpath for Public Networks' configuration (incl. STUN server connectivity and NAT type)
+• Updated the deployment check to:
+	o also look for the "ScreenSaverGracePeriod" reg key and the machine's license type
+	o warn if Windows 10 1909 deployment found (support for build 1909 ended on May 10, 2022)
+• Updated AVD Agent and SxS Stack information check to also look for agent and stack information on Windows 7 hosts
+• Updated Citrix configuration check to look for potential CTX338807 issues also for Citrix VAD versions 2109 and 2112 (previously it was only checking for version 1912 CU4)
+• Fixed an issue that was causing the status of the 'Allow audio and video playback redirection' policy to not be reported correctly
+• Output message improvements
+
+
+
+v220402.1:
+
+[AVD-Diag changes]
+• Added check for Microsoft Office configuration
+• Fixed an issue that was causing the OneDrive configuration check to sometimes incorrectly report per-user instead of per-machine installation 
+• Removed dependency on FSLogix presence when running the OneDrive configuration check
+
+
+v220401.2:
+
+[AVD-Diag changes]
+• Updated graphics check to also look for the 'Use advanced RemoteFX graphics for RemoteApp' policy configuration
+• Fixed an issue that was causing an attempt to generate a process dump even when no "-DumpPID <pid>" parameter was specified
+
+
+v220330.10:
+
+[AVD-Collect changes]
+• Added new command line parameter "-DumpPID"
+	o The script can now also be used to generate a process dump based on the PID of the process, when needed. The dump will be saved under the 'Dumps' folder
+	o This dump collection is part of the 'Core' dataset and also works in combination with any other scenario parameter except '-DiagOnly'
+	o Usage example:
+		AVD-Collect.ps1 -DumpPID 13380
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o Registry keys (in the 'RegistryKeys' folder):
+		o HKLM\SOFTWARE\Microsoft\MSLicensing
+		o HKLM\SOFTWARE\Microsoft\Ole
+		o HKLM\SYSTEM\CurrentControlSet\Enum\TERMINPUT_BUS
+		o HKLM\SYSTEM\CurrentControlSet\Services\frxccd (as part of the 'Profiles' dataset)
+		o HKLM\SYSTEM\CurrentControlSet\Services\frxccds (as part of the 'Profiles' dataset)
+	o "tasklist /v" output
+	o DACLs for the FSLogix Profiles and ODFC storage logations (as part of the 'Profiles' dataset)
+	o "fltmc volumes" output in the "\*_Fltmc.txt" file
+	o "C:\Program Files\MsRDCMMRHost\MsRDCMMRHostInstall.log" in the LogFiles folder
+	o <DiagnosticsUri>api/health and <BrokerResourceIdURIGlobal>api/health status under the "*_Networking\*_AVDServicesURIHealth.txt" file
+• Added check for the presence of the Modules folder on script launch
+• Renamed '*_BrokerURIHealth.txt' to '*_AVDServicesURIHealth.txt'
+• Code improvements
+
+[AVD-Diag changes]
+• Added dedicated check for RDS licensing configuration (previously this was only checked for Server OS deployments as part of the Deployment check; now it's a separate category that's also checked for Client OS deployments)
+• Added check for 'DisableRegistryTools' and 'ProcessTSUserLogonAsync' reg keys
+• Added check for TCP issues over the past 5 days. If an issue is found, information about the event will be exported into a separate "AVD-Diag-TCPIssuesEvents.txt" file:
+	o "TCP/IP failed to establish" (Event 4227 - System)
+• Updated potential black screen configuration check to also look for the following policies:
+	o "Prevent device metadata retrieval from the Internet"
+	o "Prevent installation of devices not described by other policy settings"
+• Updated black screen issue events check to also look for the following events:
+	o "The machine wide Default Launch and Activation security descriptor is invalid" (Event 10020 - System)
+	o "The Windows logon process has unexpectedly terminated" (Event 4005)
+• Updated agent issue events check to also look for:
+	o "Unable to extract and validate Geneva URLs" (Event 0 - RemoteDesktopServices)
+	o "PingHost: Could not PING url" (Event 0 - RemoteDesktopServices)
+	o "Unable to locate running process" (Event 0 - RemoteDesktopServices)
+• Updated FSLogix issue events check to also look for:
+	o "The disk detach may have invalidated handles" (Event 46 - FSLogix-Apps/Admin)
+	o "The disk detach may have invalidated handles" (Event 0 - RemoteDesktopServices)
+	o "ErrorCode: 4318" (Event 48 - FSLogix-Apps/Admin)
+	o "ErrorCode: 743" (Event 0 - RemoteDesktopServices)
+• Updated Multimedia Redirection check to also look for the Microsoft Edge and Google Chrome extension management settings policy configuration
+• Updated and renamed the BrokerURI health check to also include DiagnosticsUri and BrokerResourceIdURIGlobal health checks
+• Updated version checks for FSLogix and MSRDC to take into account the recent March releases
+• Fixed an issue that was causing the firewall rules from the RDP Shortpath check to not be properly detected every time
+• Various improvements to the events issues check
+
+
+v220303.18:
+
+[AVD-Collect changes]
+• Updated 'AVD-Collect-ReadMe.txt' with important information on the new script modules and script usage
+• Added new command line parameter "-OutputDir" that can be used to specify a custom location for storing the collected data
+	o If the parameter is not specified, the script will by default store all collected data under "C:\MSDATA"
+	o If the path specified in the parameter does not exit, the script will attempt to create it
+	o Usage example: 
+		AVD-Collect.ps1 -OutputDir "E:\AVDdata\"
+• The script will now also collect the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o A tree output of the following folders' contents (in the 'SystemInfo' folder):
+		o C:\Windows\RemotePackages
+		o C:\Program Files\Microsoft RDInfra
+	o Information on installed AntiVirus products (in the 'SystemInfo' folder)
+	o Scheduled Task information (Windows 10+) for:
+		o Windows Desktop RD client
+		o Remote Assistance (as part of the 'MSRA' dataset)
+	o Registry keys (in the 'RegistryKeys' folder):
+		o HKU\.DEFAULT\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+		o HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+		o HKLM\SYSTEM\CurrentControlSet\Services\Tcpip
+• Fixed an issue that was causing an error when collecting "IME" related data on Windows 7 machines
+
+[AVD-Diag changes]
+• Added check for total and available disk space
+• Added check for local firewall configuration (Windows 10+)
+• Added check for installed Citrix software
+• Added check for license server and license mode configuration on Server OS hosts
+• Added check for available Antivirus software and merged it with the Windows Defender Server OS recommendations check
+• Added additional [WARNING] labels when potential issues are detected
+• Revamped the Agent, FSLogix, MSIX App Attach, Shortpath, Black Screen, Process Hang and Crash issue events checks and merged them into one 'Issue events over the past 5 days' check. Crash check now also includes system crash events
+• Updated Deployment check to also:
+	o include host time zone information
+	o verify the 'AllowEncryptionOracle', 'SystemSetupInProgress' and 'SetupPhase' reg keys
+• Updated RDP Shortpath check to also verify:
+	o the 'DisableUDPTransport' reg key value
+	o if there were any successful Events 131 logged over the past 5 days (Shortpath has been used)
+	o if there were any of the following issue events logged over the past 5 days. If an issue is found, information about the event will be exported into a separate "AVD-Diag-ShortpathIssuesEvents.txt" file:
+		o "UDP Handshake Timeout" (Event 135 - Microsoft-Windows-RemoteDesktopServices-RdpCoreCDV/Operational)
+		o "UdpEventErrorOnMtReqComplete" (Event 226 - Microsoft-Windows-RemoteDesktopServices-RdpCoreCDV/Operational)
+• Updated and renamed the proxy settings check to also include:
+	o Microsoft Edge and NetworkIsolation proxy configuration
+	o TCPIP force tunneling configuration (Policy: Enterprise resource domains hosted in the cloud)
+	o 'DefaultConnectionSettings' reg key
+• Updated RDP and RD listener check to also verify the 'MaxInstanceCount' reg key
+• Updated and renamed the Session Time Limit configuration check to also verify the local settings on the RDP and SxS listeners
+• Updated the API version used for IMDS query
+• Updated and renamed the RD client information check to also consider the latest public client version 1.2.2924 and the Microsoft Store client
+• Updated the 3rd party components check to also report the product version when found
+• Updated some text messaging for better clarity
+• Merged the 'Audio/Video privacy' and 'Multimedia redirection' checks into one 'Multimedia configuration' check
+• Removed check for FSLogix version 2.9.8048.43478 (version still in preview and superseded)
+• Removed dependency on the AVD agent's presence when running some of the diagnostic checks
+• Fixed a display issue in the RDP and RD listener check output
+• Fixed an issue that was sometimes causing the export of unrelated event logs into the AVD-Diag-ProcessCrashEvents.txt, AVD-Diag-ProcessHangEvents.txt and AVD-Diag-PotentialBlackScreenEvents.txt files
+• Fixed an issue that was causing an incorrect warning message in the black screen check when FSLogix was not installed on the system
+• Fixed an issue where sometimes public IP information could not be retrieved when the machine was behind a proxy
+• Adjustments to the jump menu in AVD-Diag.html
+• Various code optimization
+
+
+v220203.3:
+
+[AVD-Collect changes]
+• The script can now also collect information on the COM Security permissions, as part of the 'MSRA' dataset (output under the 'SystemInfo' folder)
+
+[AVD-Diag changes]
+• Added Windows Desktop RD client information check
+• Updated the RDP and RD listener check to also look for the 'fSingleSessionPerUser' registry key
+• Updated the check for potential black screen issues to also look for AppReadiness timeout events 7011 that may have occurred within the last 5 days. If such an event is found in the event logs, an additional file ("AVD-Diag-PotentialBlackScreenEvents.txt") will be generated with an export of the specific event log entries
+• Updated some text messaging for better clarity
+• Fixed an issue that was causing errors with the AVD-Collect-Diag module on non-English operating systems
+• Code improvements
+
+
+v220131.13:
+
+[AVD-Collect changes]
+• The script is now using separate .psm1 modules, located in the "Modules" subfolder, for the various troubleshooting scenarios. This subfolder must stay in the same location with the main AVD-Collect.ps1 file for the script to work properly
+• The script now also collects the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o list of installed software (on both machine and user level) under the 'SystemInfo' subfolder
+	o 'nltest /sc_query:<domain>' and 'nltest /dnsgetdc:<domain>' output under the 'Networking' subfolder
+	o 'Microsoft-Windows-Diagnostics-Performance/Operational' event logs
+	o 'Get-Culture' and 'Get-WinUserLanguageList' output under the 'SystemInfo' subfolder (as part of the 'IME' dataset)
+• Fixed an issue that was sometimes causing the "-SCard" command line parameter to not be recognized
+• Additional code optimizations
+
+[AVD-Diag changes]
+• Added check for Domain Controller configuration (trusted and available)
+• Added check for Windows Update configuration
+• Added check for 'RpcAuthnLevelPrivacyEnabled' and 'RpcNamedPipeAuthentication' reg keys as part of the deployment check
+• Updated the FSLogix check to also consider the new version 2.9.8048.43478
+• Updated the Teams optimization check to also verify the new client side GPU render path optimization configuration
+• Updated Black Screen check to also include some folder redirection configuration
+• Updated graphics configuration check to also verify if 'MaxMonitors', 'MaxXResolution', 'MaxYResolution', 'Win8DpiScaling', 'LogPixels', 'DesktopDPIOverride', 'PreferExternalManifest' and 'IgnoreClientDesktopScaleFactor' are configured
+• Updated RDP Shortpath configuration check to avoid some unnecessary warnings
+• Updated FSLogix configuration check to also verify if 'SpecialRoamingOverrideAllowed' is configured
+• Updated OneDrive configuration check to also verify if OneDrive is configured as 'Run', 'RunOnce' or 'RailRunonce' application
+• Updated check for unsupported OS versions
+• Fixed an issue that was sometimes causing an incorrect warning for a nonexistent "rdp-sxs" listener
+• AVD-Diag.html layout updates
+
+
+v211227.3:
+
+[AVD-Collect changes]
+• The script now also collects the following (where it is not explicitly mentioned, the data is collected as part of the 'Core' dataset):
+	o Registry keys:
+		o HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+		o HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce
+		o HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce
+		o HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+	o Event logs:
+		o Setup
+		o Microsoft-Windows-TerminalServices-RDPClient/Operational
+		o Microsoft-Windows-Winlogon/Operational
+		o Microsoft-Windows-GroupPolicy/Operational (part of the 'Profiles' dataset)
+• Display text adjustments
+
+[AVD-Diag changes]
+• Added additional [WARNING] labels when potential issues are detected
+• Added check for various settings that are sometimes related to Black Screen logon scenarios
+• Added additional potentially relevant processes to the 3rd party process check (Adaware, Sophos)
+• Moved 'AppxSvc' and 'AppReadiness' checks from the system services check to the black screen check
+• 3rd party process check information will now include also the path to the executable, if found
+• Internet settings proxy registry key configuration will now be checked for HKCU too, not just HKLM
+
+
+v211208.7:
+
+[AVD-Collect changes]
+• Added automated version checking. When launched, the script will warn if a newer version is available online and recommend downloading it. Internet access is required and the repository to be reachable, for the version check to be successful. It will ask if you would like to download the new version (if you answer Yes, it will open a browser window, initiate the download and exit the current script process) or continue with running the current version.
+• Added new command line parameter:
+	o "-HCI" to collect Azure Stack HCI related log files ('Core' dataset included), for troubleshooting Azure Stack HCI related issues (Windows 10+ and Windows Server 2019+). The logs ('himds' and 'azcmagent') will be stored under the 'LogFiles' folder
+• Added new scenario "HCI" when the script is launched without parameters. When selected, it will collect the 'Core' dataset + Azure Stack HCI related log files
+• The script now also collects the following:
+	o Certificate and thumbprint information from the 'AAD Token Issuer' store
+
+[AVD-Diag changes]
+• Added check for a few 3rd party components potentially running on the system, which may be relevant for various troubleshooting scenarios
+• Added check for User Account Control (UAC) configuration
+• Added check for 'CloudKerberosTicketRetrievalEnabled' and 'LoadCredKeyFromProfile' reg keys, for FSLogix (Azure AD Kerberos Auth for Azure Files)
+• Added check for AAD Identity Provider reg key
+• Added check for Azure Arc-enabled agent service (for Azure Stack HCI)
+• Added check for secure channel connection (trust relationship) between the machine and its domain
+• Added check for public IP address information (IP, City, Region, Country, Organization, Timezone)
+• Updated recommendation message for the OS update check to also include Windows 10 21H2
+• Updated the Remote Desktop WebRTC Redirector Service version check to validate against the latest available version (1.4.2111.18001)
+• Updated the RDP Shortpath check to look for the policy 'Enable RDP Shortpath for managed networks' configuration instead of the old 'WinStations' reg keys
+• Removed check for the 'fEnableScreenCaptureProtection' reg key as it is obsolete (it was used during public preview of the Screen Capture Protection feature). The script continues to check for the current reg key 'fEnableScreenCaptureProtect'.
+• Fixed an issue that was causing an error when querying for available DNS servers on machines not joined to a domain
+• Fixed a table layout issue in AVD-Diag.html when some text was overflowing the screen width
+• Additional code optimizations
+
+
+v211115.10:
+
+[AVD-Collect changes]
+• The script will now also collect:
+	o The output of "winsock show catalog" (part of the 'Core' dataset)
+	o Reg key: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers (part of the 'Profiles' dataset)
+	o Get-NetIPInterface output (part of the 'Core' dataset)
+	o List of top 10 processes using CPU at the moment when the script is running (part of the 'Core' dataset)
+• Updated the MSIX App Attach event log filters to also include the source "Microsoft.RDInfra.AppAttach.AgentAppAttachPackageListServiceImpl" (part of the 'MSIXAA' dataset)
+• Updated the script's Get-Help section
+
+[AVD-Diag changes]
+• Added check for Process hangs that occurred within the last 5 days. If a process hang is found in the event logs, an additional file ("WVD-Diag-ProcessHangEvents.txt") will be generated with an export of the specific event log entries
+• Added check for PowerShell Language Mode configuration
+• Added check for the following Agent issue:
+	o "AgentLoadException" (Event 3277)
+	o "BootLoader exception" (Event 3389)
+	o "Unable to retrieve DefaultAgent from registry" (Event 3389)
+• Added check for out of support Windows 10 Enterprise and Windows 10 Enterprise multi-session versions
+• Added check for policy "Turn off GdiDPIScaling for applications" as part of the graphics check
+• Added check for the top 10 processes using CPU at the moment when the script is running
+• Added additional [WARNING] labels and messages when potential issues are detected
+• Added hyperlinks to the .txt files for easier access to the dedicated issues (Agent, FSLogix, MSIX App Attach, Crash, Hang) - the files have to be in the same folder as AVD-Diag.html
+• Fixed an issue that was causing the DNS configuration check to return incorrect domain DNS servers under some circumstances
+• Fixed an issue that was causing some recommended documentation URLs to not have hyperlinks
+• Fixed an issue that was sometimes causing the 5 days FSLogix issues check to return an 0x80131500 error when running
+• Fixed an issue that was sometimes causing an incorrect warning for a nonexistent "rdp-sxs" listener
+• Updated the RDP Shortpath check to also verify the registry keys that may disable UDP usage for RDS/AVD
+• Updated recommendation message for the OS build update check (Windows 11)
+• "AVD-Diag.html" output/layout improvements
+
+
+v211008.12:
+
+[AVD-Collect changes]
+• Added two new command line parameters:
+	o "-AcceptNotice" to silently accept the "Important Notice" that is displayed when starting AVD-Collect.ps1 (for automation purposes)
+	o "-IME" to collect IME related registry keys and system files information ('Core' dataset included), for troubleshooting input method issues
+• Added new scenario "IME" when the script is launched without parameters. When selected, it will collect the 'Core' dataset + IME related registry keys and system files information
+• The script now also collects:
+	o SPN information as part of the 'Core' dataset
+	o 'Whoami /all' and 'Volatile Environment' information as part of the 'Profiles' dataset
+	o Complete MSRDC reg keys when the AVD desktop client is installed
+• Fixed an issue that was causing the script to try to collect Azure Monitoring Agent data also when run on non-Azure machines
+• Fixed an issue that was causing the script to sometimes get stuck until the Enter key was pressed
+• Fixed an issue that was causing the 'WVDAgentManagerInstall.txt' log file to not be collected on Windows 7 AVD hosts
+• Fixed an issue that was causing the Remote Desktop License Server database information to not be properly collected when the RDLS role is present on Windows Server machines
+• All data are now collected by default under "C:\MSDATA\", regardless from which folder the script was launched
+• Updated URL for Azure IMDS status data collection
+• Collecting keyboard layout reg keys has been moved from the 'Core' to the 'IME' dataset
+• Collected event logs are now also archived ("wevtutil al")
+
+[AVD-Diag changes]
+• Added additional registry key and path checks for host pool registration, graphics configuration, Azure AD join configuration, FSLogix Office activation, Teams media optimization
+• Added check for DNS configuration and the available DNS servers in the domain (Windows 10+ and Server OS)
+• Added check for display scaling rate
+• Added check for Azure cluster
+• Added check if MsRdcWebRTCSvc is listening on TCP port 9500 (for Teams Media Optimization)
+• Added status check for service RDWebRTCSvc (on Windows 10+ hosts)
+• Added recommendation for updating the FSLogix version used
+• Updated recommendation message for the OS build update check (Windows Server 2022)
+• Updated the graphics check to run some of the checks also on non-GPU enabled machines
+• Updated the current SxS Stack version check to warn if the version could not be properly detected
+• Updated the URL for Azure IMDS query
+• Updated the internet proxy settings check to also log the 'proxy list' and 'proxy bypass' when detected
+• Removed the basic Test-NetConnection check
+• Fixed an issue that was causing the .NET Framework version check to not report the correct version under some circumstances
+• Fixed an issue that was causing the WinRM service status check to not report the correct status under some circumstances
+• Screen Capture Protection is no longer being checked on non-AVD machines
+• Teams media optimization configuration is no longer being checked on non-AVD machines
+• Running/skipping the OneDrive configuration check is now dependent on the presence of FSLogix instead of the AVD agent
+• Code adjustments for Windows 11 compatibility
+• Display message adjustments for better clarity
+
+
+v210830.16:
+
+[AVD-Collect changes]
+• Added a new scenario "Collect 'Core + Smart Card' data" and command line parameter "-SCard" to collect data for troubleshooting smart card related issues
+• Removed the "Extended (all)" data collection scenario and the "-Extended" command line parameter !
+	o If you want to collect data for multiple scenarios, combine individual command line parameters to build the desired dataset
+		o Available command line parameters you can combine: "-Profiles", "-Teams", "-MSIXAA", "-MSRA", "-SCard"
+		o Each of the parameters "-Profiles", "-Teams", "-MSIXAA", "-MSRA", "-SCard" already include the "-Core" data, so no need to specify it additionally
+• Scenario selection menu and various displayed messages have been adjusted to reflect the new scenario and parameter changes and for more clarity
+• The list of installed Windows updates is now collected in both .txt and .html format
+• Msinfo32 data is now also available in .txt format ("msinfo32 /report" output)
+• The script now also collects:
+	o The output of "C:\Program Files\Microsoft Monitoring Agent\Agent\TestCloudConnection.exe" as part of the 'Core' dataset (under the "Monitoring" folder)
+	o Registry keys:
+		o HKLM\SOFTWARE\Microsoft\Virtual Machine\Guest\Parameters
+		o HKLM\SOFTWARE\Microsoft\Windows\Windows Error Reporting
+		o HKLM\SYSTEM\CurrentControlSet\Control\CrashControl
+	o Remote Desktop License Server database information (if RDLS role is installed - for Server OS deployments):
+		o Win32_TSLicenseKeyPack under '*_RDS\*_rdls_LicenseKeyPacks.html'
+		o Win32_TSIssuedLicense under '*_RDS\*_rdls_IssuedLicenses.html'
+	o Device-wide IE proxy configuration under '*_Networking\*_Proxy.txt'
+		o bitsadmin /util /getieproxy LOCALSYSTEM
+		o bitsadmin /util /getieproxy NETWORKSERVICE
+		o bitsadmin /util /getieproxy LOCALSERVICE
+	o Only when launched with the "-SCard" parameter, for Smart Card troubleshooting:
+		o "certutil -scinfo -silent" output under "\*_SystemInfo\*_SmartCardInfo.txt"
+		o Event logs:
+			o Microsoft-Windows-SmartCard-Audit/Authentication
+			o Microsoft-Windows-SmartCard-DeviceEnum/Operational
+			o Microsoft-Windows-SmartCard-TPM-VCard-Module/Admin
+			o Microsoft-Windows-SmartCard-TPM-VCard-Module/Operational
+			o Microsoft-Windows-Kerberos-KDCProxy/Operational
+		o RD Gateway information when ran on the KDC Proxy server and the RD Gateway role is installed
+			o Server Settings, Resource Authorization Policy, Connection Authorization Policy
+• Renamed "Geneva" folder to "Monitoring", for broader scope
+• Renamed 'WinHTTP-Proxy.txt' file under the '*_Networking" folder to 'Proxy.txt', for broader scope
+• Moved 'nslookup' output from 'Proxy.txt' to a separate 'Nslookup.txt' file under the same '*_Networking" folder
+
+[AVD-Diag changes]
+• Added check for the new Screen Capture Protection policy configuration
+• Added check for the new Multimedia Redirection for AVD configuration (Preview - MsMmrHostMri installation only)
+• Added check for basic Test-NetConnection reply
+• Added check for IE proxy configuration (reg keys and bitsadmin output)
+• Added check if the FSLogix storage location defined under 'VHDLocations' is reachable (Test-NetConnection), for Profile and Office containers
+• Added public troubleshooting links to the notification messages when some of the Agent issues have been found
+• Added check for the following registry keys:
+	o HKLM\SOFTWARE\Microsoft\RDInfraAgent\IsRegistered
+	o HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\fQueryUserConfigFromDC
+	o HKLM\System\CurrentControlSet\Control\Terminal Server\fDenyTSConnections
+	o HKLM\SYSTEM\Setup\OOBEInProgress
+	o HKLM\SOFTWARE\FSLogix\Profiles\RedirXMLSourceFolder
+• Added check for the following Agent issue:
+	o "System.ComponentModel.Win32Exception (0x80004005)"
+• Added check for the following MSIX App Attach issues:
+	o "SysNtfyLogoff: Package deregistration for MSIX app attach failed during user logoff"
+	o "Failed to get the minimum OS version supported for app attach: System.AggregateException: One or more errors occurred"
+	o "AppAttachStageAsync: Failed to get packages to staging"
+	o "DeregisterPackages: Failed to get packages to deregister"
+	o "InnerRestException: Error accessing virtual disk"
+• Added check for FSLogix issues over the past 5 days. If an issue is found, information about the event will be exported into a separate "AVD-Diag-FSLogixIssuesEvents.txt" file:
+	o "Failed to open virtual disk" (Event 26 - FSLogix-Apps/Operational)
+	o "FindFile failed for path" (Event 26 - FSLogix-Apps/Operational)
+	o "LoadProfile failed" (Event 26 - FSLogix-Apps/Operational)
+	o "The Kerberos client received a KRB_AP_ERR_MODIFIED error from the server" (Event 4 - System)
+• Checks for known Agent, MSIX App Attach and FSLogix issues will now only list the individual checks if a corresponding issue has been found
+• The script will now only run MSIX App Attach checks if Windows 10 OS build >= 19041 (2004)
+• Updated SSL check to include also Schannel SSL 3.0 and TLS 1.x configuration
+• Updated recommendation message for proxy usage
+• Updated recommendation message for the OS build update check (Windows 10/Server 2016+)
+• Updated "AVD-Diag.html" layout
+• Removed "%ProgramFiles%\FSLogix\Apps\frxccd.exe" from the check for recommended antivirus exclusions for FSLogix
+• Fixed a broken link reference to the FSLogix antivirus exclusions recommendations
+
+
+v210721.7:
+
+[AVD-Collect changes]
+• The script now also collects:
+	o The following registry keys as part of the 'Core' dataset:
+		o HKCU\Control Panel\International
+		o HKCU\Keyboard Layout
+		o HKLM\SYSTEM\Keyboard Layout
+		o HKLM\SYSTEM\CurrentControlSet\Control\CloudDomainJoin
+	o The output of "Test-DscConfiguration -Detailed" as part of the 'Core' dataset
+	o The output of "C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe" as part of the 'Core' dataset (if the NVIDIA GPU drivers are already installed on the machine)
+	o The output of "C:\Program Files\Microsoft Monitoring Agent\Agent\TestCloudConnection.exe" as part of the 'Core' dataset
+• Merged the different Windows Defender Exclusions reg keys output under one file: '*_RegistryKeys\*_reg_SW-MS-WinDef-Exclusions.txt' for local config, respectively '*_RegistryKeys\*_reg_SW-GPO-MS-WinDef-Exclusions.txt' for GPO config
+• Updated the API version used for IMDS query
+• Fixed an issue that was causing errors when the path name to the script was containing spaces
+• Fixed an issue that was causing Get-DscConfiguration output to not be collected
+
+[AVD-Diag changes]
+• Added check for Azure VM size, VM location and OS SKU
+• Added check for GPU configuration when using NV or NC series VMs (checks required policy configuration and lists available video controllers and their driver versions)
+• Added check for Azure AD-join configuration
+• Added check for device and resource redirection policy configuration
+• Added check for camera and microphone privacy settings (general and desktop apps)
+• Added check for FSLogix registry key "HKLM\SOFTWARE\FSLogix\Profiles\NoProfileContainingFolder"
+• Added reference links to Windows Update History based on OS build (Windows 10/Server 2016+)
+• Updated the API version used for IMDS query
+• "AVD-Diag.html" improvements
+
+
+v210623.0:
+
+[AVD-Collect changes]
+• Added the Microsoft Diagnostic Tools End User License Agreement (EULA). Users will have to accept the EULA before they can continue using the script
+• Added a new command line parameter "-AcceptEula" that can be used to silently accept the EULA
+• Acceptance of the EULA will be stored in the registry under HKCU\Software\Microsoft\CESDiagnosticTools
+• Minor code improvements
+
+
+v210615.8:
+
+[AVD-Collect changes]f
+• Script renamed and updated to reflect the new name "Azure Virtual Desktop"
+• Command line parameter changes:
+	o Removed: -NoProfiles, -NoTeams, -NoMSIXAA
+	o Added: -Profiles, -Teams, -MSIXAA, -MSRA
+• Instead of excluding specific data categories, you can now combine different parameters to build the data set you want to collect
+	o Each of the parameters -Profiles, -Teams, -MSIXAA, -MSRA automatically include all "Core" data, so no need to add “-Core” extra to any of them
+	o Usage examples:
+		.\AVD-Collect.ps1 -Core (collects only Core data, no Profiles/Teams/MSIXAA/MSRA)
+		.\AVD-Collect.ps1 -Profiles (collects Core + Profiles data)
+		.\AVD-Collect.ps1 -Profiles -MSIXAA (collects Core + Profiles + MSIX App Attach data)
+		.\AVD-Collect.ps1 -Extended (collects Core + all other categories: Profiles + Teams + MSIXAA + MSRA data)
+		.\AVD-Collect.ps1 -Teams -MSIXAA -DiagOnly (runs Diagnostics only, despite the -Teams and -MSIXAA parameters)
+• Data collection scenarios when running the tool without any parameters have been adjusted to reflect the new category changes. The new categories are:
+	1) Collect 'Core' data (does not include Profiles/Teams/MSIX App Attach/MSRA data) + Run Diagnostics
+	2) Collect 'Core + Profiles' data (for troubleshooting Profiles scenarios) + Run Diagnostics
+	3) Collect 'Core + Teams' data (for troubleshooting Teams scenarios) + Run Diagnostics
+	4) Collect 'Core + MSIX App Attach' data (for troubleshooting MSIX App Attach scenarios) + Run Diagnostics
+	5) Collect 'Core + MSRA' data (for troubleshooting Remote Assistance scenarios) + Run Diagnostics
+	6) Collect 'Extended' (all) troubleshooting data (includes Core + all other categories) + Run Diagnostics
+	7) Run 'Diagnostics' only (skip data collection - may still log process crash or agent related events, if found)
+• "ScheduledTasks" subfolder has been renamed to "Geneva"
+• "MonitoringTables" subfolder has been moved under the "Geneva" subfolder and renamed to "MonTables"
+• "*_Networking\AIMServiceEndpointInfo.txt" has been renamed and moved to "*_Geneva\IMDSRequestInfo.txt"
+• Shortened the names of some of the exported reg key files to reduce overall file path length
+• If available, Windows Desktop client "RdClientAutoTrace" and "msrdcw" ETL files older than 5 days will no longer be collected
+• The tool will now also collect:
+	o "Microsoft-Windows-TaskScheduler/Operational" event logs (part of the "Core" data)
+	o "set MON" output under the "Geneva" subfolder (setMON.txt)
+• Fixed an issue that was causing the IMDS endpoint request information not to be collected by the tool
+• Fixed an issue where the “User Profile Service/Operational” event logs were not always exported when including “Profiles” data collection
+• Fixed some issues when running data collection on Windows 7 Enterprise AVD hosts
+• Resources "not found" entries have been moved from "*_WVD-Collect-Error.txt" to "*_WVD-Collect-Log.txt" for better data collection overview and to avoid confusion as they are not actual 'errors'
+• Code optimization
+
+[WVD-Diag changes]
+• WVD Agent, process crash and MSIX App Attach issues checks have been limited to the past 5 days interval
+• Added check for Time Zone Redirection policy configuration
+• Added check for the following AVD agent issues:
+	o "IMDS not accessible" (Event 0 - RemoteDesktopServices)
+	o "Monitoring Agent Launcher file path was NOT located" (Event 0 - RemoteDesktopServices)
+	o "NOT ALL required URLs are accessible!" (Event 0 - RemoteDesktopServices)
+	o "Unable to connect to the remote server" (Event 0 - RemoteDesktopServices)
+	o "Unhandled status [ConnectFailure] returned for url" (Event 0 - RemoteDesktopServices)
+• Added vCPU recommendation for single-session VMs when less than 4 vCPUs are detected
+• Added "unsupported" warning when host OS version contains "Enterprise N", "Enterprise KN", "LTSB", "LTSC"
+• Added check for "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002\EccCurves"
+• Fixed some issues when running diagnostics on Windows 7 Enterprise AVD hosts
+• "AVD-Diag.html" layout improvements
+
+
+v210503.5:
+
+[WVD-Collect changes]
+• Added a new data collection scenario: 'Core + MSIX App Attach'. This includes all Core data + MSIX App Attach related data. Diagnostics will also run and be logged at the end of the data collection
+• Added a new command line parameter: "-NoMSIXAA". Use this parameter if you want to skip MSIX App Attach data collection when running the "Extended" scenario. This does not apply to the "Core" and "DiagOnly" scenarios.
+• The selection of troubleshooting scenarios has been renamed and reordered to better reflect their applicability and the data collected
+• Fixed an issue when collecting WinRM configuration data, that would return an error during data collection
+• Fixed an issue that was causing duplicate .txt extensions for exported registry key files
+• Incresed the wait time after closing an open MSRDC instance from 10 seconds to 20 seconds (to have more time to save the latest RdClientAutoTrace as sometimes the 10 seconds were not enough)
+• Removed collection of C:\Windows\SysWOW64\*.dll, C:\Windows\SysWOW64\*.exe, C:\Windows\SysWOW64\*.sys version information
+• The script will now also collect:
+	o Event logs:
+		o 'Microsoft-Windows-AppXDeploymentServer/Operational' (for MSIX App Attach troubleshooting scenarios)
+		o 'Microsoft-Windows-RemoteDesktopServices-RdpCoreCDV/Admin'
+		o MSIX App Attach specific event logs are now also saved separately from the "RemoteDesktopServices" events into "*_evt_MSIXAA_filtered.evtx"
+	o Log files:
+		o "C:\Users\AgentInstall.txt" under "*_LogFiles\*_log_AgentInstall_initial.txt"
+		o "C:\Users\AgentBootLoaderInstall.txt" under "*_LogFiles\*_log_AgentBootLoaderInstall_initial.txt"
+	o "route print" output under the "*_Networking\*_Route.txt" file
+	o "Azure Instance Metadata service endpoint" request info under the "*_Networking\*_AIMServiceEndpointInfo.txt" file
+	o <BrokerURI>api/health and <BrokerURIGlobal>api/health status under the "*_Networking\*_BrokerURIHealth.txt" file
+	o Registry keys:
+	        • "HKLM\SOFTWARE\Microsoft\MSRDC\Policies" under "*_RegistryKeys\*_reg_SW-MS-MSRDC-Policies.txt"
+	        • "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Extensions" under "*_RegistryKeys\*_reg_SW-GPO-MS-WinDef-Excl-Extensions.txt"
+        	o "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Paths" under "*_RegistryKeys\*_reg_SW-GPO-MS-WinDef-Excl-Paths.txt"
+	        • "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Exclusions\Processes" under "*_RegistryKeys\*_reg_SW-GPO-MS-WinDef-Excl-Processes.txt"
+	o Group membership (when running the 'Extended (all)' or 'Core + Profiles' scenarios):
+		o FSLogix ODFC Exclude List
+		o FSLogix ODFC Include List
+		o FSLogix Profile Exclude List
+		o FSLogix Profile Include List
+• The previous "*_log_AgentInstall.txt" file (originating from "C:\Program Files\Microsoft RDInfra\AgentInstall.txt") has been renamed to "*_log_AgentInstall_updates.txt", to better reflect the differences between this file and the "*_log_AgentInstall_initial.txt" file (originating from "C:\Users\AgentInstall.txt")
+• Code improvements
+
+[WVD-Diag changes]
+• Diagnostic results are now also saved to a more user friendly "*_WVD-Diag.html" file
+• Added check for Session Time Limit policy settings
+• Added check for the following MSIX App Attach issues. If an issue is found, information about the event will be exported into a separate "WVD-Diag-MSIXAAIssuesEvents.txt" file.
+	o "A certificate chain processed, but terminated in a root certificate which is not trusted by the trust provider"
+	o "MountDisk:  Error occured during mount"
+• Added check for FSLogix best practice settings for enterprises (based on https://docs.microsoft.com/en-us/azure/architecture/example-scenario/wvd/windows-virtual-desktop-fslogix#best-practice-settings-for-enterprises)
+• Added check for required URLs (based on the WVDAgentUrlTool.exe tool - requires WVD agent 1.0.2944.400 or higher to be present)
+• Added check for WVD agent issue "NAME_ALREADY_REGISTERED" (Event 3277)
+• Added check for WVD agent issue "SessionHost unhealthy" (Event 0 - RemoteDesktopServices)
+• Added check for last machine boot up time, with an extra notification if it occurred >= 25 hours ago
+• Added check for <BrokerURI>api/health and <BrokerURIGlobal>api/health availability
+• Added check for LmCompatibilityLevel
+• Added check if reg key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\DisableAntiSpyware" is enabled on Server OS
+• Added check for the number of vCPUs available on the machine. We recommend limiting VM size to between 4 vCPUs and 24 vCPUs
+• Added check for Process crashes that occurred within the last 7 days. If a process crash is found in the event logs, an additional file ("WVD-Diag-ProcessCrashEvents.txt") will be generated with an export of the specific event log entries.
+• Added check for "frxsvc" service recovery settings
+• Added check for Cloud Cache "CCDLocations" registry key for Profile and Office Container
+• Added warning if both "VHDLocations" and "CCDLocations" are configured for Profile and/or Office Container
+• During WVD Agent issues check, if one of the tracked issues is found in the event logs, an additional file ("WVD-Diag-AgentIssuesEvents.txt") will be generated with an export of the specific event log entry. 
+• The WVD Agent issues check has been limited to a T-7 days interval
+• Added additional script error handling and debug information
+• Updated FSLogix Antivirus Exclusion check to also verify settings configured via GPO. Previously it was looking only at the locally configured settings.
+• FSLogix Antivirus Exclusion check now:
+	o also verifies the actual storage location used (based on the "VHDLocations" registry key value) instead of a default "\\storageaccount.file.core.windows.net\share*\...". If no path is found it will still use the default value as sample.
+	o excludes the Cloud Cache paths from the check if Cloud Cache is not enabled ("CCDLocations" is missing).
+• Fixed an issue when the previous WVD Agent version and installation date were not reported properly when there were no previous installations (the current agent being the first installation)
+• Fixed an issue when the current WVD SxS Stack version and installation date were not reported properly when the SxS stack was not (properly) installed yet
+• Fixed an issue when a Diagnostics error could overwrite the content of the "WVD-Collect-Error.txt" file
+• WVD agent related diagnostics will now be properly skipped when the WVD agent is not found (e.g. on source client machines)
+• Updated "WVD-Diag.txt" layout
+• Code improvements
+
+
+v210407.14:
+
+[WVD-Collect changes]
+• Script completely rewritten and optimized for future TSSv2 integration
+• Five troubleshooting scenarios have been added when the script is launched without any command line parameter:
+	1) Collect ‘Core’ data. This includes Core data required for troubleshooting common WVD issues. It does not include Profiles/FSLogix/OneDrive or Microsoft Teams related data. Diagnostics will run and be logged at the end of the data collection.
+	2) Collect ‘Extended’ data. This includes all Core data + Profiles/FSLogix/OneDrive data + Microsoft Teams related data. Diagnostics will run and be logged at the end of the data collection.
+	3) Collect ‘Extended with Profiles only’ data. This includes all Core data + Profiles/FSLogix/OneDrive related data. Diagnostics will run and be logged at the end of the data collection.
+	4) Collect ‘Extended with Teams only’ data. This includes all Core data + Microsoft Teams related data. Diagnostics will run and be logged at the end of the data collection.
+	5) Run ‘Diagnostics’ only. This will only run and log diagnostics, without collecting any of the Core or Extended data.
+• The following command line parameters have been removed and the corresponding data collection has been merged and split between the three new scenarios: 
+	-Certificate, -Client, -MonTables, -MSRA, -Profiles, -Teams, -Verbose
+• The following command line parameters are now available, for scripted use:
+	1) "-Core": When launching the tool with "-Basic", it will bypass the scenario selection and automatically run the Basic scenario (equivalent of selecting scenario "1").
+	2) "-Extended": When launching the tool with "-Extended", it will bypass the scenario selection and automatically run the Extended scenario (equivalent of selecting scenario "2").
+	3) "-DiagOnly": When launching the tool with "-DiagOnly", it will bypass the scenario selection and also Basic/Extended data collection and will run only the diagnostics (equivalent of selecting scenario "3").
+	4) “-NoTeams”: Use this parameter if you want to prevent Microsoft Teams related data collection when running the "Extended" scenario. The "Extended" scenario will be limited to Profiles/FSLogix data collection. This does not apply to the "Core" and "DiagOnly" scenarios.
+	5) “-NoProfiles”: Use this parameter if you want to prevent FSLogix related data collection when running the "Extended" scenario. The "Extended" scenario will be limited to Microsoft Teams data collection. This does not apply to the "Core" and "DiagOnly" scenarios. 
+• The script will now also collect:
+	o Event log Microsoft-Windows-WinHttp/ProxyConfigChanged
+	o Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+	o Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OneDrive
+	o Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\OneDrive
+	o Registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance
+	o "frx version" output in the "\*_FSLogix\*_Frx-list.txt" file when using FSLogix
+	o "nslookup rdweb.wvd.microsoft.com" output in the "\*_Networking\*_WinHTTP-Proxy.txt" file
+	o "dsregcmd /status" output in the "\*_SystemInfo\*_dsregcmd.txt" file
+• Fixed an issue when collecting the RdClientAutoTrace data resulted in an incorrect subfolder structure
+• Moved collected Teams data from "\LogFiles\Teams" to "\Teams"
+• DxDiag data will now be collected as part of the 'Core' scenario and stored in the "\*_SystemInfo\*_DxDiag.txt" file
+• "*_WVD-Collect-Output.txt" has been renamed to "*_WVD-Collect-Log.txt"
+
+[WVD-Diag changes]
+• Script completely rewritten and optimized for future TSSv2 integration
+• Script will now perform full diagnostics (both basic and extended scenarios), regardless of the data collection scenario selected
+• Updated check for current WVD listener to look for the "WinStations\ReverseConnectionListener" instead of "ClusterSettings\SessionDirectoryListener" registry key
+• Added brief system information: "FQDN", "OS", "OS Build"
+• Added check if the machine is part of a WVD host pool and if yes, log additional information: "SessionHostPool", "Ring", "Geography"
+• Added check if the machine is running an OS other than "Enterprise" or "Server" (only relevant for WVD host VMs)
+• Added check if the host pool is in Validation ring (R0)
+• Added check for NETSH WINHTTP proxy configuration
+• Added check for OneDrive configuration
+• Added check for media optimization configuration for Teams
+• Added check for the "fReverseConnectMode" registry key value for the current WVD listener
+• Added check for the following WVD agent issues:
+	o "INVALID_REGISTRATION_TOKEN" (Event 3277)
+	o "INVALID_FORM" (Event 3277)
+	o "InstallationHealthCheckFailedException" (Event 3277)
+	o "ENDPOINT_NOT_FOUND" (Event 3277)
+	o "InstallMsiException" (Event 3277)
+	o "DownloadMsiException" (Event 3277)
+	o "Transport received an exception" (Event 3019)
+	o "RD Gateway Url" (Event 3703)
+	o "MissingMethodException" (Event 3389)
+• Added check for FSLogix version
+• Added check for “CleanupInvalidSessions” registry key when running FSLogix release 2009 or later
+• Updated WVD-Diag.txt header
+• Updated key services check logic
+• Updated FSLogix recommended antivirus exclusion list check
+• Removed check for Windows Defender antivirus "Extensions" exclusion
+• Fixed an issue when the SxsStack's "PreviousVersion" registry key with an empty value resulted in an error
+
+
+v201219.7:
+
+[WVD-Collect changes]
+• Added Get-Help information. You can now read more information about the tool and available parameters by running "Get-Help .\WVD-Collect.ps1 -Full"
+• Added logic to disable quick edit mode (if it's enabled) as sometimes this causes the script to stop working until enter key is pressed (and if needed, enable it again when the script finished collecting data)
+• The "-Profile" parameter has been renamed to "-Profiles"
+• The "-ClientAutoTrace" parameter has been renamed to "-Client"
+• When executed using the "-Client" parameter, the tool will now also check if "msrdc.exe" is still running and if yes, it will ask to close it in order to collect the latest client ETL trace too. If you select "Y", it will disconnect all active WVD connections on the client. If you select "N", the tool will continue without disconnecting active WVD connections, but the latest WVD Desktop client ETL trace may not be collected.
+• The Geneva Scheduled Tasks information are now collected under the "*_ScheduledTasks" subfolder
+• Networking information are now collected under the "*_Networking" subfolder
+• Common system information are now collected under the "*_SystemInfo" subfolder
+• Certificates  information are now collected under the "*_Certificates" subfolder
+• Now collecting also:
+	o .NET Framework information under the *_SystemInfo.txt file (especially useful for scenarios where the agent may fail to upgrade due to outdated .Net version)
+	o Registry key "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\" under "*_RegistryKeys\*_reg_SW-MS-NetFS-NDP.txt" file
+	o C:\Windows\SysWOW64\*.sys file version information under "*_ver_SysWOW64_SYS.txt"
+• When executed with the "-Profiles" parameter, it now also collects the following event logs:
+	o FSLogix-Apps/Admin
+	o FSLogix-Apps/Operational
+• Updated disclaimer
+• Minor code improvements
+
+[WVD-Diag changes]
+• Added check for RDP ShortPath configuration (Windows 10 and Server OS hosts)
+• Added check for current and previous WVD Agent and Stack versions and their installation dates (Windows 10 and Server OS hosts)
+• Added check for Windows Instaler service start type (If you disable Windows Installer, the service won't be able to install agent updates on your session hosts, and your session hosts won't function properly.)
+• When executed using the "-Profiles" parameter, the tool will also check for the presence of the recommended Windows Defender Antivirus exclusion values
+
+
+v201110.3:
+
+• Added a new command line parameter "-DiagOnly". 
+	When executed with this parameter (even if other parameters are also included) the script will skip ALL data collection and will ONLY run the diagnostics part. 
+	This is useful when you want to run only a quick Diag without collecting additional data.
+	Important: To run diagnostics also for a specific scenario (like Profile troubleshooting), the corresponding command line parameter needs to be present too.
+	E.g.: 
+		"WVD-Collect -DiagOnly" will run only the default diagnostics
+		"WVD-Collect -Profile -DiagOnly" will run the default diagnostics + "Profile"-specific diagnostics
+• The script will now also collect:
+	o "fltmc filters" output in the "\*_Fltmc.txt" file
+	o the most recent C:\WindowsAzure\Logs\MonitoringAgent.log file
+	o WVDAgent and WVDAgentManager registry keys and log files when ran on Windows 7 hosts
+• When executed using the "-Profile" parameter:
+	o the FSLogix specific logs (if present) will now be stored directly under the \*_FSLogix subfolder, instead of \*_LogFiles\FSLogix
+	o the script will also collect:
+		o "frx list-redirects" and "frx list-rules" output (if FSLogix is present) in the "\*_FSLogix\*_Frx-list.txt" file
+		o Windows Defender Exclusions registry keys for Extensions, Paths and Processes under the \*_RegistryKeys folder
+• Merged output of "Get-DscConfiguration" and "Get-DscConfigurationStatus" into one file *_Get-DscConfiguration.txt
+• Fixed an issue that was preventing the Geneva Scheduled Task information to be collected from Windows 10/Server 2012R2+ machines.
+• Fixed some errors when running the script on Windows 7 hosts and newer PowerShell cmdlets were not available.
+• [WVD-Diag] Improved detection of the active WVD listener, especially when there are multiple listener registry keys present. 
+• [WVD-Diag] Added check for the value of the "SessionDirectoryListener" registry key which contains information on the WVD listener currently in use.
+• [WVD-Diag] Added check for "SSL Cipher Suite Order" configuration
+• [WVD-Diag] Added StartType information to the checked services
+• [WVD-Diag] Added status check for the "RdAgent" and "WinRM" services
+• [WVD-Diag] Added status check for the "WVDAgent" and "WVDAgentManager" services when the script is executed on Windows 7 hosts
+• [WVD-Diag] When executed using the "-Profile" parameter, the script will also check the status of the "frxsvc", "frxdrv", "frxccds", "OneDrive Updater Service" services
+• Minor code and layout improvements
+
+
+v201028.3:
+
+• The script is now digitally signed with a Microsoft Code Signing certificate.
+• Moved PSVersion collection from PSVersion.txt to SystemInfo.txt. 
+	The PSVersion.txt will no longer be generated.
+• Once data collection is complete, a File Explorer window will open pointing to the location containing the collected data
+• [WVD-Diag] Added check if the RDSH role is installed on server OS hosts and log the result in WVD-Diag. 
+	If the role is missing on server OS VMs, then installing the agent and registering the host in the host pool may fail.
+• Updated WVD-Diag.txt layout
+• Minor code fixes
+
+
+v200912.0:
+
+• Improved WVD Diagnostics functionality. The script will now also check and generate a report (WVD-Diag.txt) with:
+	o status of key services
+	o 'fEnableWinStation' registry key (host not available scenario)
+	o 'DeleteUserAppContainersOnLogoff' registry key (FW rules bloating scenario)
+• Moved WinRM configuration diagnostics under WVD-Diag
+• Hotfixes are now listed in descending order, with the most recently installed hotfix on top (Hotfixes.txt)
+• Minor code fixes
+
+
+v200722.2:
+
+• Added command line parameter "-Teams" to collect Teams specific data for troubleshooting Teams WVD optimization issues (requires the script to run under the affected user's WVD session + the user to have pressed Ctrl+Alt+Shift+1 before running the script, to have generated the Teams diagnostics logs).
+• Added additional confirmation prompt when launching the script with the "-Teams" parameter to get the user's confirmation that the prerequisites have been met before continuing
+• When running the script with the "-Teams" parameter, besides the default WVD data, the following data will are also collected:
+	o Teams logs file: %appdata%\Microsoft\Teams\logs.txt
+	o Teams diagnostics log files (only availaible if the user has used the key combination Ctrl+Alt+Shift+1 in Teams before, to generate them): 
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_calling.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_cdl.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_cdlWorker.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_chatListData.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_sync.txt
+		o %userprofile%\Downloads\MSTeams Diagnostics Log DATE_TIME_vdi_partner.txt
+	o registry key: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams
+	o registry key: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RDWebRTCSvc
+	o DxDiag output in .txt format with no WHQL check
+• Minor code fixes
+
+
+v200718.1:
+
+• added event log collection: RemoteDesktopServices (RemoteDesktopServices-MonitoringLogger)
+• added registry key collection: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RdAgent
+• added registry key collection: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RDAgentBootLoader
+• added registry key collection: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TermService
+• added registry key collection: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UmRdpService
+
+
+v200526.0:
+
+• updated Disclaimer
+
+
+v200521.2:
+
+• added basic WinRM diagnostics (checking for "WinRMRemoteWMIUsers__" group; IPv4Filter; IPv6Filter; presence of firewall rules for ports 5985 and 5986; winrm get winrm/config; winrm e winrm/config/listener)
+• added registry key collection: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinRM
+• renamed command line parameter "-Debug" to "-Verbose"
+
+
+v200518.0:
+
+• fixed an issue that was causing an error message when starting the script with all parameters specified
+
+
+v200517.0:
+
+• code and layout changes
+• fixed an issue with converting the monitoring traces when the version number in the RDMonitoringAgent folder name changes
+• added stopwatch to measure elapsed time for data collection and for archiving the results (info is in the "*_WVD-Collect-Output.txt" file)
+• added check if .zip file has been created (if .zip file creation fails, user receives notification to manually archive the collected data)
+
+
+v0.3.3-200516:
+
+• added command line parameter "-MonTables" to collect existing monitoring traces from hosts for scenarios where hosts are not sending data to WVD (Broker or Diagnostics)
+
+
+v0.3.1-200502:
+
+• added PowerShell version
+• added event logs Microsoft-Windows-PowerShell/Operational and Microsoft-Windows-WinRM/Operational
+• added registry key collection: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Azure\DSC
+• added C:\WindowsAzure\Logs\Plugins\ folder (incl. additional Domain Join, DSC, Monitoring Agent logs)
+• added Get-DscConfiguration and Get-DscConfigurationStatus output
+• added Azure VM Agent log C:\WindowsAzure\Logs\WaAppAgent.log
+• code updates
+
+
+v0.3.0-200406:
+
+• exported event logs are now saved in the "EventLogs" subfolder
+• exported registry keys are now saved in the "RegistryKeys" subfolder
+• fixed an issue with collecting WinHTTP proxy information
+• removed "-SPN" command line parameter and SPN related data is no longer collected
+• renamed "Logs" subfolder to "LogFiles"
+• renamed "-FSLogix" command line paramenter to "-Profile"
+• removed collecting group membership information from the "Administrators", "RDS Remote Access Servers", "RDS Management Servers", "RDS Endpoint Servers" groups
+• removed collecting 'netsh http' information
+• added MSRDC binary information also when the WVD desktop client is installed in "per user" mode (only from the current user)
+• added "gpresult /r /v" output in .txt format
+• added group membership information from the "Distributed COM Users" group when using the "-MSRA" command line parameter
+• added event logs "User Profile Service", "SMB Client" and "SMB Server" only when using the "-Profile" command line parameter
+• added registry key collection: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList" only when using the "-Profile" command line parameter
+• code clean-up and improvements
+
+
+v0.2.4-200321:
+
+• added command line parameter "-ClientAutoTrace" to collect Remote Desktop Client 'RdClientAutoTrace' folder
+• added command line parameter "-Debug" to display more verbose information about the data collection process
+• added full Windows build number to SystemInfo.txt
+• added 'C:\Packages\Plugins\Microsoft.EnterpriseCloud.Monitoring.MicrosoftMonitoringAgent' logs
+• added DSC log file collection when available (e.g. host pool has been expanded)
+• moved collected DSC, DomainJoin, ScriptLog and WVD/Monitoring Agent log files to "Logs" subfolder
+• moved VHDMP/Operational event log collection under the optional "FSLogix" script command line parameter
+• moved the RD client information back to the normal WVD data collection and removed the "-RDClient" command line parameter
+• code clean-up and improvements
+
+
+v0.2.1-200117:
+
+• added DSC/Operational event log collection
+• changed default script behavior to NOT automatically collect data related to: Certificates, FSLogix, Remote Assistance, RDClient, SPN (command lines parameters need to be specified for these additional data)
+• added command line parameter "-Certificate" to include also Certificates information in the data collection
+• added command line parameter "-FSLogix" to include also FSLogix information in the data collection
+• added command line parameter "-MSRA" to include also Remote Assistance information in the data collection
+• added command line parameter "-RDClient" to include also WVD Remote Desktop Client information in the data collection
+• added command line parameter "-SPN" to include also SPN information in the data collection
+• code clean-up
+
+
+v0.1.15-191227:
+
+• added NetSetup and ADDomainExtension log collection for domain join scenarios
+
+
+v0.1.14-191017:
+
+• fixed issue with collecting WVD DSC and Json logs when folder version changes
+• code improvements
+
+
+v0.1.10-190910: 
+
+• added SecurityProviders reg key export
+• added WindowsAzure-Diagnostics and WindowsAzure-Status event logs export
+• added EXE/DLL/SYS file info export from Windows\System32\ 
+• added SYS file info export from Windows\System32\Drivers\
+• added EXE/DLL file info export from Windows\SysWOW64\
+• added system info (msinfo32) collection
+• added qwinsta output
+• code improvements
+
+
+v0.1.7-190828: 
+
+• added FSLogix reg key collection (for Office, OneDrive, ProfileList, Windows Search)
+• added "Offer Remote Assistance Helpers" group membership collection
+• code improvements
+
+
+v0.1.6-190815:
+
+• added RDS and FSLogix reg key collection
+
+
+v0.1.5-190814: 
+
+• added WVD RD client data collection (reg keys and file versions)
+• fixed an issue with collecting ScriptLog.log
+
+
+v0.1.4-190813: 
+
+• added SMBclient and SMBserver event log collection for file share scenarios
+
+
+v0.1.3-190807: 
+
+• added MSRA and VHDMP event log collection
+• code and layout tweaks
+
+
+v0.1.2-190712: 
+
+• added TS Admin logs
+• added PnPDevices logs
+• disabled verbose output (toggle to enable/disable)
+• other output adjustments
+
+
+v0.1.1-190711: 
+
+• added FSLogix logs and registry keys
+• added some more try-catch
+• output adjustments
+
+
+v0.1.0-190710:
+
+• beta release (based on Gianni Bragante's WinRM-Collect script)

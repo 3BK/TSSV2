@@ -1,0 +1,1138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dcmPS:DiagnosticPackage SchemaVersion="1.0" Localized="true" xmlns:dcmPS="http://www.microsoft.com/schemas/dcm/package/2007" xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <DiagnosticIdentification>
+    <ID>DIAG_CTS_SCCM_2012</ID>
+    <Version>1.0</Version>
+  </DiagnosticIdentification>
+  <DisplayInformation>
+    <Parameters />
+    <Name>@DiagPackage.dll,-221010</Name>
+    <Description>@DiagPackage.dll,-221011</Description>
+  </DisplayInformation>
+  <PrivacyLink>http://privacy.microsoft.com/en-us/default.mspx</PrivacyLink>
+  <PowerShellVersion>2.0</PowerShellVersion>
+  <SupportedOSVersion clientSupported="true" serverSupported="true">5.1</SupportedOSVersion>
+  <Troubleshooter>
+    <Script>
+      <Parameters />
+      <ProcessArchitecture>Any</ProcessArchitecture>
+      <RequiresElevation>true</RequiresElevation>
+      <RequiresInteractivity>true</RequiresInteractivity>
+      <FileName>TS_Main.ps1</FileName>
+      <ExtensionPoint />
+    </Script>
+    <ExtensionPoint />
+  </Troubleshooter>
+  <Rootcauses>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_DbOwner</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221232</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>eb1c8ad5-c808-4b62-8826-5727b79b12c6</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221233</Name>
+            <Description>@DiagPackage.dll,-221234</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-20273.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms187359(v=sql.105).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_UserAccess</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221235</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>477095dc-2537-4628-9dd3-1ec2cb0284af</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221236</Name>
+            <Description>@DiagPackage.dll,-221237</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-25914.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms178534(v=SQL.90).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_ReadOnly</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221238</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>3c3d84ed-763c-43a0-8857-b4dca76d31f6</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221239</Name>
+            <Description>@DiagPackage.dll,-221240</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-75069.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms178534(v=SQL.90).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_DbOnline</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221241</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>2969ea9b-ccc0-434d-b05c-696359fc59a0</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221242</Name>
+            <Description>@DiagPackage.dll,-221243</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-15420.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms178534(v=SQL.90).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_RecoveryModel</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221244</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>983d7749-3474-4f77-840c-7b14f1306205</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221245</Name>
+            <Description>@DiagPackage.dll,-221246</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-79192.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms189272(v=sql.110).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_BrokerEnabled</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221226</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>8b0205cd-b7cc-4853-bba5-3cd191174656</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221227</Name>
+            <Description>@DiagPackage.dll,-221228</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-63937.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms166086(v=sql.90).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_RecursiveTriggers</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221223</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>654fc2fb-0b8c-4a4c-9be1-f4c48cfd0646</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221224</Name>
+            <Description>@DiagPackage.dll,-221225</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-6619.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms188124.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_Trustworthy</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221229</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>4b32685d-66c4-4648-8106-c080d086562f</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221230</Name>
+            <Description>@DiagPackage.dll,-221231</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-70938.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>This property can also cause Software Update Sync to fail with 'Unknown SQL Error'</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2709082</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_HonorBrokerPriority</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221247</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>de320eb7-34f5-4185-bc85-a8aeb60f0472</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221248</Name>
+            <Description>@DiagPackage.dll,-221249</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-57612.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/bb934456(v=SQL.105).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_SnapshotIsolation</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221250</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>df2fe5bd-a09c-4477-848d-e0ec1bd1a7e2</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221251</Name>
+            <Description>@DiagPackage.dll,-221252</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-81841.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/tcbchxcb(v=vs.80).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_ReadCommittedSnapshot</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221253</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>bbc440ed-6d01-47d5-a9ba-ec1a3cf37c0a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221254</Name>
+            <Description>@DiagPackage.dll,-221255</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-79584.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/tcbchxcb(v=vs.80).aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_NestedTriggers</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221256</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>c6040df7-f5e1-4f64-b789-c590ac8967bc</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221257</Name>
+            <Description>@DiagPackage.dll,-221258</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-86305.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>http://blogs.technet.com/b/umairkhan/archive/2014/10/03/the-case-of-the-unexplained-the-package-gets-distributed-successfully-but-does-not-show-in-the-console.aspx</InternalContentURL>
+        <PublicContentURL>http://msdn.microsoft.com/en-us/library/ms178101.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_DRSBacklog</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221259</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>e4ae0fcf-621f-4285-990d-360781b3df5a</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>DRSBacklogDescription</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-221260</Name>
+            <Description>@DiagPackage.dll,-221261</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-53121.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://bemis/15/Pages/3100462_en-US.aspx</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks SQL Configuration Settings-->
+    <Rootcause>
+      <ID>RC_DBSchemaChangeHistory</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221262</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>17f0503f-5120-47d5-9cf5-02cedb7f6209</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>DBSchemaChangeHistoryDescription</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-221263</Name>
+            <Description>@DiagPackage.dll,-221264</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-92027.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>https://gallery.technet.microsoft.com/DbSchemaChangeHistory-c646d363</InternalContentURL>
+        <PublicContentURL>https://support.microsoft.com/en-us/kb/3155482</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks if connection to root\CCM WMI Namespace is successful on this system-->
+    <Rootcause>
+      <ID>RC_CCMNamespaceCheck</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221018</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>e78b0edd-a427-44ad-8fb9-ebf86b0fa2b6</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221019</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage-52583.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+    <!--Checks if Configuration Manager related services are running-->
+    <Rootcause>
+      <ID>RC_ServiceStatus</ID>
+      <DisplayInformation>
+        <Parameters>
+          <Parameter>
+            <Name>ServiceName</Name>
+            <DefaultValue>
+            </DefaultValue>
+          </Parameter>
+        </Parameters>
+        <Name>@DiagPackage.dll,-221303</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>84ee6d73-11c5-45d4-9f5e-f751d749b3a2</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>ServiceName</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>DesiredStartMode</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>RCDescription</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-221304</Name>
+            <Description>@DiagPackage.dll,-221305</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-76179.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks if Configuration Manager related services are running-->
+    <Rootcause>
+      <ID>RC_ServiceMode</ID>
+      <DisplayInformation>
+        <Parameters>
+          <Parameter>
+            <Name>ServiceName</Name>
+            <DefaultValue>
+            </DefaultValue>
+          </Parameter>
+        </Parameters>
+        <Name>@DiagPackage.dll,-221306</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>6c5edee2-eff5-4bd8-b312-24edd2e0cf27</ID>
+          <DisplayInformation>
+            <Parameters>
+              <Parameter>
+                <Name>ServiceName</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>DesiredStartMode</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+              <Parameter>
+                <Name>RCDescription</Name>
+                <DefaultValue>
+                </DefaultValue>
+              </Parameter>
+            </Parameters>
+            <Name>@DiagPackage.dll,-221307</Name>
+            <Description>@DiagPackage.dll,-221308</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>true</RequiresInteractivity>
+            <FileName>RS_GenericMessage-16343.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>
+        </RootCause>
+        <HighLevelLogic>
+        </HighLevelLogic>
+        <Symptom>
+        </Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>
+        </PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17512</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <!--Checks if the Configuration Manager Client is in Provisioning Mode-->
+    <Rootcause>
+      <ID>RC_ProvisioningMode</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-221323</Name>
+        <Description />
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>251c1c37-1bbc-4759-80fd-60ba0fdcb28a</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-221321</Name>
+            <Description>@DiagPackage.dll,-221322</Description>
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>true</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_GenericMessage.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier>
+        <Script>
+          <Parameters />
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>false</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>VF_GenericMessage.ps1</FileName>
+          <ExtensionPoint />
+        </Script>
+        <ExtensionPoint />
+      </Verifier>
+      <ContextParameters />
+      <ExtensionPoint>
+        <RootCause>Configuration Manager Client is in Provisioning Mode</RootCause>
+        <HighLevelLogic>The client computer may also be stuck in provisioning mode after the task sequence failure. You can determine whether the computer is in provisioning mode by checking the following registry subkey:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\CcmExec</HighLevelLogic>
+        <Symptom>Configuration Manager Client is in Provisioning Mode</Symptom>
+        <InternalContentURL>
+        </InternalContentURL>
+        <PublicContentURL>http://support.microsoft.com/kb/2894518</PublicContentURL>
+        <Visibility>4</Visibility>
+        <SupportTopicsID>17271</SupportTopicsID>
+        <MessageVersion>1</MessageVersion>
+        <AlertType>Error</AlertType>
+      </ExtensionPoint>
+    </Rootcause>
+    <Rootcause>
+      <ID>RC_Blank</ID>
+      <DisplayInformation>
+        <Parameters />
+        <Name>@DiagPackage.dll,-1290</Name>
+        <Description>@DiagPackage.dll,-1291</Description>
+      </DisplayInformation>
+      <Resolvers>
+        <Resolver>
+          <ID>RS_Blank</ID>
+          <DisplayInformation>
+            <Parameters />
+            <Name>@DiagPackage.dll,-1292</Name>
+            <Description />
+          </DisplayInformation>
+          <RequiresConsent>false</RequiresConsent>
+          <Script>
+            <Parameters />
+            <ProcessArchitecture>Any</ProcessArchitecture>
+            <RequiresElevation>false</RequiresElevation>
+            <RequiresInteractivity>false</RequiresInteractivity>
+            <FileName>RS_Blank.ps1</FileName>
+            <ExtensionPoint />
+          </Script>
+          <ExtensionPoint />
+        </Resolver>
+      </Resolvers>
+      <Verifier />
+      <ContextParameters />
+      <ExtensionPoint />
+    </Rootcause>
+  </Rootcauses>
+  <Interactions>
+    <SingleResponseInteractions>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-221905</Name>
+              <Description>@DiagPackage.dll,-221906</Description>
+            </DisplayInformation>
+            <Value>AUTOMATED</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-221907</Name>
+              <Description>@DiagPackage.dll,-221909</Description>
+            </DisplayInformation>
+            <Value>FILE_UPLOAD</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>ExecutionType</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-221903</Name>
+          <Description>@DiagPackage.dll,-221904</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <CommandLinks />
+          <NoCache />
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-221004</Name>
+              <Description>@DiagPackage.dll,-221005</Description>
+            </DisplayInformation>
+            <Value>LOCAL_COMPUTER</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters />
+              <Name>@DiagPackage.dll,-221006</Name>
+              <Description>@DiagPackage.dll,-221007</Description>
+            </DisplayInformation>
+            <Value>REMOTE_COMPUTER</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>ComputerType</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-221002</Name>
+          <Description>@DiagPackage.dll,-221003</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <CommandLinks />
+          <NoCache />
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+      <!--TS_Remote components-->
+      <SingleResponseInteraction>
+        <AllowDynamicResponses>false</AllowDynamicResponses>
+        <Choices>
+          <Choice>
+            <DisplayInformation>
+              <Parameters>
+                <Parameter>
+                  <Name>Machine</Name>
+                  <DefaultValue />
+                </Parameter>
+              </Parameters>
+              <Name>@DiagPackage.dll,-1746</Name>
+              <Description>@DiagPackage.dll,-1747</Description>
+            </DisplayInformation>
+            <Value>Continue</Value>
+            <ExtensionPoint />
+          </Choice>
+          <Choice>
+            <DisplayInformation>
+              <Parameters>
+                <Parameter>
+                  <Name>Machine</Name>
+                  <DefaultValue />
+                </Parameter>
+              </Parameters>
+              <Name>@DiagPackage.dll,-1748</Name>
+              <Description>@DiagPackage.dll,-1749</Description>
+            </DisplayInformation>
+            <Value>Cancel</Value>
+            <ExtensionPoint />
+          </Choice>
+        </Choices>
+        <ID>PowerShellNotInstalledOnRemoteMachine</ID>
+        <DisplayInformation>
+          <Parameters>
+            <Parameter>
+              <Name>Machine</Name>
+              <DefaultValue />
+            </Parameter>
+          </Parameters>
+          <Name>@DiagPackage.dll,-1744</Name>
+          <Description>@DiagPackage.dll,-1745</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+          <CommandLinks>
+          </CommandLinks>
+        </ExtensionPoint>
+      </SingleResponseInteraction>
+    </SingleResponseInteractions>
+    <MultipleResponseInteractions />
+    <TextInteractions>
+      <TextInteraction>
+        <RegularExpression />
+        <ID>RemoteComputers</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-221008</Name>
+          <Description>@DiagPackage.dll,-221009</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache />
+        </ExtensionPoint>
+      </TextInteraction>
+      <!--Ask customer to upload a custom file-->
+      <TextInteraction>
+        <RegularExpression />
+        <ID>BrowseFile</ID>
+        <DisplayInformation>
+          <Parameters />
+          <Name>@DiagPackage.dll,-12460</Name>
+          <Description>@DiagPackage.dll,-12461</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <Browse>File</Browse>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </TextInteraction>
+    </TextInteractions>
+    <PauseInteractions>
+      <!--TS_Remote components-->
+      <PauseInteraction>
+        <ID>ErrorContacting</ID>
+        <DisplayInformation>
+          <Parameters>
+            <Parameter>
+              <Name>Machine</Name>
+              <DefaultValue />
+            </Parameter>
+            <Parameter>
+              <Name>Error</Name>
+              <DefaultValue />
+            </Parameter>
+          </Parameters>
+          <Name>@DiagPackage.dll,-1742</Name>
+          <Description>@DiagPackage.dll,-1743</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+      <!--Ask customer to upload a custom file-->
+      <PauseInteraction>
+        <ID>Error</ID>
+        <DisplayInformation>
+          <Parameters>
+            <Parameter>
+              <Name>Error</Name>
+              <DefaultValue />
+            </Parameter>
+          </Parameters>
+          <Name>@DiagPackage.dll,-12462</Name>
+          <Description>@DiagPackage.dll,-12463</Description>
+        </DisplayInformation>
+        <ContextParameters />
+        <ExtensionPoint>
+          <NoCache>
+          </NoCache>
+        </ExtensionPoint>
+      </PauseInteraction>
+    </PauseInteractions>
+    <LaunchUIInteractions />
+  </Interactions>
+  <ExtensionPoint />
+</dcmPS:DiagnosticPackage>

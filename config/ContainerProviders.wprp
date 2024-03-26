@@ -1,0 +1,1195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder   Version="1" Author="DiagTrack Scenario Editor" Copyright="Microsoft Corporation" Company="Microsoft Corporation" >
+  <Profiles>
+    <SystemCollector Id="SystemCollector">
+      <BufferSize Value="256" />
+      <Buffers Value="16" PercentageOfTotalMemory="true" MaximumBufferSpace="32" />
+      <StackCaching BucketCount="256" CacheSize="3072" />
+    </SystemCollector>
+    <EventCollector Id="EventCollector_WDAGContainerTrace" Name="WDAGContainerTrace_UserCollector">
+      <BufferSize Value="1024" />
+      <Buffers Value="100" />
+    </EventCollector>
+    <EventCollector Id="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_0" Name="DiagTrack_3f760e1effb3437ea10ec0f39557657d_0">
+      <BufferSize Value="4" />
+      <Buffers Value="1024" />
+    </EventCollector>
+    <EventCollector Id="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_1" Name="DiagTrack_3f760e1effb3437ea10ec0f39557657d_1">
+      <BufferSize Value="64" />
+      <Buffers Value="32" />
+    </EventCollector>
+    <EventCollector Id="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_2" Name="DiagTrack_3f760e1effb3437ea10ec0f39557657d_2">
+      <BufferSize Value="64" />
+      <Buffers Value="64" />
+    </EventCollector>
+    <EventCollector Id="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_3" Name="DiagTrack_3f760e1effb3437ea10ec0f39557657d_3">
+      <BufferSize Value="64" />
+      <Buffers Value="64" />
+    </EventCollector>
+    <SystemProvider Id="SystemProvider" Base="">
+      <Keywords>
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="Loader" />
+        <Keyword Value="DiskIO" />
+        <Keyword Value="SampledProfile" />
+        <Keyword Value="MemoryInfo" />
+        <Keyword Value="MemoryInfoWS" />
+        <Keyword Value="CSwitch" />
+        <Keyword Value="DPC" />
+        <Keyword Value="ReadyThread" />
+        <Keyword Value="CpuConfig" />
+        <Keyword Value="FileIO" />
+        <Keyword Value="FileIOInit" />
+        <Keyword Value="Registry" />
+        <Keyword Value="Memory" />
+      </Keywords>
+      <Stacks Operation="Add">
+        <Stack Value="SampledProfile" />
+        <Stack Value="CSwitch" />
+        <Stack Value="ReadyThread" />
+      </Stacks>
+    </SystemProvider>
+    <!-- shell -->
+    <EventProvider Id="Microsoft.Windows.Shell.DefaultAssoc" Name="e305fb0f-da8e-52b5-a918-7a4f17a2531a" Level="255" />
+    <EventProvider Id="Microsoft.Windows.ShellExecute" Name="382B5E24-181E-417F-A8D6-2155F749E724" Level="255" />
+    <!-- office -->
+    <EventProvider Id="Microsoft.Office.SessionIdProvider" Name="e6aec961-a5e0-5560-a860-15edd6b70f6c" Level="255" />
+    <EventProvider Id="Microsoft.Office.TelemetryEngine" Name="D1318FE0-16B7-4F5B-B5F9-BA3CD54CD9CC" Level="255" />
+    <EventProvider Id="Microsoft.Office.CorrelationMetadata" Name="fc15139c-ddf2-481f-9a9b-365919cb8ae5" Level="255" />
+    <!-- WDAG Office -->
+    <EventProvider Id="Microsoft.Windows.HVSI.FileTrustFilter" Name="0b8d083d-254e-56d3-34df-d2134ce309e6" Level="255">
+        <Keywords>
+            <Keyword Value="0xffffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.HVSI.Addin" Name="18E01546-6119-44FE-BE49-3835261D24A7" Level="255" />
+    <!-- Application Activation -->
+    <EventProvider Id="ActivationManager" Name="cf7f94b3-08dc-5257-422f-497d7dc86ab3" />
+    <!-- COM -->
+    <EventProvider Id="ComBaseTraceLoggingProvider" Name="1aff6089-e863-4d36-bdfd-3581f07440be"/>
+    <!-- Setting providers -->
+    <EventProvider Id="Microsoft.Windows.HVSI.Settings" Name="106e9835-2e81-5341-fd84-ab263098e7d3" Level="255">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="HvsiSettingsProvider_WPP" Name="483705FD-030A-4F15-8333-1B6BEF8E41CB" Level="6">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.HyperV.Compute" Name="80CE50DE-D264-4581-950D-ABADEEE0D340" Level="6">
+      <Keywords>
+        <Keyword Value="0xF000FFFFF0FF" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-Guest-Network-Service" Name="0bacf1d2-fb51-549a-6119-04daa7180dc8" Level="6">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- wcifstrace trace -->
+    <EventProvider Id="wcifstrace" Name="803CB23A-E32B-4200-BD82-D8A15919AC1B" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- wcnfstrace trace -->
+    <EventProvider Id="wcnfstrace" Name="4A27EFC0-DE4A-44F3-8948-DBA084DF6A0C" Level="5">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Microsoft.Windows.BindFlt trace -->
+    <EventProvider Id="Microsoft.Windows.BindFlt" Name="e68e254c-44d6-4433-b1e3-b61a0a831b10" Level="5">
+        <Keywords>
+            <Keyword Value="0xffffffff"/>
+        </Keywords>
+    </EventProvider>
+    <!-- Edge trace -->
+    <EventProvider Id="Microsoft.Windows.App.Browser" Name="0bca4784-8257-51a0-d9ec-24fe1fe4c90d" Level="255">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Web.Platform" Name="ff32ada1-5a4b-583c-889e-a3c027b201f5" Level="255">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Windows.Ui.Xaml" Name="950d4eda-1729-47cc-8f1e-d9ed5aa17642" Level="255">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TextInput" Name="ebadf775-48aa-4bf3-8f8e-ec68d113c98e" Level="255">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.AppModel.StateManagerTelemetry" Name="41b5f6e6-f53c-4645-a991-135c2011c074" Level="255" >
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WindowsNotificationFacilityProvider" Name="42695762-EA50-497A-9068-5CBBB35E0B95" Level="255" >
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Aria.7005b72804a64fa4b2138faab88f877b.Microsoft.WebBrowser.Wdag" Name="7005B728-04A6-4FA4-B213-8FAAB88F877B" NonPagedMemory="true" Level="5" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x0" />
+      </Keywords>
+    </EventProvider>
+    <!-- Printer WPP trace -->
+    <EventProvider Id="SpoolSv" Name="C9BF4A9E-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="SPOOLSS" Name="C9BF4A9F-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="LocalSpl" Name="C9BF4A01-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Winspool" Name="C9BF4A02-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Win32spl" Name="C9BF4A03-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="BiDispl" Name="C9BF4A04-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="SplWow64" Name="C9BF4A05-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="SplLib" Name="C9BF4A06-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="PerfLib" Name="C9BF4A07-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Asyncntfy" Name="C9BF4A08-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Remntfy" Name="C9BF4A09-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Gpprnext" Name="C9BF4A0A-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Sandbox" Name="C9BF4A0B-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="SandboxHost" Name="C9BF4A0C-D547-4d11-8242-E03A18B5BE01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Pipeline" Name="AEFE45F4-8548-42B4-B1C8-25673B07AD8B" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="NTPrint" Name="B795C7DF-07BC-4362-938E-E8ABD81A9A01" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="LprHelp" Name="9e6d0d9b-1ce5-44b5-8b98-f32ed89077ec" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="LprMon" Name="f30fab8e-84bb-48d4-8e80-f8967ef0fe6a" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="UsbJScript" Name="B48AE058-218A-4338-9B97-9F5F9E4EB5D2" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="UsbMon" Name="99F5F45C-FD1E-439F-A910-20D0DC759D28" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TcpMib" Name="D3A10B55-1EAD-453d-8FC7-35DA3D6A04D2" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="TcpMon" Name="62A0EB6C-3E3E-471d-960C-7C574A72534C" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WSDPrint" Name="9558985e-3bc8-45ef-a2fd-2e6ff06fb886" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WSDMon" Name="836767A6-AF31-4938-B4C0-EF86749A9AEF" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WSDPProxy" Name="6D1E0446-6C52-4b85-840D-D2CB10AF5C63" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="DAFWSD" Name="4ea56ff9-fc2a-4f0c-8d6e-c345bc452c80" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="FDWSD" Name="7e2dbfc7-41e8-4987-bca7-76cadfad765f" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="WSDAPI" Name="75454210-b231-4fea-b2b4-2cc66d7ae8aa" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="XpsPrint" Name="CA478AB1-8B38-451D-90E4-8534EB50B9D3" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- PrintUI WPP Trace -->
+    <EventProvider Id="PrintUI" Name="A83C80B9-AE01-4981-91C6-94F00C0BB8AA" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Prnntfy" Name="09737B09-A25E-44D8-AA75-07F7572458E2" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- PrintDriver WPP Trace -->
+    <EventProvider Id="PrintExtension" Name="19E93940-A1BD-497F-BC58-CA333880BAB4" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- JScriptLib WPP Trace -->
+    <EventProvider Id="JScriptLib" Name="C59DA080-9CCE-4415-A77D-08457D7A059F" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Roaming WPP Trace -->
+    <EventProvider Id="DafPrint" Name="3048407B-56AA-4D41-82B2-7d5F4b1CDD39" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="AepRoam" Name="19E464A4-7408-49BD-B960-53446AE47820" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Driver WPP Trace -->
+    <EventProvider Id="MSXpsFilters" Name="9B4A618C-07B8-4182-BA5A-5B1943A92EA1" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- MXDC WPP Trace -->
+    <EventProvider Id="MXDC" Name="FCA72EBA-CBB3-467c-93BC-1DB4978C398D" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- PrintDialog WPP Trace -->
+    <EventProvider Id="PREFDLG" Name="3FB15E5D-DF1A-46FC-BEFE-27A4B82D75EE" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="DLGHOST" Name="02EA8EB9-9811-46d6-AEEE-430ADCC2AA18" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Windows.Graphics.Printing WPP Trace -->
+    <EventProvider Id="MODERNPRINT" Name="DD6A31CB-C9C6-4EF9-B738-F306C29352F4" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="PrinterExtensions" Name="EC08D605-5A20-4ED0-AE54-E8C4BFFF2EEB" Level="255">
+      <Keywords>
+        <Keyword Value="0x7fffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- Print ETW Providers -->
+    <EventProvider Id="Microsoft-Windows-PrintDialogs" Name="27E76321-1E5B-4a82-BA0C-26E978F15072" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-PrintDrivers" Name="0E173F13-4266-4EFD-883C-79B24789B1BC" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="microsoft-windows-printservice-usbmon" Name="7f812073-b28d-4afc-9ced-b8010f914ef6" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-PrintService" Name="747EF6FD-E535-4d16-B510-42C90F6873A1" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft-Windows-ProcessStateManager" Name="d49918cf-9489-4bf1-9d7b-014d864cf71f" Level="255">
+      <Keywords>
+        <Keyword Value="0xffffffff" />
+      </Keywords>
+    </EventProvider>
+    <!-- RDPServer WPP trace -->
+    <EventProvider Id="Rdpcore" Name="D4199645-41be-4fd5-9d73-A612C508FDC6" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="ProgressiveCodec" Name="140C2428-F60D-43F9-9B07-3E5F622438A0" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Termsrv" Name="5283d5f6-65b5-425f-a30b-f16c057d6b57" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Lsm" Name="557d257b-180e-4aae-8f06-86c4e46e9d00" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="TsSrvLic" Name="9ed727c4-4ab6-4b66-92d7-2072e87c9124" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="LSCSHostPolicy" Name="9EA2030F-DB66-47EF-BF2C-619CC76F3E1B" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="SDClient" Name="449e4e69-329e-4eb1-9ddf-809d17a2e0c1" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpclip" Name="796f204a-44fc-47df-8ae4-77c210bd5af4" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpinput" Name="C5615DDA-2DAC-479B-83AB-F18C95601774" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="umrdp" Name="73c5ec49-c807-489d-9e45-d36d72235f84" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpshell" Name="BFA655DC-6C51-11DA-8BDE-F66BAD1E3F3A" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpshellCDV" Name="BFA655DC-6C51-11DA-8BDE-F66BAD1E3F30" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpinit" Name="C127C1A8-6CEB-11DA-8BDE-F66BAD1E3F3A" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdsdwmdr" Name="97e97a1e-c0a9-4b8d-87c4-42105a957d7b" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="winsta" Name="d33e545f-59c3-423f-9051-6dc4983393a8" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="winlogon" Name="d451642c-63a6-11d7-9720-00b0d03e0347" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="tsvmhasvc" Name="2A0A7EC8-5E2B-47AB-B553-32E1C7AEF0EF" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="audiosrv" Name="e27950eb-1768-451f-96ac-cc4e14f6d3d0" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdpendp" Name="5A966D1C-6B48-11DA-8BDE-F66BAD1E3F3A" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="rdvcloud" Name="3C734565-80DB-4168-8B16-B15393154F69" Level="255">
+        <Keywords>
+            <Keyword Value="0x7fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="UserProfileService" Name="eb7428f5-ab1f-4322-a4cc-1f1a9b2c5e98" Level="255">
+        <Keywords>
+            <Keyword Value="0xffffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="UstCommon" Name="6b6c257f-5643-43e8-8e5a-c66343dbc650" Level="7">
+        <Keywords>
+            <Keyword Value="0x0fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Fr" Name="2955e23c-4e0b-45ca-a181-6ee442ca1fc0" Level="7">
+        <Keywords>
+            <Keyword Value="0x0fffffff"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.RemoteDesktop.RAIL.RdpInit" Name="4A49AFE3-776E-467A-ACA0-71F9C6C8499F" Level="5">
+        <Keywords>
+            <Keyword Value="0x0"/>
+        </Keywords>
+    </EventProvider>
+    <EventProvider Id="Microsoft.Windows.RemoteDesktop.RAIL.RdpShell" Name="39825FFA-F1B4-41B7-8221-20D4B8DBE57E" Level="5">
+        <Keywords>
+            <Keyword Value="0x0"/>
+        </Keywords>
+    </EventProvider>
+    <!-- location -->
+    <EventProvider Id="EventProvider_Microsoft-WindowsPhone-LocationServiceProvider" Name="4D13548F-C7B8-4174-BB7A-D7F64BF22D29" Level="5" />
+    <EventProvider Id="EventProvider_GeolocationAPI" Name="cb671458-ad15-40e8-a65a-753ea62d853a" Level="5" />
+    <EventProvider Id="EventProvider_GeolocationService" Name="89dfbde8-86e8-489b-9867-eefdc5e8879b" Level="5" />
+    <!-- Print Tracelogging Providers -->
+    <EventProvider Id="Microsoft.Windows.PrintCore" Name="a4f32eea-babb-59b2-3828-ce92e4e20765" Level="5" />
+    <EventProvider Id="Microsoft-Windows-Mobile-Print-Plugins" Name="6de9ba0e-9e72-53d2-229a-dc09205a27ea" Level="5" />
+    <EventProvider Id="Microsoft-Windows-Print-Platform" Name="fd6b6ae4-7563-550d-46a4-da9fe46cad57" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Print.PrintConfig" Name="fdcab703-6402-4959-b618-f5c3c279ef3d" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Print.PrintCoreConfig" Name="3d9d790d-fb07-539d-b66e-5a2ffb7899ca" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Shell.PrintDialog" Name="b0f40491-9ea6-5fd5-ccb1-0ec63be8b674" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Shell.PrintManager" Name="c6dba857-03f1-5c5b-350c-ef08dbd04572" Level="5" />
+    <EventProvider Id="Microsoft-Windows-LifetimeManager" Name="072665fb-8953-5a85-931d-d06aeab3d109" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Das" Name="ab4d9355-341e-435d-b3d2-4b0e46354e2c" Level="5" />
+    <EventProvider Id="Microsoft-Windows-WSD-DafProvider" Name="e4d412ab-4c22-49ef-83ca-eafb90768512" Level="5" />
+    <EventProvider Id="Microsoft-Windows-WSD-WSDApi" Name="29b47072-00ff-4d9d-852d-0eafc181a9a3" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Print.PrintJobManager" Name="6e0043e4-57d6-4fa6-ae61-1b6595c2412f" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Shell.ServiceProvider" Name="15584c9b-7d86-5fe0-a123-4a0f438a82c0" Level="5" />
+    <EventProvider Id="Windows.Internal.Shell.ModalExperience" Name="8BFE6B98-510E-478D-B868-142CD4DEDC1A" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Mobile.Shell.ServiceProvider" Name="97ff6b54-144c-524b-5fec-82b610461390" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Print.XpsDocumentTargetPrint" Name="73cf4d38-21a5-41dc-93d5-c8ec31d84b70" Level="5" />
+    <EventProvider Id="Microsoft.Windows.Print.GetPrinterConfig" Name="7e247d3c-42fa-5e08-6427-f98478081d24" Level="5" />
+    <EventProvider Id="EventProvider_3f471139-acb7-4a01-b7a7-ff5da4ba2d43_0" Name="3f471139-acb7-4a01-b7a7-ff5da4ba2d43" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_fe762fb1-341a-4dd4-b399-be1868b3d918_0" Name="fe762fb1-341a-4dd4-b399-be1868b3d918" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ba44067a-3c4b-459c-a8f6-18f0d3cf0870_0" Name="ba44067a-3c4b-459c-a8f6-18f0d3cf0870" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_8127f6d4-59f9-4abf-8952-3e3a02073d5f_0" Name="8127f6d4-59f9-4abf-8952-3e3a02073d5f" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_b89fa39d-0d71-41c6-ba55-effb40eb2098_0" Name="b89fa39d-0d71-41c6-ba55-effb40eb2098" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_8fd4b82b-602f-4470-8577-cbb56f702ebf_0" Name="8fd4b82b-602f-4470-8577-cbb56f702ebf" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_2f29dca8-fbb3-4944-8953-2d390f0fe746_0" Name="2f29dca8-fbb3-4944-8953-2d390f0fe746" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_d9e5f8fb-06b1-4796-8fa8-abb07f4fc662_0" Name="d9e5f8fb-06b1-4796-8fa8-abb07f4fc662" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_eb65a492-86c0-406a-bace-9912d595bd69_0" Name="eb65a492-86c0-406a-bace-9912d595bd69" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4ee76bd8-3cf4-44a0-a0ac-3937643e37a3_0" Name="4ee76bd8-3cf4-44a0-a0ac-3937643e37a3" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_830a1f34-7797-4e31-9b75-c82056330051_0" Name="830a1f34-7797-4e31-9b75-c82056330051" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_aea3a1a8-ea43-4802-b750-2dd678910779_0" Name="aea3a1a8-ea43-4802-b750-2dd678910779" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4dab1c21-6842-4376-b7aa-6629aa5e0d2c_0" Name="4dab1c21-6842-4376-b7aa-6629aa5e0d2c" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ba723d81-0d0c-4f1e-80c8-54740f508ddf_0" Name="ba723d81-0d0c-4f1e-80c8-54740f508ddf" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5526aed1-f6e5-5896-cbf0-27d9f59b6be7_0" Name="5526aed1-f6e5-5896-cbf0-27d9f59b6be7" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xf" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_367c9044-75e0-5320-cc3c-8a40ffc6b4f6_0" Name="367c9044-75e0-5320-cc3c-8a40ffc6b4f6" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xf" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_3f471139-acb7-4a01-b7a7-ff5da4ba2d43_0_CaptureState" Name="3f471139-acb7-4a01-b7a7-ff5da4ba2d43" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_fe762fb1-341a-4dd4-b399-be1868b3d918_0_CaptureState" Name="fe762fb1-341a-4dd4-b399-be1868b3d918" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ba44067a-3c4b-459c-a8f6-18f0d3cf0870_0_CaptureState" Name="ba44067a-3c4b-459c-a8f6-18f0d3cf0870" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_8127f6d4-59f9-4abf-8952-3e3a02073d5f_0_CaptureState" Name="8127f6d4-59f9-4abf-8952-3e3a02073d5f" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_b89fa39d-0d71-41c6-ba55-effb40eb2098_0_CaptureState" Name="b89fa39d-0d71-41c6-ba55-effb40eb2098" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_8fd4b82b-602f-4470-8577-cbb56f702ebf_0_CaptureState" Name="8fd4b82b-602f-4470-8577-cbb56f702ebf" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_2f29dca8-fbb3-4944-8953-2d390f0fe746_0_CaptureState" Name="2f29dca8-fbb3-4944-8953-2d390f0fe746" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_d9e5f8fb-06b1-4796-8fa8-abb07f4fc662_0_CaptureState" Name="d9e5f8fb-06b1-4796-8fa8-abb07f4fc662" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_eb65a492-86c0-406a-bace-9912d595bd69_0_CaptureState" Name="eb65a492-86c0-406a-bace-9912d595bd69" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4ee76bd8-3cf4-44a0-a0ac-3937643e37a3_0_CaptureState" Name="4ee76bd8-3cf4-44a0-a0ac-3937643e37a3" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_830a1f34-7797-4e31-9b75-c82056330051_0_CaptureState" Name="830a1f34-7797-4e31-9b75-c82056330051" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_aea3a1a8-ea43-4802-b750-2dd678910779_0_CaptureState" Name="aea3a1a8-ea43-4802-b750-2dd678910779" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4dab1c21-6842-4376-b7aa-6629aa5e0d2c_0_CaptureState" Name="4dab1c21-6842-4376-b7aa-6629aa5e0d2c" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ba723d81-0d0c-4f1e-80c8-54740f508ddf_0_CaptureState" Name="ba723d81-0d0c-4f1e-80c8-54740f508ddf" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5526aed1-f6e5-5896-cbf0-27d9f59b6be7_0_CaptureState" Name="5526aed1-f6e5-5896-cbf0-27d9f59b6be7" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xf" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_367c9044-75e0-5320-cc3c-8a40ffc6b4f6_0_CaptureState" Name="367c9044-75e0-5320-cc3c-8a40ffc6b4f6" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xf" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_83d6e83b-900b-48a3-9835-57656b6f6474_1" Name="83d6e83b-900b-48a3-9835-57656b6f6474" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_9f973c1d-d056-4e38-84a5-7be81cdd6ab6_1" Name="9f973c1d-d056-4e38-84a5-7be81cdd6ab6" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ffef6934-8d7f-41c9-a33f-0bdd2ae8887c_1" Name="ffef6934-8d7f-41c9-a33f-0bdd2ae8887c" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4e530037-e29d-4535-ac16-a75bd0cdb897_1" Name="4e530037-e29d-4535-ac16-a75bd0cdb897" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_7828d1ce-92dd-46d7-87a0-17d18b79c3b3_1" Name="7828d1ce-92dd-46d7-87a0-17d18b79c3b3" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f43c3c35-22e2-53eb-f169-07594054779e_1" Name="f43c3c35-22e2-53eb-f169-07594054779e" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0_1" Name="5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ee845016-ebe1-41eb-be52-5e3ae58339f2_1" Name="ee845016-ebe1-41eb-be52-5e3ae58339f2" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_b92d1ff0-92ec-444d-b7ec-c016f971c000_1" Name="b92d1ff0-92ec-444d-b7ec-c016f971c000" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_88cd9180-4491-4640-b571-e3bee2527943_1" Name="88cd9180-4491-4640-b571-e3bee2527943" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f0ae506b-805e-434a-a005-7971d555179c_1" Name="f0ae506b-805e-434a-a005-7971d555179c" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5cad3597-5fec-4c62-9ce1-9d7abc723d3a_1" Name="5cad3597-5fec-4c62-9ce1-9d7abc723d3a" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_2fdb1f25-8de1-4bc1-bac2-e445e5b38743_1" Name="2fdb1f25-8de1-4bc1-bac2-e445e5b38743" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_83d6e83b-900b-48a3-9835-57656b6f6474_1_CaptureState" Name="83d6e83b-900b-48a3-9835-57656b6f6474" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_9f973c1d-d056-4e38-84a5-7be81cdd6ab6_1_CaptureState" Name="9f973c1d-d056-4e38-84a5-7be81cdd6ab6" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ffef6934-8d7f-41c9-a33f-0bdd2ae8887c_1_CaptureState" Name="ffef6934-8d7f-41c9-a33f-0bdd2ae8887c" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_4e530037-e29d-4535-ac16-a75bd0cdb897_1_CaptureState" Name="4e530037-e29d-4535-ac16-a75bd0cdb897" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_7828d1ce-92dd-46d7-87a0-17d18b79c3b3_1_CaptureState" Name="7828d1ce-92dd-46d7-87a0-17d18b79c3b3" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f43c3c35-22e2-53eb-f169-07594054779e_1_CaptureState" Name="f43c3c35-22e2-53eb-f169-07594054779e" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0_1_CaptureState" Name="5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_ee845016-ebe1-41eb-be52-5e3ae58339f2_1_CaptureState" Name="ee845016-ebe1-41eb-be52-5e3ae58339f2" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_b92d1ff0-92ec-444d-b7ec-c016f971c000_1_CaptureState" Name="b92d1ff0-92ec-444d-b7ec-c016f971c000" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_88cd9180-4491-4640-b571-e3bee2527943_1_CaptureState" Name="88cd9180-4491-4640-b571-e3bee2527943" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f0ae506b-805e-434a-a005-7971d555179c_1_CaptureState" Name="f0ae506b-805e-434a-a005-7971d555179c" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_5cad3597-5fec-4c62-9ce1-9d7abc723d3a_1_CaptureState" Name="5cad3597-5fec-4c62-9ce1-9d7abc723d3a" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_2fdb1f25-8de1-4bc1-bac2-e445e5b38743_1_CaptureState" Name="2fdb1f25-8de1-4bc1-bac2-e445e5b38743" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_594bf743-ce2e-48ee-83ee-3d50a0add692_2" Name="594bf743-ce2e-48ee-83ee-3d50a0add692" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_98ccaad9-6464-48d7-9a66-c13718226668_2" Name="98ccaad9-6464-48d7-9a66-c13718226668" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f1ef270a-0d32-4352-ba52-dbab41e1d859_2" Name="f1ef270a-0d32-4352-ba52-dbab41e1d859" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_bff15e13-81bf-45ee-8b16-7cfead00da86_2" Name="bff15e13-81bf-45ee-8b16-7cfead00da86" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_89592015-d996-4636-8f61-066b5d4dd739_2" Name="89592015-d996-4636-8f61-066b5d4dd739" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_1ded4f74-5def-425d-ae55-4fd4e9bbe0a7_2" Name="1ded4f74-5def-425d-ae55-4fd4e9bbe0a7" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_a89336e8-e6cf-485c-9c6a-ddb6614f278a_2" Name="a89336e8-e6cf-485c-9c6a-ddb6614f278a" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_312326fa-036d-4888-bc77-c3de2ff9ae06_2" Name="312326fa-036d-4888-bc77-c3de2ff9ae06" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_551ff9b3-0b7e-4408-b008-0068c8da2ff1_2" Name="551ff9b3-0b7e-4408-b008-0068c8da2ff1" NonPagedMemory="true" Stack="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xffffffffffffffff" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_594bf743-ce2e-48ee-83ee-3d50a0add692_2_CaptureState" Name="594bf743-ce2e-48ee-83ee-3d50a0add692" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_98ccaad9-6464-48d7-9a66-c13718226668_2_CaptureState" Name="98ccaad9-6464-48d7-9a66-c13718226668" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_f1ef270a-0d32-4352-ba52-dbab41e1d859_2_CaptureState" Name="f1ef270a-0d32-4352-ba52-dbab41e1d859" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_bff15e13-81bf-45ee-8b16-7cfead00da86_2_CaptureState" Name="bff15e13-81bf-45ee-8b16-7cfead00da86" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_89592015-d996-4636-8f61-066b5d4dd739_2_CaptureState" Name="89592015-d996-4636-8f61-066b5d4dd739" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_1ded4f74-5def-425d-ae55-4fd4e9bbe0a7_2_CaptureState" Name="1ded4f74-5def-425d-ae55-4fd4e9bbe0a7" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_a89336e8-e6cf-485c-9c6a-ddb6614f278a_2_CaptureState" Name="a89336e8-e6cf-485c-9c6a-ddb6614f278a" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_312326fa-036d-4888-bc77-c3de2ff9ae06_2_CaptureState" Name="312326fa-036d-4888-bc77-c3de2ff9ae06" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_551ff9b3-0b7e-4408-b008-0068c8da2ff1_2_CaptureState" Name="551ff9b3-0b7e-4408-b008-0068c8da2ff1" Stack="true" Level="255" CaptureStateOnly="true">
+      <CaptureStateOnSave Timeout="30">
+        <Keyword Value="0xffffffffffffffff" />
+      </CaptureStateOnSave>
+    </EventProvider>
+    <EventProvider Id="EventProvider_cc79cf77-70d9-4082-9b52-23f3a3e92fe4_3" Name="cc79cf77-70d9-4082-9b52-23f3a3e92fe4" NonPagedMemory="true" Level="5" EventKey="true">
+      <Keywords>
+        <Keyword Value="0xf" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_9474a749-a98d-4f52-9f455b20247e4f01_3" Name="9474a749-a98d-4f52-9f455b20247e4f01" NonPagedMemory="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x3" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_bda92ae8-9f11-4d49-ba1da4c2abca692e_3" Name="bda92ae8-9f11-4d49-ba1da4c2abca692e" NonPagedMemory="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x3" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_097d1686-4038-46be-b55110fda0387165_3" Name="097d1686-4038-46be-b55110fda0387165" NonPagedMemory="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x3" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_A0C4702B-51F7-4ea9-9C74E39952C694B8_3" Name="A0C4702B-51F7-4ea9-9C74E39952C694B8" NonPagedMemory="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x3" />
+      </Keywords>
+    </EventProvider>
+    <EventProvider Id="EventProvider_B46FA1AD-B22D-4362-B0729F5BA07B046D_3" Name="B46FA1AD-B22D-4362-B0729F5BA07B046D" NonPagedMemory="true" Level="255" EventKey="true">
+      <Keywords>
+        <Keyword Value="0x3" />
+      </Keywords>
+    </EventProvider>
+    <Profile Id="AppXDep_Desktop_Trace.Verbose.File" Name="AppXDep_Desktop_Trace" Description="Generated by DiagTrack Scenario Editor (TraceId=3f760e1e-ffb3-437e-a10e-c0f39557657d)" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors Operation="Add">
+        <SystemCollectorId Value="SystemCollector">
+          <SystemProviderId Value="SystemProvider" />
+        </SystemCollectorId>
+        <EventCollectorId Value="EventCollector_WDAGContainerTrace">
+          <EventProviders Operation="Add">
+            <!-- shell -->
+            <EventProviderId Value="Microsoft.Windows.Shell.DefaultAssoc" />
+            <EventProviderId Value="Microsoft.Windows.ShellExecute" />
+            <!-- office -->
+            <EventProviderId Value="Microsoft.Office.SessionIdProvider" />
+            <EventProviderId Value="Microsoft.Office.TelemetryEngine" />
+            <EventProviderId Value="Microsoft.Office.CorrelationMetadata" />
+            <!-- WDAG Office -->
+            <EventProviderId Value="Microsoft.Windows.HVSI.FileTrustFilter" />
+            <EventProviderId Value="Microsoft.Windows.HVSI.Addin" />
+            <!-- Application Activation -->
+            <EventProviderId Value="ActivationManager" />
+            <!-- COM -->
+            <EventProviderId Value="ComBaseTraceLoggingProvider" />
+            <!-- Setting providers -->
+            <EventProviderId Value="Microsoft.Windows.HVSI.Settings" />
+            <EventProviderId Value="HvsiSettingsProvider_WPP" />
+            <EventProviderId Value="Microsoft.Windows.HyperV.Compute" />
+            <!-- wcifstrace trace -->
+            <EventProviderId Value="wcifstrace" />
+            <!-- wcnfstrace trace -->
+            <EventProviderId Value="wcnfstrace" />
+            <!-- Microsoft.Windows.BindFlt trace -->
+            <EventProviderId Value="Microsoft.Windows.BindFlt" />
+            <!-- Edge -->
+            <EventProviderId Value="Microsoft.Windows.App.Browser" />
+            <EventProviderId Value="Microsoft.Web.Platform" />
+            <EventProviderId Value="Windows.Ui.Xaml" />
+            <EventProviderId Value="TextInput" />
+            <EventProviderId Value="Microsoft.Windows.AppModel.StateManagerTelemetry" />
+            <EventProviderId Value="WindowsNotificationFacilityProvider" />
+            <EventProviderId Value="Aria.7005b72804a64fa4b2138faab88f877b.Microsoft.WebBrowser.Wdag" />
+            <!-- Printer WPP trace -->
+            <EventProviderId Value="SpoolSv" />
+            <EventProviderId Value="SPOOLSS" />
+            <EventProviderId Value="LocalSpl" />
+            <EventProviderId Value="Winspool" />
+            <EventProviderId Value="Win32spl" />
+            <EventProviderId Value="BiDispl" />
+            <EventProviderId Value="SplWow64" />
+            <EventProviderId Value="SplLib" />
+            <EventProviderId Value="PerfLib" />
+            <EventProviderId Value="Asyncntfy" />
+            <EventProviderId Value="Remntfy" />
+            <EventProviderId Value="Gpprnext" />
+            <EventProviderId Value="Sandbox" />
+            <EventProviderId Value="SandboxHost" />
+            <EventProviderId Value="Pipeline" />
+            <EventProviderId Value="NTPrint" />
+            <EventProviderId Value="LprHelp" />
+            <EventProviderId Value="LprMon" />
+            <EventProviderId Value="UsbJScript" />
+            <EventProviderId Value="UsbMon" />
+            <EventProviderId Value="TcpMib" />
+            <EventProviderId Value="TcpMon" />
+            <EventProviderId Value="WSDPrint" />
+            <EventProviderId Value="WSDMon" />
+            <EventProviderId Value="WSDPProxy" />
+            <EventProviderId Value="DAFWSD" />
+            <EventProviderId Value="FDWSD" />
+            <EventProviderId Value="WSDAPI" />
+            <EventProviderId Value="XpsPrint" />
+            <!-- PrintUI WPP Trace -->
+            <EventProviderId Value="PrintUI" />
+            <EventProviderId Value="Prnntfy" />
+            <!-- PrintDriver WPP Trace -->
+            <EventProviderId Value="PrintExtension" />
+            <!-- JScriptLib WPP Trace -->
+            <EventProviderId Value="JScriptLib" />
+            <!-- Roaming WPP Trace -->
+            <EventProviderId Value="DafPrint" />
+            <EventProviderId Value="AepRoam" />
+            <!-- Driver WPP Trace -->
+            <EventProviderId Value="MSXpsFilters" />
+            <!-- MXDC WPP Trace -->
+            <EventProviderId Value="MXDC" />
+            <!-- PrintDialog WPP Trace -->
+            <EventProviderId Value="PREFDLG" />
+            <EventProviderId Value="DLGHOST" />
+            <!-- Windows.Graphics.Printing WPP Trace -->
+            <EventProviderId Value="MODERNPRINT" />
+            <EventProviderId Value="PrinterExtensions" />
+            <!-- Print ETW Providers -->
+            <EventProviderId Value="Microsoft-Windows-PrintDialogs" />
+            <EventProviderId Value="Microsoft-Windows-PrintDrivers" />
+            <EventProviderId Value="microsoft-windows-printservice-usbmon" />
+            <EventProviderId Value="Microsoft-Windows-PrintService" />
+            <EventProviderId Value="Microsoft-Windows-ProcessStateManager" />
+            <!-- RDPServer providers -->
+            <EventProviderId Value="Rdpcore" />
+            <EventProviderId Value="ProgressiveCodec" />
+            <EventProviderId Value="Termsrv" />
+            <EventProviderId Value="Lsm" />
+            <EventProviderId Value="TsSrvLic" />
+            <EventProviderId Value="LSCSHostPolicy" />
+            <EventProviderId Value="SDClient" />
+            <EventProviderId Value="rdpclip" />
+            <EventProviderId Value="rdpinput" />
+            <EventProviderId Value="umrdp" />
+            <EventProviderId Value="rdpshell" />
+            <EventProviderId Value="rdpshellCDV" />
+            <EventProviderId Value="rdpinit" />
+            <EventProviderId Value="rdsdwmdr" />
+            <EventProviderId Value="winsta" />
+            <EventProviderId Value="winlogon" />
+            <EventProviderId Value="tsvmhasvc" />
+            <EventProviderId Value="audiosrv" />
+            <EventProviderId Value="rdpendp" />
+            <EventProviderId Value="rdvcloud" />
+            <EventProviderId Value="UserProfileService" />
+            <EventProviderId Value="UstCommon" />
+            <EventProviderId Value="Fr" />
+            <EventProviderId Value="Microsoft.Windows.RemoteDesktop.RAIL.RdpInit" />
+            <EventProviderId Value="Microsoft.Windows.RemoteDesktop.RAIL.RdpShell" />
+            <!-- location -->
+            <EventProviderId Value="EventProvider_Microsoft-WindowsPhone-LocationServiceProvider" />
+            <EventProviderId Value="EventProvider_GeolocationAPI" />
+            <EventProviderId Value="EventProvider_GeolocationService" />
+            <!-- Print Tracelogging Providers -->
+            <EventProviderId Value="Microsoft.Windows.PrintCore" />
+            <EventProviderId Value="Microsoft-Windows-Mobile-Print-Plugins" />
+            <EventProviderId Value="Microsoft-Windows-Print-Platform" />
+            <EventProviderId Value="Microsoft.Windows.Print.PrintConfig" />
+            <EventProviderId Value="Microsoft.Windows.Print.PrintCoreConfig" />
+            <EventProviderId Value="Microsoft.Windows.Shell.PrintDialog" />
+            <EventProviderId Value="Microsoft.Windows.Shell.PrintManager" />
+            <EventProviderId Value="Microsoft-Windows-LifetimeManager" />
+            <EventProviderId Value="Microsoft.Windows.Das" />
+            <EventProviderId Value="Microsoft-Windows-WSD-DafProvider" />
+            <EventProviderId Value="Microsoft-Windows-WSD-WSDApi" />
+            <EventProviderId Value="Microsoft.Windows.Print.PrintJobManager" />
+            <EventProviderId Value="Microsoft.Windows.Shell.ServiceProvider" />
+            <EventProviderId Value="Windows.Internal.Shell.ModalExperience" />
+            <EventProviderId Value="Microsoft.Windows.Mobile.Shell.ServiceProvider" />
+            <EventProviderId Value="Microsoft.Windows.Print.XpsDocumentTargetPrint" />
+            <EventProviderId Value="Microsoft.Windows.Print.GetPrinterConfig" />
+          </EventProviders>
+        </EventCollectorId>
+        <EventCollectorId Value="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_0">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_3f471139-acb7-4a01-b7a7-ff5da4ba2d43_0" />
+            <EventProviderId Value="EventProvider_3f471139-acb7-4a01-b7a7-ff5da4ba2d43_0_CaptureState" />
+            <EventProviderId Value="EventProvider_fe762fb1-341a-4dd4-b399-be1868b3d918_0" />
+            <EventProviderId Value="EventProvider_fe762fb1-341a-4dd4-b399-be1868b3d918_0_CaptureState" />
+            <EventProviderId Value="EventProvider_ba44067a-3c4b-459c-a8f6-18f0d3cf0870_0" />
+            <EventProviderId Value="EventProvider_ba44067a-3c4b-459c-a8f6-18f0d3cf0870_0_CaptureState" />
+            <EventProviderId Value="EventProvider_8127f6d4-59f9-4abf-8952-3e3a02073d5f_0" />
+            <EventProviderId Value="EventProvider_8127f6d4-59f9-4abf-8952-3e3a02073d5f_0_CaptureState" />
+            <EventProviderId Value="EventProvider_b89fa39d-0d71-41c6-ba55-effb40eb2098_0" />
+            <EventProviderId Value="EventProvider_b89fa39d-0d71-41c6-ba55-effb40eb2098_0_CaptureState" />
+            <EventProviderId Value="EventProvider_8fd4b82b-602f-4470-8577-cbb56f702ebf_0" />
+            <EventProviderId Value="EventProvider_8fd4b82b-602f-4470-8577-cbb56f702ebf_0_CaptureState" />
+            <EventProviderId Value="EventProvider_2f29dca8-fbb3-4944-8953-2d390f0fe746_0" />
+            <EventProviderId Value="EventProvider_2f29dca8-fbb3-4944-8953-2d390f0fe746_0_CaptureState" />
+            <EventProviderId Value="EventProvider_d9e5f8fb-06b1-4796-8fa8-abb07f4fc662_0" />
+            <EventProviderId Value="EventProvider_d9e5f8fb-06b1-4796-8fa8-abb07f4fc662_0_CaptureState" />
+            <EventProviderId Value="EventProvider_eb65a492-86c0-406a-bace-9912d595bd69_0" />
+            <EventProviderId Value="EventProvider_eb65a492-86c0-406a-bace-9912d595bd69_0_CaptureState" />
+            <EventProviderId Value="EventProvider_4ee76bd8-3cf4-44a0-a0ac-3937643e37a3_0" />
+            <EventProviderId Value="EventProvider_4ee76bd8-3cf4-44a0-a0ac-3937643e37a3_0_CaptureState" />
+            <EventProviderId Value="EventProvider_830a1f34-7797-4e31-9b75-c82056330051_0" />
+            <EventProviderId Value="EventProvider_830a1f34-7797-4e31-9b75-c82056330051_0_CaptureState" />
+            <EventProviderId Value="EventProvider_aea3a1a8-ea43-4802-b750-2dd678910779_0" />
+            <EventProviderId Value="EventProvider_aea3a1a8-ea43-4802-b750-2dd678910779_0_CaptureState" />
+            <EventProviderId Value="EventProvider_4dab1c21-6842-4376-b7aa-6629aa5e0d2c_0" />
+            <EventProviderId Value="EventProvider_4dab1c21-6842-4376-b7aa-6629aa5e0d2c_0_CaptureState" />
+            <EventProviderId Value="EventProvider_ba723d81-0d0c-4f1e-80c8-54740f508ddf_0" />
+            <EventProviderId Value="EventProvider_ba723d81-0d0c-4f1e-80c8-54740f508ddf_0_CaptureState" />
+            <EventProviderId Value="EventProvider_5526aed1-f6e5-5896-cbf0-27d9f59b6be7_0" />
+            <EventProviderId Value="EventProvider_5526aed1-f6e5-5896-cbf0-27d9f59b6be7_0_CaptureState" />
+            <EventProviderId Value="EventProvider_367c9044-75e0-5320-cc3c-8a40ffc6b4f6_0" />
+            <EventProviderId Value="EventProvider_367c9044-75e0-5320-cc3c-8a40ffc6b4f6_0_CaptureState" />
+          </EventProviders>
+        </EventCollectorId>
+        <EventCollectorId Value="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_1">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_83d6e83b-900b-48a3-9835-57656b6f6474_1" />
+            <EventProviderId Value="EventProvider_83d6e83b-900b-48a3-9835-57656b6f6474_1_CaptureState" />
+            <EventProviderId Value="EventProvider_9f973c1d-d056-4e38-84a5-7be81cdd6ab6_1" />
+            <EventProviderId Value="EventProvider_9f973c1d-d056-4e38-84a5-7be81cdd6ab6_1_CaptureState" />
+            <EventProviderId Value="EventProvider_ffef6934-8d7f-41c9-a33f-0bdd2ae8887c_1" />
+            <EventProviderId Value="EventProvider_ffef6934-8d7f-41c9-a33f-0bdd2ae8887c_1_CaptureState" />
+            <EventProviderId Value="EventProvider_4e530037-e29d-4535-ac16-a75bd0cdb897_1" />
+            <EventProviderId Value="EventProvider_4e530037-e29d-4535-ac16-a75bd0cdb897_1_CaptureState" />
+            <EventProviderId Value="EventProvider_7828d1ce-92dd-46d7-87a0-17d18b79c3b3_1" />
+            <EventProviderId Value="EventProvider_7828d1ce-92dd-46d7-87a0-17d18b79c3b3_1_CaptureState" />
+            <EventProviderId Value="EventProvider_f43c3c35-22e2-53eb-f169-07594054779e_1" />
+            <EventProviderId Value="EventProvider_f43c3c35-22e2-53eb-f169-07594054779e_1_CaptureState" />
+            <EventProviderId Value="EventProvider_5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0_1" />
+            <EventProviderId Value="EventProvider_5b5ab841-7d2e-4a95-bb4f-095cdf66d8f0_1_CaptureState" />
+            <EventProviderId Value="EventProvider_ee845016-ebe1-41eb-be52-5e3ae58339f2_1" />
+            <EventProviderId Value="EventProvider_ee845016-ebe1-41eb-be52-5e3ae58339f2_1_CaptureState" />
+            <EventProviderId Value="EventProvider_b92d1ff0-92ec-444d-b7ec-c016f971c000_1" />
+            <EventProviderId Value="EventProvider_b92d1ff0-92ec-444d-b7ec-c016f971c000_1_CaptureState" />
+            <EventProviderId Value="EventProvider_88cd9180-4491-4640-b571-e3bee2527943_1" />
+            <EventProviderId Value="EventProvider_88cd9180-4491-4640-b571-e3bee2527943_1_CaptureState" />
+            <EventProviderId Value="EventProvider_f0ae506b-805e-434a-a005-7971d555179c_1" />
+            <EventProviderId Value="EventProvider_f0ae506b-805e-434a-a005-7971d555179c_1_CaptureState" />
+            <EventProviderId Value="EventProvider_5cad3597-5fec-4c62-9ce1-9d7abc723d3a_1" />
+            <EventProviderId Value="EventProvider_5cad3597-5fec-4c62-9ce1-9d7abc723d3a_1_CaptureState" />
+            <EventProviderId Value="EventProvider_2fdb1f25-8de1-4bc1-bac2-e445e5b38743_1" />
+            <EventProviderId Value="EventProvider_2fdb1f25-8de1-4bc1-bac2-e445e5b38743_1_CaptureState" />
+          </EventProviders>
+        </EventCollectorId>
+        <EventCollectorId Value="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_2">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_594bf743-ce2e-48ee-83ee-3d50a0add692_2" />
+            <EventProviderId Value="EventProvider_594bf743-ce2e-48ee-83ee-3d50a0add692_2_CaptureState" />
+            <EventProviderId Value="EventProvider_98ccaad9-6464-48d7-9a66-c13718226668_2" />
+            <EventProviderId Value="EventProvider_98ccaad9-6464-48d7-9a66-c13718226668_2_CaptureState" />
+            <EventProviderId Value="EventProvider_f1ef270a-0d32-4352-ba52-dbab41e1d859_2" />
+            <EventProviderId Value="EventProvider_f1ef270a-0d32-4352-ba52-dbab41e1d859_2_CaptureState" />
+            <EventProviderId Value="EventProvider_bff15e13-81bf-45ee-8b16-7cfead00da86_2" />
+            <EventProviderId Value="EventProvider_bff15e13-81bf-45ee-8b16-7cfead00da86_2_CaptureState" />
+            <EventProviderId Value="EventProvider_89592015-d996-4636-8f61-066b5d4dd739_2" />
+            <EventProviderId Value="EventProvider_89592015-d996-4636-8f61-066b5d4dd739_2_CaptureState" />
+            <EventProviderId Value="EventProvider_1ded4f74-5def-425d-ae55-4fd4e9bbe0a7_2" />
+            <EventProviderId Value="EventProvider_1ded4f74-5def-425d-ae55-4fd4e9bbe0a7_2_CaptureState" />
+            <EventProviderId Value="EventProvider_a89336e8-e6cf-485c-9c6a-ddb6614f278a_2" />
+            <EventProviderId Value="EventProvider_a89336e8-e6cf-485c-9c6a-ddb6614f278a_2_CaptureState" />
+            <EventProviderId Value="EventProvider_312326fa-036d-4888-bc77-c3de2ff9ae06_2" />
+            <EventProviderId Value="EventProvider_312326fa-036d-4888-bc77-c3de2ff9ae06_2_CaptureState" />
+            <EventProviderId Value="EventProvider_551ff9b3-0b7e-4408-b008-0068c8da2ff1_2" />
+            <EventProviderId Value="EventProvider_551ff9b3-0b7e-4408-b008-0068c8da2ff1_2_CaptureState" />
+          </EventProviders>
+        </EventCollectorId>
+        <EventCollectorId Value="EventCollector_DiagTrack_3f760e1effb3437ea10ec0f39557657d_3">
+          <EventProviders>
+            <EventProviderId Value="EventProvider_cc79cf77-70d9-4082-9b52-23f3a3e92fe4_3" />
+            <EventProviderId Value="EventProvider_9474a749-a98d-4f52-9f455b20247e4f01_3" />
+            <EventProviderId Value="EventProvider_bda92ae8-9f11-4d49-ba1da4c2abca692e_3" />
+            <EventProviderId Value="EventProvider_097d1686-4038-46be-b55110fda0387165_3" />
+            <EventProviderId Value="EventProvider_A0C4702B-51F7-4ea9-9C74E39952C694B8_3" />
+            <EventProviderId Value="EventProvider_B46FA1AD-B22D-4362-B0729F5BA07B046D_3" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+    <Profile Id="AppXDep_Desktop_Trace.Light.File" Name="AppXDep_Desktop_Trace" Description="Generated by DiagTrack Scenario Editor (TraceId=3f760e1e-ffb3-437e-a10e-c0f39557657d)" Base="AppXDep_Desktop_Trace.Verbose.File" LoggingMode="File" DetailLevel="Light" />
+
+    <Profile Id="AppXDep_Desktop_Trace.Verbose.Memory" Name="AppXDep_Desktop_Trace" Description="Generated by DiagTrack Scenario Editor (TraceId=3f760e1e-ffb3-437e-a10e-c0f39557657d)" Base="AppXDep_Desktop_Trace.Verbose.File" LoggingMode="Memory" DetailLevel="Verbose" />
+
+    <Profile Id="AppXDep_Desktop_Trace.Light.Memory" Name="AppXDep_Desktop_Trace" Description="Generated by DiagTrack Scenario Editor (TraceId=3f760e1e-ffb3-437e-a10e-c0f39557657d)" Base="AppXDep_Desktop_Trace.Verbose.File" LoggingMode="Memory" DetailLevel="Light" />
+  </Profiles>
+
+</WindowsPerformanceRecorder>

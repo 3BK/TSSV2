@@ -1,0 +1,51 @@
+**psSDP Revision History**  - *ReleaseNotes* -Changes/Improvements since last version
+::   Version number=Change Date | Notes
+
+::   2023.02.28.0 [we] [psSDP] upd DC_HotfixRollups.ps1 to use rfl_Hotfix.csv
+::   2023.02.24.0 [we] [psSDP] upd utils_remote.ps1
+::   2023.02.22.0 [we] [psSDP] add mod for CRMbase
+::   2023.02.20.0 [we] [psSDP] added more debugging (Trap)
+::   2023.02.19.0 [we] [psSDP] add CRMbase, renamed upper case to lower: TS_CRM_ORG_Updates_Check, TS_CRMupgradeRegKeysExist, TS_HighTempFileCheck, TS_RegistryDatatypeCheck
+::   2023.02.09.0 [we] [psSDP] fix menue selection in DC_DfsrInfo.ps1 for -SDP DOM
+::   2023.02.05.0 [we] [psSDP] upd TS_AutoAddCommands_NET, DC_InternetExplorer-Component
+::   2023.01.30.0 [we] [psSDP] upd DC_SMBClient-Component, xray
+::   2023.01.10.0 [we] [psSDP] upd DC_HotfixRollups, xray
+::   2022.12.14.0 [we] [psSDP] upd DC_HotfixRollups, xray
+::   2022.11.30.0 [we] [psSDP] upd DC_HotfixRollups, fix DC_InternetExplorer-Component.ps1
+::   2022.11.17.0 [we] [psSDP] #Requires -Version 3
+::   2022.11.11.0 [we] [psSDP] upd DC_TCPIP-Component; add DC_RPC-Component to Perf
+::   2022.10.24.0 [we] [psSDP] upd Get-CimInstance for Win11 22H2
+::   2022.10.19.0 [we] [psSDP] DFSsrv Evt-logs/reg.keys, DC_RPC-Component, DC_HotfixRollups
+::   2022.10.17.0 [we] [psSDP] add Keys "HKLM\Software\Policies\Microsoft\Windows NT\Rpc"
+::   2022.10.04.0 [we] [psSDP] Added DsRegCmd /status output to -SDP Net
+::   2022.06.10.0 [psSDP] copy *BPAinfo results
+::   2021.12.17.0 [psSDP] moved "verify signature of VBS files" into PROCESS block
+::   2021.11.17.0 [psSDP] added signature check for *.vbs (Get-AuthenticodeSignature)
+::   2021.07.26.0 [psSDP] changed folder structure; disable QuickEditMode during script execution
+::   2021.07.08.1 [psSDP] fixing some SUVP issues
+::   2021.07.08.0 [psSDP] add SUVP  
+::   2021.06.21.0 [psSDP] add CES Diagnostic Scripts and Utilities License  
+::   2021.04.19.0 [psSDP] mod AlwaysOnDiagScript.sql
+::   2021.04.12.0 [psSDP] add SCCM
+::   2021.03.30.0 [psSDP] add RDS
+::   2021.03.17.0 [psSDP] add Get-WindowsUpdateLog to skipHang
+::   2021.02.02.0 [psSDP] upd GetNetview; Hyper-V Shielded VM EventLogs
+::   2021.01.26.0 [psSDP] skipHang for DC_W32Time.ps1
+::   2021.01.13.0 [psSDP] skipHang for TS_DumpCollector
+::   2020.12.16.0 [psSDP] upd xray 201217
+::   2020.12.16.0 [psSDP] fixed AutorunsC, replaced .exe with older version
+::   2020.12.09.0 [psSDP] added DPM
+::   2020.11.03.0 [psSDP] upd DNSsrv
+::   2020.11.02.0 [psSDP] upd xray
+::   2020.10.26.0 [psSDP] added CscDbDump for NET
+::   2020.10.16.0 [psSDP] include reg.Hives
+::   2020.08.20.0 [psSDP] fixed CORE running without 'Get-ClusterNode'
+::   2020.08.15.0 [psSDP] upd Get_SmbShare, UTC time
+::   2020.06.14.0 [psSDP] upd xray, added ReFs event log collection to Setup, Hyper-V, Cluster and S2D SDP logs
+::   2020.06.01.0 [psSDP] remove XP/W2k3
+::   2020.05.31.0 [psSDP] upd xray
+::   2020.05.07.0 [psSDP] run xray, if PSver > 4.0 run xray, if PSver > 1
+::   2020.04.24.0 [psSDP] upd xray, SQL
+::   2020.04.22.1 [psSDP] upd xray; added Schannel to DS_regEntries
+::   2020.04.19.1 [psSDP] activated xray; SDDC
+::   2020.04.13.2 [psSDP] upd of many troubleshooter to run on Win10; add SkipXray

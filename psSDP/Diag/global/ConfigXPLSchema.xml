@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Root="0ac3ddef-0adf-4876-a863-a15ac2ced3d8" xmlns="">
+  <DiscoverySet Name="OperatingSystemCore" Script="DiscoverySet_OperatingSystemCore.ps1" Infrastructure="false" Guid="0ac3ddef-0adf-4876-a863-a15ac2ced3d8" Version="4.07">
+    <RelativePaths />
+    <Entities>
+      <Entity Type="Class" Name="BasicSysInfo" DisplayName="Basic System Information" Description="Basic information about the system (OS/Hardware)" ViewMode="List" Version="1.019" Guid="5a129654-cefb-4195-849c-6b0afb48e198" Active="true" PublishingHistory="2" FunctionName="FN_Class_BasicSysInfo">
+        <Properties>
+          <Property Name="DiagId" DataType="String" DataTypeFormat="Default" DisplayName="Diagnostic Id" Description="Diagnostic Package Id" Visibility="Internal" Order="16" PII="false" Guid="27f1cafc-d0d8-4779-89d2-02fe188006bf" Active="true" PublishingHistory="2" />
+          <Property Name="Manufacturer" DataType="String" DataTypeFormat="Default" DisplayName="System Manufacturer" Description="Machine Manufacturer" Visibility="Public" Order="4" PII="false" Guid="28b7513a-f678-4d0a-8019-037ac8d8dbfb" Active="true" PublishingHistory="2" />
+          <Property Name="DomainController" DataType="Boolean" DataTypeFormat="Yes-No" DisplayName="Domain Controller" Description="Is machine a Domain Controller" Visibility="Public" Order="15" PII="false" Guid="7620a691-9dfb-4ecc-8574-1bbb86206099" Active="true" PublishingHistory="2" />
+          <Property Name="OSBuild" DataType="Number" DataTypeFormat="Integer" DisplayName="OS Build Number" Description="Operating System Build Number" Visibility="None" Order="9" PII="false" Guid="0fa58a2b-ccc7-4dd4-8355-27463bf3c2ff" Active="true" PublishingHistory="2" />
+          <Property Name="OS64Bit" DataType="Boolean" DataTypeFormat="Yes-No" DisplayName="64-bit OS" Description="Is the Operating System 64-bit " Visibility="Public" Order="12" PII="false" Guid="fe5d34ea-12de-422b-9173-3454aadd1f08" Active="true" PublishingHistory="2" />
+          <Property Name="OSServicePack" DataType="Number" DataTypeFormat="Integer" DisplayName="OS Service Pack" Description="Operating System Service Pack Number" Visibility="Public" Order="13" PII="false" Guid="2956a86f-5dbd-413b-9fcc-35537bf0354e" Active="true" PublishingHistory="2" />
+          <Property Name="OSRevision" DataType="Number" DataTypeFormat="Integer" DisplayName="OS Revision Number" Description="Operating System Revision Number" Visibility="None" Order="10" PII="false" Guid="b344f295-6d8e-4dc9-8830-3776426b1fba" Active="true" PublishingHistory="2" />
+          <Property Name="OSVersion" DataType="String" DataTypeFormat="Default" DisplayName="Operating System Version" Description="OS Version Number" Visibility="Public" Order="3" PII="false" Guid="376f2248-68c5-4d88-9cd9-3ec698c907de" Active="true" PublishingHistory="2" />
+          <Property Name="VisibleMemory" DataType="Number" DataTypeFormat="Size-Bytes" DisplayName="Physical Memory" Description="System Visible Physical Memory" Visibility="Public" Order="6" PII="false" Guid="f11047f1-d7cd-4e1d-ad6b-519cdd0c2ecf" Active="true" PublishingHistory="2" />
+          <Property Name="OSArchitecture" DataType="String" DataTypeFormat="Default" DisplayName="OS Architecture" Description="Operating System Architecture" Visibility="Public" Order="5" PII="false" Guid="212995ca-600e-425b-a463-646f8f19fcab" Active="true" PublishingHistory="2" />
+          <Property Name="OSMajor" DataType="Number" DataTypeFormat="Integer" DisplayName="OS Major Version" Description="Operating System Version Major" Visibility="None" Order="7" PII="false" Guid="9de96140-c1ba-404a-a722-85b8d4bebfd9" Active="true" PublishingHistory="2" />
+          <Property Name="OSMinor" DataType="Number" DataTypeFormat="Integer" DisplayName="OS Minor Version" Description="Operating System Minor version" Visibility="None" Order="8" PII="false" Guid="d41ae4d4-b0e6-413c-8e18-9b75f0b1fdbf" Active="true" PublishingHistory="2" />
+          <Property Name="OSName" DataType="String" DataTypeFormat="Default" DisplayName="Operating System Name" Description="Name of the Operating System" Visibility="Public" Order="2" PII="false" Guid="a8c5f2ea-da61-40ed-8bea-a143e457408e" Active="true" PublishingHistory="2" />
+          <Property Name="MachineName" DataType="String" DataTypeFormat="Default" DisplayName="Machine Name" Description="Name of the machine" Visibility="Public" Order="1" PII="true" Guid="2a222976-6353-4a45-9e1f-ed2382296045" Active="true" PublishingHistory="2" />
+          <Property Name="ServerSKU" DataType="Boolean" DataTypeFormat="Yes-No" DisplayName="Server SKU" Description="Is machine Server SKU" Visibility="Public" Order="14" PII="false" Guid="a5e09e68-16df-4351-9590-f0c7869efc04" Active="true" PublishingHistory="2" />
+          <Property Name="SystemModel" DataType="String" DataTypeFormat="Default" DisplayName="System Model" Description="System Model Number" Visibility="Public" Order="11" PII="false" Guid="5fa477d4-e541-4da8-b927-fb3f338b4af0" Active="true" PublishingHistory="2" />
+        </Properties>
+      </Entity>
+    </Entities>
+  </DiscoverySet>
+  <SystemObjects>
+    <GenericDataTypes />
+    <DataTypes>
+      <DataType Name="String" PSTypeName="String">
+        <DataTypeFormats>
+          <DataTypeFormat Name="Default" FunctionName="" />
+        </DataTypeFormats>
+      </DataType>
+      <DataType Name="Boolean" PSTypeName="Boolean">
+        <DataTypeFormats>
+          <DataTypeFormat Name="True-False" FunctionName="" />
+          <DataTypeFormat Name="0-1" FunctionName="" />
+          <DataTypeFormat Name="Enabled-Disabled" FunctionName="" />
+          <DataTypeFormat Name="Yes-No" FunctionName="" />
+        </DataTypeFormats>
+      </DataType>
+      <DataType Name="Number" PSTypeName="Double">
+        <DataTypeFormats>
+          <DataTypeFormat Name="Integer" FunctionName="" />
+          <DataTypeFormat Name="Percentage" FunctionName="" />
+          <DataTypeFormat Name="Percentage-0" FunctionName="" />
+          <DataTypeFormat Name="Percentage-1" FunctionName="" />
+          <DataTypeFormat Name="Percentage-2" FunctionName="" />
+          <DataTypeFormat Name="Double-1" FunctionName="" />
+          <DataTypeFormat Name="Double-2" FunctionName="" />
+          <DataTypeFormat Name="Default" FunctionName="" />
+          <DataTypeFormat Name="Size-Bytes" FunctionName="FormatBytes" />
+        </DataTypeFormats>
+      </DataType>
+    </DataTypes>
+  </SystemObjects>
+</Schema>

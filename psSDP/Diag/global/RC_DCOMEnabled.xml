@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Element xmlns:dcmRS="http://www.microsoft.com/schemas/dcm/resource/2007">
+  <Rootcause>
+    <ID>RC_DCOMEnabled</ID>
+    <DisplayInformation>
+      <Parameters/>
+      <Name>
+        <dcmRS:LocalizeResourceElement comment="Title" index="740162">Localized Title</dcmRS:LocalizeResourceElement>
+      </Name>
+      <Description/>
+    </DisplayInformation>
+    <Resolvers>
+      <Resolver>
+        <ID>f9f0bb2c-24d9-4b14-a9d8-32e5c67ed92d</ID>
+        <DisplayInformation>
+          <Parameters/>
+          <Name>
+            <dcmRS:LocalizeResourceElement comment="Title" index="740163">Description</dcmRS:LocalizeResourceElement>
+          </Name>
+          <Description/>
+        </DisplayInformation>
+        <RequiresConsent>false</RequiresConsent>
+        <Script>
+          <Parameters/>
+          <ProcessArchitecture>Any</ProcessArchitecture>
+          <RequiresElevation>true</RequiresElevation>
+          <RequiresInteractivity>false</RequiresInteractivity>
+          <FileName>TS_DCOMEnabled.ps1</FileName>
+          <ExtensionPoint/>
+        </Script>
+        <ExtensionPoint/>
+      </Resolver>
+    </Resolvers>
+    <Verifier/>
+    <ContextParameters/>
+    <ExtensionPoint/>
+  </Rootcause>
+</Element>

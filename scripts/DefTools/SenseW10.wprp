@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<WindowsPerformanceRecorder
+    Author="Windows Defender Advanced Threat Protection"
+    Company="Microsoft Corporation"
+    Copyright="Microsoft Corporation"
+    Team="Windows Defender Advanced Threat Protection"
+    Version="1.0"
+    >
+  <Profiles>
+    <EventCollector Id="EventCollector_Sense" Name="Sense" />
+	
+	<!-- Would want to base All on Events, but then Events has to appear first and will become the default when running "wpr -start Sense.wprp", which we don't want -->
+    <Profile Id="All.Verbose.File" Name="All" DetailLevel="Verbose" LoggingMode="File" Default="true" Description="Sense cyber events and traces">
+      <Collectors Operation="Add">
+        <EventCollectorId Value="EventCollector_Sense">
+          <EventProviders>
+            <EventProvider Id="Microsoft.Windows.Sense.CyberEvents" Name="cb2ff72d-d4e4-585d-33f9-f3a395c40be7" />
+            <EventProvider Id="Microsoft.Windows.Sense.Client" Name="65a1b6fc-4c24-59c9-e3f3-ad11ac510b41" />
+            <EventProvider Id="Microsoft.Windows.Sec.Driver" Name="e2cdbc57-b2a5-570a-969b-ef80adc0b915" />
+            <EventProvider Id="Microsoft.Windows.Sense.SensorHub" Name="1dc742c2-0e76-5490-e1b5-8ddb4982ff77" />
+            <EventProvider Id="Microsoft-Windows-DiagTrack" Name="56DC463B-97E8-4B59-E836-AB7C9BB96301" />
+            <EventProvider Id="Microsoft.Windows.DiagTrack" Name="43AC453B-97CD-4B51-4376-DB7C9BB963AC" />
+            <EventProvider Id="Microsoft.Windows.Sense.WDATPLauncher" Name="01a64d63-b71b-5166-d9a6-99d953b3534b" />
+            <EventProvider Id="Microsoft.Windows.Sense.SenseCm" Name="F0FF433A-B5A0-4899-A81D-0B5088A96D04" />
+            <EventProvider Id="Microsoft.AAD.Runtime" Name="bd67e65c-9cc2-51d8-7399-0bb9899e75c1" />
+            <EventProvider Id="Microsoft.Defender.EndpointDlp.Tracelog" Name="0be29c0b-0729-534d-0c1d-5fad98cc6118" />
+            <EventProvider Id="Microsoft-Windows-User-Device-Registration" Name="23B8D46B-67DD-40A3-B636-D43E50552C6D" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+
+    <Profile Id="All.Verbose.Memory" Name="All" DetailLevel="Verbose" LoggingMode="Memory" Default="false" Description="Sense cyber events and traces">
+      <Collectors Operation="Add">
+        <EventCollectorId Value="EventCollector_Sense">
+          <EventProviders>
+            <EventProvider Id="Microsoft.Windows.Sense.CyberEvents" Name="cb2ff72d-d4e4-585d-33f9-f3a395c40be7" />
+            <EventProvider Id="Microsoft.Windows.Sense.Client" Name="65a1b6fc-4c24-59c9-e3f3-ad11ac510b41" />
+            <EventProvider Id="Microsoft.Windows.Sec.Driver" Name="e2cdbc57-b2a5-570a-969b-ef80adc0b915" />
+            <EventProvider Id="Microsoft.Windows.Sense.SensorHub" Name="1dc742c2-0e76-5490-e1b5-8ddb4982ff77" />
+            <EventProvider Id="Microsoft-Windows-DiagTrack" Name="56DC463B-97E8-4B59-E836-AB7C9BB96301" />
+            <EventProvider Id="Microsoft.Windows.DiagTrack" Name="43AC453B-97CD-4B51-4376-DB7C9BB963AC" />
+            <EventProvider Id="Microsoft.Windows.Sense.WDATPLauncher" Name="01a64d63-b71b-5166-d9a6-99d953b3534b" />
+            <EventProvider Id="Microsoft.Windows.Sense.SenseCm" Name="F0FF433A-B5A0-4899-A81D-0B5088A96D04" />
+            <EventProvider Id="Microsoft.AAD.Runtime" Name="bd67e65c-9cc2-51d8-7399-0bb9899e75c1" />
+            <EventProvider Id="Microsoft.Defender.EndpointDlp.Tracelog" Name="0be29c0b-0729-534d-0c1d-5fad98cc6118" />
+            <EventProvider Id="Microsoft-Windows-User-Device-Registration" Name="23B8D46B-67DD-40A3-B636-D43E50552C6D" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+</Profiles>
+</WindowsPerformanceRecorder>

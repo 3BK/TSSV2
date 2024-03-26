@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<WindowsPerformanceRecorder
+    Author="Windows Defender Advanced Threat Protection"
+    Company="Microsoft Corporation"
+    Copyright="Microsoft Corporation"
+    Team="Windows Defender Advanced Threat Protection"
+    Version="1.0"
+    >
+  <Profiles>
+    <EventCollector Id="EventCollector_Sense" Name="Sense" />
+	
+	<!-- Would want to base All on Events, but then Events has to appear first and will become the default when running "wpr -start Sense.wprp", which we don't want -->
+    <Profile Id="All.Verbose.File" Name="All" DetailLevel="Verbose" LoggingMode="File" Default="true" Description="Sense cyber events and traces">
+      <Collectors Operation="Add">
+        <EventCollectorId Value="EventCollector_Sense">
+          <EventProviders>
+            <EventProvider Id="Microsoft.Windows.Sense.CyberEvents" Name="cb2ff72d-d4e4-585d-33f9-f3a395c40be7" />
+            <EventProvider Id="Microsoft.Windows.Sense.Client" Name="65a1b6fc-4c24-59c9-e3f3-ad11ac510b41" />
+            <EventProvider Id="Microsoft.Windows.Sense.WDATPLauncher" Name="01a64d63-b71b-5166-d9a6-99d953b3534b" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+
+    <Profile Id="All.Verbose.Memory" Name="All" DetailLevel="Verbose" LoggingMode="Memory" Default="false" Description="Sense cyber events and traces">
+      <Collectors Operation="Add">
+        <EventCollectorId Value="EventCollector_Sense">
+          <EventProviders>
+            <EventProvider Id="Microsoft.Windows.Sense.CyberEvents" Name="cb2ff72d-d4e4-585d-33f9-f3a395c40be7" />
+            <EventProvider Id="Microsoft.Windows.Sense.Client" Name="65a1b6fc-4c24-59c9-e3f3-ad11ac510b41" />
+            <EventProvider Id="Microsoft.Windows.Sense.WDATPLauncher" Name="01a64d63-b71b-5166-d9a6-99d953b3534b" />
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>
+
